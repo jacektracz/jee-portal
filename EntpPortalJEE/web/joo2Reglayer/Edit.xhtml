@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2ReglayerTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MRegLayerid}" for="MRegLayerid" />
+                    <h:inputText id="MRegLayerid" value="#{joo2ReglayerController.selected.MRegLayerid}" title="#{bundle.EditJoo2ReglayerTitle_MRegLayerid}" required="true" requiredMessage="#{bundle.EditJoo2ReglayerRequiredMessage_MRegLayerid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MParentId}" for="MParentId" />
+                    <h:inputText id="MParentId" value="#{joo2ReglayerController.selected.MParentId}" title="#{bundle.EditJoo2ReglayerTitle_MParentId}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MLayerId}" for="MLayerId" />
+                    <h:inputText id="MLayerId" value="#{joo2ReglayerController.selected.MLayerId}" title="#{bundle.EditJoo2ReglayerTitle_MLayerId}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MShortName}" for="MShortName" />
+                    <h:inputText id="MShortName" value="#{joo2ReglayerController.selected.MShortName}" title="#{bundle.EditJoo2ReglayerTitle_MShortName}" required="true" requiredMessage="#{bundle.EditJoo2ReglayerRequiredMessage_MShortName}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MTitle}" for="MTitle" />
+                    <h:inputText id="MTitle" value="#{joo2ReglayerController.selected.MTitle}" title="#{bundle.EditJoo2ReglayerTitle_MTitle}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MCollapsible}" for="MCollapsible" />
+                    <h:inputText id="MCollapsible" value="#{joo2ReglayerController.selected.MCollapsible}" title="#{bundle.EditJoo2ReglayerTitle_MCollapsible}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MOpenContent}" for="MOpenContent" />
+                    <h:inputText id="MOpenContent" value="#{joo2ReglayerController.selected.MOpenContent}" title="#{bundle.EditJoo2ReglayerTitle_MOpenContent}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MRegLayertype}" for="MRegLayertype" />
+                    <h:inputText id="MRegLayertype" value="#{joo2ReglayerController.selected.MRegLayertype}" title="#{bundle.EditJoo2ReglayerTitle_MRegLayertype}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MRegLayerposition}" for="MRegLayerposition" />
+                    <h:inputText id="MRegLayerposition" value="#{joo2ReglayerController.selected.MRegLayerposition}" title="#{bundle.EditJoo2ReglayerTitle_MRegLayerposition}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MRegLayerordering}" for="MRegLayerordering" />
+                    <h:inputText id="MRegLayerordering" value="#{joo2ReglayerController.selected.MRegLayerordering}" title="#{bundle.EditJoo2ReglayerTitle_MRegLayerordering}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MRegLayername}" for="MRegLayername" />
+                    <h:inputText id="MRegLayername" value="#{joo2ReglayerController.selected.MRegLayername}" title="#{bundle.EditJoo2ReglayerTitle_MRegLayername}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MRegLayertitle}" for="MRegLayertitle" />
+                    <h:inputText id="MRegLayertitle" value="#{joo2ReglayerController.selected.MRegLayertitle}" title="#{bundle.EditJoo2ReglayerTitle_MRegLayertitle}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_regLayerdisplay}" for="regLayerdisplay" />
+                    <h:inputText id="regLayerdisplay" value="#{joo2ReglayerController.selected.regLayerdisplay}" title="#{bundle.EditJoo2ReglayerTitle_regLayerdisplay}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MRegLayerdisplay}" for="MRegLayerdisplay" />
+                    <h:inputText id="MRegLayerdisplay" value="#{joo2ReglayerController.selected.MRegLayerdisplay}" title="#{bundle.EditJoo2ReglayerTitle_MRegLayerdisplay}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MThemeTeam}" for="MThemeTeam" />
+                    <h:inputText id="MThemeTeam" value="#{joo2ReglayerController.selected.MThemeTeam}" title="#{bundle.EditJoo2ReglayerTitle_MThemeTeam}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MThemeEpt}" for="MThemeEpt" />
+                    <h:inputText id="MThemeEpt" value="#{joo2ReglayerController.selected.MThemeEpt}" title="#{bundle.EditJoo2ReglayerTitle_MThemeEpt}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MReglayerThemesPath}" for="MReglayerThemesPath" />
+                    <h:inputText id="MReglayerThemesPath" value="#{joo2ReglayerController.selected.MReglayerThemesPath}" title="#{bundle.EditJoo2ReglayerTitle_MReglayerThemesPath}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MReglayerThemeDefault}" for="MReglayerThemeDefault" />
+                    <h:inputText id="MReglayerThemeDefault" value="#{joo2ReglayerController.selected.MReglayerThemeDefault}" title="#{bundle.EditJoo2ReglayerTitle_MReglayerThemeDefault}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MReglayerThemeLast}" for="MReglayerThemeLast" />
+                    <h:inputText id="MReglayerThemeLast" value="#{joo2ReglayerController.selected.MReglayerThemeLast}" title="#{bundle.EditJoo2ReglayerTitle_MReglayerThemeLast}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MReglayerLeadTheme}" for="MReglayerLeadTheme" />
+                    <h:inputText id="MReglayerLeadTheme" value="#{joo2ReglayerController.selected.MReglayerLeadTheme}" title="#{bundle.EditJoo2ReglayerTitle_MReglayerLeadTheme}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ReglayerLabel_MReglayerThreeTabTheme}" for="MReglayerThreeTabTheme" />
+                    <h:inputText id="MReglayerThreeTabTheme" value="#{joo2ReglayerController.selected.MReglayerThreeTabTheme}" title="#{bundle.EditJoo2ReglayerTitle_MReglayerThreeTabTheme}" />
+                </h:panelGrid>
+                <h:commandLink action="#{joo2ReglayerController.update}" value="#{bundle.EditJoo2ReglayerSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2ReglayerViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2ReglayerController.prepareList}" value="#{bundle.EditJoo2ReglayerShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2ReglayerIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

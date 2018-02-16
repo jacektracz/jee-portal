@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2K2CategoriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2K2CategoriesLabel_id}"/>
+                    <h:outputText value="#{joo2K2CategoriesController.selected.id}" title="#{bundle.ViewJoo2K2CategoriesTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2CategoriesLabel_name}"/>
+                    <h:outputText value="#{joo2K2CategoriesController.selected.name}" title="#{bundle.ViewJoo2K2CategoriesTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2CategoriesLabel_alias}"/>
+                    <h:outputText value="#{joo2K2CategoriesController.selected.alias}" title="#{bundle.ViewJoo2K2CategoriesTitle_alias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2CategoriesLabel_description}"/>
+                    <h:outputText value="#{joo2K2CategoriesController.selected.description}" title="#{bundle.ViewJoo2K2CategoriesTitle_description}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2CategoriesLabel_parent}"/>
+                    <h:outputText value="#{joo2K2CategoriesController.selected.parent}" title="#{bundle.ViewJoo2K2CategoriesTitle_parent}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2CategoriesLabel_extraFieldsGroup}"/>
+                    <h:outputText value="#{joo2K2CategoriesController.selected.extraFieldsGroup}" title="#{bundle.ViewJoo2K2CategoriesTitle_extraFieldsGroup}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2CategoriesLabel_published}"/>
+                    <h:outputText value="#{joo2K2CategoriesController.selected.published}" title="#{bundle.ViewJoo2K2CategoriesTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2CategoriesLabel_access}"/>
+                    <h:outputText value="#{joo2K2CategoriesController.selected.access}" title="#{bundle.ViewJoo2K2CategoriesTitle_access}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2CategoriesLabel_ordering}"/>
+                    <h:outputText value="#{joo2K2CategoriesController.selected.ordering}" title="#{bundle.ViewJoo2K2CategoriesTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2CategoriesLabel_image}"/>
+                    <h:outputText value="#{joo2K2CategoriesController.selected.image}" title="#{bundle.ViewJoo2K2CategoriesTitle_image}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2CategoriesLabel_params}"/>
+                    <h:outputText value="#{joo2K2CategoriesController.selected.params}" title="#{bundle.ViewJoo2K2CategoriesTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2CategoriesLabel_trash}"/>
+                    <h:outputText value="#{joo2K2CategoriesController.selected.trash}" title="#{bundle.ViewJoo2K2CategoriesTitle_trash}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2CategoriesLabel_plugins}"/>
+                    <h:outputText value="#{joo2K2CategoriesController.selected.plugins}" title="#{bundle.ViewJoo2K2CategoriesTitle_plugins}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2CategoriesLabel_language}"/>
+                    <h:outputText value="#{joo2K2CategoriesController.selected.language}" title="#{bundle.ViewJoo2K2CategoriesTitle_language}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2K2CategoriesController.destroyAndView}" value="#{bundle.ViewJoo2K2CategoriesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2K2CategoriesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2K2CategoriesController.prepareCreate}" value="#{bundle.ViewJoo2K2CategoriesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2K2CategoriesController.prepareList}" value="#{bundle.ViewJoo2K2CategoriesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2K2CategoriesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

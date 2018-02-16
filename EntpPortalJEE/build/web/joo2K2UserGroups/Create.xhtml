@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2K2UserGroupsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2K2UserGroupsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2K2UserGroupsController.selected.id}" title="#{bundle.CreateJoo2K2UserGroupsTitle_id}" required="true" requiredMessage="#{bundle.CreateJoo2K2UserGroupsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2K2UserGroupsLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{joo2K2UserGroupsController.selected.name}" title="#{bundle.CreateJoo2K2UserGroupsTitle_name}" required="true" requiredMessage="#{bundle.CreateJoo2K2UserGroupsRequiredMessage_name}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2K2UserGroupsLabel_permissions}" for="permissions" />
+                    <h:inputTextarea rows="4" cols="30" id="permissions" value="#{joo2K2UserGroupsController.selected.permissions}" title="#{bundle.CreateJoo2K2UserGroupsTitle_permissions}" required="true" requiredMessage="#{bundle.CreateJoo2K2UserGroupsRequiredMessage_permissions}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2K2UserGroupsController.create}" value="#{bundle.CreateJoo2K2UserGroupsSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2K2UserGroupsController.prepareList}" value="#{bundle.CreateJoo2K2UserGroupsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2K2UserGroupsIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

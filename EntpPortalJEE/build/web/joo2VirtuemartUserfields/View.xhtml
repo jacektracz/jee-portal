@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_virtuemartUserfieldId}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.virtuemartUserfieldId}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_virtuemartUserfieldId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_virtuemartVendorId}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.virtuemartVendorId}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_virtuemartVendorId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_name}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.name}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_title}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.title}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_title}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_description}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.description}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_description}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_type}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.type}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_type}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_maxlength}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.maxlength}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_maxlength}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_size}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.size}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_size}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_required}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.required}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_required}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_cols}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.cols}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_cols}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_rows}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.rows}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_rows}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_value}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.value}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_value}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_default1}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.default1}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_default1}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_registration}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.registration}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_registration}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_shipping}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.shipping}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_shipping}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_account}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.account}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_account}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_readonly}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.readonly}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_readonly}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_calculated}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.calculated}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_calculated}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_sys}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.sys}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_sys}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_params}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.params}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_ordering}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.ordering}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_shared}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.shared}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_shared}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.published}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartUserfieldsLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartUserfieldsController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartUserfieldsTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartUserfieldsController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartUserfieldsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartUserfieldsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartUserfieldsController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartUserfieldsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartUserfieldsController.prepareList}" value="#{bundle.ViewJoo2VirtuemartUserfieldsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartUserfieldsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

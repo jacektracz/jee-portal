@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_virtuemartPaymentmethodId}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.virtuemartPaymentmethodId}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_virtuemartPaymentmethodId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_virtuemartVendorId}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.virtuemartVendorId}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_virtuemartVendorId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_paymentJpluginId}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.paymentJpluginId}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_paymentJpluginId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_paymentName}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.paymentName}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_paymentName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_paymentElement}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.paymentElement}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_paymentElement}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_discount}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.discount}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_discount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_discountIsPercentage}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.discountIsPercentage}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_discountIsPercentage}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_discountMaxAmount}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.discountMaxAmount}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_discountMaxAmount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_discountMinAmount}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.discountMinAmount}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_discountMinAmount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_paymentParams}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.paymentParams}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_paymentParams}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_shared}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.shared}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_shared}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_ordering}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.ordering}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.published}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPaymentmethodsLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartPaymentmethodsController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartPaymentmethodsTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartPaymentmethodsController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartPaymentmethodsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartPaymentmethodsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartPaymentmethodsController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartPaymentmethodsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartPaymentmethodsController.prepareList}" value="#{bundle.ViewJoo2VirtuemartPaymentmethodsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartPaymentmethodsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2ContentTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2ContentEmpty}" rendered="#{joo2ContentController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2ContentController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2ContentController.pagination.pageFirstItem + 1}..#{joo2ContentController.pagination.pageLastItem + 1}/#{joo2ContentController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2ContentController.previous}" value="#{bundle.Previous} #{joo2ContentController.pagination.pageSize}" rendered="#{joo2ContentController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2ContentController.next}" value="#{bundle.Next} #{joo2ContentController.pagination.pageSize}" rendered="#{joo2ContentController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2ContentController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_assetId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.assetId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_title}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.title}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_alias}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.alias}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_titleAlias}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.titleAlias}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_introtext}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.introtext}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_fulltext}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fulltext}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_state}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.state}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_sectionid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.sectionid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_mask}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mask}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_catid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.catid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_created}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.created}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_createdBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_createdByAlias}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdByAlias}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_modified}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modified}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_modifiedBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modifiedBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_checkedOut}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.checkedOut}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_checkedOutTime}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.checkedOutTime}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_publishUp}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.publishUp}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_publishDown}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.publishDown}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_images}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.images}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_urls}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.urls}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_attribs}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.attribs}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_version}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.version}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_parentid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.parentid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_ordering}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ordering}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_metakey}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metakey}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_metadesc}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metadesc}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_access}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.access}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_hits}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hits}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_metadata}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metadata}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_featured}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.featured}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_language}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.language}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_xreference}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.xreference}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epHrefMain}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epHrefMain}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epImage}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epImage}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epIntroRaw}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epIntroRaw}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epDownButtin}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epDownButtin}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epDownButton}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epDownButton}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epType}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epType}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epImageType}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epImageType}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epFunction}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epFunction}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epRegenerationState}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epRegenerationState}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epFeaturedPosition}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epFeaturedPosition}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epImageBig}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epImageBig}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epImageOrg}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epImageOrg}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epReferencedCatid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epReferencedCatid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epHrefOrg}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epHrefOrg}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epReferencedMenuid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epReferencedMenuid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epUnpublished}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epUnpublished}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epTheme}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epTheme}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epMenuid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epMenuid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epHrefAll}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epHrefAll}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epHrefText}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epHrefText}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epHrefTitle}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epHrefTitle}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epHrefImg}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epHrefImg}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epIsThreeSummary}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epIsThreeSummary}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epRefToOutsideCatId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epRefToOutsideCatId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epImportFromDir}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epImportFromDir}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epImportFromFile}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epImportFromFile}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epImportFromFileShort}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epImportFromFileShort}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContentTitle_epLeadingImported}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epLeadingImported}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2ContentController.prepareView}" value="#{bundle.ListJoo2ContentViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2ContentController.prepareEdit}" value="#{bundle.ListJoo2ContentEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2ContentController.destroy}" value="#{bundle.ListJoo2ContentDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2ContentController.prepareCreate}" value="#{bundle.ListJoo2ContentCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2ContentIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

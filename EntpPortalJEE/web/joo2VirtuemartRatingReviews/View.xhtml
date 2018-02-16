@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_virtuemartRatingReviewId}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.virtuemartRatingReviewId}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_virtuemartRatingReviewId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_virtuemartProductId}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.virtuemartProductId}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_virtuemartProductId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_comment}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.comment}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_comment}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_reviewOk}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.reviewOk}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_reviewOk}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_reviewRates}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.reviewRates}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_reviewRates}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_reviewRatingcount}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.reviewRatingcount}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_reviewRatingcount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_reviewRating}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.reviewRating}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_reviewRating}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_lastip}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.lastip}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_lastip}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.published}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartRatingReviewsLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartRatingReviewsController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartRatingReviewsTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartRatingReviewsController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartRatingReviewsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartRatingReviewsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartRatingReviewsController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartRatingReviewsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartRatingReviewsController.prepareList}" value="#{bundle.ViewJoo2VirtuemartRatingReviewsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartRatingReviewsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

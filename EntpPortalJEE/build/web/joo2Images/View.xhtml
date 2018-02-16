@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2ImagesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epImageId}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epImageId}" title="#{bundle.ViewJoo2ImagesTitle_epImageId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epImageSmallPath}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epImageSmallPath}" title="#{bundle.ViewJoo2ImagesTitle_epImageSmallPath}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epImageBigPath}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epImageBigPath}" title="#{bundle.ViewJoo2ImagesTitle_epImageBigPath}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epSourceClass}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epSourceClass}" title="#{bundle.ViewJoo2ImagesTitle_epSourceClass}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epSizeSmall}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epSizeSmall}" title="#{bundle.ViewJoo2ImagesTitle_epSizeSmall}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epSizeBigl}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epSizeBigl}" title="#{bundle.ViewJoo2ImagesTitle_epSizeBigl}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epSizeBig}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epSizeBig}" title="#{bundle.ViewJoo2ImagesTitle_epSizeBig}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epSizeSmallDb}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epSizeSmallDb}" title="#{bundle.ViewJoo2ImagesTitle_epSizeSmallDb}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epSizeBigDb}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epSizeBigDb}" title="#{bundle.ViewJoo2ImagesTitle_epSizeBigDb}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epSizeType}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epSizeType}" title="#{bundle.ViewJoo2ImagesTitle_epSizeType}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epBigSizeType}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epBigSizeType}" title="#{bundle.ViewJoo2ImagesTitle_epBigSizeType}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epSmallSizeType}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epSmallSizeType}" title="#{bundle.ViewJoo2ImagesTitle_epSmallSizeType}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epBigWidth}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epBigWidth}" title="#{bundle.ViewJoo2ImagesTitle_epBigWidth}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epBigHeight}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epBigHeight}" title="#{bundle.ViewJoo2ImagesTitle_epBigHeight}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epSmallWidth}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epSmallWidth}" title="#{bundle.ViewJoo2ImagesTitle_epSmallWidth}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ImagesLabel_epSmallHeight}"/>
+                    <h:outputText value="#{joo2ImagesController.selected.epSmallHeight}" title="#{bundle.ViewJoo2ImagesTitle_epSmallHeight}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2ImagesController.destroyAndView}" value="#{bundle.ViewJoo2ImagesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2ImagesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2ImagesController.prepareCreate}" value="#{bundle.ViewJoo2ImagesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2ImagesController.prepareList}" value="#{bundle.ViewJoo2ImagesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2ImagesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartProductPricesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_virtuemartProductPriceId}" for="virtuemartProductPriceId" />
+                    <h:inputText id="virtuemartProductPriceId" value="#{joo2VirtuemartProductPricesController.selected.virtuemartProductPriceId}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_virtuemartProductPriceId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductPricesRequiredMessage_virtuemartProductPriceId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_virtuemartProductId}" for="virtuemartProductId" />
+                    <h:inputText id="virtuemartProductId" value="#{joo2VirtuemartProductPricesController.selected.virtuemartProductId}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_virtuemartProductId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductPricesRequiredMessage_virtuemartProductId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_virtuemartShoppergroupId}" for="virtuemartShoppergroupId" />
+                    <h:inputText id="virtuemartShoppergroupId" value="#{joo2VirtuemartProductPricesController.selected.virtuemartShoppergroupId}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_virtuemartShoppergroupId}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_productPrice}" for="productPrice" />
+                    <h:inputText id="productPrice" value="#{joo2VirtuemartProductPricesController.selected.productPrice}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_productPrice}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_override}" for="override" />
+                    <h:inputText id="override" value="#{joo2VirtuemartProductPricesController.selected.override}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_override}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductPricesRequiredMessage_override}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_productOverridePrice}" for="productOverridePrice" />
+                    <h:inputText id="productOverridePrice" value="#{joo2VirtuemartProductPricesController.selected.productOverridePrice}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_productOverridePrice}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductPricesRequiredMessage_productOverridePrice}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_productTaxId}" for="productTaxId" />
+                    <h:inputText id="productTaxId" value="#{joo2VirtuemartProductPricesController.selected.productTaxId}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_productTaxId}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_productDiscountId}" for="productDiscountId" />
+                    <h:inputText id="productDiscountId" value="#{joo2VirtuemartProductPricesController.selected.productDiscountId}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_productDiscountId}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_productCurrency}" for="productCurrency" />
+                    <h:inputText id="productCurrency" value="#{joo2VirtuemartProductPricesController.selected.productCurrency}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_productCurrency}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_productPriceVdate}" for="productPriceVdate" />
+                    <h:inputText id="productPriceVdate" value="#{joo2VirtuemartProductPricesController.selected.productPriceVdate}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_productPriceVdate}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductPricesRequiredMessage_productPriceVdate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_productPriceEdate}" for="productPriceEdate" />
+                    <h:inputText id="productPriceEdate" value="#{joo2VirtuemartProductPricesController.selected.productPriceEdate}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_productPriceEdate}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductPricesRequiredMessage_productPriceEdate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_priceQuantityStart}" for="priceQuantityStart" />
+                    <h:inputText id="priceQuantityStart" value="#{joo2VirtuemartProductPricesController.selected.priceQuantityStart}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_priceQuantityStart}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductPricesRequiredMessage_priceQuantityStart}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_priceQuantityEnd}" for="priceQuantityEnd" />
+                    <h:inputText id="priceQuantityEnd" value="#{joo2VirtuemartProductPricesController.selected.priceQuantityEnd}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_priceQuantityEnd}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductPricesRequiredMessage_priceQuantityEnd}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartProductPricesController.selected.createdOn}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_createdOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductPricesRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartProductPricesController.selected.createdBy}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductPricesRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartProductPricesController.selected.modifiedOn}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_modifiedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductPricesRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartProductPricesController.selected.modifiedBy}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductPricesRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartProductPricesController.selected.lockedOn}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_lockedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductPricesRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductPricesLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartProductPricesController.selected.lockedBy}" title="#{bundle.EditJoo2VirtuemartProductPricesTitle_lockedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductPricesRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartProductPricesController.update}" value="#{bundle.EditJoo2VirtuemartProductPricesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartProductPricesViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartProductPricesController.prepareList}" value="#{bundle.EditJoo2VirtuemartProductPricesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartProductPricesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

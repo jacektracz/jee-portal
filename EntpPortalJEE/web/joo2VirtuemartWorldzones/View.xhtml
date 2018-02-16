@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_virtuemartWorldzoneId}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.virtuemartWorldzoneId}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_virtuemartWorldzoneId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_virtuemartVendorId}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.virtuemartVendorId}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_virtuemartVendorId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_zoneName}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.zoneName}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_zoneName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_zoneCost}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.zoneCost}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_zoneCost}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_zoneLimit}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.zoneLimit}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_zoneLimit}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_zoneDescription}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.zoneDescription}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_zoneDescription}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_zoneTaxRate}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.zoneTaxRate}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_zoneTaxRate}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_ordering}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.ordering}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_shared}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.shared}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_shared}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.published}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWorldzonesLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartWorldzonesController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartWorldzonesTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartWorldzonesController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartWorldzonesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartWorldzonesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartWorldzonesController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartWorldzonesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartWorldzonesController.prepareList}" value="#{bundle.ViewJoo2VirtuemartWorldzonesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartWorldzonesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

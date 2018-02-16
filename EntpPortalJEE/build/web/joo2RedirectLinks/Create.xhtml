@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2RedirectLinksTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2RedirectLinksLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2RedirectLinksController.selected.id}" title="#{bundle.CreateJoo2RedirectLinksTitle_id}" required="true" requiredMessage="#{bundle.CreateJoo2RedirectLinksRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2RedirectLinksLabel_oldUrl}" for="oldUrl" />
+                    <h:inputText id="oldUrl" value="#{joo2RedirectLinksController.selected.oldUrl}" title="#{bundle.CreateJoo2RedirectLinksTitle_oldUrl}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2RedirectLinksLabel_newUrl}" for="newUrl" />
+                    <h:inputText id="newUrl" value="#{joo2RedirectLinksController.selected.newUrl}" title="#{bundle.CreateJoo2RedirectLinksTitle_newUrl}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2RedirectLinksLabel_referer}" for="referer" />
+                    <h:inputText id="referer" value="#{joo2RedirectLinksController.selected.referer}" title="#{bundle.CreateJoo2RedirectLinksTitle_referer}" required="true" requiredMessage="#{bundle.CreateJoo2RedirectLinksRequiredMessage_referer}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2RedirectLinksLabel_comment}" for="comment" />
+                    <h:inputText id="comment" value="#{joo2RedirectLinksController.selected.comment}" title="#{bundle.CreateJoo2RedirectLinksTitle_comment}" required="true" requiredMessage="#{bundle.CreateJoo2RedirectLinksRequiredMessage_comment}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2RedirectLinksLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2RedirectLinksController.selected.published}" title="#{bundle.CreateJoo2RedirectLinksTitle_published}" required="true" requiredMessage="#{bundle.CreateJoo2RedirectLinksRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2RedirectLinksLabel_createdDate}" for="createdDate" />
+                    <h:inputText id="createdDate" value="#{joo2RedirectLinksController.selected.createdDate}" title="#{bundle.CreateJoo2RedirectLinksTitle_createdDate}" required="true" requiredMessage="#{bundle.CreateJoo2RedirectLinksRequiredMessage_createdDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2RedirectLinksLabel_modifiedDate}" for="modifiedDate" />
+                    <h:inputText id="modifiedDate" value="#{joo2RedirectLinksController.selected.modifiedDate}" title="#{bundle.CreateJoo2RedirectLinksTitle_modifiedDate}" required="true" requiredMessage="#{bundle.CreateJoo2RedirectLinksRequiredMessage_modifiedDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2RedirectLinksController.create}" value="#{bundle.CreateJoo2RedirectLinksSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2RedirectLinksController.prepareList}" value="#{bundle.CreateJoo2RedirectLinksShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2RedirectLinksIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

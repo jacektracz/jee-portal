@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2UsersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2UsersEmpty}" rendered="#{joo2UsersController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2UsersController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2UsersController.pagination.pageFirstItem + 1}..#{joo2UsersController.pagination.pageLastItem + 1}/#{joo2UsersController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2UsersController.previous}" value="#{bundle.Previous} #{joo2UsersController.pagination.pageSize}" rendered="#{joo2UsersController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2UsersController.next}" value="#{bundle.Next} #{joo2UsersController.pagination.pageSize}" rendered="#{joo2UsersController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2UsersController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UsersTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UsersTitle_name}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.name}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UsersTitle_username}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.username}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UsersTitle_email}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.email}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UsersTitle_password}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.password}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UsersTitle_usertype}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.usertype}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UsersTitle_block}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.block}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UsersTitle_sendEmail}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.sendEmail}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UsersTitle_registerDate}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.registerDate}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UsersTitle_lastvisitDate}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lastvisitDate}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UsersTitle_activation}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.activation}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UsersTitle_params}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.params}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2UsersController.prepareView}" value="#{bundle.ListJoo2UsersViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2UsersController.prepareEdit}" value="#{bundle.ListJoo2UsersEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2UsersController.destroy}" value="#{bundle.ListJoo2UsersDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2UsersController.prepareCreate}" value="#{bundle.ListJoo2UsersCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2UsersIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartCountriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCountriesLabel_virtuemartCountryId}" for="virtuemartCountryId" />
+                    <h:inputText id="virtuemartCountryId" value="#{joo2VirtuemartCountriesController.selected.virtuemartCountryId}" title="#{bundle.EditJoo2VirtuemartCountriesTitle_virtuemartCountryId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCountriesRequiredMessage_virtuemartCountryId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCountriesLabel_virtuemartWorldzoneId}" for="virtuemartWorldzoneId" />
+                    <h:inputText id="virtuemartWorldzoneId" value="#{joo2VirtuemartCountriesController.selected.virtuemartWorldzoneId}" title="#{bundle.EditJoo2VirtuemartCountriesTitle_virtuemartWorldzoneId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCountriesRequiredMessage_virtuemartWorldzoneId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCountriesLabel_countryName}" for="countryName" />
+                    <h:inputText id="countryName" value="#{joo2VirtuemartCountriesController.selected.countryName}" title="#{bundle.EditJoo2VirtuemartCountriesTitle_countryName}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCountriesLabel_country3Code}" for="country3Code" />
+                    <h:inputText id="country3Code" value="#{joo2VirtuemartCountriesController.selected.country3Code}" title="#{bundle.EditJoo2VirtuemartCountriesTitle_country3Code}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCountriesLabel_country2Code}" for="country2Code" />
+                    <h:inputText id="country2Code" value="#{joo2VirtuemartCountriesController.selected.country2Code}" title="#{bundle.EditJoo2VirtuemartCountriesTitle_country2Code}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCountriesLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2VirtuemartCountriesController.selected.ordering}" title="#{bundle.EditJoo2VirtuemartCountriesTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCountriesRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCountriesLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartCountriesController.selected.published}" title="#{bundle.EditJoo2VirtuemartCountriesTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCountriesRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCountriesLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartCountriesController.selected.createdOn}" title="#{bundle.EditJoo2VirtuemartCountriesTitle_createdOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCountriesRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCountriesLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartCountriesController.selected.createdBy}" title="#{bundle.EditJoo2VirtuemartCountriesTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCountriesRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCountriesLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartCountriesController.selected.modifiedOn}" title="#{bundle.EditJoo2VirtuemartCountriesTitle_modifiedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCountriesRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCountriesLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartCountriesController.selected.modifiedBy}" title="#{bundle.EditJoo2VirtuemartCountriesTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCountriesRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCountriesLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartCountriesController.selected.lockedOn}" title="#{bundle.EditJoo2VirtuemartCountriesTitle_lockedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCountriesRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCountriesLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartCountriesController.selected.lockedBy}" title="#{bundle.EditJoo2VirtuemartCountriesTitle_lockedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCountriesRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartCountriesController.update}" value="#{bundle.EditJoo2VirtuemartCountriesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartCountriesViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCountriesController.prepareList}" value="#{bundle.EditJoo2VirtuemartCountriesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartCountriesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

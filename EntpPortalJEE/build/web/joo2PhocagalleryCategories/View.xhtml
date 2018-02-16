@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_id}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.id}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_parentId}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.parentId}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_parentId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_ownerId}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.ownerId}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_ownerId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_title}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.title}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_title}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_name}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.name}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_alias}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.alias}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_alias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_image}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.image}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_image}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_section}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.section}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_section}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_imagePosition}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.imagePosition}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_imagePosition}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_description}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.description}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_description}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_date}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.date}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_date}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_published}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.published}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_approved}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.approved}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_approved}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.checkedOut}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.checkedOutTime}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_editor}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.editor}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_editor}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_ordering}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.ordering}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_access}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.access}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_access}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_count}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.count}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_count}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_hits}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.hits}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_hits}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_accessuserid}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.accessuserid}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_accessuserid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_uploaduserid}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.uploaduserid}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_uploaduserid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_deleteuserid}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.deleteuserid}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_deleteuserid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_userfolder}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.userfolder}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_userfolder}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_latitude}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.latitude}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_latitude}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_longitude}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.longitude}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_longitude}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_zoom}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.zoom}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_zoom}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_geotitle}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.geotitle}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_geotitle}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_extid}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.extid}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_extid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_exta}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.exta}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_exta}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_extu}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.extu}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_extu}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_extauth}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.extauth}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_extauth}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_extfbuid}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.extfbuid}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_extfbuid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_extfbcatid}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.extfbcatid}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_extfbcatid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_params}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.params}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_metakey}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.metakey}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_metakey}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_metadesc}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.metadesc}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_metadesc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_metadata}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.metadata}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_metadata}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCategoriesLabel_language}"/>
+                    <h:outputText value="#{joo2PhocagalleryCategoriesController.selected.language}" title="#{bundle.ViewJoo2PhocagalleryCategoriesTitle_language}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryCategoriesController.destroyAndView}" value="#{bundle.ViewJoo2PhocagalleryCategoriesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2PhocagalleryCategoriesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryCategoriesController.prepareCreate}" value="#{bundle.ViewJoo2PhocagalleryCategoriesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryCategoriesController.prepareList}" value="#{bundle.ViewJoo2PhocagalleryCategoriesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2PhocagalleryCategoriesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2UpdatesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2UpdatesEmpty}" rendered="#{joo2UpdatesController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2UpdatesController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2UpdatesController.pagination.pageFirstItem + 1}..#{joo2UpdatesController.pagination.pageLastItem + 1}/#{joo2UpdatesController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2UpdatesController.previous}" value="#{bundle.Previous} #{joo2UpdatesController.pagination.pageSize}" rendered="#{joo2UpdatesController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2UpdatesController.next}" value="#{bundle.Next} #{joo2UpdatesController.pagination.pageSize}" rendered="#{joo2UpdatesController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2UpdatesController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UpdatesTitle_updateId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.updateId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UpdatesTitle_updateSiteId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.updateSiteId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UpdatesTitle_extensionId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.extensionId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UpdatesTitle_categoryid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.categoryid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UpdatesTitle_name}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.name}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UpdatesTitle_description}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.description}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UpdatesTitle_element}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.element}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UpdatesTitle_type}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.type}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UpdatesTitle_folder}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.folder}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UpdatesTitle_clientId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.clientId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UpdatesTitle_version}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.version}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UpdatesTitle_data}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.data}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UpdatesTitle_detailsurl}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.detailsurl}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2UpdatesController.prepareView}" value="#{bundle.ListJoo2UpdatesViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2UpdatesController.prepareEdit}" value="#{bundle.ListJoo2UpdatesEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2UpdatesController.destroy}" value="#{bundle.ListJoo2UpdatesDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2UpdatesController.prepareCreate}" value="#{bundle.ListJoo2UpdatesCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2UpdatesIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

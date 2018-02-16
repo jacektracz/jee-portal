@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2BannersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2BannersController.selected.id}" title="#{bundle.CreateJoo2BannersTitle_id}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_cid}" for="cid" />
+                    <h:inputText id="cid" value="#{joo2BannersController.selected.cid}" title="#{bundle.CreateJoo2BannersTitle_cid}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_cid}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_type}" for="type" />
+                    <h:inputText id="type" value="#{joo2BannersController.selected.type}" title="#{bundle.CreateJoo2BannersTitle_type}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_type}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{joo2BannersController.selected.name}" title="#{bundle.CreateJoo2BannersTitle_name}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_name}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_alias}" for="alias" />
+                    <h:inputText id="alias" value="#{joo2BannersController.selected.alias}" title="#{bundle.CreateJoo2BannersTitle_alias}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_alias}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_imptotal}" for="imptotal" />
+                    <h:inputText id="imptotal" value="#{joo2BannersController.selected.imptotal}" title="#{bundle.CreateJoo2BannersTitle_imptotal}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_imptotal}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_impmade}" for="impmade" />
+                    <h:inputText id="impmade" value="#{joo2BannersController.selected.impmade}" title="#{bundle.CreateJoo2BannersTitle_impmade}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_impmade}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_clicks}" for="clicks" />
+                    <h:inputText id="clicks" value="#{joo2BannersController.selected.clicks}" title="#{bundle.CreateJoo2BannersTitle_clicks}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_clicks}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_clickurl}" for="clickurl" />
+                    <h:inputText id="clickurl" value="#{joo2BannersController.selected.clickurl}" title="#{bundle.CreateJoo2BannersTitle_clickurl}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_clickurl}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_state}" for="state" />
+                    <h:inputText id="state" value="#{joo2BannersController.selected.state}" title="#{bundle.CreateJoo2BannersTitle_state}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_state}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_catid}" for="catid" />
+                    <h:inputText id="catid" value="#{joo2BannersController.selected.catid}" title="#{bundle.CreateJoo2BannersTitle_catid}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_catid}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_description}" for="description" />
+                    <h:inputTextarea rows="4" cols="30" id="description" value="#{joo2BannersController.selected.description}" title="#{bundle.CreateJoo2BannersTitle_description}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_description}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_custombannercode}" for="custombannercode" />
+                    <h:inputText id="custombannercode" value="#{joo2BannersController.selected.custombannercode}" title="#{bundle.CreateJoo2BannersTitle_custombannercode}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_custombannercode}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_sticky}" for="sticky" />
+                    <h:inputText id="sticky" value="#{joo2BannersController.selected.sticky}" title="#{bundle.CreateJoo2BannersTitle_sticky}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_sticky}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2BannersController.selected.ordering}" title="#{bundle.CreateJoo2BannersTitle_ordering}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_metakey}" for="metakey" />
+                    <h:inputTextarea rows="4" cols="30" id="metakey" value="#{joo2BannersController.selected.metakey}" title="#{bundle.CreateJoo2BannersTitle_metakey}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_metakey}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_params}" for="params" />
+                    <h:inputTextarea rows="4" cols="30" id="params" value="#{joo2BannersController.selected.params}" title="#{bundle.CreateJoo2BannersTitle_params}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_params}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_ownPrefix}" for="ownPrefix" />
+                    <h:inputText id="ownPrefix" value="#{joo2BannersController.selected.ownPrefix}" title="#{bundle.CreateJoo2BannersTitle_ownPrefix}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_ownPrefix}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_metakeyPrefix}" for="metakeyPrefix" />
+                    <h:inputText id="metakeyPrefix" value="#{joo2BannersController.selected.metakeyPrefix}" title="#{bundle.CreateJoo2BannersTitle_metakeyPrefix}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_metakeyPrefix}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_purchaseType}" for="purchaseType" />
+                    <h:inputText id="purchaseType" value="#{joo2BannersController.selected.purchaseType}" title="#{bundle.CreateJoo2BannersTitle_purchaseType}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_purchaseType}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_trackClicks}" for="trackClicks" />
+                    <h:inputText id="trackClicks" value="#{joo2BannersController.selected.trackClicks}" title="#{bundle.CreateJoo2BannersTitle_trackClicks}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_trackClicks}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_trackImpressions}" for="trackImpressions" />
+                    <h:inputText id="trackImpressions" value="#{joo2BannersController.selected.trackImpressions}" title="#{bundle.CreateJoo2BannersTitle_trackImpressions}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_trackImpressions}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_checkedOut}" for="checkedOut" />
+                    <h:inputText id="checkedOut" value="#{joo2BannersController.selected.checkedOut}" title="#{bundle.CreateJoo2BannersTitle_checkedOut}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_checkedOut}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_checkedOutTime}" for="checkedOutTime" />
+                    <h:inputText id="checkedOutTime" value="#{joo2BannersController.selected.checkedOutTime}" title="#{bundle.CreateJoo2BannersTitle_checkedOutTime}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_publishUp}" for="publishUp" />
+                    <h:inputText id="publishUp" value="#{joo2BannersController.selected.publishUp}" title="#{bundle.CreateJoo2BannersTitle_publishUp}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_publishUp}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_publishDown}" for="publishDown" />
+                    <h:inputText id="publishDown" value="#{joo2BannersController.selected.publishDown}" title="#{bundle.CreateJoo2BannersTitle_publishDown}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_publishDown}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_reset}" for="reset" />
+                    <h:inputText id="reset" value="#{joo2BannersController.selected.reset}" title="#{bundle.CreateJoo2BannersTitle_reset}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_reset}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_created}" for="created" />
+                    <h:inputText id="created" value="#{joo2BannersController.selected.created}" title="#{bundle.CreateJoo2BannersTitle_created}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2BannersLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2BannersController.selected.language}" title="#{bundle.CreateJoo2BannersTitle_language}" required="true" requiredMessage="#{bundle.CreateJoo2BannersRequiredMessage_language}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2BannersController.create}" value="#{bundle.CreateJoo2BannersSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2BannersController.prepareList}" value="#{bundle.CreateJoo2BannersShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2BannersIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

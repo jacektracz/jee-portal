@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2VirtuemartOrdersEmpty}" rendered="#{joo2VirtuemartOrdersController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2VirtuemartOrdersController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2VirtuemartOrdersController.pagination.pageFirstItem + 1}..#{joo2VirtuemartOrdersController.pagination.pageLastItem + 1}/#{joo2VirtuemartOrdersController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2VirtuemartOrdersController.previous}" value="#{bundle.Previous} #{joo2VirtuemartOrdersController.pagination.pageSize}" rendered="#{joo2VirtuemartOrdersController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2VirtuemartOrdersController.next}" value="#{bundle.Next} #{joo2VirtuemartOrdersController.pagination.pageSize}" rendered="#{joo2VirtuemartOrdersController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2VirtuemartOrdersController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_virtuemartOrderId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.virtuemartOrderId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_virtuemartUserId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.virtuemartUserId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_virtuemartVendorId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.virtuemartVendorId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_orderNumber}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderNumber}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_orderPass}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderPass}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_virtuemartUserinfoId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.virtuemartUserinfoId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_orderTotal}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderTotal}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_orderSubtotal}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderSubtotal}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_orderTax}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderTax}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_orderTaxDetails}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderTaxDetails}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_orderShipping}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderShipping}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_orderShippingTax}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderShippingTax}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_couponDiscount}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.couponDiscount}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_couponCode}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.couponCode}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_orderDiscount}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderDiscount}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_orderCurrency}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderCurrency}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_orderStatus}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderStatus}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_userCurrencyId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userCurrencyId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_userCurrencyRate}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userCurrencyRate}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_paymentMethodId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.paymentMethodId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_shipMethodId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.shipMethodId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_customerNote}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.customerNote}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_ipAddress}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ipAddress}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_createdOn}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdOn}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_createdBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_modifiedOn}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modifiedOn}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_modifiedBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modifiedBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_lockedOn}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lockedOn}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrdersTitle_lockedBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lockedBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2VirtuemartOrdersController.prepareView}" value="#{bundle.ListJoo2VirtuemartOrdersViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2VirtuemartOrdersController.prepareEdit}" value="#{bundle.ListJoo2VirtuemartOrdersEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2VirtuemartOrdersController.destroy}" value="#{bundle.ListJoo2VirtuemartOrdersDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartOrdersController.prepareCreate}" value="#{bundle.ListJoo2VirtuemartOrdersCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2VirtuemartOrdersIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2KunenaVersionTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2KunenaVersionLabel_id}"/>
+                    <h:outputText value="#{joo2KunenaVersionController.selected.id}" title="#{bundle.ViewJoo2KunenaVersionTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaVersionLabel_version}"/>
+                    <h:outputText value="#{joo2KunenaVersionController.selected.version}" title="#{bundle.ViewJoo2KunenaVersionTitle_version}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaVersionLabel_versiondate}"/>
+                    <h:outputText value="#{joo2KunenaVersionController.selected.versiondate}" title="#{bundle.ViewJoo2KunenaVersionTitle_versiondate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaVersionLabel_installdate}"/>
+                    <h:outputText value="#{joo2KunenaVersionController.selected.installdate}" title="#{bundle.ViewJoo2KunenaVersionTitle_installdate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaVersionLabel_build}"/>
+                    <h:outputText value="#{joo2KunenaVersionController.selected.build}" title="#{bundle.ViewJoo2KunenaVersionTitle_build}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaVersionLabel_versionname}"/>
+                    <h:outputText value="#{joo2KunenaVersionController.selected.versionname}" title="#{bundle.ViewJoo2KunenaVersionTitle_versionname}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaVersionLabel_state}"/>
+                    <h:outputText value="#{joo2KunenaVersionController.selected.state}" title="#{bundle.ViewJoo2KunenaVersionTitle_state}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2KunenaVersionController.destroyAndView}" value="#{bundle.ViewJoo2KunenaVersionDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2KunenaVersionEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaVersionController.prepareCreate}" value="#{bundle.ViewJoo2KunenaVersionCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2KunenaVersionController.prepareList}" value="#{bundle.ViewJoo2KunenaVersionShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2KunenaVersionIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

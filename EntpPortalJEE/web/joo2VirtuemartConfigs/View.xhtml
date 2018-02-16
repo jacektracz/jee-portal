@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartConfigsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartConfigsLabel_virtuemartConfigId}"/>
+                    <h:outputText value="#{joo2VirtuemartConfigsController.selected.virtuemartConfigId}" title="#{bundle.ViewJoo2VirtuemartConfigsTitle_virtuemartConfigId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartConfigsLabel_config}"/>
+                    <h:outputText value="#{joo2VirtuemartConfigsController.selected.config}" title="#{bundle.ViewJoo2VirtuemartConfigsTitle_config}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartConfigsLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartConfigsController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartConfigsTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartConfigsLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartConfigsController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartConfigsTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartConfigsLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartConfigsController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartConfigsTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartConfigsLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartConfigsController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartConfigsTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartConfigsLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartConfigsController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartConfigsTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartConfigsLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartConfigsController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartConfigsTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartConfigsController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartConfigsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartConfigsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartConfigsController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartConfigsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartConfigsController.prepareList}" value="#{bundle.ViewJoo2VirtuemartConfigsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartConfigsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

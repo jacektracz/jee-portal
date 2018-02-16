@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_virtuemartVendorId}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.virtuemartVendorId}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_virtuemartVendorId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_vendorName}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.vendorName}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_vendorName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_vendorPhone}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.vendorPhone}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_vendorPhone}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_vendorStoreName}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.vendorStoreName}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_vendorStoreName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_vendorStoreDesc}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.vendorStoreDesc}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_vendorStoreDesc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_vendorCurrency}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.vendorCurrency}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_vendorCurrency}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_vendorImagePath}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.vendorImagePath}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_vendorImagePath}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_vendorTermsOfService}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.vendorTermsOfService}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_vendorTermsOfService}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_vendorUrl}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.vendorUrl}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_vendorUrl}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_vendorMinPov}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.vendorMinPov}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_vendorMinPov}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_vendorFreeshipping}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.vendorFreeshipping}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_vendorFreeshipping}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_vendorAcceptedCurrencies}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.vendorAcceptedCurrencies}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_vendorAcceptedCurrencies}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_vendorAddressFormat}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.vendorAddressFormat}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_vendorAddressFormat}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_vendorDateFormat}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.vendorDateFormat}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_vendorDateFormat}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_config}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.config}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_config}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorsLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorsController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartVendorsTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartVendorsController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartVendorsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartVendorsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartVendorsController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartVendorsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartVendorsController.prepareList}" value="#{bundle.ViewJoo2VirtuemartVendorsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartVendorsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

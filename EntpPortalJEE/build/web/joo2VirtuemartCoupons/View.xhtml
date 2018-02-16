@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_virtuemartCouponId}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.virtuemartCouponId}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_virtuemartCouponId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_couponCode}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.couponCode}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_couponCode}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_percentOrTotal}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.percentOrTotal}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_percentOrTotal}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_couponType}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.couponType}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_couponType}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_couponValue}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.couponValue}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_couponValue}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_couponStartDate}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.couponStartDate}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_couponStartDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_couponExpiryDate}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.couponExpiryDate}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_couponExpiryDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_couponValueValid}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.couponValueValid}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_couponValueValid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.published}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCouponsLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCouponsController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartCouponsTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCouponsController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartCouponsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartCouponsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCouponsController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartCouponsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCouponsController.prepareList}" value="#{bundle.ViewJoo2VirtuemartCouponsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartCouponsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

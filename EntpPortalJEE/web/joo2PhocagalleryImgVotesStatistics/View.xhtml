@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsLabel_id}"/>
+                    <h:outputText value="#{joo2PhocagalleryImgVotesStatisticsController.selected.id}" title="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsLabel_imgid}"/>
+                    <h:outputText value="#{joo2PhocagalleryImgVotesStatisticsController.selected.imgid}" title="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsTitle_imgid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsLabel_count}"/>
+                    <h:outputText value="#{joo2PhocagalleryImgVotesStatisticsController.selected.count}" title="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsTitle_count}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsLabel_average}"/>
+                    <h:outputText value="#{joo2PhocagalleryImgVotesStatisticsController.selected.average}" title="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsTitle_average}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsLabel_language}"/>
+                    <h:outputText value="#{joo2PhocagalleryImgVotesStatisticsController.selected.language}" title="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsTitle_language}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryImgVotesStatisticsController.destroyAndView}" value="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryImgVotesStatisticsController.prepareCreate}" value="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryImgVotesStatisticsController.prepareList}" value="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2PhocagalleryImgVotesStatisticsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

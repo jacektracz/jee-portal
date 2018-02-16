@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2ModulesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2ModulesController.selected.id}" title="#{bundle.CreateJoo2ModulesTitle_id}" required="true" requiredMessage="#{bundle.CreateJoo2ModulesRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2ModulesController.selected.title}" title="#{bundle.CreateJoo2ModulesTitle_title}" required="true" requiredMessage="#{bundle.CreateJoo2ModulesRequiredMessage_title}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_note}" for="note" />
+                    <h:inputText id="note" value="#{joo2ModulesController.selected.note}" title="#{bundle.CreateJoo2ModulesTitle_note}" required="true" requiredMessage="#{bundle.CreateJoo2ModulesRequiredMessage_note}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_content}" for="content" />
+                    <h:inputTextarea rows="4" cols="30" id="content" value="#{joo2ModulesController.selected.content}" title="#{bundle.CreateJoo2ModulesTitle_content}" required="true" requiredMessage="#{bundle.CreateJoo2ModulesRequiredMessage_content}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2ModulesController.selected.ordering}" title="#{bundle.CreateJoo2ModulesTitle_ordering}" required="true" requiredMessage="#{bundle.CreateJoo2ModulesRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_position}" for="position" />
+                    <h:inputText id="position" value="#{joo2ModulesController.selected.position}" title="#{bundle.CreateJoo2ModulesTitle_position}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_checkedOut}" for="checkedOut" />
+                    <h:inputText id="checkedOut" value="#{joo2ModulesController.selected.checkedOut}" title="#{bundle.CreateJoo2ModulesTitle_checkedOut}" required="true" requiredMessage="#{bundle.CreateJoo2ModulesRequiredMessage_checkedOut}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_checkedOutTime}" for="checkedOutTime" />
+                    <h:inputText id="checkedOutTime" value="#{joo2ModulesController.selected.checkedOutTime}" title="#{bundle.CreateJoo2ModulesTitle_checkedOutTime}" required="true" requiredMessage="#{bundle.CreateJoo2ModulesRequiredMessage_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_publishUp}" for="publishUp" />
+                    <h:inputText id="publishUp" value="#{joo2ModulesController.selected.publishUp}" title="#{bundle.CreateJoo2ModulesTitle_publishUp}" required="true" requiredMessage="#{bundle.CreateJoo2ModulesRequiredMessage_publishUp}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_publishDown}" for="publishDown" />
+                    <h:inputText id="publishDown" value="#{joo2ModulesController.selected.publishDown}" title="#{bundle.CreateJoo2ModulesTitle_publishDown}" required="true" requiredMessage="#{bundle.CreateJoo2ModulesRequiredMessage_publishDown}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2ModulesController.selected.published}" title="#{bundle.CreateJoo2ModulesTitle_published}" required="true" requiredMessage="#{bundle.CreateJoo2ModulesRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_module}" for="module" />
+                    <h:inputText id="module" value="#{joo2ModulesController.selected.module}" title="#{bundle.CreateJoo2ModulesTitle_module}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_access}" for="access" />
+                    <h:inputText id="access" value="#{joo2ModulesController.selected.access}" title="#{bundle.CreateJoo2ModulesTitle_access}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_showtitle}" for="showtitle" />
+                    <h:inputText id="showtitle" value="#{joo2ModulesController.selected.showtitle}" title="#{bundle.CreateJoo2ModulesTitle_showtitle}" required="true" requiredMessage="#{bundle.CreateJoo2ModulesRequiredMessage_showtitle}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_params}" for="params" />
+                    <h:inputTextarea rows="4" cols="30" id="params" value="#{joo2ModulesController.selected.params}" title="#{bundle.CreateJoo2ModulesTitle_params}" required="true" requiredMessage="#{bundle.CreateJoo2ModulesRequiredMessage_params}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_clientId}" for="clientId" />
+                    <h:inputText id="clientId" value="#{joo2ModulesController.selected.clientId}" title="#{bundle.CreateJoo2ModulesTitle_clientId}" required="true" requiredMessage="#{bundle.CreateJoo2ModulesRequiredMessage_clientId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2ModulesController.selected.language}" title="#{bundle.CreateJoo2ModulesTitle_language}" required="true" requiredMessage="#{bundle.CreateJoo2ModulesRequiredMessage_language}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_epRootCatId}" for="epRootCatId" />
+                    <h:inputText id="epRootCatId" value="#{joo2ModulesController.selected.epRootCatId}" title="#{bundle.CreateJoo2ModulesTitle_epRootCatId}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2ModulesLabel_epRootMenuId}" for="epRootMenuId" />
+                    <h:inputText id="epRootMenuId" value="#{joo2ModulesController.selected.epRootMenuId}" title="#{bundle.CreateJoo2ModulesTitle_epRootMenuId}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2ModulesController.create}" value="#{bundle.CreateJoo2ModulesSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2ModulesController.prepareList}" value="#{bundle.CreateJoo2ModulesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2ModulesIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

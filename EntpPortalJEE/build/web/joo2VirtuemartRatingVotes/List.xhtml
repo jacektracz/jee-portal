@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2VirtuemartRatingVotesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2VirtuemartRatingVotesEmpty}" rendered="#{joo2VirtuemartRatingVotesController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2VirtuemartRatingVotesController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2VirtuemartRatingVotesController.pagination.pageFirstItem + 1}..#{joo2VirtuemartRatingVotesController.pagination.pageLastItem + 1}/#{joo2VirtuemartRatingVotesController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2VirtuemartRatingVotesController.previous}" value="#{bundle.Previous} #{joo2VirtuemartRatingVotesController.pagination.pageSize}" rendered="#{joo2VirtuemartRatingVotesController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2VirtuemartRatingVotesController.next}" value="#{bundle.Next} #{joo2VirtuemartRatingVotesController.pagination.pageSize}" rendered="#{joo2VirtuemartRatingVotesController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2VirtuemartRatingVotesController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartRatingVotesTitle_virtuemartRatingVoteId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.virtuemartRatingVoteId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartRatingVotesTitle_virtuemartProductId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.virtuemartProductId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartRatingVotesTitle_vote}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.vote}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartRatingVotesTitle_lastip}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lastip}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartRatingVotesTitle_createdOn}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdOn}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartRatingVotesTitle_createdBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartRatingVotesTitle_modifiedOn}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modifiedOn}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartRatingVotesTitle_modifiedBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modifiedBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2VirtuemartRatingVotesController.prepareView}" value="#{bundle.ListJoo2VirtuemartRatingVotesViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2VirtuemartRatingVotesController.prepareEdit}" value="#{bundle.ListJoo2VirtuemartRatingVotesEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2VirtuemartRatingVotesController.destroy}" value="#{bundle.ListJoo2VirtuemartRatingVotesDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartRatingVotesController.prepareCreate}" value="#{bundle.ListJoo2VirtuemartRatingVotesCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2VirtuemartRatingVotesIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

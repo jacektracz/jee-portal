@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2KunenaSessionsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2KunenaSessionsLabel_userid}"/>
+                    <h:outputText value="#{joo2KunenaSessionsController.selected.userid}" title="#{bundle.ViewJoo2KunenaSessionsTitle_userid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaSessionsLabel_allowed}"/>
+                    <h:outputText value="#{joo2KunenaSessionsController.selected.allowed}" title="#{bundle.ViewJoo2KunenaSessionsTitle_allowed}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaSessionsLabel_lasttime}"/>
+                    <h:outputText value="#{joo2KunenaSessionsController.selected.lasttime}" title="#{bundle.ViewJoo2KunenaSessionsTitle_lasttime}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaSessionsLabel_readtopics}"/>
+                    <h:outputText value="#{joo2KunenaSessionsController.selected.readtopics}" title="#{bundle.ViewJoo2KunenaSessionsTitle_readtopics}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaSessionsLabel_currvisit}"/>
+                    <h:outputText value="#{joo2KunenaSessionsController.selected.currvisit}" title="#{bundle.ViewJoo2KunenaSessionsTitle_currvisit}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2KunenaSessionsController.destroyAndView}" value="#{bundle.ViewJoo2KunenaSessionsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2KunenaSessionsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaSessionsController.prepareCreate}" value="#{bundle.ViewJoo2KunenaSessionsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2KunenaSessionsController.prepareList}" value="#{bundle.ViewJoo2KunenaSessionsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2KunenaSessionsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

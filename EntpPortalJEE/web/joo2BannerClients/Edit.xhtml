@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2BannerClientsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2BannerClientsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2BannerClientsController.selected.id}" title="#{bundle.EditJoo2BannerClientsTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2BannerClientsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2BannerClientsLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{joo2BannerClientsController.selected.name}" title="#{bundle.EditJoo2BannerClientsTitle_name}" required="true" requiredMessage="#{bundle.EditJoo2BannerClientsRequiredMessage_name}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2BannerClientsLabel_contact}" for="contact" />
+                    <h:inputText id="contact" value="#{joo2BannerClientsController.selected.contact}" title="#{bundle.EditJoo2BannerClientsTitle_contact}" required="true" requiredMessage="#{bundle.EditJoo2BannerClientsRequiredMessage_contact}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2BannerClientsLabel_email}" for="email" />
+                    <h:inputText id="email" value="#{joo2BannerClientsController.selected.email}" title="#{bundle.EditJoo2BannerClientsTitle_email}" required="true" requiredMessage="#{bundle.EditJoo2BannerClientsRequiredMessage_email}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2BannerClientsLabel_extrainfo}" for="extrainfo" />
+                    <h:inputTextarea rows="4" cols="30" id="extrainfo" value="#{joo2BannerClientsController.selected.extrainfo}" title="#{bundle.EditJoo2BannerClientsTitle_extrainfo}" required="true" requiredMessage="#{bundle.EditJoo2BannerClientsRequiredMessage_extrainfo}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2BannerClientsLabel_state}" for="state" />
+                    <h:inputText id="state" value="#{joo2BannerClientsController.selected.state}" title="#{bundle.EditJoo2BannerClientsTitle_state}" required="true" requiredMessage="#{bundle.EditJoo2BannerClientsRequiredMessage_state}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2BannerClientsLabel_checkedOut}" for="checkedOut" />
+                    <h:inputText id="checkedOut" value="#{joo2BannerClientsController.selected.checkedOut}" title="#{bundle.EditJoo2BannerClientsTitle_checkedOut}" required="true" requiredMessage="#{bundle.EditJoo2BannerClientsRequiredMessage_checkedOut}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2BannerClientsLabel_checkedOutTime}" for="checkedOutTime" />
+                    <h:inputText id="checkedOutTime" value="#{joo2BannerClientsController.selected.checkedOutTime}" title="#{bundle.EditJoo2BannerClientsTitle_checkedOutTime}" required="true" requiredMessage="#{bundle.EditJoo2BannerClientsRequiredMessage_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2BannerClientsLabel_metakey}" for="metakey" />
+                    <h:inputTextarea rows="4" cols="30" id="metakey" value="#{joo2BannerClientsController.selected.metakey}" title="#{bundle.EditJoo2BannerClientsTitle_metakey}" required="true" requiredMessage="#{bundle.EditJoo2BannerClientsRequiredMessage_metakey}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2BannerClientsLabel_ownPrefix}" for="ownPrefix" />
+                    <h:inputText id="ownPrefix" value="#{joo2BannerClientsController.selected.ownPrefix}" title="#{bundle.EditJoo2BannerClientsTitle_ownPrefix}" required="true" requiredMessage="#{bundle.EditJoo2BannerClientsRequiredMessage_ownPrefix}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2BannerClientsLabel_metakeyPrefix}" for="metakeyPrefix" />
+                    <h:inputText id="metakeyPrefix" value="#{joo2BannerClientsController.selected.metakeyPrefix}" title="#{bundle.EditJoo2BannerClientsTitle_metakeyPrefix}" required="true" requiredMessage="#{bundle.EditJoo2BannerClientsRequiredMessage_metakeyPrefix}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2BannerClientsLabel_purchaseType}" for="purchaseType" />
+                    <h:inputText id="purchaseType" value="#{joo2BannerClientsController.selected.purchaseType}" title="#{bundle.EditJoo2BannerClientsTitle_purchaseType}" required="true" requiredMessage="#{bundle.EditJoo2BannerClientsRequiredMessage_purchaseType}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2BannerClientsLabel_trackClicks}" for="trackClicks" />
+                    <h:inputText id="trackClicks" value="#{joo2BannerClientsController.selected.trackClicks}" title="#{bundle.EditJoo2BannerClientsTitle_trackClicks}" required="true" requiredMessage="#{bundle.EditJoo2BannerClientsRequiredMessage_trackClicks}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2BannerClientsLabel_trackImpressions}" for="trackImpressions" />
+                    <h:inputText id="trackImpressions" value="#{joo2BannerClientsController.selected.trackImpressions}" title="#{bundle.EditJoo2BannerClientsTitle_trackImpressions}" required="true" requiredMessage="#{bundle.EditJoo2BannerClientsRequiredMessage_trackImpressions}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2BannerClientsController.update}" value="#{bundle.EditJoo2BannerClientsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2BannerClientsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2BannerClientsController.prepareList}" value="#{bundle.EditJoo2BannerClientsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2BannerClientsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

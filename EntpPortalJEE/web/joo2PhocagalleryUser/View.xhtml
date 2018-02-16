@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2PhocagalleryUserTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryUserLabel_id}"/>
+                    <h:outputText value="#{joo2PhocagalleryUserController.selected.id}" title="#{bundle.ViewJoo2PhocagalleryUserTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryUserLabel_userid}"/>
+                    <h:outputText value="#{joo2PhocagalleryUserController.selected.userid}" title="#{bundle.ViewJoo2PhocagalleryUserTitle_userid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryUserLabel_avatar}"/>
+                    <h:outputText value="#{joo2PhocagalleryUserController.selected.avatar}" title="#{bundle.ViewJoo2PhocagalleryUserTitle_avatar}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryUserLabel_published}"/>
+                    <h:outputText value="#{joo2PhocagalleryUserController.selected.published}" title="#{bundle.ViewJoo2PhocagalleryUserTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryUserLabel_approved}"/>
+                    <h:outputText value="#{joo2PhocagalleryUserController.selected.approved}" title="#{bundle.ViewJoo2PhocagalleryUserTitle_approved}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryUserLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2PhocagalleryUserController.selected.checkedOut}" title="#{bundle.ViewJoo2PhocagalleryUserTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryUserLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2PhocagalleryUserController.selected.checkedOutTime}" title="#{bundle.ViewJoo2PhocagalleryUserTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryUserLabel_ordering}"/>
+                    <h:outputText value="#{joo2PhocagalleryUserController.selected.ordering}" title="#{bundle.ViewJoo2PhocagalleryUserTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryUserLabel_params}"/>
+                    <h:outputText value="#{joo2PhocagalleryUserController.selected.params}" title="#{bundle.ViewJoo2PhocagalleryUserTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryUserLabel_language}"/>
+                    <h:outputText value="#{joo2PhocagalleryUserController.selected.language}" title="#{bundle.ViewJoo2PhocagalleryUserTitle_language}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryUserController.destroyAndView}" value="#{bundle.ViewJoo2PhocagalleryUserDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2PhocagalleryUserEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryUserController.prepareCreate}" value="#{bundle.ViewJoo2PhocagalleryUserCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryUserController.prepareList}" value="#{bundle.ViewJoo2PhocagalleryUserShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2PhocagalleryUserIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

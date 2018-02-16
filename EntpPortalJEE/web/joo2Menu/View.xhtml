@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2MenuTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_id}"/>
+                    <h:outputText value="#{joo2MenuController.selected.id}" title="#{bundle.ViewJoo2MenuTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_menutype}"/>
+                    <h:outputText value="#{joo2MenuController.selected.menutype}" title="#{bundle.ViewJoo2MenuTitle_menutype}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_title}"/>
+                    <h:outputText value="#{joo2MenuController.selected.title}" title="#{bundle.ViewJoo2MenuTitle_title}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_alias}"/>
+                    <h:outputText value="#{joo2MenuController.selected.alias}" title="#{bundle.ViewJoo2MenuTitle_alias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_note}"/>
+                    <h:outputText value="#{joo2MenuController.selected.note}" title="#{bundle.ViewJoo2MenuTitle_note}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_path}"/>
+                    <h:outputText value="#{joo2MenuController.selected.path}" title="#{bundle.ViewJoo2MenuTitle_path}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_link}"/>
+                    <h:outputText value="#{joo2MenuController.selected.link}" title="#{bundle.ViewJoo2MenuTitle_link}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_type}"/>
+                    <h:outputText value="#{joo2MenuController.selected.type}" title="#{bundle.ViewJoo2MenuTitle_type}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_published}"/>
+                    <h:outputText value="#{joo2MenuController.selected.published}" title="#{bundle.ViewJoo2MenuTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_parentId}"/>
+                    <h:outputText value="#{joo2MenuController.selected.parentId}" title="#{bundle.ViewJoo2MenuTitle_parentId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_level}"/>
+                    <h:outputText value="#{joo2MenuController.selected.level}" title="#{bundle.ViewJoo2MenuTitle_level}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_componentId}"/>
+                    <h:outputText value="#{joo2MenuController.selected.componentId}" title="#{bundle.ViewJoo2MenuTitle_componentId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_ordering}"/>
+                    <h:outputText value="#{joo2MenuController.selected.ordering}" title="#{bundle.ViewJoo2MenuTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2MenuController.selected.checkedOut}" title="#{bundle.ViewJoo2MenuTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2MenuController.selected.checkedOutTime}" title="#{bundle.ViewJoo2MenuTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_browserNav}"/>
+                    <h:outputText value="#{joo2MenuController.selected.browserNav}" title="#{bundle.ViewJoo2MenuTitle_browserNav}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_access}"/>
+                    <h:outputText value="#{joo2MenuController.selected.access}" title="#{bundle.ViewJoo2MenuTitle_access}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_img}"/>
+                    <h:outputText value="#{joo2MenuController.selected.img}" title="#{bundle.ViewJoo2MenuTitle_img}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_templateStyleId}"/>
+                    <h:outputText value="#{joo2MenuController.selected.templateStyleId}" title="#{bundle.ViewJoo2MenuTitle_templateStyleId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_params}"/>
+                    <h:outputText value="#{joo2MenuController.selected.params}" title="#{bundle.ViewJoo2MenuTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_lft}"/>
+                    <h:outputText value="#{joo2MenuController.selected.lft}" title="#{bundle.ViewJoo2MenuTitle_lft}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_rgt}"/>
+                    <h:outputText value="#{joo2MenuController.selected.rgt}" title="#{bundle.ViewJoo2MenuTitle_rgt}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_home}"/>
+                    <h:outputText value="#{joo2MenuController.selected.home}" title="#{bundle.ViewJoo2MenuTitle_home}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_language}"/>
+                    <h:outputText value="#{joo2MenuController.selected.language}" title="#{bundle.ViewJoo2MenuTitle_language}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_clientId}"/>
+                    <h:outputText value="#{joo2MenuController.selected.clientId}" title="#{bundle.ViewJoo2MenuTitle_clientId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_epCatid}"/>
+                    <h:outputText value="#{joo2MenuController.selected.epCatid}" title="#{bundle.ViewJoo2MenuTitle_epCatid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_epCopyFrom}"/>
+                    <h:outputText value="#{joo2MenuController.selected.epCopyFrom}" title="#{bundle.ViewJoo2MenuTitle_epCopyFrom}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_epRefresh}"/>
+                    <h:outputText value="#{joo2MenuController.selected.epRefresh}" title="#{bundle.ViewJoo2MenuTitle_epRefresh}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_epOrdering}"/>
+                    <h:outputText value="#{joo2MenuController.selected.epOrdering}" title="#{bundle.ViewJoo2MenuTitle_epOrdering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_eptLft}"/>
+                    <h:outputText value="#{joo2MenuController.selected.eptLft}" title="#{bundle.ViewJoo2MenuTitle_eptLft}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_eptRgt}"/>
+                    <h:outputText value="#{joo2MenuController.selected.eptRgt}" title="#{bundle.ViewJoo2MenuTitle_eptRgt}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_eptCount}"/>
+                    <h:outputText value="#{joo2MenuController.selected.eptCount}" title="#{bundle.ViewJoo2MenuTitle_eptCount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_epRgt}"/>
+                    <h:outputText value="#{joo2MenuController.selected.epRgt}" title="#{bundle.ViewJoo2MenuTitle_epRgt}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_epCount}"/>
+                    <h:outputText value="#{joo2MenuController.selected.epCount}" title="#{bundle.ViewJoo2MenuTitle_epCount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_epLft}"/>
+                    <h:outputText value="#{joo2MenuController.selected.epLft}" title="#{bundle.ViewJoo2MenuTitle_epLft}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_epLftBck}"/>
+                    <h:outputText value="#{joo2MenuController.selected.epLftBck}" title="#{bundle.ViewJoo2MenuTitle_epLftBck}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MenuLabel_epRgtBck}"/>
+                    <h:outputText value="#{joo2MenuController.selected.epRgtBck}" title="#{bundle.ViewJoo2MenuTitle_epRgtBck}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2MenuController.destroyAndView}" value="#{bundle.ViewJoo2MenuDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2MenuEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2MenuController.prepareCreate}" value="#{bundle.ViewJoo2MenuCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2MenuController.prepareList}" value="#{bundle.ViewJoo2MenuShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2MenuIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

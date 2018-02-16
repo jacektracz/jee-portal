@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2VirtuemartAdminmenuentriesController.selected.id}" title="#{bundle.CreateJoo2VirtuemartAdminmenuentriesTitle_id}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartAdminmenuentriesRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesLabel_moduleId}" for="moduleId" />
+                    <h:inputText id="moduleId" value="#{joo2VirtuemartAdminmenuentriesController.selected.moduleId}" title="#{bundle.CreateJoo2VirtuemartAdminmenuentriesTitle_moduleId}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartAdminmenuentriesRequiredMessage_moduleId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesLabel_parentId}" for="parentId" />
+                    <h:inputText id="parentId" value="#{joo2VirtuemartAdminmenuentriesController.selected.parentId}" title="#{bundle.CreateJoo2VirtuemartAdminmenuentriesTitle_parentId}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartAdminmenuentriesRequiredMessage_parentId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{joo2VirtuemartAdminmenuentriesController.selected.name}" title="#{bundle.CreateJoo2VirtuemartAdminmenuentriesTitle_name}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartAdminmenuentriesRequiredMessage_name}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesLabel_link}" for="link" />
+                    <h:inputTextarea rows="4" cols="30" id="link" value="#{joo2VirtuemartAdminmenuentriesController.selected.link}" title="#{bundle.CreateJoo2VirtuemartAdminmenuentriesTitle_link}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartAdminmenuentriesRequiredMessage_link}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesLabel_depends}" for="depends" />
+                    <h:inputTextarea rows="4" cols="30" id="depends" value="#{joo2VirtuemartAdminmenuentriesController.selected.depends}" title="#{bundle.CreateJoo2VirtuemartAdminmenuentriesTitle_depends}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartAdminmenuentriesRequiredMessage_depends}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesLabel_iconClass}" for="iconClass" />
+                    <h:inputText id="iconClass" value="#{joo2VirtuemartAdminmenuentriesController.selected.iconClass}" title="#{bundle.CreateJoo2VirtuemartAdminmenuentriesTitle_iconClass}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartAdminmenuentriesRequiredMessage_iconClass}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2VirtuemartAdminmenuentriesController.selected.ordering}" title="#{bundle.CreateJoo2VirtuemartAdminmenuentriesTitle_ordering}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartAdminmenuentriesRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartAdminmenuentriesController.selected.published}" title="#{bundle.CreateJoo2VirtuemartAdminmenuentriesTitle_published}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartAdminmenuentriesRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesLabel_tooltip}" for="tooltip" />
+                    <h:inputTextarea rows="4" cols="30" id="tooltip" value="#{joo2VirtuemartAdminmenuentriesController.selected.tooltip}" title="#{bundle.CreateJoo2VirtuemartAdminmenuentriesTitle_tooltip}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartAdminmenuentriesRequiredMessage_tooltip}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesLabel_view}" for="view" />
+                    <h:inputText id="view" value="#{joo2VirtuemartAdminmenuentriesController.selected.view}" title="#{bundle.CreateJoo2VirtuemartAdminmenuentriesTitle_view}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesLabel_task}" for="task" />
+                    <h:inputText id="task" value="#{joo2VirtuemartAdminmenuentriesController.selected.task}" title="#{bundle.CreateJoo2VirtuemartAdminmenuentriesTitle_task}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartAdminmenuentriesController.create}" value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartAdminmenuentriesController.prepareList}" value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2VirtuemartAdminmenuentriesIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

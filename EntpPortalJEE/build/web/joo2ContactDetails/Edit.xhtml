@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2ContactDetailsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2ContactDetailsController.selected.id}" title="#{bundle.EditJoo2ContactDetailsTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{joo2ContactDetailsController.selected.name}" title="#{bundle.EditJoo2ContactDetailsTitle_name}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_name}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_alias}" for="alias" />
+                    <h:inputText id="alias" value="#{joo2ContactDetailsController.selected.alias}" title="#{bundle.EditJoo2ContactDetailsTitle_alias}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_alias}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_conPosition}" for="conPosition" />
+                    <h:inputText id="conPosition" value="#{joo2ContactDetailsController.selected.conPosition}" title="#{bundle.EditJoo2ContactDetailsTitle_conPosition}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_address}" for="address" />
+                    <h:inputTextarea rows="4" cols="30" id="address" value="#{joo2ContactDetailsController.selected.address}" title="#{bundle.EditJoo2ContactDetailsTitle_address}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_suburb}" for="suburb" />
+                    <h:inputText id="suburb" value="#{joo2ContactDetailsController.selected.suburb}" title="#{bundle.EditJoo2ContactDetailsTitle_suburb}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_state}" for="state" />
+                    <h:inputText id="state" value="#{joo2ContactDetailsController.selected.state}" title="#{bundle.EditJoo2ContactDetailsTitle_state}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_country}" for="country" />
+                    <h:inputText id="country" value="#{joo2ContactDetailsController.selected.country}" title="#{bundle.EditJoo2ContactDetailsTitle_country}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_postcode}" for="postcode" />
+                    <h:inputText id="postcode" value="#{joo2ContactDetailsController.selected.postcode}" title="#{bundle.EditJoo2ContactDetailsTitle_postcode}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_telephone}" for="telephone" />
+                    <h:inputText id="telephone" value="#{joo2ContactDetailsController.selected.telephone}" title="#{bundle.EditJoo2ContactDetailsTitle_telephone}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_fax}" for="fax" />
+                    <h:inputText id="fax" value="#{joo2ContactDetailsController.selected.fax}" title="#{bundle.EditJoo2ContactDetailsTitle_fax}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_misc}" for="misc" />
+                    <h:inputTextarea rows="4" cols="30" id="misc" value="#{joo2ContactDetailsController.selected.misc}" title="#{bundle.EditJoo2ContactDetailsTitle_misc}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_image}" for="image" />
+                    <h:inputText id="image" value="#{joo2ContactDetailsController.selected.image}" title="#{bundle.EditJoo2ContactDetailsTitle_image}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_imagepos}" for="imagepos" />
+                    <h:inputText id="imagepos" value="#{joo2ContactDetailsController.selected.imagepos}" title="#{bundle.EditJoo2ContactDetailsTitle_imagepos}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_emailTo}" for="emailTo" />
+                    <h:inputText id="emailTo" value="#{joo2ContactDetailsController.selected.emailTo}" title="#{bundle.EditJoo2ContactDetailsTitle_emailTo}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_defaultCon}" for="defaultCon" />
+                    <h:inputText id="defaultCon" value="#{joo2ContactDetailsController.selected.defaultCon}" title="#{bundle.EditJoo2ContactDetailsTitle_defaultCon}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_defaultCon}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2ContactDetailsController.selected.published}" title="#{bundle.EditJoo2ContactDetailsTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_checkedOut}" for="checkedOut" />
+                    <h:inputText id="checkedOut" value="#{joo2ContactDetailsController.selected.checkedOut}" title="#{bundle.EditJoo2ContactDetailsTitle_checkedOut}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_checkedOut}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_checkedOutTime}" for="checkedOutTime" />
+                    <h:inputText id="checkedOutTime" value="#{joo2ContactDetailsController.selected.checkedOutTime}" title="#{bundle.EditJoo2ContactDetailsTitle_checkedOutTime}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2ContactDetailsController.selected.ordering}" title="#{bundle.EditJoo2ContactDetailsTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_params}" for="params" />
+                    <h:inputTextarea rows="4" cols="30" id="params" value="#{joo2ContactDetailsController.selected.params}" title="#{bundle.EditJoo2ContactDetailsTitle_params}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_params}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_userId}" for="userId" />
+                    <h:inputText id="userId" value="#{joo2ContactDetailsController.selected.userId}" title="#{bundle.EditJoo2ContactDetailsTitle_userId}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_userId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_catid}" for="catid" />
+                    <h:inputText id="catid" value="#{joo2ContactDetailsController.selected.catid}" title="#{bundle.EditJoo2ContactDetailsTitle_catid}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_catid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_access}" for="access" />
+                    <h:inputText id="access" value="#{joo2ContactDetailsController.selected.access}" title="#{bundle.EditJoo2ContactDetailsTitle_access}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_mobile}" for="mobile" />
+                    <h:inputText id="mobile" value="#{joo2ContactDetailsController.selected.mobile}" title="#{bundle.EditJoo2ContactDetailsTitle_mobile}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_mobile}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_webpage}" for="webpage" />
+                    <h:inputText id="webpage" value="#{joo2ContactDetailsController.selected.webpage}" title="#{bundle.EditJoo2ContactDetailsTitle_webpage}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_webpage}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_sortname1}" for="sortname1" />
+                    <h:inputText id="sortname1" value="#{joo2ContactDetailsController.selected.sortname1}" title="#{bundle.EditJoo2ContactDetailsTitle_sortname1}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_sortname1}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_sortname2}" for="sortname2" />
+                    <h:inputText id="sortname2" value="#{joo2ContactDetailsController.selected.sortname2}" title="#{bundle.EditJoo2ContactDetailsTitle_sortname2}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_sortname2}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_sortname3}" for="sortname3" />
+                    <h:inputText id="sortname3" value="#{joo2ContactDetailsController.selected.sortname3}" title="#{bundle.EditJoo2ContactDetailsTitle_sortname3}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_sortname3}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2ContactDetailsController.selected.language}" title="#{bundle.EditJoo2ContactDetailsTitle_language}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_language}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_created}" for="created" />
+                    <h:inputText id="created" value="#{joo2ContactDetailsController.selected.created}" title="#{bundle.EditJoo2ContactDetailsTitle_created}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2ContactDetailsController.selected.createdBy}" title="#{bundle.EditJoo2ContactDetailsTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_createdByAlias}" for="createdByAlias" />
+                    <h:inputText id="createdByAlias" value="#{joo2ContactDetailsController.selected.createdByAlias}" title="#{bundle.EditJoo2ContactDetailsTitle_createdByAlias}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_createdByAlias}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_modified}" for="modified" />
+                    <h:inputText id="modified" value="#{joo2ContactDetailsController.selected.modified}" title="#{bundle.EditJoo2ContactDetailsTitle_modified}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_modified}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2ContactDetailsController.selected.modifiedBy}" title="#{bundle.EditJoo2ContactDetailsTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_metakey}" for="metakey" />
+                    <h:inputTextarea rows="4" cols="30" id="metakey" value="#{joo2ContactDetailsController.selected.metakey}" title="#{bundle.EditJoo2ContactDetailsTitle_metakey}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_metakey}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_metadesc}" for="metadesc" />
+                    <h:inputTextarea rows="4" cols="30" id="metadesc" value="#{joo2ContactDetailsController.selected.metadesc}" title="#{bundle.EditJoo2ContactDetailsTitle_metadesc}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_metadesc}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_metadata}" for="metadata" />
+                    <h:inputTextarea rows="4" cols="30" id="metadata" value="#{joo2ContactDetailsController.selected.metadata}" title="#{bundle.EditJoo2ContactDetailsTitle_metadata}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_metadata}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_featured}" for="featured" />
+                    <h:inputText id="featured" value="#{joo2ContactDetailsController.selected.featured}" title="#{bundle.EditJoo2ContactDetailsTitle_featured}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_featured}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_xreference}" for="xreference" />
+                    <h:inputText id="xreference" value="#{joo2ContactDetailsController.selected.xreference}" title="#{bundle.EditJoo2ContactDetailsTitle_xreference}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_xreference}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_publishUp}" for="publishUp" />
+                    <h:inputText id="publishUp" value="#{joo2ContactDetailsController.selected.publishUp}" title="#{bundle.EditJoo2ContactDetailsTitle_publishUp}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_publishUp}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2ContactDetailsLabel_publishDown}" for="publishDown" />
+                    <h:inputText id="publishDown" value="#{joo2ContactDetailsController.selected.publishDown}" title="#{bundle.EditJoo2ContactDetailsTitle_publishDown}" required="true" requiredMessage="#{bundle.EditJoo2ContactDetailsRequiredMessage_publishDown}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2ContactDetailsController.update}" value="#{bundle.EditJoo2ContactDetailsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2ContactDetailsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2ContactDetailsController.prepareList}" value="#{bundle.EditJoo2ContactDetailsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2ContactDetailsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

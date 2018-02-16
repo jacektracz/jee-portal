@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartProductCustomfieldsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductCustomfieldsLabel_virtuemartCustomfieldId}" for="virtuemartCustomfieldId" />
+                    <h:inputText id="virtuemartCustomfieldId" value="#{joo2VirtuemartProductCustomfieldsController.selected.virtuemartCustomfieldId}" title="#{bundle.EditJoo2VirtuemartProductCustomfieldsTitle_virtuemartCustomfieldId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductCustomfieldsRequiredMessage_virtuemartCustomfieldId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductCustomfieldsLabel_virtuemartProductId}" for="virtuemartProductId" />
+                    <h:inputText id="virtuemartProductId" value="#{joo2VirtuemartProductCustomfieldsController.selected.virtuemartProductId}" title="#{bundle.EditJoo2VirtuemartProductCustomfieldsTitle_virtuemartProductId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductCustomfieldsRequiredMessage_virtuemartProductId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductCustomfieldsLabel_virtuemartCustomId}" for="virtuemartCustomId" />
+                    <h:inputText id="virtuemartCustomId" value="#{joo2VirtuemartProductCustomfieldsController.selected.virtuemartCustomId}" title="#{bundle.EditJoo2VirtuemartProductCustomfieldsTitle_virtuemartCustomId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductCustomfieldsRequiredMessage_virtuemartCustomId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductCustomfieldsLabel_customValue}" for="customValue" />
+                    <h:inputText id="customValue" value="#{joo2VirtuemartProductCustomfieldsController.selected.customValue}" title="#{bundle.EditJoo2VirtuemartProductCustomfieldsTitle_customValue}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductCustomfieldsLabel_customPrice}" for="customPrice" />
+                    <h:inputText id="customPrice" value="#{joo2VirtuemartProductCustomfieldsController.selected.customPrice}" title="#{bundle.EditJoo2VirtuemartProductCustomfieldsTitle_customPrice}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductCustomfieldsLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartProductCustomfieldsController.selected.published}" title="#{bundle.EditJoo2VirtuemartProductCustomfieldsTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductCustomfieldsRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductCustomfieldsLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartProductCustomfieldsController.selected.createdOn}" title="#{bundle.EditJoo2VirtuemartProductCustomfieldsTitle_createdOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductCustomfieldsRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductCustomfieldsLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartProductCustomfieldsController.selected.createdBy}" title="#{bundle.EditJoo2VirtuemartProductCustomfieldsTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductCustomfieldsRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductCustomfieldsLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartProductCustomfieldsController.selected.modifiedOn}" title="#{bundle.EditJoo2VirtuemartProductCustomfieldsTitle_modifiedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductCustomfieldsRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductCustomfieldsLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartProductCustomfieldsController.selected.modifiedBy}" title="#{bundle.EditJoo2VirtuemartProductCustomfieldsTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductCustomfieldsRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductCustomfieldsLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartProductCustomfieldsController.selected.lockedOn}" title="#{bundle.EditJoo2VirtuemartProductCustomfieldsTitle_lockedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductCustomfieldsRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductCustomfieldsLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartProductCustomfieldsController.selected.lockedBy}" title="#{bundle.EditJoo2VirtuemartProductCustomfieldsTitle_lockedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductCustomfieldsRequiredMessage_lockedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductCustomfieldsLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2VirtuemartProductCustomfieldsController.selected.ordering}" title="#{bundle.EditJoo2VirtuemartProductCustomfieldsTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductCustomfieldsRequiredMessage_ordering}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartProductCustomfieldsController.update}" value="#{bundle.EditJoo2VirtuemartProductCustomfieldsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartProductCustomfieldsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartProductCustomfieldsController.prepareList}" value="#{bundle.EditJoo2VirtuemartProductCustomfieldsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartProductCustomfieldsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

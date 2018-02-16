@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2UcparamTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2UcparamEmpty}" rendered="#{joo2UcparamController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2UcparamController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2UcparamController.pagination.pageFirstItem + 1}..#{joo2UcparamController.pagination.pageLastItem + 1}/#{joo2UcparamController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2UcparamController.previous}" value="#{bundle.Previous} #{joo2UcparamController.pagination.pageSize}" rendered="#{joo2UcparamController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2UcparamController.next}" value="#{bundle.Next} #{joo2UcparamController.pagination.pageSize}" rendered="#{joo2UcparamController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2UcparamController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UcparamTitle_MUcparamId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUcparamId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UcparamTitle_MUctxcId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUctxcId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UcparamTitle_MUcparamKey}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUcparamKey}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UcparamTitle_MUcparamName}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUcparamName}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UcparamTitle_MUcparamValue}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUcparamValue}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UcparamTitle_MUcparamValue0}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUcparamValue0}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UcparamTitle_MUcparamValue1}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUcparamValue1}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UcparamTitle_MUcparamValue2}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUcparamValue2}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UcparamTitle_MUcparamValue3}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUcparamValue3}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UcparamTitle_MUcparamTitle}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUcparamTitle}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UcparamTitle_MUcparamType}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUcparamType}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2UcparamController.prepareView}" value="#{bundle.ListJoo2UcparamViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2UcparamController.prepareEdit}" value="#{bundle.ListJoo2UcparamEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2UcparamController.destroy}" value="#{bundle.ListJoo2UcparamDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2UcparamController.prepareCreate}" value="#{bundle.ListJoo2UcparamCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2UcparamIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2SwmenufreeConfigTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2SwmenufreeConfigController.selected.id}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2SwmenufreeConfigRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainTop}" for="mainTop" />
+                    <h:inputText id="mainTop" value="#{joo2SwmenufreeConfigController.selected.mainTop}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainTop}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainLeft}" for="mainLeft" />
+                    <h:inputText id="mainLeft" value="#{joo2SwmenufreeConfigController.selected.mainLeft}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainLeft}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainHeight}" for="mainHeight" />
+                    <h:inputText id="mainHeight" value="#{joo2SwmenufreeConfigController.selected.mainHeight}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainHeight}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subBorderOver}" for="subBorderOver" />
+                    <h:inputText id="subBorderOver" value="#{joo2SwmenufreeConfigController.selected.subBorderOver}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subBorderOver}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainWidth}" for="mainWidth" />
+                    <h:inputText id="mainWidth" value="#{joo2SwmenufreeConfigController.selected.mainWidth}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainWidth}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subWidth}" for="subWidth" />
+                    <h:inputText id="subWidth" value="#{joo2SwmenufreeConfigController.selected.subWidth}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subWidth}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainBack}" for="mainBack" />
+                    <h:inputText id="mainBack" value="#{joo2SwmenufreeConfigController.selected.mainBack}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainBack}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainOver}" for="mainOver" />
+                    <h:inputText id="mainOver" value="#{joo2SwmenufreeConfigController.selected.mainOver}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainOver}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subBack}" for="subBack" />
+                    <h:inputText id="subBack" value="#{joo2SwmenufreeConfigController.selected.subBack}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subBack}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subOver}" for="subOver" />
+                    <h:inputText id="subOver" value="#{joo2SwmenufreeConfigController.selected.subOver}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subOver}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subBorder}" for="subBorder" />
+                    <h:inputText id="subBorder" value="#{joo2SwmenufreeConfigController.selected.subBorder}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subBorder}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainFontSize}" for="mainFontSize" />
+                    <h:inputText id="mainFontSize" value="#{joo2SwmenufreeConfigController.selected.mainFontSize}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainFontSize}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subFontSize}" for="subFontSize" />
+                    <h:inputText id="subFontSize" value="#{joo2SwmenufreeConfigController.selected.subFontSize}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subFontSize}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainBorderOver}" for="mainBorderOver" />
+                    <h:inputText id="mainBorderOver" value="#{joo2SwmenufreeConfigController.selected.mainBorderOver}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainBorderOver}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subFontColor}" for="subFontColor" />
+                    <h:inputText id="subFontColor" value="#{joo2SwmenufreeConfigController.selected.subFontColor}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subFontColor}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainBorder}" for="mainBorder" />
+                    <h:inputText id="mainBorder" value="#{joo2SwmenufreeConfigController.selected.mainBorder}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainBorder}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainFontColor}" for="mainFontColor" />
+                    <h:inputText id="mainFontColor" value="#{joo2SwmenufreeConfigController.selected.mainFontColor}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainFontColor}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subFontColorOver}" for="subFontColorOver" />
+                    <h:inputText id="subFontColorOver" value="#{joo2SwmenufreeConfigController.selected.subFontColorOver}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subFontColorOver}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainFontColorOver}" for="mainFontColorOver" />
+                    <h:inputText id="mainFontColorOver" value="#{joo2SwmenufreeConfigController.selected.mainFontColorOver}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainFontColorOver}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainAlign}" for="mainAlign" />
+                    <h:inputText id="mainAlign" value="#{joo2SwmenufreeConfigController.selected.mainAlign}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainAlign}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subAlign}" for="subAlign" />
+                    <h:inputText id="subAlign" value="#{joo2SwmenufreeConfigController.selected.subAlign}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subAlign}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subHeight}" for="subHeight" />
+                    <h:inputText id="subHeight" value="#{joo2SwmenufreeConfigController.selected.subHeight}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subHeight}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_position}" for="position" />
+                    <h:inputText id="position" value="#{joo2SwmenufreeConfigController.selected.position}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_position}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_orientation}" for="orientation" />
+                    <h:inputText id="orientation" value="#{joo2SwmenufreeConfigController.selected.orientation}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_orientation}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_fontFamily}" for="fontFamily" />
+                    <h:inputText id="fontFamily" value="#{joo2SwmenufreeConfigController.selected.fontFamily}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_fontFamily}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_fontWeight}" for="fontWeight" />
+                    <h:inputText id="fontWeight" value="#{joo2SwmenufreeConfigController.selected.fontWeight}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_fontWeight}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_fontWeightOver}" for="fontWeightOver" />
+                    <h:inputText id="fontWeightOver" value="#{joo2SwmenufreeConfigController.selected.fontWeightOver}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_fontWeightOver}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_level2SubTop}" for="level2SubTop" />
+                    <h:inputText id="level2SubTop" value="#{joo2SwmenufreeConfigController.selected.level2SubTop}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_level2SubTop}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_level2SubLeft}" for="level2SubLeft" />
+                    <h:inputText id="level2SubLeft" value="#{joo2SwmenufreeConfigController.selected.level2SubLeft}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_level2SubLeft}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_level1SubTop}" for="level1SubTop" />
+                    <h:inputText id="level1SubTop" value="#{joo2SwmenufreeConfigController.selected.level1SubTop}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_level1SubTop}" required="true" requiredMessage="#{bundle.EditJoo2SwmenufreeConfigRequiredMessage_level1SubTop}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_level1SubLeft}" for="level1SubLeft" />
+                    <h:inputText id="level1SubLeft" value="#{joo2SwmenufreeConfigController.selected.level1SubLeft}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_level1SubLeft}" required="true" requiredMessage="#{bundle.EditJoo2SwmenufreeConfigRequiredMessage_level1SubLeft}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainBackImage}" for="mainBackImage" />
+                    <h:inputText id="mainBackImage" value="#{joo2SwmenufreeConfigController.selected.mainBackImage}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainBackImage}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainBackImageOver}" for="mainBackImageOver" />
+                    <h:inputText id="mainBackImageOver" value="#{joo2SwmenufreeConfigController.selected.mainBackImageOver}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainBackImageOver}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subBackImage}" for="subBackImage" />
+                    <h:inputText id="subBackImage" value="#{joo2SwmenufreeConfigController.selected.subBackImage}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subBackImage}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subBackImageOver}" for="subBackImageOver" />
+                    <h:inputText id="subBackImageOver" value="#{joo2SwmenufreeConfigController.selected.subBackImageOver}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subBackImageOver}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_specialA}" for="specialA" />
+                    <h:inputText id="specialA" value="#{joo2SwmenufreeConfigController.selected.specialA}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_specialA}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_mainPadding}" for="mainPadding" />
+                    <h:inputText id="mainPadding" value="#{joo2SwmenufreeConfigController.selected.mainPadding}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_mainPadding}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subPadding}" for="subPadding" />
+                    <h:inputText id="subPadding" value="#{joo2SwmenufreeConfigController.selected.subPadding}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subPadding}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_specialB}" for="specialB" />
+                    <h:inputText id="specialB" value="#{joo2SwmenufreeConfigController.selected.specialB}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_specialB}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subFontFamily}" for="subFontFamily" />
+                    <h:inputText id="subFontFamily" value="#{joo2SwmenufreeConfigController.selected.subFontFamily}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subFontFamily}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_extra}" for="extra" />
+                    <h:inputTextarea rows="4" cols="30" id="extra" value="#{joo2SwmenufreeConfigController.selected.extra}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_extra}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_topTtf}" for="topTtf" />
+                    <h:inputTextarea rows="4" cols="30" id="topTtf" value="#{joo2SwmenufreeConfigController.selected.topTtf}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_topTtf}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subTtf}" for="subTtf" />
+                    <h:inputTextarea rows="4" cols="30" id="subTtf" value="#{joo2SwmenufreeConfigController.selected.subTtf}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subTtf}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_activeBackground}" for="activeBackground" />
+                    <h:inputText id="activeBackground" value="#{joo2SwmenufreeConfigController.selected.activeBackground}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_activeBackground}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_activeFont}" for="activeFont" />
+                    <h:inputText id="activeFont" value="#{joo2SwmenufreeConfigController.selected.activeFont}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_activeFont}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_topMargin}" for="topMargin" />
+                    <h:inputText id="topMargin" value="#{joo2SwmenufreeConfigController.selected.topMargin}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_topMargin}" required="true" requiredMessage="#{bundle.EditJoo2SwmenufreeConfigRequiredMessage_topMargin}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_topWrap}" for="topWrap" />
+                    <h:inputText id="topWrap" value="#{joo2SwmenufreeConfigController.selected.topWrap}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_topWrap}" required="true" requiredMessage="#{bundle.EditJoo2SwmenufreeConfigRequiredMessage_topWrap}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subWrap}" for="subWrap" />
+                    <h:inputText id="subWrap" value="#{joo2SwmenufreeConfigController.selected.subWrap}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subWrap}" required="true" requiredMessage="#{bundle.EditJoo2SwmenufreeConfigRequiredMessage_subWrap}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_corners}" for="corners" />
+                    <h:inputTextarea rows="4" cols="30" id="corners" value="#{joo2SwmenufreeConfigController.selected.corners}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_corners}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_topFontExtra}" for="topFontExtra" />
+                    <h:inputText id="topFontExtra" value="#{joo2SwmenufreeConfigController.selected.topFontExtra}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_topFontExtra}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subFontExtra}" for="subFontExtra" />
+                    <h:inputText id="subFontExtra" value="#{joo2SwmenufreeConfigController.selected.subFontExtra}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subFontExtra}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_completePadding}" for="completePadding" />
+                    <h:inputText id="completePadding" value="#{joo2SwmenufreeConfigController.selected.completePadding}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_completePadding}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_completeBackground}" for="completeBackground" />
+                    <h:inputText id="completeBackground" value="#{joo2SwmenufreeConfigController.selected.completeBackground}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_completeBackground}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_completeBackgroundImage}" for="completeBackgroundImage" />
+                    <h:inputText id="completeBackgroundImage" value="#{joo2SwmenufreeConfigController.selected.completeBackgroundImage}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_completeBackgroundImage}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_activeBackgroundImage}" for="activeBackgroundImage" />
+                    <h:inputText id="activeBackgroundImage" value="#{joo2SwmenufreeConfigController.selected.activeBackgroundImage}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_activeBackgroundImage}" />
+                    <h:outputLabel value="#{bundle.EditJoo2SwmenufreeConfigLabel_subIndicator}" for="subIndicator" />
+                    <h:inputTextarea rows="4" cols="30" id="subIndicator" value="#{joo2SwmenufreeConfigController.selected.subIndicator}" title="#{bundle.EditJoo2SwmenufreeConfigTitle_subIndicator}" />
+                </h:panelGrid>
+                <h:commandLink action="#{joo2SwmenufreeConfigController.update}" value="#{bundle.EditJoo2SwmenufreeConfigSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2SwmenufreeConfigViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2SwmenufreeConfigController.prepareList}" value="#{bundle.EditJoo2SwmenufreeConfigShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2SwmenufreeConfigIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

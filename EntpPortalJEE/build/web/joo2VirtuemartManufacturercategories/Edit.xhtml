@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartManufacturercategoriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartManufacturercategoriesLabel_virtuemartManufacturercategoriesId}" for="virtuemartManufacturercategoriesId" />
+                    <h:inputText id="virtuemartManufacturercategoriesId" value="#{joo2VirtuemartManufacturercategoriesController.selected.virtuemartManufacturercategoriesId}" title="#{bundle.EditJoo2VirtuemartManufacturercategoriesTitle_virtuemartManufacturercategoriesId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartManufacturercategoriesRequiredMessage_virtuemartManufacturercategoriesId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartManufacturercategoriesLabel_mfCategoryName}" for="mfCategoryName" />
+                    <h:inputText id="mfCategoryName" value="#{joo2VirtuemartManufacturercategoriesController.selected.mfCategoryName}" title="#{bundle.EditJoo2VirtuemartManufacturercategoriesTitle_mfCategoryName}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartManufacturercategoriesLabel_mfCategoryDesc}" for="mfCategoryDesc" />
+                    <h:inputTextarea rows="4" cols="30" id="mfCategoryDesc" value="#{joo2VirtuemartManufacturercategoriesController.selected.mfCategoryDesc}" title="#{bundle.EditJoo2VirtuemartManufacturercategoriesTitle_mfCategoryDesc}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartManufacturercategoriesLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartManufacturercategoriesController.selected.published}" title="#{bundle.EditJoo2VirtuemartManufacturercategoriesTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartManufacturercategoriesRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartManufacturercategoriesLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartManufacturercategoriesController.selected.createdOn}" title="#{bundle.EditJoo2VirtuemartManufacturercategoriesTitle_createdOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartManufacturercategoriesRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartManufacturercategoriesLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartManufacturercategoriesController.selected.createdBy}" title="#{bundle.EditJoo2VirtuemartManufacturercategoriesTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartManufacturercategoriesRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartManufacturercategoriesLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartManufacturercategoriesController.selected.modifiedOn}" title="#{bundle.EditJoo2VirtuemartManufacturercategoriesTitle_modifiedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartManufacturercategoriesRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartManufacturercategoriesLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartManufacturercategoriesController.selected.modifiedBy}" title="#{bundle.EditJoo2VirtuemartManufacturercategoriesTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartManufacturercategoriesRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartManufacturercategoriesLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartManufacturercategoriesController.selected.lockedOn}" title="#{bundle.EditJoo2VirtuemartManufacturercategoriesTitle_lockedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartManufacturercategoriesRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartManufacturercategoriesLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartManufacturercategoriesController.selected.lockedBy}" title="#{bundle.EditJoo2VirtuemartManufacturercategoriesTitle_lockedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartManufacturercategoriesRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartManufacturercategoriesController.update}" value="#{bundle.EditJoo2VirtuemartManufacturercategoriesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartManufacturercategoriesViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartManufacturercategoriesController.prepareList}" value="#{bundle.EditJoo2VirtuemartManufacturercategoriesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartManufacturercategoriesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2UpdateSitesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2UpdateSitesLabel_updateSiteId}" for="updateSiteId" />
+                    <h:inputText id="updateSiteId" value="#{joo2UpdateSitesController.selected.updateSiteId}" title="#{bundle.CreateJoo2UpdateSitesTitle_updateSiteId}" required="true" requiredMessage="#{bundle.CreateJoo2UpdateSitesRequiredMessage_updateSiteId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2UpdateSitesLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{joo2UpdateSitesController.selected.name}" title="#{bundle.CreateJoo2UpdateSitesTitle_name}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2UpdateSitesLabel_type}" for="type" />
+                    <h:inputText id="type" value="#{joo2UpdateSitesController.selected.type}" title="#{bundle.CreateJoo2UpdateSitesTitle_type}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2UpdateSitesLabel_location}" for="location" />
+                    <h:inputTextarea rows="4" cols="30" id="location" value="#{joo2UpdateSitesController.selected.location}" title="#{bundle.CreateJoo2UpdateSitesTitle_location}" required="true" requiredMessage="#{bundle.CreateJoo2UpdateSitesRequiredMessage_location}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2UpdateSitesLabel_enabled}" for="enabled" />
+                    <h:inputText id="enabled" value="#{joo2UpdateSitesController.selected.enabled}" title="#{bundle.CreateJoo2UpdateSitesTitle_enabled}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2UpdateSitesController.create}" value="#{bundle.CreateJoo2UpdateSitesSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2UpdateSitesController.prepareList}" value="#{bundle.CreateJoo2UpdateSitesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2UpdateSitesIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

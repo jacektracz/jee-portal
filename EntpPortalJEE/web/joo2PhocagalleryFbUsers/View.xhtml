@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_id}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.id}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_appid}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.appid}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_appid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_appsid}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.appsid}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_appsid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_uid}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.uid}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_uid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_name}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.name}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_link}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.link}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_link}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_secret}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.secret}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_secret}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_baseDomain}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.baseDomain}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_baseDomain}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_expires}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.expires}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_expires}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_sessionKey}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.sessionKey}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_sessionKey}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_accessToken}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.accessToken}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_accessToken}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_sig}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.sig}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_sig}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_fanpageid}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.fanpageid}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_fanpageid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_published}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.published}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.checkedOut}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.checkedOutTime}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_ordering}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.ordering}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_comments}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.comments}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_comments}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_params}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.params}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryFbUsersLabel_language}"/>
+                    <h:outputText value="#{joo2PhocagalleryFbUsersController.selected.language}" title="#{bundle.ViewJoo2PhocagalleryFbUsersTitle_language}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryFbUsersController.destroyAndView}" value="#{bundle.ViewJoo2PhocagalleryFbUsersDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2PhocagalleryFbUsersEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryFbUsersController.prepareCreate}" value="#{bundle.ViewJoo2PhocagalleryFbUsersCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryFbUsersController.prepareList}" value="#{bundle.ViewJoo2PhocagalleryFbUsersShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2PhocagalleryFbUsersIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

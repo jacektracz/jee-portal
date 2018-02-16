@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2ViewlevelsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2ViewlevelsLabel_id}"/>
+                    <h:outputText value="#{joo2ViewlevelsController.selected.id}" title="#{bundle.ViewJoo2ViewlevelsTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ViewlevelsLabel_title}"/>
+                    <h:outputText value="#{joo2ViewlevelsController.selected.title}" title="#{bundle.ViewJoo2ViewlevelsTitle_title}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ViewlevelsLabel_ordering}"/>
+                    <h:outputText value="#{joo2ViewlevelsController.selected.ordering}" title="#{bundle.ViewJoo2ViewlevelsTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ViewlevelsLabel_rules}"/>
+                    <h:outputText value="#{joo2ViewlevelsController.selected.rules}" title="#{bundle.ViewJoo2ViewlevelsTitle_rules}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2ViewlevelsController.destroyAndView}" value="#{bundle.ViewJoo2ViewlevelsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2ViewlevelsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2ViewlevelsController.prepareCreate}" value="#{bundle.ViewJoo2ViewlevelsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2ViewlevelsController.prepareList}" value="#{bundle.ViewJoo2ViewlevelsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2ViewlevelsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

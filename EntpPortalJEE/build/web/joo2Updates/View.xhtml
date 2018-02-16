@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2UpdatesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2UpdatesLabel_updateId}"/>
+                    <h:outputText value="#{joo2UpdatesController.selected.updateId}" title="#{bundle.ViewJoo2UpdatesTitle_updateId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdatesLabel_updateSiteId}"/>
+                    <h:outputText value="#{joo2UpdatesController.selected.updateSiteId}" title="#{bundle.ViewJoo2UpdatesTitle_updateSiteId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdatesLabel_extensionId}"/>
+                    <h:outputText value="#{joo2UpdatesController.selected.extensionId}" title="#{bundle.ViewJoo2UpdatesTitle_extensionId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdatesLabel_categoryid}"/>
+                    <h:outputText value="#{joo2UpdatesController.selected.categoryid}" title="#{bundle.ViewJoo2UpdatesTitle_categoryid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdatesLabel_name}"/>
+                    <h:outputText value="#{joo2UpdatesController.selected.name}" title="#{bundle.ViewJoo2UpdatesTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdatesLabel_description}"/>
+                    <h:outputText value="#{joo2UpdatesController.selected.description}" title="#{bundle.ViewJoo2UpdatesTitle_description}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdatesLabel_element}"/>
+                    <h:outputText value="#{joo2UpdatesController.selected.element}" title="#{bundle.ViewJoo2UpdatesTitle_element}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdatesLabel_type}"/>
+                    <h:outputText value="#{joo2UpdatesController.selected.type}" title="#{bundle.ViewJoo2UpdatesTitle_type}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdatesLabel_folder}"/>
+                    <h:outputText value="#{joo2UpdatesController.selected.folder}" title="#{bundle.ViewJoo2UpdatesTitle_folder}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdatesLabel_clientId}"/>
+                    <h:outputText value="#{joo2UpdatesController.selected.clientId}" title="#{bundle.ViewJoo2UpdatesTitle_clientId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdatesLabel_version}"/>
+                    <h:outputText value="#{joo2UpdatesController.selected.version}" title="#{bundle.ViewJoo2UpdatesTitle_version}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdatesLabel_data}"/>
+                    <h:outputText value="#{joo2UpdatesController.selected.data}" title="#{bundle.ViewJoo2UpdatesTitle_data}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdatesLabel_detailsurl}"/>
+                    <h:outputText value="#{joo2UpdatesController.selected.detailsurl}" title="#{bundle.ViewJoo2UpdatesTitle_detailsurl}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2UpdatesController.destroyAndView}" value="#{bundle.ViewJoo2UpdatesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2UpdatesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2UpdatesController.prepareCreate}" value="#{bundle.ViewJoo2UpdatesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2UpdatesController.prepareList}" value="#{bundle.ViewJoo2UpdatesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2UpdatesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

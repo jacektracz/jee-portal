@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2ExtensionsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_extensionId}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.extensionId}" title="#{bundle.ViewJoo2ExtensionsTitle_extensionId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_name}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.name}" title="#{bundle.ViewJoo2ExtensionsTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_type}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.type}" title="#{bundle.ViewJoo2ExtensionsTitle_type}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_element}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.element}" title="#{bundle.ViewJoo2ExtensionsTitle_element}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_folder}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.folder}" title="#{bundle.ViewJoo2ExtensionsTitle_folder}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_clientId}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.clientId}" title="#{bundle.ViewJoo2ExtensionsTitle_clientId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_enabled}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.enabled}" title="#{bundle.ViewJoo2ExtensionsTitle_enabled}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_access}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.access}" title="#{bundle.ViewJoo2ExtensionsTitle_access}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_protected1}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.protected1}" title="#{bundle.ViewJoo2ExtensionsTitle_protected1}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_manifestCache}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.manifestCache}" title="#{bundle.ViewJoo2ExtensionsTitle_manifestCache}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_params}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.params}" title="#{bundle.ViewJoo2ExtensionsTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_customData}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.customData}" title="#{bundle.ViewJoo2ExtensionsTitle_customData}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_systemData}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.systemData}" title="#{bundle.ViewJoo2ExtensionsTitle_systemData}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.checkedOut}" title="#{bundle.ViewJoo2ExtensionsTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.checkedOutTime}" title="#{bundle.ViewJoo2ExtensionsTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_ordering}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.ordering}" title="#{bundle.ViewJoo2ExtensionsTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ExtensionsLabel_state}"/>
+                    <h:outputText value="#{joo2ExtensionsController.selected.state}" title="#{bundle.ViewJoo2ExtensionsTitle_state}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2ExtensionsController.destroyAndView}" value="#{bundle.ViewJoo2ExtensionsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2ExtensionsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2ExtensionsController.prepareCreate}" value="#{bundle.ViewJoo2ExtensionsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2ExtensionsController.prepareList}" value="#{bundle.ViewJoo2ExtensionsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2ExtensionsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

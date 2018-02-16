@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_virtuemartCurrencyId}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.virtuemartCurrencyId}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_virtuemartCurrencyId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_virtuemartVendorId}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.virtuemartVendorId}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_virtuemartVendorId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_currencyName}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.currencyName}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_currencyName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_currencyCode2}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.currencyCode2}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_currencyCode2}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_currencyCode3}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.currencyCode3}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_currencyCode3}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_currencyNumericCode}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.currencyNumericCode}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_currencyNumericCode}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_currencyExchangeRate}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.currencyExchangeRate}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_currencyExchangeRate}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_currencySymbol}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.currencySymbol}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_currencySymbol}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_currencyDecimalPlace}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.currencyDecimalPlace}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_currencyDecimalPlace}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_currencyDecimalSymbol}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.currencyDecimalSymbol}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_currencyDecimalSymbol}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_currencyThousands}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.currencyThousands}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_currencyThousands}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_currencyPositiveStyle}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.currencyPositiveStyle}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_currencyPositiveStyle}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_currencyNegativeStyle}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.currencyNegativeStyle}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_currencyNegativeStyle}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_ordering}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.ordering}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_shared}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.shared}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_shared}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.published}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCurrenciesLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCurrenciesController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartCurrenciesTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCurrenciesController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartCurrenciesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartCurrenciesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCurrenciesController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartCurrenciesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCurrenciesController.prepareList}" value="#{bundle.ViewJoo2VirtuemartCurrenciesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartCurrenciesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

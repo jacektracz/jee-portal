@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2NewsfeedsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_catid}" for="catid" />
+                    <h:inputText id="catid" value="#{joo2NewsfeedsController.selected.catid}" title="#{bundle.EditJoo2NewsfeedsTitle_catid}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_catid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2NewsfeedsController.selected.id}" title="#{bundle.EditJoo2NewsfeedsTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{joo2NewsfeedsController.selected.name}" title="#{bundle.EditJoo2NewsfeedsTitle_name}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_name}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_alias}" for="alias" />
+                    <h:inputText id="alias" value="#{joo2NewsfeedsController.selected.alias}" title="#{bundle.EditJoo2NewsfeedsTitle_alias}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_alias}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_link}" for="link" />
+                    <h:inputText id="link" value="#{joo2NewsfeedsController.selected.link}" title="#{bundle.EditJoo2NewsfeedsTitle_link}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_link}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_filename}" for="filename" />
+                    <h:inputText id="filename" value="#{joo2NewsfeedsController.selected.filename}" title="#{bundle.EditJoo2NewsfeedsTitle_filename}" />
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2NewsfeedsController.selected.published}" title="#{bundle.EditJoo2NewsfeedsTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_numarticles}" for="numarticles" />
+                    <h:inputText id="numarticles" value="#{joo2NewsfeedsController.selected.numarticles}" title="#{bundle.EditJoo2NewsfeedsTitle_numarticles}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_numarticles}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_cacheTime}" for="cacheTime" />
+                    <h:inputText id="cacheTime" value="#{joo2NewsfeedsController.selected.cacheTime}" title="#{bundle.EditJoo2NewsfeedsTitle_cacheTime}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_cacheTime}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_checkedOut}" for="checkedOut" />
+                    <h:inputText id="checkedOut" value="#{joo2NewsfeedsController.selected.checkedOut}" title="#{bundle.EditJoo2NewsfeedsTitle_checkedOut}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_checkedOut}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_checkedOutTime}" for="checkedOutTime" />
+                    <h:inputText id="checkedOutTime" value="#{joo2NewsfeedsController.selected.checkedOutTime}" title="#{bundle.EditJoo2NewsfeedsTitle_checkedOutTime}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2NewsfeedsController.selected.ordering}" title="#{bundle.EditJoo2NewsfeedsTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_rtl}" for="rtl" />
+                    <h:inputText id="rtl" value="#{joo2NewsfeedsController.selected.rtl}" title="#{bundle.EditJoo2NewsfeedsTitle_rtl}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_rtl}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_access}" for="access" />
+                    <h:inputText id="access" value="#{joo2NewsfeedsController.selected.access}" title="#{bundle.EditJoo2NewsfeedsTitle_access}" />
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2NewsfeedsController.selected.language}" title="#{bundle.EditJoo2NewsfeedsTitle_language}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_language}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_params}" for="params" />
+                    <h:inputTextarea rows="4" cols="30" id="params" value="#{joo2NewsfeedsController.selected.params}" title="#{bundle.EditJoo2NewsfeedsTitle_params}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_params}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_created}" for="created" />
+                    <h:inputText id="created" value="#{joo2NewsfeedsController.selected.created}" title="#{bundle.EditJoo2NewsfeedsTitle_created}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2NewsfeedsController.selected.createdBy}" title="#{bundle.EditJoo2NewsfeedsTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_createdByAlias}" for="createdByAlias" />
+                    <h:inputText id="createdByAlias" value="#{joo2NewsfeedsController.selected.createdByAlias}" title="#{bundle.EditJoo2NewsfeedsTitle_createdByAlias}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_createdByAlias}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_modified}" for="modified" />
+                    <h:inputText id="modified" value="#{joo2NewsfeedsController.selected.modified}" title="#{bundle.EditJoo2NewsfeedsTitle_modified}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_modified}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2NewsfeedsController.selected.modifiedBy}" title="#{bundle.EditJoo2NewsfeedsTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_metakey}" for="metakey" />
+                    <h:inputTextarea rows="4" cols="30" id="metakey" value="#{joo2NewsfeedsController.selected.metakey}" title="#{bundle.EditJoo2NewsfeedsTitle_metakey}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_metakey}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_metadesc}" for="metadesc" />
+                    <h:inputTextarea rows="4" cols="30" id="metadesc" value="#{joo2NewsfeedsController.selected.metadesc}" title="#{bundle.EditJoo2NewsfeedsTitle_metadesc}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_metadesc}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_metadata}" for="metadata" />
+                    <h:inputTextarea rows="4" cols="30" id="metadata" value="#{joo2NewsfeedsController.selected.metadata}" title="#{bundle.EditJoo2NewsfeedsTitle_metadata}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_metadata}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_xreference}" for="xreference" />
+                    <h:inputText id="xreference" value="#{joo2NewsfeedsController.selected.xreference}" title="#{bundle.EditJoo2NewsfeedsTitle_xreference}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_xreference}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_publishUp}" for="publishUp" />
+                    <h:inputText id="publishUp" value="#{joo2NewsfeedsController.selected.publishUp}" title="#{bundle.EditJoo2NewsfeedsTitle_publishUp}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_publishUp}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2NewsfeedsLabel_publishDown}" for="publishDown" />
+                    <h:inputText id="publishDown" value="#{joo2NewsfeedsController.selected.publishDown}" title="#{bundle.EditJoo2NewsfeedsTitle_publishDown}" required="true" requiredMessage="#{bundle.EditJoo2NewsfeedsRequiredMessage_publishDown}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2NewsfeedsController.update}" value="#{bundle.EditJoo2NewsfeedsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2NewsfeedsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2NewsfeedsController.prepareList}" value="#{bundle.EditJoo2NewsfeedsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2NewsfeedsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

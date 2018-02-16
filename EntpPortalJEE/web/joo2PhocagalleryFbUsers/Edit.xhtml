@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2PhocagalleryFbUsersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2PhocagalleryFbUsersController.selected.id}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_appid}" for="appid" />
+                    <h:inputText id="appid" value="#{joo2PhocagalleryFbUsersController.selected.appid}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_appid}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_appid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_appsid}" for="appsid" />
+                    <h:inputText id="appsid" value="#{joo2PhocagalleryFbUsersController.selected.appsid}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_appsid}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_appsid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_uid}" for="uid" />
+                    <h:inputText id="uid" value="#{joo2PhocagalleryFbUsersController.selected.uid}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_uid}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_uid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{joo2PhocagalleryFbUsersController.selected.name}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_name}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_name}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_link}" for="link" />
+                    <h:inputText id="link" value="#{joo2PhocagalleryFbUsersController.selected.link}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_link}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_link}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_secret}" for="secret" />
+                    <h:inputText id="secret" value="#{joo2PhocagalleryFbUsersController.selected.secret}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_secret}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_secret}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_baseDomain}" for="baseDomain" />
+                    <h:inputText id="baseDomain" value="#{joo2PhocagalleryFbUsersController.selected.baseDomain}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_baseDomain}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_baseDomain}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_expires}" for="expires" />
+                    <h:inputText id="expires" value="#{joo2PhocagalleryFbUsersController.selected.expires}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_expires}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_expires}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_sessionKey}" for="sessionKey" />
+                    <h:inputTextarea rows="4" cols="30" id="sessionKey" value="#{joo2PhocagalleryFbUsersController.selected.sessionKey}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_sessionKey}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_accessToken}" for="accessToken" />
+                    <h:inputTextarea rows="4" cols="30" id="accessToken" value="#{joo2PhocagalleryFbUsersController.selected.accessToken}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_accessToken}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_sig}" for="sig" />
+                    <h:inputTextarea rows="4" cols="30" id="sig" value="#{joo2PhocagalleryFbUsersController.selected.sig}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_sig}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_fanpageid}" for="fanpageid" />
+                    <h:inputText id="fanpageid" value="#{joo2PhocagalleryFbUsersController.selected.fanpageid}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_fanpageid}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_fanpageid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2PhocagalleryFbUsersController.selected.published}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_checkedOut}" for="checkedOut" />
+                    <h:inputText id="checkedOut" value="#{joo2PhocagalleryFbUsersController.selected.checkedOut}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_checkedOut}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_checkedOut}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_checkedOutTime}" for="checkedOutTime" />
+                    <h:inputText id="checkedOutTime" value="#{joo2PhocagalleryFbUsersController.selected.checkedOutTime}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_checkedOutTime}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2PhocagalleryFbUsersController.selected.ordering}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_comments}" for="comments" />
+                    <h:inputTextarea rows="4" cols="30" id="comments" value="#{joo2PhocagalleryFbUsersController.selected.comments}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_comments}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_params}" for="params" />
+                    <h:inputTextarea rows="4" cols="30" id="params" value="#{joo2PhocagalleryFbUsersController.selected.params}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_params}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryFbUsersLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2PhocagalleryFbUsersController.selected.language}" title="#{bundle.EditJoo2PhocagalleryFbUsersTitle_language}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryFbUsersRequiredMessage_language}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2PhocagalleryFbUsersController.update}" value="#{bundle.EditJoo2PhocagalleryFbUsersSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2PhocagalleryFbUsersViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryFbUsersController.prepareList}" value="#{bundle.EditJoo2PhocagalleryFbUsersShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2PhocagalleryFbUsersIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

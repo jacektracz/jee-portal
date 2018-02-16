@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2UtxcTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2UtxcLabel_MUctxcId}"/>
+                    <h:outputText value="#{joo2UtxcController.selected.MUctxcId}" title="#{bundle.ViewJoo2UtxcTitle_MUctxcId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UtxcLabel_MUctxcCookie}"/>
+                    <h:outputText value="#{joo2UtxcController.selected.MUctxcCookie}" title="#{bundle.ViewJoo2UtxcTitle_MUctxcCookie}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UtxcLabel_MUctxcName}"/>
+                    <h:outputText value="#{joo2UtxcController.selected.MUctxcName}" title="#{bundle.ViewJoo2UtxcTitle_MUctxcName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UtxcLabel_MUctxcTitle}"/>
+                    <h:outputText value="#{joo2UtxcController.selected.MUctxcTitle}" title="#{bundle.ViewJoo2UtxcTitle_MUctxcTitle}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UtxcLabel_MUctxcTheme}"/>
+                    <h:outputText value="#{joo2UtxcController.selected.MUctxcTheme}" title="#{bundle.ViewJoo2UtxcTitle_MUctxcTheme}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UtxcLabel_MUctxcGenericData}"/>
+                    <h:outputText value="#{joo2UtxcController.selected.MUctxcGenericData}" title="#{bundle.ViewJoo2UtxcTitle_MUctxcGenericData}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2UtxcController.destroyAndView}" value="#{bundle.ViewJoo2UtxcDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2UtxcEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2UtxcController.prepareCreate}" value="#{bundle.ViewJoo2UtxcCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2UtxcController.prepareList}" value="#{bundle.ViewJoo2UtxcShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2UtxcIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

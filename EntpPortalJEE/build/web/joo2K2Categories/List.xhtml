@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2K2CategoriesEmpty}" rendered="#{joo2K2CategoriesController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2K2CategoriesController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2K2CategoriesController.pagination.pageFirstItem + 1}..#{joo2K2CategoriesController.pagination.pageLastItem + 1}/#{joo2K2CategoriesController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2K2CategoriesController.previous}" value="#{bundle.Previous} #{joo2K2CategoriesController.pagination.pageSize}" rendered="#{joo2K2CategoriesController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2K2CategoriesController.next}" value="#{bundle.Next} #{joo2K2CategoriesController.pagination.pageSize}" rendered="#{joo2K2CategoriesController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2K2CategoriesController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle_name}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.name}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle_alias}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.alias}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle_description}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.description}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle_parent}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.parent}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle_extraFieldsGroup}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.extraFieldsGroup}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle_published}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.published}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle_access}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.access}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle_ordering}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ordering}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle_image}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.image}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle_params}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.params}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle_trash}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.trash}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle_plugins}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.plugins}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2CategoriesTitle_language}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.language}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2K2CategoriesController.prepareView}" value="#{bundle.ListJoo2K2CategoriesViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2K2CategoriesController.prepareEdit}" value="#{bundle.ListJoo2K2CategoriesEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2K2CategoriesController.destroy}" value="#{bundle.ListJoo2K2CategoriesDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2K2CategoriesController.prepareCreate}" value="#{bundle.ListJoo2K2CategoriesCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2K2CategoriesIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

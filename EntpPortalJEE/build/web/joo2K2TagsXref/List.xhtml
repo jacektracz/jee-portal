@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2K2TagsXrefTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2K2TagsXrefEmpty}" rendered="#{joo2K2TagsXrefController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2K2TagsXrefController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2K2TagsXrefController.pagination.pageFirstItem + 1}..#{joo2K2TagsXrefController.pagination.pageLastItem + 1}/#{joo2K2TagsXrefController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2K2TagsXrefController.previous}" value="#{bundle.Previous} #{joo2K2TagsXrefController.pagination.pageSize}" rendered="#{joo2K2TagsXrefController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2K2TagsXrefController.next}" value="#{bundle.Next} #{joo2K2TagsXrefController.pagination.pageSize}" rendered="#{joo2K2TagsXrefController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2K2TagsXrefController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2TagsXrefTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2TagsXrefTitle_tagID}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tagID}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2K2TagsXrefTitle_itemID}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.itemID}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2K2TagsXrefController.prepareView}" value="#{bundle.ListJoo2K2TagsXrefViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2K2TagsXrefController.prepareEdit}" value="#{bundle.ListJoo2K2TagsXrefEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2K2TagsXrefController.destroy}" value="#{bundle.ListJoo2K2TagsXrefDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2K2TagsXrefController.prepareCreate}" value="#{bundle.ListJoo2K2TagsXrefCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2K2TagsXrefIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

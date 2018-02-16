@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2PhocagalleryVotesStatisticsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryVotesStatisticsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2PhocagalleryVotesStatisticsController.selected.id}" title="#{bundle.CreateJoo2PhocagalleryVotesStatisticsTitle_id}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryVotesStatisticsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryVotesStatisticsLabel_catid}" for="catid" />
+                    <h:inputText id="catid" value="#{joo2PhocagalleryVotesStatisticsController.selected.catid}" title="#{bundle.CreateJoo2PhocagalleryVotesStatisticsTitle_catid}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryVotesStatisticsRequiredMessage_catid}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryVotesStatisticsLabel_count}" for="count" />
+                    <h:inputText id="count" value="#{joo2PhocagalleryVotesStatisticsController.selected.count}" title="#{bundle.CreateJoo2PhocagalleryVotesStatisticsTitle_count}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryVotesStatisticsRequiredMessage_count}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryVotesStatisticsLabel_average}" for="average" />
+                    <h:inputText id="average" value="#{joo2PhocagalleryVotesStatisticsController.selected.average}" title="#{bundle.CreateJoo2PhocagalleryVotesStatisticsTitle_average}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryVotesStatisticsRequiredMessage_average}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryVotesStatisticsLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2PhocagalleryVotesStatisticsController.selected.language}" title="#{bundle.CreateJoo2PhocagalleryVotesStatisticsTitle_language}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryVotesStatisticsRequiredMessage_language}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryVotesStatisticsController.create}" value="#{bundle.CreateJoo2PhocagalleryVotesStatisticsSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryVotesStatisticsController.prepareList}" value="#{bundle.CreateJoo2PhocagalleryVotesStatisticsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2PhocagalleryVotesStatisticsIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

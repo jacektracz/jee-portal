@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartCreditcardsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCreditcardsLabel_virtuemartCreditcardId}"/>
+                    <h:outputText value="#{joo2VirtuemartCreditcardsController.selected.virtuemartCreditcardId}" title="#{bundle.ViewJoo2VirtuemartCreditcardsTitle_virtuemartCreditcardId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCreditcardsLabel_virtuemartVendorId}"/>
+                    <h:outputText value="#{joo2VirtuemartCreditcardsController.selected.virtuemartVendorId}" title="#{bundle.ViewJoo2VirtuemartCreditcardsTitle_virtuemartVendorId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCreditcardsLabel_creditcardName}"/>
+                    <h:outputText value="#{joo2VirtuemartCreditcardsController.selected.creditcardName}" title="#{bundle.ViewJoo2VirtuemartCreditcardsTitle_creditcardName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCreditcardsLabel_creditcardCode}"/>
+                    <h:outputText value="#{joo2VirtuemartCreditcardsController.selected.creditcardCode}" title="#{bundle.ViewJoo2VirtuemartCreditcardsTitle_creditcardCode}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCreditcardsLabel_ordering}"/>
+                    <h:outputText value="#{joo2VirtuemartCreditcardsController.selected.ordering}" title="#{bundle.ViewJoo2VirtuemartCreditcardsTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCreditcardsLabel_shared}"/>
+                    <h:outputText value="#{joo2VirtuemartCreditcardsController.selected.shared}" title="#{bundle.ViewJoo2VirtuemartCreditcardsTitle_shared}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCreditcardsLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartCreditcardsController.selected.published}" title="#{bundle.ViewJoo2VirtuemartCreditcardsTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCreditcardsLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCreditcardsController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartCreditcardsTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCreditcardsLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCreditcardsController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartCreditcardsTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCreditcardsLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCreditcardsController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartCreditcardsTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCreditcardsLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCreditcardsController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartCreditcardsTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCreditcardsLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCreditcardsController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartCreditcardsTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCreditcardsLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCreditcardsController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartCreditcardsTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCreditcardsController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartCreditcardsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartCreditcardsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCreditcardsController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartCreditcardsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCreditcardsController.prepareList}" value="#{bundle.ViewJoo2VirtuemartCreditcardsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartCreditcardsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

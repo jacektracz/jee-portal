@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsLabel_virtuemartProductId}"/>
+                    <h:outputText value="#{joo2VirtuemartProductDownloadsController.selected.virtuemartProductId}" title="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle_virtuemartProductId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsLabel_virtuemartUserId}"/>
+                    <h:outputText value="#{joo2VirtuemartProductDownloadsController.selected.virtuemartUserId}" title="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle_virtuemartUserId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsLabel_virtuemartOrderId}"/>
+                    <h:outputText value="#{joo2VirtuemartProductDownloadsController.selected.virtuemartOrderId}" title="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle_virtuemartOrderId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsLabel_endDate}"/>
+                    <h:outputText value="#{joo2VirtuemartProductDownloadsController.selected.endDate}" title="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle_endDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsLabel_downloadMax}"/>
+                    <h:outputText value="#{joo2VirtuemartProductDownloadsController.selected.downloadMax}" title="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle_downloadMax}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsLabel_downloadId}"/>
+                    <h:outputText value="#{joo2VirtuemartProductDownloadsController.selected.downloadId}" title="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle_downloadId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsLabel_fileName}"/>
+                    <h:outputText value="#{joo2VirtuemartProductDownloadsController.selected.fileName}" title="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle_fileName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartProductDownloadsController.selected.published}" title="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartProductDownloadsController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartProductDownloadsController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartProductDownloadsController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartProductDownloadsController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartProductDownloadsController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartProductDownloadsLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartProductDownloadsController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartProductDownloadsTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartProductDownloadsController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartProductDownloadsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartProductDownloadsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartProductDownloadsController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartProductDownloadsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartProductDownloadsController.prepareList}" value="#{bundle.ViewJoo2VirtuemartProductDownloadsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartProductDownloadsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

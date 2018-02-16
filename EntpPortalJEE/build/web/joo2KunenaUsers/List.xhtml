@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2KunenaUsersEmpty}" rendered="#{joo2KunenaUsersController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2KunenaUsersController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2KunenaUsersController.pagination.pageFirstItem + 1}..#{joo2KunenaUsersController.pagination.pageLastItem + 1}/#{joo2KunenaUsersController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2KunenaUsersController.previous}" value="#{bundle.Previous} #{joo2KunenaUsersController.pagination.pageSize}" rendered="#{joo2KunenaUsersController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2KunenaUsersController.next}" value="#{bundle.Next} #{joo2KunenaUsersController.pagination.pageSize}" rendered="#{joo2KunenaUsersController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2KunenaUsersController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_userid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_view}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.view}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_signature}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.signature}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_moderator}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.moderator}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_banned}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.banned}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_ordering}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ordering}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_posts}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.posts}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_avatar}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.avatar}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_karma}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.karma}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_karmaTime}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.karmaTime}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_groupId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.groupId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_uhits}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.uhits}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_personalText}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.personalText}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_gender}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.gender}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_birthdate}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.birthdate}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_location}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.location}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_icq}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.icq}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_aim}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.aim}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_yim}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.yim}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_msn}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.msn}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_skype}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.skype}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_twitter}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.twitter}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_facebook}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.facebook}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_gtalk}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.gtalk}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_myspace}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.myspace}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_linkedin}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.linkedin}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_delicious}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.delicious}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_friendfeed}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.friendfeed}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_digg}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.digg}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_blogspot}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.blogspot}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_flickr}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.flickr}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_bebo}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bebo}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_websitename}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.websitename}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_websiteurl}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.websiteurl}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_rank}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rank}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_hideEmail}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hideEmail}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaUsersTitle_showOnline}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showOnline}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2KunenaUsersController.prepareView}" value="#{bundle.ListJoo2KunenaUsersViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2KunenaUsersController.prepareEdit}" value="#{bundle.ListJoo2KunenaUsersEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2KunenaUsersController.destroy}" value="#{bundle.ListJoo2KunenaUsersDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2KunenaUsersController.prepareCreate}" value="#{bundle.ListJoo2KunenaUsersCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2KunenaUsersIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

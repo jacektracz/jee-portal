@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2BannerClientsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2BannerClientsEmpty}" rendered="#{joo2BannerClientsController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2BannerClientsController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2BannerClientsController.pagination.pageFirstItem + 1}..#{joo2BannerClientsController.pagination.pageLastItem + 1}/#{joo2BannerClientsController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2BannerClientsController.previous}" value="#{bundle.Previous} #{joo2BannerClientsController.pagination.pageSize}" rendered="#{joo2BannerClientsController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2BannerClientsController.next}" value="#{bundle.Next} #{joo2BannerClientsController.pagination.pageSize}" rendered="#{joo2BannerClientsController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2BannerClientsController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2BannerClientsTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2BannerClientsTitle_name}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.name}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2BannerClientsTitle_contact}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.contact}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2BannerClientsTitle_email}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.email}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2BannerClientsTitle_extrainfo}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.extrainfo}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2BannerClientsTitle_state}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.state}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2BannerClientsTitle_checkedOut}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.checkedOut}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2BannerClientsTitle_checkedOutTime}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.checkedOutTime}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2BannerClientsTitle_metakey}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metakey}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2BannerClientsTitle_ownPrefix}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ownPrefix}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2BannerClientsTitle_metakeyPrefix}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metakeyPrefix}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2BannerClientsTitle_purchaseType}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.purchaseType}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2BannerClientsTitle_trackClicks}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.trackClicks}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2BannerClientsTitle_trackImpressions}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.trackImpressions}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2BannerClientsController.prepareView}" value="#{bundle.ListJoo2BannerClientsViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2BannerClientsController.prepareEdit}" value="#{bundle.ListJoo2BannerClientsEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2BannerClientsController.destroy}" value="#{bundle.ListJoo2BannerClientsDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2BannerClientsController.prepareCreate}" value="#{bundle.ListJoo2BannerClientsCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2BannerClientsIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

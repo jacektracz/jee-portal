@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartCountriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCountriesLabel_virtuemartCountryId}"/>
+                    <h:outputText value="#{joo2VirtuemartCountriesController.selected.virtuemartCountryId}" title="#{bundle.ViewJoo2VirtuemartCountriesTitle_virtuemartCountryId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCountriesLabel_virtuemartWorldzoneId}"/>
+                    <h:outputText value="#{joo2VirtuemartCountriesController.selected.virtuemartWorldzoneId}" title="#{bundle.ViewJoo2VirtuemartCountriesTitle_virtuemartWorldzoneId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCountriesLabel_countryName}"/>
+                    <h:outputText value="#{joo2VirtuemartCountriesController.selected.countryName}" title="#{bundle.ViewJoo2VirtuemartCountriesTitle_countryName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCountriesLabel_country3Code}"/>
+                    <h:outputText value="#{joo2VirtuemartCountriesController.selected.country3Code}" title="#{bundle.ViewJoo2VirtuemartCountriesTitle_country3Code}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCountriesLabel_country2Code}"/>
+                    <h:outputText value="#{joo2VirtuemartCountriesController.selected.country2Code}" title="#{bundle.ViewJoo2VirtuemartCountriesTitle_country2Code}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCountriesLabel_ordering}"/>
+                    <h:outputText value="#{joo2VirtuemartCountriesController.selected.ordering}" title="#{bundle.ViewJoo2VirtuemartCountriesTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCountriesLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartCountriesController.selected.published}" title="#{bundle.ViewJoo2VirtuemartCountriesTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCountriesLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCountriesController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartCountriesTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCountriesLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCountriesController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartCountriesTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCountriesLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCountriesController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartCountriesTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCountriesLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCountriesController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartCountriesTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCountriesLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCountriesController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartCountriesTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCountriesLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCountriesController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartCountriesTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCountriesController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartCountriesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartCountriesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCountriesController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartCountriesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCountriesController.prepareList}" value="#{bundle.ViewJoo2VirtuemartCountriesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartCountriesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2K2ItemsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_id}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.id}" title="#{bundle.ViewJoo2K2ItemsTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_title}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.title}" title="#{bundle.ViewJoo2K2ItemsTitle_title}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_alias}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.alias}" title="#{bundle.ViewJoo2K2ItemsTitle_alias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_catid}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.catid}" title="#{bundle.ViewJoo2K2ItemsTitle_catid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_published}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.published}" title="#{bundle.ViewJoo2K2ItemsTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_introtext}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.introtext}" title="#{bundle.ViewJoo2K2ItemsTitle_introtext}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_fulltext}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.fulltext}" title="#{bundle.ViewJoo2K2ItemsTitle_fulltext}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_video}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.video}" title="#{bundle.ViewJoo2K2ItemsTitle_video}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_gallery}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.gallery}" title="#{bundle.ViewJoo2K2ItemsTitle_gallery}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_extraFields}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.extraFields}" title="#{bundle.ViewJoo2K2ItemsTitle_extraFields}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_extraFieldsSearch}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.extraFieldsSearch}" title="#{bundle.ViewJoo2K2ItemsTitle_extraFieldsSearch}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_created}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.created}" title="#{bundle.ViewJoo2K2ItemsTitle_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_createdBy}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.createdBy}" title="#{bundle.ViewJoo2K2ItemsTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_createdByAlias}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.createdByAlias}" title="#{bundle.ViewJoo2K2ItemsTitle_createdByAlias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.checkedOut}" title="#{bundle.ViewJoo2K2ItemsTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.checkedOutTime}" title="#{bundle.ViewJoo2K2ItemsTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_modified}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.modified}" title="#{bundle.ViewJoo2K2ItemsTitle_modified}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.modifiedBy}" title="#{bundle.ViewJoo2K2ItemsTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_publishUp}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.publishUp}" title="#{bundle.ViewJoo2K2ItemsTitle_publishUp}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_publishDown}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.publishDown}" title="#{bundle.ViewJoo2K2ItemsTitle_publishDown}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_trash}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.trash}" title="#{bundle.ViewJoo2K2ItemsTitle_trash}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_access}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.access}" title="#{bundle.ViewJoo2K2ItemsTitle_access}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_ordering}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.ordering}" title="#{bundle.ViewJoo2K2ItemsTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_featured}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.featured}" title="#{bundle.ViewJoo2K2ItemsTitle_featured}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_featuredOrdering}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.featuredOrdering}" title="#{bundle.ViewJoo2K2ItemsTitle_featuredOrdering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_imageCaption}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.imageCaption}" title="#{bundle.ViewJoo2K2ItemsTitle_imageCaption}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_imageCredits}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.imageCredits}" title="#{bundle.ViewJoo2K2ItemsTitle_imageCredits}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_videoCaption}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.videoCaption}" title="#{bundle.ViewJoo2K2ItemsTitle_videoCaption}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_videoCredits}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.videoCredits}" title="#{bundle.ViewJoo2K2ItemsTitle_videoCredits}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_hits}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.hits}" title="#{bundle.ViewJoo2K2ItemsTitle_hits}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_params}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.params}" title="#{bundle.ViewJoo2K2ItemsTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_metadesc}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.metadesc}" title="#{bundle.ViewJoo2K2ItemsTitle_metadesc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_metadata}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.metadata}" title="#{bundle.ViewJoo2K2ItemsTitle_metadata}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_metakey}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.metakey}" title="#{bundle.ViewJoo2K2ItemsTitle_metakey}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_plugins}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.plugins}" title="#{bundle.ViewJoo2K2ItemsTitle_plugins}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ItemsLabel_language}"/>
+                    <h:outputText value="#{joo2K2ItemsController.selected.language}" title="#{bundle.ViewJoo2K2ItemsTitle_language}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2K2ItemsController.destroyAndView}" value="#{bundle.ViewJoo2K2ItemsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2K2ItemsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2K2ItemsController.prepareCreate}" value="#{bundle.ViewJoo2K2ItemsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2K2ItemsController.prepareList}" value="#{bundle.ViewJoo2K2ItemsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2K2ItemsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

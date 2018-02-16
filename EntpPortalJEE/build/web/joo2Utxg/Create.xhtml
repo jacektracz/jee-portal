@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2UtxgTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2UtxgLabel_MUctxgId}" for="MUctxgId" />
+                    <h:inputText id="MUctxgId" value="#{joo2UtxgController.selected.MUctxgId}" title="#{bundle.CreateJoo2UtxgTitle_MUctxgId}" required="true" requiredMessage="#{bundle.CreateJoo2UtxgRequiredMessage_MUctxgId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2UtxgLabel_MUctxId}" for="MUctxId" />
+                    <h:inputText id="MUctxId" value="#{joo2UtxgController.selected.MUctxId}" title="#{bundle.CreateJoo2UtxgTitle_MUctxId}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2UtxgLabel_MUctxgKey}" for="MUctxgKey" />
+                    <h:inputText id="MUctxgKey" value="#{joo2UtxgController.selected.MUctxgKey}" title="#{bundle.CreateJoo2UtxgTitle_MUctxgKey}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2UtxgLabel_MUctxgName}" for="MUctxgName" />
+                    <h:inputText id="MUctxgName" value="#{joo2UtxgController.selected.MUctxgName}" title="#{bundle.CreateJoo2UtxgTitle_MUctxgName}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2UtxgLabel_MUctxgValue}" for="MUctxgValue" />
+                    <h:inputText id="MUctxgValue" value="#{joo2UtxgController.selected.MUctxgValue}" title="#{bundle.CreateJoo2UtxgTitle_MUctxgValue}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2UtxgLabel_MUctxgTitle}" for="MUctxgTitle" />
+                    <h:inputText id="MUctxgTitle" value="#{joo2UtxgController.selected.MUctxgTitle}" title="#{bundle.CreateJoo2UtxgTitle_MUctxgTitle}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2UtxgLabel_MUctxgType}" for="MUctxgType" />
+                    <h:inputText id="MUctxgType" value="#{joo2UtxgController.selected.MUctxgType}" title="#{bundle.CreateJoo2UtxgTitle_MUctxgType}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2UtxgController.create}" value="#{bundle.CreateJoo2UtxgSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2UtxgController.prepareList}" value="#{bundle.CreateJoo2UtxgShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2UtxgIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

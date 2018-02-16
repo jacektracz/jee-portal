@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListTmpTreeTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListTmpTreeEmpty}" rendered="#{tmpTreeController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{tmpTreeController.items.rowCount > 0}">
+                    <h:outputText value="#{tmpTreeController.pagination.pageFirstItem + 1}..#{tmpTreeController.pagination.pageLastItem + 1}/#{tmpTreeController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{tmpTreeController.previous}" value="#{bundle.Previous} #{tmpTreeController.pagination.pageSize}" rendered="#{tmpTreeController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{tmpTreeController.next}" value="#{bundle.Next} #{tmpTreeController.pagination.pageSize}" rendered="#{tmpTreeController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{tmpTreeController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTmpTreeTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTmpTreeTitle_parentId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.parentId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTmpTreeTitle_lft}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lft}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTmpTreeTitle_rgt}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rgt}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{tmpTreeController.prepareView}" value="#{bundle.ListTmpTreeViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{tmpTreeController.prepareEdit}" value="#{bundle.ListTmpTreeEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{tmpTreeController.destroy}" value="#{bundle.ListTmpTreeDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{tmpTreeController.prepareCreate}" value="#{bundle.ListTmpTreeCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListTmpTreeIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

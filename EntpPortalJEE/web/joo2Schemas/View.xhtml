@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2SchemasTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2SchemasLabel_joo2SchemasPK_versionId}"/>
+                    <h:outputText value="#{joo2SchemasController.selected.joo2SchemasPK.versionId}" title="#{bundle.ViewJoo2SchemasTitle_joo2SchemasPK_versionId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SchemasLabel_joo2SchemasPK_extensionId}"/>
+                    <h:outputText value="#{joo2SchemasController.selected.joo2SchemasPK.extensionId}" title="#{bundle.ViewJoo2SchemasTitle_joo2SchemasPK_extensionId}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2SchemasController.destroyAndView}" value="#{bundle.ViewJoo2SchemasDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2SchemasEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2SchemasController.prepareCreate}" value="#{bundle.ViewJoo2SchemasCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2SchemasController.prepareList}" value="#{bundle.ViewJoo2SchemasShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2SchemasIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

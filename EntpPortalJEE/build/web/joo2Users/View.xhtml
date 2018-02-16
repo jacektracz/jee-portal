@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2UsersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2UsersLabel_id}"/>
+                    <h:outputText value="#{joo2UsersController.selected.id}" title="#{bundle.ViewJoo2UsersTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UsersLabel_name}"/>
+                    <h:outputText value="#{joo2UsersController.selected.name}" title="#{bundle.ViewJoo2UsersTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UsersLabel_username}"/>
+                    <h:outputText value="#{joo2UsersController.selected.username}" title="#{bundle.ViewJoo2UsersTitle_username}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UsersLabel_email}"/>
+                    <h:outputText value="#{joo2UsersController.selected.email}" title="#{bundle.ViewJoo2UsersTitle_email}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UsersLabel_password}"/>
+                    <h:outputText value="#{joo2UsersController.selected.password}" title="#{bundle.ViewJoo2UsersTitle_password}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UsersLabel_usertype}"/>
+                    <h:outputText value="#{joo2UsersController.selected.usertype}" title="#{bundle.ViewJoo2UsersTitle_usertype}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UsersLabel_block}"/>
+                    <h:outputText value="#{joo2UsersController.selected.block}" title="#{bundle.ViewJoo2UsersTitle_block}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UsersLabel_sendEmail}"/>
+                    <h:outputText value="#{joo2UsersController.selected.sendEmail}" title="#{bundle.ViewJoo2UsersTitle_sendEmail}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UsersLabel_registerDate}"/>
+                    <h:outputText value="#{joo2UsersController.selected.registerDate}" title="#{bundle.ViewJoo2UsersTitle_registerDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2UsersLabel_lastvisitDate}"/>
+                    <h:outputText value="#{joo2UsersController.selected.lastvisitDate}" title="#{bundle.ViewJoo2UsersTitle_lastvisitDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2UsersLabel_activation}"/>
+                    <h:outputText value="#{joo2UsersController.selected.activation}" title="#{bundle.ViewJoo2UsersTitle_activation}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UsersLabel_params}"/>
+                    <h:outputText value="#{joo2UsersController.selected.params}" title="#{bundle.ViewJoo2UsersTitle_params}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2UsersController.destroyAndView}" value="#{bundle.ViewJoo2UsersDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2UsersEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2UsersController.prepareCreate}" value="#{bundle.ViewJoo2UsersCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2UsersController.prepareList}" value="#{bundle.ViewJoo2UsersShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2UsersIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

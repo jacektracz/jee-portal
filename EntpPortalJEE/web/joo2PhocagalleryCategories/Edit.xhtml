@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2PhocagalleryCategoriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2PhocagalleryCategoriesController.selected.id}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_parentId}" for="parentId" />
+                    <h:inputText id="parentId" value="#{joo2PhocagalleryCategoriesController.selected.parentId}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_parentId}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_parentId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_ownerId}" for="ownerId" />
+                    <h:inputText id="ownerId" value="#{joo2PhocagalleryCategoriesController.selected.ownerId}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_ownerId}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_ownerId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2PhocagalleryCategoriesController.selected.title}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_title}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_title}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{joo2PhocagalleryCategoriesController.selected.name}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_name}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_name}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_alias}" for="alias" />
+                    <h:inputText id="alias" value="#{joo2PhocagalleryCategoriesController.selected.alias}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_alias}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_alias}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_image}" for="image" />
+                    <h:inputText id="image" value="#{joo2PhocagalleryCategoriesController.selected.image}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_image}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_image}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_section}" for="section" />
+                    <h:inputText id="section" value="#{joo2PhocagalleryCategoriesController.selected.section}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_section}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_section}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_imagePosition}" for="imagePosition" />
+                    <h:inputText id="imagePosition" value="#{joo2PhocagalleryCategoriesController.selected.imagePosition}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_imagePosition}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_imagePosition}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_description}" for="description" />
+                    <h:inputTextarea rows="4" cols="30" id="description" value="#{joo2PhocagalleryCategoriesController.selected.description}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_description}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_date}" for="date" />
+                    <h:inputText id="date" value="#{joo2PhocagalleryCategoriesController.selected.date}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_date}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_date}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2PhocagalleryCategoriesController.selected.published}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_approved}" for="approved" />
+                    <h:inputText id="approved" value="#{joo2PhocagalleryCategoriesController.selected.approved}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_approved}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_approved}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_checkedOut}" for="checkedOut" />
+                    <h:inputText id="checkedOut" value="#{joo2PhocagalleryCategoriesController.selected.checkedOut}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_checkedOut}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_checkedOut}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_checkedOutTime}" for="checkedOutTime" />
+                    <h:inputText id="checkedOutTime" value="#{joo2PhocagalleryCategoriesController.selected.checkedOutTime}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_checkedOutTime}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_editor}" for="editor" />
+                    <h:inputText id="editor" value="#{joo2PhocagalleryCategoriesController.selected.editor}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_editor}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2PhocagalleryCategoriesController.selected.ordering}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_access}" for="access" />
+                    <h:inputText id="access" value="#{joo2PhocagalleryCategoriesController.selected.access}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_access}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_access}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_count}" for="count" />
+                    <h:inputText id="count" value="#{joo2PhocagalleryCategoriesController.selected.count}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_count}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_count}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_hits}" for="hits" />
+                    <h:inputText id="hits" value="#{joo2PhocagalleryCategoriesController.selected.hits}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_hits}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_hits}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_accessuserid}" for="accessuserid" />
+                    <h:inputTextarea rows="4" cols="30" id="accessuserid" value="#{joo2PhocagalleryCategoriesController.selected.accessuserid}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_accessuserid}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_uploaduserid}" for="uploaduserid" />
+                    <h:inputTextarea rows="4" cols="30" id="uploaduserid" value="#{joo2PhocagalleryCategoriesController.selected.uploaduserid}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_uploaduserid}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_deleteuserid}" for="deleteuserid" />
+                    <h:inputTextarea rows="4" cols="30" id="deleteuserid" value="#{joo2PhocagalleryCategoriesController.selected.deleteuserid}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_deleteuserid}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_userfolder}" for="userfolder" />
+                    <h:inputTextarea rows="4" cols="30" id="userfolder" value="#{joo2PhocagalleryCategoriesController.selected.userfolder}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_userfolder}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_latitude}" for="latitude" />
+                    <h:inputText id="latitude" value="#{joo2PhocagalleryCategoriesController.selected.latitude}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_latitude}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_latitude}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_longitude}" for="longitude" />
+                    <h:inputText id="longitude" value="#{joo2PhocagalleryCategoriesController.selected.longitude}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_longitude}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_longitude}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_zoom}" for="zoom" />
+                    <h:inputText id="zoom" value="#{joo2PhocagalleryCategoriesController.selected.zoom}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_zoom}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_zoom}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_geotitle}" for="geotitle" />
+                    <h:inputText id="geotitle" value="#{joo2PhocagalleryCategoriesController.selected.geotitle}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_geotitle}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_geotitle}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_extid}" for="extid" />
+                    <h:inputText id="extid" value="#{joo2PhocagalleryCategoriesController.selected.extid}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_extid}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_extid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_exta}" for="exta" />
+                    <h:inputText id="exta" value="#{joo2PhocagalleryCategoriesController.selected.exta}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_exta}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_exta}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_extu}" for="extu" />
+                    <h:inputText id="extu" value="#{joo2PhocagalleryCategoriesController.selected.extu}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_extu}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_extu}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_extauth}" for="extauth" />
+                    <h:inputText id="extauth" value="#{joo2PhocagalleryCategoriesController.selected.extauth}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_extauth}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_extauth}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_extfbuid}" for="extfbuid" />
+                    <h:inputText id="extfbuid" value="#{joo2PhocagalleryCategoriesController.selected.extfbuid}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_extfbuid}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_extfbuid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_extfbcatid}" for="extfbcatid" />
+                    <h:inputText id="extfbcatid" value="#{joo2PhocagalleryCategoriesController.selected.extfbcatid}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_extfbcatid}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_extfbcatid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_params}" for="params" />
+                    <h:inputTextarea rows="4" cols="30" id="params" value="#{joo2PhocagalleryCategoriesController.selected.params}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_params}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_metakey}" for="metakey" />
+                    <h:inputTextarea rows="4" cols="30" id="metakey" value="#{joo2PhocagalleryCategoriesController.selected.metakey}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_metakey}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_metadesc}" for="metadesc" />
+                    <h:inputTextarea rows="4" cols="30" id="metadesc" value="#{joo2PhocagalleryCategoriesController.selected.metadesc}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_metadesc}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_metadata}" for="metadata" />
+                    <h:inputTextarea rows="4" cols="30" id="metadata" value="#{joo2PhocagalleryCategoriesController.selected.metadata}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_metadata}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryCategoriesLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2PhocagalleryCategoriesController.selected.language}" title="#{bundle.EditJoo2PhocagalleryCategoriesTitle_language}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryCategoriesRequiredMessage_language}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2PhocagalleryCategoriesController.update}" value="#{bundle.EditJoo2PhocagalleryCategoriesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2PhocagalleryCategoriesViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryCategoriesController.prepareList}" value="#{bundle.EditJoo2PhocagalleryCategoriesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2PhocagalleryCategoriesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

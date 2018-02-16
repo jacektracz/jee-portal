@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2UcparamTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2UcparamLabel_MUcparamId}"/>
+                    <h:outputText value="#{joo2UcparamController.selected.MUcparamId}" title="#{bundle.ViewJoo2UcparamTitle_MUcparamId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UcparamLabel_MUctxcId}"/>
+                    <h:outputText value="#{joo2UcparamController.selected.MUctxcId}" title="#{bundle.ViewJoo2UcparamTitle_MUctxcId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UcparamLabel_MUcparamKey}"/>
+                    <h:outputText value="#{joo2UcparamController.selected.MUcparamKey}" title="#{bundle.ViewJoo2UcparamTitle_MUcparamKey}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UcparamLabel_MUcparamName}"/>
+                    <h:outputText value="#{joo2UcparamController.selected.MUcparamName}" title="#{bundle.ViewJoo2UcparamTitle_MUcparamName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UcparamLabel_MUcparamValue}"/>
+                    <h:outputText value="#{joo2UcparamController.selected.MUcparamValue}" title="#{bundle.ViewJoo2UcparamTitle_MUcparamValue}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UcparamLabel_MUcparamValue0}"/>
+                    <h:outputText value="#{joo2UcparamController.selected.MUcparamValue0}" title="#{bundle.ViewJoo2UcparamTitle_MUcparamValue0}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UcparamLabel_MUcparamValue1}"/>
+                    <h:outputText value="#{joo2UcparamController.selected.MUcparamValue1}" title="#{bundle.ViewJoo2UcparamTitle_MUcparamValue1}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UcparamLabel_MUcparamValue2}"/>
+                    <h:outputText value="#{joo2UcparamController.selected.MUcparamValue2}" title="#{bundle.ViewJoo2UcparamTitle_MUcparamValue2}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UcparamLabel_MUcparamValue3}"/>
+                    <h:outputText value="#{joo2UcparamController.selected.MUcparamValue3}" title="#{bundle.ViewJoo2UcparamTitle_MUcparamValue3}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UcparamLabel_MUcparamTitle}"/>
+                    <h:outputText value="#{joo2UcparamController.selected.MUcparamTitle}" title="#{bundle.ViewJoo2UcparamTitle_MUcparamTitle}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UcparamLabel_MUcparamType}"/>
+                    <h:outputText value="#{joo2UcparamController.selected.MUcparamType}" title="#{bundle.ViewJoo2UcparamTitle_MUcparamType}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2UcparamController.destroyAndView}" value="#{bundle.ViewJoo2UcparamDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2UcparamEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2UcparamController.prepareCreate}" value="#{bundle.ViewJoo2UcparamCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2UcparamController.prepareList}" value="#{bundle.ViewJoo2UcparamShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2UcparamIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

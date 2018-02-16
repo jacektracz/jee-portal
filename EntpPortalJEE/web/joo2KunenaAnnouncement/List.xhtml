@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2KunenaAnnouncementTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2KunenaAnnouncementEmpty}" rendered="#{joo2KunenaAnnouncementController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2KunenaAnnouncementController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2KunenaAnnouncementController.pagination.pageFirstItem + 1}..#{joo2KunenaAnnouncementController.pagination.pageLastItem + 1}/#{joo2KunenaAnnouncementController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2KunenaAnnouncementController.previous}" value="#{bundle.Previous} #{joo2KunenaAnnouncementController.pagination.pageSize}" rendered="#{joo2KunenaAnnouncementController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2KunenaAnnouncementController.next}" value="#{bundle.Next} #{joo2KunenaAnnouncementController.pagination.pageSize}" rendered="#{joo2KunenaAnnouncementController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2KunenaAnnouncementController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaAnnouncementTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaAnnouncementTitle_title}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.title}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaAnnouncementTitle_sdescription}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.sdescription}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaAnnouncementTitle_description}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.description}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaAnnouncementTitle_created}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.created}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaAnnouncementTitle_published}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.published}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaAnnouncementTitle_ordering}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ordering}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaAnnouncementTitle_showdate}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showdate}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2KunenaAnnouncementController.prepareView}" value="#{bundle.ListJoo2KunenaAnnouncementViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2KunenaAnnouncementController.prepareEdit}" value="#{bundle.ListJoo2KunenaAnnouncementEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2KunenaAnnouncementController.destroy}" value="#{bundle.ListJoo2KunenaAnnouncementDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2KunenaAnnouncementController.prepareCreate}" value="#{bundle.ListJoo2KunenaAnnouncementCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2KunenaAnnouncementIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

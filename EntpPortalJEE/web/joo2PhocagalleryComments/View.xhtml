@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2PhocagalleryCommentsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCommentsLabel_id}"/>
+                    <h:outputText value="#{joo2PhocagalleryCommentsController.selected.id}" title="#{bundle.ViewJoo2PhocagalleryCommentsTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCommentsLabel_catid}"/>
+                    <h:outputText value="#{joo2PhocagalleryCommentsController.selected.catid}" title="#{bundle.ViewJoo2PhocagalleryCommentsTitle_catid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCommentsLabel_userid}"/>
+                    <h:outputText value="#{joo2PhocagalleryCommentsController.selected.userid}" title="#{bundle.ViewJoo2PhocagalleryCommentsTitle_userid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCommentsLabel_date}"/>
+                    <h:outputText value="#{joo2PhocagalleryCommentsController.selected.date}" title="#{bundle.ViewJoo2PhocagalleryCommentsTitle_date}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCommentsLabel_title}"/>
+                    <h:outputText value="#{joo2PhocagalleryCommentsController.selected.title}" title="#{bundle.ViewJoo2PhocagalleryCommentsTitle_title}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCommentsLabel_alias}"/>
+                    <h:outputText value="#{joo2PhocagalleryCommentsController.selected.alias}" title="#{bundle.ViewJoo2PhocagalleryCommentsTitle_alias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCommentsLabel_comment}"/>
+                    <h:outputText value="#{joo2PhocagalleryCommentsController.selected.comment}" title="#{bundle.ViewJoo2PhocagalleryCommentsTitle_comment}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCommentsLabel_published}"/>
+                    <h:outputText value="#{joo2PhocagalleryCommentsController.selected.published}" title="#{bundle.ViewJoo2PhocagalleryCommentsTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCommentsLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2PhocagalleryCommentsController.selected.checkedOut}" title="#{bundle.ViewJoo2PhocagalleryCommentsTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCommentsLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2PhocagalleryCommentsController.selected.checkedOutTime}" title="#{bundle.ViewJoo2PhocagalleryCommentsTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCommentsLabel_ordering}"/>
+                    <h:outputText value="#{joo2PhocagalleryCommentsController.selected.ordering}" title="#{bundle.ViewJoo2PhocagalleryCommentsTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCommentsLabel_params}"/>
+                    <h:outputText value="#{joo2PhocagalleryCommentsController.selected.params}" title="#{bundle.ViewJoo2PhocagalleryCommentsTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryCommentsLabel_language}"/>
+                    <h:outputText value="#{joo2PhocagalleryCommentsController.selected.language}" title="#{bundle.ViewJoo2PhocagalleryCommentsTitle_language}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryCommentsController.destroyAndView}" value="#{bundle.ViewJoo2PhocagalleryCommentsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2PhocagalleryCommentsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryCommentsController.prepareCreate}" value="#{bundle.ViewJoo2PhocagalleryCommentsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryCommentsController.prepareList}" value="#{bundle.ViewJoo2PhocagalleryCommentsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2PhocagalleryCommentsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

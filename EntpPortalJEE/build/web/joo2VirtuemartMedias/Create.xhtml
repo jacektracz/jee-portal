@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2VirtuemartMediasTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_virtuemartMediaId}" for="virtuemartMediaId" />
+                    <h:inputText id="virtuemartMediaId" value="#{joo2VirtuemartMediasController.selected.virtuemartMediaId}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_virtuemartMediaId}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_virtuemartMediaId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_virtuemartVendorId}" for="virtuemartVendorId" />
+                    <h:inputText id="virtuemartVendorId" value="#{joo2VirtuemartMediasController.selected.virtuemartVendorId}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_virtuemartVendorId}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_virtuemartVendorId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_fileTitle}" for="fileTitle" />
+                    <h:inputText id="fileTitle" value="#{joo2VirtuemartMediasController.selected.fileTitle}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_fileTitle}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_fileTitle}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_fileDescription}" for="fileDescription" />
+                    <h:inputText id="fileDescription" value="#{joo2VirtuemartMediasController.selected.fileDescription}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_fileDescription}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_fileDescription}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_fileMeta}" for="fileMeta" />
+                    <h:inputText id="fileMeta" value="#{joo2VirtuemartMediasController.selected.fileMeta}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_fileMeta}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_fileMeta}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_fileMimetype}" for="fileMimetype" />
+                    <h:inputText id="fileMimetype" value="#{joo2VirtuemartMediasController.selected.fileMimetype}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_fileMimetype}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_fileMimetype}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_fileType}" for="fileType" />
+                    <h:inputText id="fileType" value="#{joo2VirtuemartMediasController.selected.fileType}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_fileType}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_fileType}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_fileUrl}" for="fileUrl" />
+                    <h:inputTextarea rows="4" cols="30" id="fileUrl" value="#{joo2VirtuemartMediasController.selected.fileUrl}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_fileUrl}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_fileUrlThumb}" for="fileUrlThumb" />
+                    <h:inputText id="fileUrlThumb" value="#{joo2VirtuemartMediasController.selected.fileUrlThumb}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_fileUrlThumb}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_fileUrlThumb}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_fileIsProductImage}" for="fileIsProductImage" />
+                    <h:inputText id="fileIsProductImage" value="#{joo2VirtuemartMediasController.selected.fileIsProductImage}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_fileIsProductImage}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_fileIsProductImage}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_fileIsDownloadable}" for="fileIsDownloadable" />
+                    <h:inputText id="fileIsDownloadable" value="#{joo2VirtuemartMediasController.selected.fileIsDownloadable}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_fileIsDownloadable}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_fileIsDownloadable}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_fileisforSale}" for="fileisforSale" />
+                    <h:inputText id="fileisforSale" value="#{joo2VirtuemartMediasController.selected.fileisforSale}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_fileisforSale}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_fileisforSale}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_fileParams}" for="fileParams" />
+                    <h:inputTextarea rows="4" cols="30" id="fileParams" value="#{joo2VirtuemartMediasController.selected.fileParams}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_fileParams}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2VirtuemartMediasController.selected.ordering}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_ordering}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_shared}" for="shared" />
+                    <h:inputText id="shared" value="#{joo2VirtuemartMediasController.selected.shared}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_shared}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_shared}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartMediasController.selected.published}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_published}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartMediasController.selected.createdOn}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_createdOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartMediasController.selected.createdBy}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_createdBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartMediasController.selected.modifiedOn}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_modifiedOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartMediasController.selected.modifiedBy}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_modifiedBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartMediasController.selected.lockedOn}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_lockedOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartMediasLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartMediasController.selected.lockedBy}" title="#{bundle.CreateJoo2VirtuemartMediasTitle_lockedBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartMediasRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartMediasController.create}" value="#{bundle.CreateJoo2VirtuemartMediasSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartMediasController.prepareList}" value="#{bundle.CreateJoo2VirtuemartMediasShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2VirtuemartMediasIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

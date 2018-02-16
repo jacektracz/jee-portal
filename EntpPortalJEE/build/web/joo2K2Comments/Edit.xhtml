@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2K2CommentsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2K2CommentsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2K2CommentsController.selected.id}" title="#{bundle.EditJoo2K2CommentsTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2K2CommentsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2CommentsLabel_itemID}" for="itemID" />
+                    <h:inputText id="itemID" value="#{joo2K2CommentsController.selected.itemID}" title="#{bundle.EditJoo2K2CommentsTitle_itemID}" required="true" requiredMessage="#{bundle.EditJoo2K2CommentsRequiredMessage_itemID}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2CommentsLabel_userID}" for="userID" />
+                    <h:inputText id="userID" value="#{joo2K2CommentsController.selected.userID}" title="#{bundle.EditJoo2K2CommentsTitle_userID}" required="true" requiredMessage="#{bundle.EditJoo2K2CommentsRequiredMessage_userID}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2CommentsLabel_userName}" for="userName" />
+                    <h:inputText id="userName" value="#{joo2K2CommentsController.selected.userName}" title="#{bundle.EditJoo2K2CommentsTitle_userName}" required="true" requiredMessage="#{bundle.EditJoo2K2CommentsRequiredMessage_userName}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2CommentsLabel_commentDate}" for="commentDate" />
+                    <h:inputText id="commentDate" value="#{joo2K2CommentsController.selected.commentDate}" title="#{bundle.EditJoo2K2CommentsTitle_commentDate}" required="true" requiredMessage="#{bundle.EditJoo2K2CommentsRequiredMessage_commentDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2K2CommentsLabel_commentText}" for="commentText" />
+                    <h:inputTextarea rows="4" cols="30" id="commentText" value="#{joo2K2CommentsController.selected.commentText}" title="#{bundle.EditJoo2K2CommentsTitle_commentText}" required="true" requiredMessage="#{bundle.EditJoo2K2CommentsRequiredMessage_commentText}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2CommentsLabel_commentEmail}" for="commentEmail" />
+                    <h:inputText id="commentEmail" value="#{joo2K2CommentsController.selected.commentEmail}" title="#{bundle.EditJoo2K2CommentsTitle_commentEmail}" required="true" requiredMessage="#{bundle.EditJoo2K2CommentsRequiredMessage_commentEmail}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2CommentsLabel_commentURL}" for="commentURL" />
+                    <h:inputText id="commentURL" value="#{joo2K2CommentsController.selected.commentURL}" title="#{bundle.EditJoo2K2CommentsTitle_commentURL}" required="true" requiredMessage="#{bundle.EditJoo2K2CommentsRequiredMessage_commentURL}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2CommentsLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2K2CommentsController.selected.published}" title="#{bundle.EditJoo2K2CommentsTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2K2CommentsRequiredMessage_published}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2K2CommentsController.update}" value="#{bundle.EditJoo2K2CommentsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2K2CommentsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2K2CommentsController.prepareList}" value="#{bundle.EditJoo2K2CommentsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2K2CommentsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

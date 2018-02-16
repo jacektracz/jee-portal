@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartCategoryCategoriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoryCategoriesLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2VirtuemartCategoryCategoriesController.selected.id}" title="#{bundle.EditJoo2VirtuemartCategoryCategoriesTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoryCategoriesRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoryCategoriesLabel_categoryParentId}" for="categoryParentId" />
+                    <h:inputText id="categoryParentId" value="#{joo2VirtuemartCategoryCategoriesController.selected.categoryParentId}" title="#{bundle.EditJoo2VirtuemartCategoryCategoriesTitle_categoryParentId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoryCategoriesRequiredMessage_categoryParentId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoryCategoriesLabel_categoryChildId}" for="categoryChildId" />
+                    <h:inputText id="categoryChildId" value="#{joo2VirtuemartCategoryCategoriesController.selected.categoryChildId}" title="#{bundle.EditJoo2VirtuemartCategoryCategoriesTitle_categoryChildId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoryCategoriesRequiredMessage_categoryChildId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoryCategoriesLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2VirtuemartCategoryCategoriesController.selected.ordering}" title="#{bundle.EditJoo2VirtuemartCategoryCategoriesTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoryCategoriesRequiredMessage_ordering}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartCategoryCategoriesController.update}" value="#{bundle.EditJoo2VirtuemartCategoryCategoriesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartCategoryCategoriesViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCategoryCategoriesController.prepareList}" value="#{bundle.EditJoo2VirtuemartCategoryCategoriesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartCategoryCategoriesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

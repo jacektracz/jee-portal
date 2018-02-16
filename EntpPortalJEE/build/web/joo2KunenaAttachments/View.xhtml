@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2KunenaAttachmentsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2KunenaAttachmentsLabel_id}"/>
+                    <h:outputText value="#{joo2KunenaAttachmentsController.selected.id}" title="#{bundle.ViewJoo2KunenaAttachmentsTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaAttachmentsLabel_mesid}"/>
+                    <h:outputText value="#{joo2KunenaAttachmentsController.selected.mesid}" title="#{bundle.ViewJoo2KunenaAttachmentsTitle_mesid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaAttachmentsLabel_userid}"/>
+                    <h:outputText value="#{joo2KunenaAttachmentsController.selected.userid}" title="#{bundle.ViewJoo2KunenaAttachmentsTitle_userid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaAttachmentsLabel_hash}"/>
+                    <h:outputText value="#{joo2KunenaAttachmentsController.selected.hash}" title="#{bundle.ViewJoo2KunenaAttachmentsTitle_hash}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaAttachmentsLabel_size}"/>
+                    <h:outputText value="#{joo2KunenaAttachmentsController.selected.size}" title="#{bundle.ViewJoo2KunenaAttachmentsTitle_size}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaAttachmentsLabel_folder}"/>
+                    <h:outputText value="#{joo2KunenaAttachmentsController.selected.folder}" title="#{bundle.ViewJoo2KunenaAttachmentsTitle_folder}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaAttachmentsLabel_filetype}"/>
+                    <h:outputText value="#{joo2KunenaAttachmentsController.selected.filetype}" title="#{bundle.ViewJoo2KunenaAttachmentsTitle_filetype}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaAttachmentsLabel_filename}"/>
+                    <h:outputText value="#{joo2KunenaAttachmentsController.selected.filename}" title="#{bundle.ViewJoo2KunenaAttachmentsTitle_filename}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2KunenaAttachmentsController.destroyAndView}" value="#{bundle.ViewJoo2KunenaAttachmentsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2KunenaAttachmentsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaAttachmentsController.prepareCreate}" value="#{bundle.ViewJoo2KunenaAttachmentsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2KunenaAttachmentsController.prepareList}" value="#{bundle.ViewJoo2KunenaAttachmentsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2KunenaAttachmentsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

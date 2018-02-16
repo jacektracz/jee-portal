@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2WidgetkitWidgetTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2WidgetkitWidgetLabel_id}"/>
+                    <h:outputText value="#{joo2WidgetkitWidgetController.selected.id}" title="#{bundle.ViewJoo2WidgetkitWidgetTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WidgetkitWidgetLabel_type}"/>
+                    <h:outputText value="#{joo2WidgetkitWidgetController.selected.type}" title="#{bundle.ViewJoo2WidgetkitWidgetTitle_type}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WidgetkitWidgetLabel_style}"/>
+                    <h:outputText value="#{joo2WidgetkitWidgetController.selected.style}" title="#{bundle.ViewJoo2WidgetkitWidgetTitle_style}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WidgetkitWidgetLabel_name}"/>
+                    <h:outputText value="#{joo2WidgetkitWidgetController.selected.name}" title="#{bundle.ViewJoo2WidgetkitWidgetTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WidgetkitWidgetLabel_content}"/>
+                    <h:outputText value="#{joo2WidgetkitWidgetController.selected.content}" title="#{bundle.ViewJoo2WidgetkitWidgetTitle_content}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WidgetkitWidgetLabel_created}"/>
+                    <h:outputText value="#{joo2WidgetkitWidgetController.selected.created}" title="#{bundle.ViewJoo2WidgetkitWidgetTitle_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2WidgetkitWidgetLabel_modified}"/>
+                    <h:outputText value="#{joo2WidgetkitWidgetController.selected.modified}" title="#{bundle.ViewJoo2WidgetkitWidgetTitle_modified}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2WidgetkitWidgetController.destroyAndView}" value="#{bundle.ViewJoo2WidgetkitWidgetDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2WidgetkitWidgetEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2WidgetkitWidgetController.prepareCreate}" value="#{bundle.ViewJoo2WidgetkitWidgetCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2WidgetkitWidgetController.prepareList}" value="#{bundle.ViewJoo2WidgetkitWidgetShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2WidgetkitWidgetIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

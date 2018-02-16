@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2BannerClientsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2BannerClientsLabel_id}"/>
+                    <h:outputText value="#{joo2BannerClientsController.selected.id}" title="#{bundle.ViewJoo2BannerClientsTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2BannerClientsLabel_name}"/>
+                    <h:outputText value="#{joo2BannerClientsController.selected.name}" title="#{bundle.ViewJoo2BannerClientsTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2BannerClientsLabel_contact}"/>
+                    <h:outputText value="#{joo2BannerClientsController.selected.contact}" title="#{bundle.ViewJoo2BannerClientsTitle_contact}"/>
+                    <h:outputText value="#{bundle.ViewJoo2BannerClientsLabel_email}"/>
+                    <h:outputText value="#{joo2BannerClientsController.selected.email}" title="#{bundle.ViewJoo2BannerClientsTitle_email}"/>
+                    <h:outputText value="#{bundle.ViewJoo2BannerClientsLabel_extrainfo}"/>
+                    <h:outputText value="#{joo2BannerClientsController.selected.extrainfo}" title="#{bundle.ViewJoo2BannerClientsTitle_extrainfo}"/>
+                    <h:outputText value="#{bundle.ViewJoo2BannerClientsLabel_state}"/>
+                    <h:outputText value="#{joo2BannerClientsController.selected.state}" title="#{bundle.ViewJoo2BannerClientsTitle_state}"/>
+                    <h:outputText value="#{bundle.ViewJoo2BannerClientsLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2BannerClientsController.selected.checkedOut}" title="#{bundle.ViewJoo2BannerClientsTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2BannerClientsLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2BannerClientsController.selected.checkedOutTime}" title="#{bundle.ViewJoo2BannerClientsTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2BannerClientsLabel_metakey}"/>
+                    <h:outputText value="#{joo2BannerClientsController.selected.metakey}" title="#{bundle.ViewJoo2BannerClientsTitle_metakey}"/>
+                    <h:outputText value="#{bundle.ViewJoo2BannerClientsLabel_ownPrefix}"/>
+                    <h:outputText value="#{joo2BannerClientsController.selected.ownPrefix}" title="#{bundle.ViewJoo2BannerClientsTitle_ownPrefix}"/>
+                    <h:outputText value="#{bundle.ViewJoo2BannerClientsLabel_metakeyPrefix}"/>
+                    <h:outputText value="#{joo2BannerClientsController.selected.metakeyPrefix}" title="#{bundle.ViewJoo2BannerClientsTitle_metakeyPrefix}"/>
+                    <h:outputText value="#{bundle.ViewJoo2BannerClientsLabel_purchaseType}"/>
+                    <h:outputText value="#{joo2BannerClientsController.selected.purchaseType}" title="#{bundle.ViewJoo2BannerClientsTitle_purchaseType}"/>
+                    <h:outputText value="#{bundle.ViewJoo2BannerClientsLabel_trackClicks}"/>
+                    <h:outputText value="#{joo2BannerClientsController.selected.trackClicks}" title="#{bundle.ViewJoo2BannerClientsTitle_trackClicks}"/>
+                    <h:outputText value="#{bundle.ViewJoo2BannerClientsLabel_trackImpressions}"/>
+                    <h:outputText value="#{joo2BannerClientsController.selected.trackImpressions}" title="#{bundle.ViewJoo2BannerClientsTitle_trackImpressions}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2BannerClientsController.destroyAndView}" value="#{bundle.ViewJoo2BannerClientsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2BannerClientsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2BannerClientsController.prepareCreate}" value="#{bundle.ViewJoo2BannerClientsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2BannerClientsController.prepareList}" value="#{bundle.ViewJoo2BannerClientsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2BannerClientsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

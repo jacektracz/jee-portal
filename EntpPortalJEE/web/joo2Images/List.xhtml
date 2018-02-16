@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2ImagesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2ImagesEmpty}" rendered="#{joo2ImagesController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2ImagesController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2ImagesController.pagination.pageFirstItem + 1}..#{joo2ImagesController.pagination.pageLastItem + 1}/#{joo2ImagesController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2ImagesController.previous}" value="#{bundle.Previous} #{joo2ImagesController.pagination.pageSize}" rendered="#{joo2ImagesController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2ImagesController.next}" value="#{bundle.Next} #{joo2ImagesController.pagination.pageSize}" rendered="#{joo2ImagesController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2ImagesController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epImageId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epImageId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epImageSmallPath}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epImageSmallPath}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epImageBigPath}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epImageBigPath}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epSourceClass}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epSourceClass}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epSizeSmall}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epSizeSmall}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epSizeBigl}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epSizeBigl}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epSizeBig}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epSizeBig}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epSizeSmallDb}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epSizeSmallDb}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epSizeBigDb}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epSizeBigDb}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epSizeType}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epSizeType}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epBigSizeType}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epBigSizeType}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epSmallSizeType}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epSmallSizeType}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epBigWidth}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epBigWidth}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epBigHeight}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epBigHeight}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epSmallWidth}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epSmallWidth}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ImagesTitle_epSmallHeight}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epSmallHeight}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2ImagesController.prepareView}" value="#{bundle.ListJoo2ImagesViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2ImagesController.prepareEdit}" value="#{bundle.ListJoo2ImagesEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2ImagesController.destroy}" value="#{bundle.ListJoo2ImagesDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2ImagesController.prepareCreate}" value="#{bundle.ListJoo2ImagesCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2ImagesIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

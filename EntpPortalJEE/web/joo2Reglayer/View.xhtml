@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2ReglayerTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MRegLayerid}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MRegLayerid}" title="#{bundle.ViewJoo2ReglayerTitle_MRegLayerid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MParentId}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MParentId}" title="#{bundle.ViewJoo2ReglayerTitle_MParentId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MLayerId}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MLayerId}" title="#{bundle.ViewJoo2ReglayerTitle_MLayerId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MShortName}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MShortName}" title="#{bundle.ViewJoo2ReglayerTitle_MShortName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MTitle}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MTitle}" title="#{bundle.ViewJoo2ReglayerTitle_MTitle}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MCollapsible}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MCollapsible}" title="#{bundle.ViewJoo2ReglayerTitle_MCollapsible}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MOpenContent}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MOpenContent}" title="#{bundle.ViewJoo2ReglayerTitle_MOpenContent}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MRegLayertype}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MRegLayertype}" title="#{bundle.ViewJoo2ReglayerTitle_MRegLayertype}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MRegLayerposition}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MRegLayerposition}" title="#{bundle.ViewJoo2ReglayerTitle_MRegLayerposition}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MRegLayerordering}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MRegLayerordering}" title="#{bundle.ViewJoo2ReglayerTitle_MRegLayerordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MRegLayername}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MRegLayername}" title="#{bundle.ViewJoo2ReglayerTitle_MRegLayername}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MRegLayertitle}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MRegLayertitle}" title="#{bundle.ViewJoo2ReglayerTitle_MRegLayertitle}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_regLayerdisplay}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.regLayerdisplay}" title="#{bundle.ViewJoo2ReglayerTitle_regLayerdisplay}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MRegLayerdisplay}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MRegLayerdisplay}" title="#{bundle.ViewJoo2ReglayerTitle_MRegLayerdisplay}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MThemeTeam}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MThemeTeam}" title="#{bundle.ViewJoo2ReglayerTitle_MThemeTeam}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MThemeEpt}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MThemeEpt}" title="#{bundle.ViewJoo2ReglayerTitle_MThemeEpt}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MReglayerThemesPath}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MReglayerThemesPath}" title="#{bundle.ViewJoo2ReglayerTitle_MReglayerThemesPath}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MReglayerThemeDefault}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MReglayerThemeDefault}" title="#{bundle.ViewJoo2ReglayerTitle_MReglayerThemeDefault}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MReglayerThemeLast}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MReglayerThemeLast}" title="#{bundle.ViewJoo2ReglayerTitle_MReglayerThemeLast}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MReglayerLeadTheme}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MReglayerLeadTheme}" title="#{bundle.ViewJoo2ReglayerTitle_MReglayerLeadTheme}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ReglayerLabel_MReglayerThreeTabTheme}"/>
+                    <h:outputText value="#{joo2ReglayerController.selected.MReglayerThreeTabTheme}" title="#{bundle.ViewJoo2ReglayerTitle_MReglayerThreeTabTheme}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2ReglayerController.destroyAndView}" value="#{bundle.ViewJoo2ReglayerDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2ReglayerEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2ReglayerController.prepareCreate}" value="#{bundle.ViewJoo2ReglayerCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2ReglayerController.prepareList}" value="#{bundle.ViewJoo2ReglayerShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2ReglayerIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

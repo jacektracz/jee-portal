@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartCreditcardsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCreditcardsLabel_virtuemartCreditcardId}" for="virtuemartCreditcardId" />
+                    <h:inputText id="virtuemartCreditcardId" value="#{joo2VirtuemartCreditcardsController.selected.virtuemartCreditcardId}" title="#{bundle.EditJoo2VirtuemartCreditcardsTitle_virtuemartCreditcardId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCreditcardsRequiredMessage_virtuemartCreditcardId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCreditcardsLabel_virtuemartVendorId}" for="virtuemartVendorId" />
+                    <h:inputText id="virtuemartVendorId" value="#{joo2VirtuemartCreditcardsController.selected.virtuemartVendorId}" title="#{bundle.EditJoo2VirtuemartCreditcardsTitle_virtuemartVendorId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCreditcardsRequiredMessage_virtuemartVendorId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCreditcardsLabel_creditcardName}" for="creditcardName" />
+                    <h:inputText id="creditcardName" value="#{joo2VirtuemartCreditcardsController.selected.creditcardName}" title="#{bundle.EditJoo2VirtuemartCreditcardsTitle_creditcardName}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCreditcardsRequiredMessage_creditcardName}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCreditcardsLabel_creditcardCode}" for="creditcardCode" />
+                    <h:inputText id="creditcardCode" value="#{joo2VirtuemartCreditcardsController.selected.creditcardCode}" title="#{bundle.EditJoo2VirtuemartCreditcardsTitle_creditcardCode}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCreditcardsRequiredMessage_creditcardCode}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCreditcardsLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2VirtuemartCreditcardsController.selected.ordering}" title="#{bundle.EditJoo2VirtuemartCreditcardsTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCreditcardsRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCreditcardsLabel_shared}" for="shared" />
+                    <h:inputText id="shared" value="#{joo2VirtuemartCreditcardsController.selected.shared}" title="#{bundle.EditJoo2VirtuemartCreditcardsTitle_shared}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCreditcardsRequiredMessage_shared}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCreditcardsLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartCreditcardsController.selected.published}" title="#{bundle.EditJoo2VirtuemartCreditcardsTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCreditcardsRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCreditcardsLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartCreditcardsController.selected.createdOn}" title="#{bundle.EditJoo2VirtuemartCreditcardsTitle_createdOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCreditcardsRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCreditcardsLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartCreditcardsController.selected.createdBy}" title="#{bundle.EditJoo2VirtuemartCreditcardsTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCreditcardsRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCreditcardsLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartCreditcardsController.selected.modifiedOn}" title="#{bundle.EditJoo2VirtuemartCreditcardsTitle_modifiedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCreditcardsRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCreditcardsLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartCreditcardsController.selected.modifiedBy}" title="#{bundle.EditJoo2VirtuemartCreditcardsTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCreditcardsRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCreditcardsLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartCreditcardsController.selected.lockedOn}" title="#{bundle.EditJoo2VirtuemartCreditcardsTitle_lockedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCreditcardsRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCreditcardsLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartCreditcardsController.selected.lockedBy}" title="#{bundle.EditJoo2VirtuemartCreditcardsTitle_lockedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCreditcardsRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartCreditcardsController.update}" value="#{bundle.EditJoo2VirtuemartCreditcardsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartCreditcardsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCreditcardsController.prepareList}" value="#{bundle.EditJoo2VirtuemartCreditcardsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartCreditcardsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsLabel_id}"/>
+                    <h:outputText value="#{joo2VirtuemartMigrationOldtonewIdsController.selected.id}" title="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsLabel_cats}"/>
+                    <h:outputText value="#{joo2VirtuemartMigrationOldtonewIdsController.selected.cats}" title="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsTitle_cats}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsLabel_catsxref}"/>
+                    <h:outputText value="#{joo2VirtuemartMigrationOldtonewIdsController.selected.catsxref}" title="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsTitle_catsxref}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsLabel_manus}"/>
+                    <h:outputText value="#{joo2VirtuemartMigrationOldtonewIdsController.selected.manus}" title="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsTitle_manus}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsLabel_mfcats}"/>
+                    <h:outputText value="#{joo2VirtuemartMigrationOldtonewIdsController.selected.mfcats}" title="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsTitle_mfcats}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsLabel_shoppergroups}"/>
+                    <h:outputText value="#{joo2VirtuemartMigrationOldtonewIdsController.selected.shoppergroups}" title="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsTitle_shoppergroups}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsLabel_products}"/>
+                    <h:outputText value="#{joo2VirtuemartMigrationOldtonewIdsController.selected.products}" title="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsTitle_products}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsLabel_orderstates}"/>
+                    <h:outputText value="#{joo2VirtuemartMigrationOldtonewIdsController.selected.orderstates}" title="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsTitle_orderstates}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsLabel_orders}"/>
+                    <h:outputText value="#{joo2VirtuemartMigrationOldtonewIdsController.selected.orders}" title="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsTitle_orders}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartMigrationOldtonewIdsController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartMigrationOldtonewIdsController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartMigrationOldtonewIdsController.prepareList}" value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartMigrationOldtonewIdsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

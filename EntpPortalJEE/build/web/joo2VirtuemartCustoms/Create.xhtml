@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2VirtuemartCustomsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_virtuemartCustomId}" for="virtuemartCustomId" />
+                    <h:inputText id="virtuemartCustomId" value="#{joo2VirtuemartCustomsController.selected.virtuemartCustomId}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_virtuemartCustomId}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_virtuemartCustomId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_customParentId}" for="customParentId" />
+                    <h:inputText id="customParentId" value="#{joo2VirtuemartCustomsController.selected.customParentId}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_customParentId}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_customParentId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_adminOnly}" for="adminOnly" />
+                    <h:inputText id="adminOnly" value="#{joo2VirtuemartCustomsController.selected.adminOnly}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_adminOnly}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_adminOnly}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_customTitle}" for="customTitle" />
+                    <h:inputText id="customTitle" value="#{joo2VirtuemartCustomsController.selected.customTitle}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_customTitle}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_customTitle}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_customTip}" for="customTip" />
+                    <h:inputText id="customTip" value="#{joo2VirtuemartCustomsController.selected.customTip}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_customTip}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_customTip}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_customValue}" for="customValue" />
+                    <h:inputText id="customValue" value="#{joo2VirtuemartCustomsController.selected.customValue}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_customValue}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_customFieldDesc}" for="customFieldDesc" />
+                    <h:inputText id="customFieldDesc" value="#{joo2VirtuemartCustomsController.selected.customFieldDesc}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_customFieldDesc}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_fieldType}" for="fieldType" />
+                    <h:inputText id="fieldType" value="#{joo2VirtuemartCustomsController.selected.fieldType}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_fieldType}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_fieldType}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_isList}" for="isList" />
+                    <h:inputText id="isList" value="#{joo2VirtuemartCustomsController.selected.isList}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_isList}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_isHidden}" for="isHidden" />
+                    <h:inputText id="isHidden" value="#{joo2VirtuemartCustomsController.selected.isHidden}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_isHidden}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_isHidden}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_isCartAttribute}" for="isCartAttribute" />
+                    <h:inputText id="isCartAttribute" value="#{joo2VirtuemartCustomsController.selected.isCartAttribute}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_isCartAttribute}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_isCartAttribute}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartCustomsController.selected.published}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_published}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartCustomsController.selected.createdOn}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_createdOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartCustomsController.selected.createdBy}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_createdBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartCustomsController.selected.modifiedOn}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_modifiedOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartCustomsController.selected.modifiedBy}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_modifiedBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartCustomsController.selected.lockedOn}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_lockedOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCustomsLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartCustomsController.selected.lockedBy}" title="#{bundle.CreateJoo2VirtuemartCustomsTitle_lockedBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCustomsRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCustomsController.create}" value="#{bundle.CreateJoo2VirtuemartCustomsSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCustomsController.prepareList}" value="#{bundle.CreateJoo2VirtuemartCustomsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2VirtuemartCustomsIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

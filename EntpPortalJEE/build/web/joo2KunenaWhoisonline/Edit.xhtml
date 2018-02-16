@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2KunenaWhoisonlineTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaWhoisonlineLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2KunenaWhoisonlineController.selected.id}" title="#{bundle.EditJoo2KunenaWhoisonlineTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2KunenaWhoisonlineRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaWhoisonlineLabel_userid}" for="userid" />
+                    <h:inputText id="userid" value="#{joo2KunenaWhoisonlineController.selected.userid}" title="#{bundle.EditJoo2KunenaWhoisonlineTitle_userid}" required="true" requiredMessage="#{bundle.EditJoo2KunenaWhoisonlineRequiredMessage_userid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaWhoisonlineLabel_time}" for="time" />
+                    <h:inputText id="time" value="#{joo2KunenaWhoisonlineController.selected.time}" title="#{bundle.EditJoo2KunenaWhoisonlineTitle_time}" required="true" requiredMessage="#{bundle.EditJoo2KunenaWhoisonlineRequiredMessage_time}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaWhoisonlineLabel_item}" for="item" />
+                    <h:inputText id="item" value="#{joo2KunenaWhoisonlineController.selected.item}" title="#{bundle.EditJoo2KunenaWhoisonlineTitle_item}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaWhoisonlineLabel_what}" for="what" />
+                    <h:inputText id="what" value="#{joo2KunenaWhoisonlineController.selected.what}" title="#{bundle.EditJoo2KunenaWhoisonlineTitle_what}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaWhoisonlineLabel_func}" for="func" />
+                    <h:inputText id="func" value="#{joo2KunenaWhoisonlineController.selected.func}" title="#{bundle.EditJoo2KunenaWhoisonlineTitle_func}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaWhoisonlineLabel_do1}" for="do1" />
+                    <h:inputText id="do1" value="#{joo2KunenaWhoisonlineController.selected.do1}" title="#{bundle.EditJoo2KunenaWhoisonlineTitle_do1}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaWhoisonlineLabel_task}" for="task" />
+                    <h:inputText id="task" value="#{joo2KunenaWhoisonlineController.selected.task}" title="#{bundle.EditJoo2KunenaWhoisonlineTitle_task}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaWhoisonlineLabel_link}" for="link" />
+                    <h:inputTextarea rows="4" cols="30" id="link" value="#{joo2KunenaWhoisonlineController.selected.link}" title="#{bundle.EditJoo2KunenaWhoisonlineTitle_link}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaWhoisonlineLabel_userip}" for="userip" />
+                    <h:inputText id="userip" value="#{joo2KunenaWhoisonlineController.selected.userip}" title="#{bundle.EditJoo2KunenaWhoisonlineTitle_userip}" required="true" requiredMessage="#{bundle.EditJoo2KunenaWhoisonlineRequiredMessage_userip}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaWhoisonlineLabel_user}" for="user" />
+                    <h:inputText id="user" value="#{joo2KunenaWhoisonlineController.selected.user}" title="#{bundle.EditJoo2KunenaWhoisonlineTitle_user}" required="true" requiredMessage="#{bundle.EditJoo2KunenaWhoisonlineRequiredMessage_user}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2KunenaWhoisonlineController.update}" value="#{bundle.EditJoo2KunenaWhoisonlineSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2KunenaWhoisonlineViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaWhoisonlineController.prepareList}" value="#{bundle.EditJoo2KunenaWhoisonlineShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2KunenaWhoisonlineIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

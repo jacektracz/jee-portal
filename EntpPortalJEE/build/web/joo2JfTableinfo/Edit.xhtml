@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2JfTableinfoTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2JfTableinfoLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2JfTableinfoController.selected.id}" title="#{bundle.EditJoo2JfTableinfoTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2JfTableinfoRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2JfTableinfoLabel_joomlatablename}" for="joomlatablename" />
+                    <h:inputText id="joomlatablename" value="#{joo2JfTableinfoController.selected.joomlatablename}" title="#{bundle.EditJoo2JfTableinfoTitle_joomlatablename}" required="true" requiredMessage="#{bundle.EditJoo2JfTableinfoRequiredMessage_joomlatablename}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2JfTableinfoLabel_tablepkID}" for="tablepkID" />
+                    <h:inputText id="tablepkID" value="#{joo2JfTableinfoController.selected.tablepkID}" title="#{bundle.EditJoo2JfTableinfoTitle_tablepkID}" required="true" requiredMessage="#{bundle.EditJoo2JfTableinfoRequiredMessage_tablepkID}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2JfTableinfoController.update}" value="#{bundle.EditJoo2JfTableinfoSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2JfTableinfoViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2JfTableinfoController.prepareList}" value="#{bundle.EditJoo2JfTableinfoShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2JfTableinfoIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

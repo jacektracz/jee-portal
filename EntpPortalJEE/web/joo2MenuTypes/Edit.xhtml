@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2MenuTypesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2MenuTypesLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2MenuTypesController.selected.id}" title="#{bundle.EditJoo2MenuTypesTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2MenuTypesRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2MenuTypesLabel_menutype}" for="menutype" />
+                    <h:inputText id="menutype" value="#{joo2MenuTypesController.selected.menutype}" title="#{bundle.EditJoo2MenuTypesTitle_menutype}" required="true" requiredMessage="#{bundle.EditJoo2MenuTypesRequiredMessage_menutype}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2MenuTypesLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2MenuTypesController.selected.title}" title="#{bundle.EditJoo2MenuTypesTitle_title}" required="true" requiredMessage="#{bundle.EditJoo2MenuTypesRequiredMessage_title}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2MenuTypesLabel_description}" for="description" />
+                    <h:inputText id="description" value="#{joo2MenuTypesController.selected.description}" title="#{bundle.EditJoo2MenuTypesTitle_description}" required="true" requiredMessage="#{bundle.EditJoo2MenuTypesRequiredMessage_description}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2MenuTypesController.update}" value="#{bundle.EditJoo2MenuTypesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2MenuTypesViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2MenuTypesController.prepareList}" value="#{bundle.EditJoo2MenuTypesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2MenuTypesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2KunenaPollsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaPollsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2KunenaPollsController.selected.id}" title="#{bundle.EditJoo2KunenaPollsTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2KunenaPollsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaPollsLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2KunenaPollsController.selected.title}" title="#{bundle.EditJoo2KunenaPollsTitle_title}" required="true" requiredMessage="#{bundle.EditJoo2KunenaPollsRequiredMessage_title}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaPollsLabel_threadid}" for="threadid" />
+                    <h:inputText id="threadid" value="#{joo2KunenaPollsController.selected.threadid}" title="#{bundle.EditJoo2KunenaPollsTitle_threadid}" required="true" requiredMessage="#{bundle.EditJoo2KunenaPollsRequiredMessage_threadid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaPollsLabel_polltimetolive}" for="polltimetolive" />
+                    <h:inputText id="polltimetolive" value="#{joo2KunenaPollsController.selected.polltimetolive}" title="#{bundle.EditJoo2KunenaPollsTitle_polltimetolive}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2KunenaPollsController.update}" value="#{bundle.EditJoo2KunenaPollsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2KunenaPollsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaPollsController.prepareList}" value="#{bundle.EditJoo2KunenaPollsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2KunenaPollsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

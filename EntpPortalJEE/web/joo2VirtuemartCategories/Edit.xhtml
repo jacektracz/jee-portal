@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartCategoriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_virtuemartCategoryId}" for="virtuemartCategoryId" />
+                    <h:inputText id="virtuemartCategoryId" value="#{joo2VirtuemartCategoriesController.selected.virtuemartCategoryId}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_virtuemartCategoryId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_virtuemartCategoryId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_virtuemartVendorId}" for="virtuemartVendorId" />
+                    <h:inputText id="virtuemartVendorId" value="#{joo2VirtuemartCategoriesController.selected.virtuemartVendorId}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_virtuemartVendorId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_virtuemartVendorId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_categoryName}" for="categoryName" />
+                    <h:inputText id="categoryName" value="#{joo2VirtuemartCategoriesController.selected.categoryName}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_categoryName}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_categoryName}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_slug}" for="slug" />
+                    <h:inputText id="slug" value="#{joo2VirtuemartCategoriesController.selected.slug}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_slug}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_slug}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_categoryDescription}" for="categoryDescription" />
+                    <h:inputTextarea rows="4" cols="30" id="categoryDescription" value="#{joo2VirtuemartCategoriesController.selected.categoryDescription}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_categoryDescription}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_categoryTemplate}" for="categoryTemplate" />
+                    <h:inputText id="categoryTemplate" value="#{joo2VirtuemartCategoriesController.selected.categoryTemplate}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_categoryTemplate}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_categoryLayout}" for="categoryLayout" />
+                    <h:inputText id="categoryLayout" value="#{joo2VirtuemartCategoriesController.selected.categoryLayout}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_categoryLayout}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_categoryProductLayout}" for="categoryProductLayout" />
+                    <h:inputText id="categoryProductLayout" value="#{joo2VirtuemartCategoriesController.selected.categoryProductLayout}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_categoryProductLayout}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_productsPerRow}" for="productsPerRow" />
+                    <h:inputText id="productsPerRow" value="#{joo2VirtuemartCategoriesController.selected.productsPerRow}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_productsPerRow}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_productsPerRow}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_limitListStart}" for="limitListStart" />
+                    <h:inputText id="limitListStart" value="#{joo2VirtuemartCategoriesController.selected.limitListStart}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_limitListStart}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_limitListStep}" for="limitListStep" />
+                    <h:inputText id="limitListStep" value="#{joo2VirtuemartCategoriesController.selected.limitListStep}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_limitListStep}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_limitListMax}" for="limitListMax" />
+                    <h:inputText id="limitListMax" value="#{joo2VirtuemartCategoriesController.selected.limitListMax}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_limitListMax}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_limitListInitial}" for="limitListInitial" />
+                    <h:inputText id="limitListInitial" value="#{joo2VirtuemartCategoriesController.selected.limitListInitial}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_limitListInitial}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_hits}" for="hits" />
+                    <h:inputText id="hits" value="#{joo2VirtuemartCategoriesController.selected.hits}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_hits}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_hits}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_metadesc}" for="metadesc" />
+                    <h:inputTextarea rows="4" cols="30" id="metadesc" value="#{joo2VirtuemartCategoriesController.selected.metadesc}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_metadesc}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_metadesc}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_metakey}" for="metakey" />
+                    <h:inputTextarea rows="4" cols="30" id="metakey" value="#{joo2VirtuemartCategoriesController.selected.metakey}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_metakey}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_metakey}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_metarobot}" for="metarobot" />
+                    <h:inputTextarea rows="4" cols="30" id="metarobot" value="#{joo2VirtuemartCategoriesController.selected.metarobot}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_metarobot}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_metarobot}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_metaauthor}" for="metaauthor" />
+                    <h:inputTextarea rows="4" cols="30" id="metaauthor" value="#{joo2VirtuemartCategoriesController.selected.metaauthor}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_metaauthor}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_metaauthor}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2VirtuemartCategoriesController.selected.ordering}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_shared}" for="shared" />
+                    <h:inputText id="shared" value="#{joo2VirtuemartCategoriesController.selected.shared}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_shared}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_shared}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartCategoriesController.selected.published}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartCategoriesController.selected.createdOn}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_createdOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartCategoriesController.selected.createdBy}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartCategoriesController.selected.modifiedOn}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_modifiedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartCategoriesController.selected.modifiedBy}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartCategoriesController.selected.lockedOn}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_lockedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCategoriesLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartCategoriesController.selected.lockedBy}" title="#{bundle.EditJoo2VirtuemartCategoriesTitle_lockedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCategoriesRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartCategoriesController.update}" value="#{bundle.EditJoo2VirtuemartCategoriesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartCategoriesViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCategoriesController.prepareList}" value="#{bundle.EditJoo2VirtuemartCategoriesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartCategoriesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

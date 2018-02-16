@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2KunenaAnnouncementTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaAnnouncementLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2KunenaAnnouncementController.selected.id}" title="#{bundle.EditJoo2KunenaAnnouncementTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2KunenaAnnouncementRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaAnnouncementLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2KunenaAnnouncementController.selected.title}" title="#{bundle.EditJoo2KunenaAnnouncementTitle_title}" required="true" requiredMessage="#{bundle.EditJoo2KunenaAnnouncementRequiredMessage_title}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaAnnouncementLabel_sdescription}" for="sdescription" />
+                    <h:inputTextarea rows="4" cols="30" id="sdescription" value="#{joo2KunenaAnnouncementController.selected.sdescription}" title="#{bundle.EditJoo2KunenaAnnouncementTitle_sdescription}" required="true" requiredMessage="#{bundle.EditJoo2KunenaAnnouncementRequiredMessage_sdescription}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaAnnouncementLabel_description}" for="description" />
+                    <h:inputTextarea rows="4" cols="30" id="description" value="#{joo2KunenaAnnouncementController.selected.description}" title="#{bundle.EditJoo2KunenaAnnouncementTitle_description}" required="true" requiredMessage="#{bundle.EditJoo2KunenaAnnouncementRequiredMessage_description}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaAnnouncementLabel_created}" for="created" />
+                    <h:inputText id="created" value="#{joo2KunenaAnnouncementController.selected.created}" title="#{bundle.EditJoo2KunenaAnnouncementTitle_created}" required="true" requiredMessage="#{bundle.EditJoo2KunenaAnnouncementRequiredMessage_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaAnnouncementLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2KunenaAnnouncementController.selected.published}" title="#{bundle.EditJoo2KunenaAnnouncementTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2KunenaAnnouncementRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaAnnouncementLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2KunenaAnnouncementController.selected.ordering}" title="#{bundle.EditJoo2KunenaAnnouncementTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2KunenaAnnouncementRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaAnnouncementLabel_showdate}" for="showdate" />
+                    <h:inputText id="showdate" value="#{joo2KunenaAnnouncementController.selected.showdate}" title="#{bundle.EditJoo2KunenaAnnouncementTitle_showdate}" required="true" requiredMessage="#{bundle.EditJoo2KunenaAnnouncementRequiredMessage_showdate}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2KunenaAnnouncementController.update}" value="#{bundle.EditJoo2KunenaAnnouncementSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2KunenaAnnouncementViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaAnnouncementController.prepareList}" value="#{bundle.EditJoo2KunenaAnnouncementShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2KunenaAnnouncementIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

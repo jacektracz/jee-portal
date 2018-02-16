@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2WidgetkitWidgetTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2WidgetkitWidgetLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2WidgetkitWidgetController.selected.id}" title="#{bundle.EditJoo2WidgetkitWidgetTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2WidgetkitWidgetRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2WidgetkitWidgetLabel_type}" for="type" />
+                    <h:inputText id="type" value="#{joo2WidgetkitWidgetController.selected.type}" title="#{bundle.EditJoo2WidgetkitWidgetTitle_type}" required="true" requiredMessage="#{bundle.EditJoo2WidgetkitWidgetRequiredMessage_type}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2WidgetkitWidgetLabel_style}" for="style" />
+                    <h:inputText id="style" value="#{joo2WidgetkitWidgetController.selected.style}" title="#{bundle.EditJoo2WidgetkitWidgetTitle_style}" required="true" requiredMessage="#{bundle.EditJoo2WidgetkitWidgetRequiredMessage_style}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2WidgetkitWidgetLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{joo2WidgetkitWidgetController.selected.name}" title="#{bundle.EditJoo2WidgetkitWidgetTitle_name}" required="true" requiredMessage="#{bundle.EditJoo2WidgetkitWidgetRequiredMessage_name}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2WidgetkitWidgetLabel_content}" for="content" />
+                    <h:inputTextarea rows="4" cols="30" id="content" value="#{joo2WidgetkitWidgetController.selected.content}" title="#{bundle.EditJoo2WidgetkitWidgetTitle_content}" required="true" requiredMessage="#{bundle.EditJoo2WidgetkitWidgetRequiredMessage_content}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2WidgetkitWidgetLabel_created}" for="created" />
+                    <h:inputText id="created" value="#{joo2WidgetkitWidgetController.selected.created}" title="#{bundle.EditJoo2WidgetkitWidgetTitle_created}" required="true" requiredMessage="#{bundle.EditJoo2WidgetkitWidgetRequiredMessage_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2WidgetkitWidgetLabel_modified}" for="modified" />
+                    <h:inputText id="modified" value="#{joo2WidgetkitWidgetController.selected.modified}" title="#{bundle.EditJoo2WidgetkitWidgetTitle_modified}" required="true" requiredMessage="#{bundle.EditJoo2WidgetkitWidgetRequiredMessage_modified}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2WidgetkitWidgetController.update}" value="#{bundle.EditJoo2WidgetkitWidgetSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2WidgetkitWidgetViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2WidgetkitWidgetController.prepareList}" value="#{bundle.EditJoo2WidgetkitWidgetShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2WidgetkitWidgetIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

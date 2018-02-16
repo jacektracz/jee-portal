@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2TemplateStylesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2TemplateStylesLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2TemplateStylesController.selected.id}" title="#{bundle.EditJoo2TemplateStylesTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2TemplateStylesRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2TemplateStylesLabel_template}" for="template" />
+                    <h:inputText id="template" value="#{joo2TemplateStylesController.selected.template}" title="#{bundle.EditJoo2TemplateStylesTitle_template}" required="true" requiredMessage="#{bundle.EditJoo2TemplateStylesRequiredMessage_template}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2TemplateStylesLabel_clientId}" for="clientId" />
+                    <h:inputText id="clientId" value="#{joo2TemplateStylesController.selected.clientId}" title="#{bundle.EditJoo2TemplateStylesTitle_clientId}" required="true" requiredMessage="#{bundle.EditJoo2TemplateStylesRequiredMessage_clientId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2TemplateStylesLabel_home}" for="home" />
+                    <h:inputText id="home" value="#{joo2TemplateStylesController.selected.home}" title="#{bundle.EditJoo2TemplateStylesTitle_home}" required="true" requiredMessage="#{bundle.EditJoo2TemplateStylesRequiredMessage_home}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2TemplateStylesLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2TemplateStylesController.selected.title}" title="#{bundle.EditJoo2TemplateStylesTitle_title}" required="true" requiredMessage="#{bundle.EditJoo2TemplateStylesRequiredMessage_title}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2TemplateStylesLabel_params}" for="params" />
+                    <h:inputTextarea rows="4" cols="30" id="params" value="#{joo2TemplateStylesController.selected.params}" title="#{bundle.EditJoo2TemplateStylesTitle_params}" required="true" requiredMessage="#{bundle.EditJoo2TemplateStylesRequiredMessage_params}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2TemplateStylesController.update}" value="#{bundle.EditJoo2TemplateStylesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2TemplateStylesViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2TemplateStylesController.prepareList}" value="#{bundle.EditJoo2TemplateStylesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2TemplateStylesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

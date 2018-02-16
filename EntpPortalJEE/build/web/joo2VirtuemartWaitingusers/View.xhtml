@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartWaitingusersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWaitingusersLabel_virtuemartWaitinguserId}"/>
+                    <h:outputText value="#{joo2VirtuemartWaitingusersController.selected.virtuemartWaitinguserId}" title="#{bundle.ViewJoo2VirtuemartWaitingusersTitle_virtuemartWaitinguserId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWaitingusersLabel_virtuemartProductId}"/>
+                    <h:outputText value="#{joo2VirtuemartWaitingusersController.selected.virtuemartProductId}" title="#{bundle.ViewJoo2VirtuemartWaitingusersTitle_virtuemartProductId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWaitingusersLabel_virtuemartUserId}"/>
+                    <h:outputText value="#{joo2VirtuemartWaitingusersController.selected.virtuemartUserId}" title="#{bundle.ViewJoo2VirtuemartWaitingusersTitle_virtuemartUserId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWaitingusersLabel_notifyEmail}"/>
+                    <h:outputText value="#{joo2VirtuemartWaitingusersController.selected.notifyEmail}" title="#{bundle.ViewJoo2VirtuemartWaitingusersTitle_notifyEmail}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWaitingusersLabel_notified}"/>
+                    <h:outputText value="#{joo2VirtuemartWaitingusersController.selected.notified}" title="#{bundle.ViewJoo2VirtuemartWaitingusersTitle_notified}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWaitingusersLabel_notifyDate}"/>
+                    <h:outputText value="#{joo2VirtuemartWaitingusersController.selected.notifyDate}" title="#{bundle.ViewJoo2VirtuemartWaitingusersTitle_notifyDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWaitingusersLabel_ordering}"/>
+                    <h:outputText value="#{joo2VirtuemartWaitingusersController.selected.ordering}" title="#{bundle.ViewJoo2VirtuemartWaitingusersTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWaitingusersLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartWaitingusersController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartWaitingusersTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWaitingusersLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartWaitingusersController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartWaitingusersTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWaitingusersLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartWaitingusersController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartWaitingusersTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWaitingusersLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartWaitingusersController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartWaitingusersTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWaitingusersLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartWaitingusersController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartWaitingusersTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartWaitingusersLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartWaitingusersController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartWaitingusersTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartWaitingusersController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartWaitingusersDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartWaitingusersEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartWaitingusersController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartWaitingusersCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartWaitingusersController.prepareList}" value="#{bundle.ViewJoo2VirtuemartWaitingusersShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartWaitingusersIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

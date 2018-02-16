@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_id}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.id}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainTop}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainTop}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainTop}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainLeft}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainLeft}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainLeft}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainHeight}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainHeight}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainHeight}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subBorderOver}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subBorderOver}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subBorderOver}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainWidth}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainWidth}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainWidth}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subWidth}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subWidth}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subWidth}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainBack}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainBack}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainBack}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainOver}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainOver}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainOver}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subBack}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subBack}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subBack}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subOver}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subOver}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subOver}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subBorder}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subBorder}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subBorder}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainFontSize}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainFontSize}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainFontSize}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subFontSize}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subFontSize}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subFontSize}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainBorderOver}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainBorderOver}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainBorderOver}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subFontColor}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subFontColor}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subFontColor}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainBorder}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainBorder}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainBorder}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainFontColor}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainFontColor}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainFontColor}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subFontColorOver}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subFontColorOver}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subFontColorOver}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainFontColorOver}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainFontColorOver}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainFontColorOver}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainAlign}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainAlign}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainAlign}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subAlign}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subAlign}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subAlign}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subHeight}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subHeight}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subHeight}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_position}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.position}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_position}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_orientation}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.orientation}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_orientation}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_fontFamily}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.fontFamily}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_fontFamily}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_fontWeight}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.fontWeight}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_fontWeight}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_fontWeightOver}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.fontWeightOver}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_fontWeightOver}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_level2SubTop}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.level2SubTop}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_level2SubTop}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_level2SubLeft}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.level2SubLeft}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_level2SubLeft}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_level1SubTop}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.level1SubTop}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_level1SubTop}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_level1SubLeft}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.level1SubLeft}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_level1SubLeft}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainBackImage}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainBackImage}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainBackImage}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainBackImageOver}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainBackImageOver}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainBackImageOver}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subBackImage}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subBackImage}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subBackImage}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subBackImageOver}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subBackImageOver}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subBackImageOver}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_specialA}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.specialA}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_specialA}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_mainPadding}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.mainPadding}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_mainPadding}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subPadding}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subPadding}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subPadding}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_specialB}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.specialB}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_specialB}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subFontFamily}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subFontFamily}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subFontFamily}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_extra}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.extra}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_extra}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_topTtf}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.topTtf}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_topTtf}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subTtf}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subTtf}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subTtf}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_activeBackground}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.activeBackground}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_activeBackground}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_activeFont}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.activeFont}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_activeFont}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_topMargin}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.topMargin}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_topMargin}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_topWrap}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.topWrap}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_topWrap}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subWrap}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subWrap}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subWrap}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_corners}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.corners}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_corners}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_topFontExtra}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.topFontExtra}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_topFontExtra}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subFontExtra}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subFontExtra}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subFontExtra}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_completePadding}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.completePadding}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_completePadding}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_completeBackground}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.completeBackground}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_completeBackground}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_completeBackgroundImage}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.completeBackgroundImage}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_completeBackgroundImage}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_activeBackgroundImage}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.activeBackgroundImage}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_activeBackgroundImage}"/>
+                    <h:outputText value="#{bundle.ViewJoo2SwmenufreeConfigLabel_subIndicator}"/>
+                    <h:outputText value="#{joo2SwmenufreeConfigController.selected.subIndicator}" title="#{bundle.ViewJoo2SwmenufreeConfigTitle_subIndicator}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2SwmenufreeConfigController.destroyAndView}" value="#{bundle.ViewJoo2SwmenufreeConfigDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2SwmenufreeConfigEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2SwmenufreeConfigController.prepareCreate}" value="#{bundle.ViewJoo2SwmenufreeConfigCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2SwmenufreeConfigController.prepareList}" value="#{bundle.ViewJoo2SwmenufreeConfigShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2SwmenufreeConfigIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

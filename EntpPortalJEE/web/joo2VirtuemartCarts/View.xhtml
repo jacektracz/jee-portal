@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartCartsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCartsLabel_virtuemartUserId}"/>
+                    <h:outputText value="#{joo2VirtuemartCartsController.selected.virtuemartUserId}" title="#{bundle.ViewJoo2VirtuemartCartsTitle_virtuemartUserId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCartsLabel_cartContent}"/>
+                    <h:outputText value="#{joo2VirtuemartCartsController.selected.cartContent}" title="#{bundle.ViewJoo2VirtuemartCartsTitle_cartContent}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCartsLabel_lastUpdated}"/>
+                    <h:outputText value="#{joo2VirtuemartCartsController.selected.lastUpdated}" title="#{bundle.ViewJoo2VirtuemartCartsTitle_lastUpdated}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCartsController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartCartsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartCartsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCartsController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartCartsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCartsController.prepareList}" value="#{bundle.ViewJoo2VirtuemartCartsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartCartsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

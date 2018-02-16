@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2KunenaWhoisonlineTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2KunenaWhoisonlineLabel_id}"/>
+                    <h:outputText value="#{joo2KunenaWhoisonlineController.selected.id}" title="#{bundle.ViewJoo2KunenaWhoisonlineTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaWhoisonlineLabel_userid}"/>
+                    <h:outputText value="#{joo2KunenaWhoisonlineController.selected.userid}" title="#{bundle.ViewJoo2KunenaWhoisonlineTitle_userid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaWhoisonlineLabel_time}"/>
+                    <h:outputText value="#{joo2KunenaWhoisonlineController.selected.time}" title="#{bundle.ViewJoo2KunenaWhoisonlineTitle_time}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaWhoisonlineLabel_item}"/>
+                    <h:outputText value="#{joo2KunenaWhoisonlineController.selected.item}" title="#{bundle.ViewJoo2KunenaWhoisonlineTitle_item}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaWhoisonlineLabel_what}"/>
+                    <h:outputText value="#{joo2KunenaWhoisonlineController.selected.what}" title="#{bundle.ViewJoo2KunenaWhoisonlineTitle_what}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaWhoisonlineLabel_func}"/>
+                    <h:outputText value="#{joo2KunenaWhoisonlineController.selected.func}" title="#{bundle.ViewJoo2KunenaWhoisonlineTitle_func}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaWhoisonlineLabel_do1}"/>
+                    <h:outputText value="#{joo2KunenaWhoisonlineController.selected.do1}" title="#{bundle.ViewJoo2KunenaWhoisonlineTitle_do1}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaWhoisonlineLabel_task}"/>
+                    <h:outputText value="#{joo2KunenaWhoisonlineController.selected.task}" title="#{bundle.ViewJoo2KunenaWhoisonlineTitle_task}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaWhoisonlineLabel_link}"/>
+                    <h:outputText value="#{joo2KunenaWhoisonlineController.selected.link}" title="#{bundle.ViewJoo2KunenaWhoisonlineTitle_link}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaWhoisonlineLabel_userip}"/>
+                    <h:outputText value="#{joo2KunenaWhoisonlineController.selected.userip}" title="#{bundle.ViewJoo2KunenaWhoisonlineTitle_userip}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaWhoisonlineLabel_user}"/>
+                    <h:outputText value="#{joo2KunenaWhoisonlineController.selected.user}" title="#{bundle.ViewJoo2KunenaWhoisonlineTitle_user}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2KunenaWhoisonlineController.destroyAndView}" value="#{bundle.ViewJoo2KunenaWhoisonlineDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2KunenaWhoisonlineEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaWhoisonlineController.prepareCreate}" value="#{bundle.ViewJoo2KunenaWhoisonlineCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2KunenaWhoisonlineController.prepareList}" value="#{bundle.ViewJoo2KunenaWhoisonlineShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2KunenaWhoisonlineIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2K2TagsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2K2TagsLabel_id}"/>
+                    <h:outputText value="#{joo2K2TagsController.selected.id}" title="#{bundle.ViewJoo2K2TagsTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2TagsLabel_name}"/>
+                    <h:outputText value="#{joo2K2TagsController.selected.name}" title="#{bundle.ViewJoo2K2TagsTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2TagsLabel_published}"/>
+                    <h:outputText value="#{joo2K2TagsController.selected.published}" title="#{bundle.ViewJoo2K2TagsTitle_published}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2K2TagsController.destroyAndView}" value="#{bundle.ViewJoo2K2TagsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2K2TagsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2K2TagsController.prepareCreate}" value="#{bundle.ViewJoo2K2TagsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2K2TagsController.prepareList}" value="#{bundle.ViewJoo2K2TagsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2K2TagsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

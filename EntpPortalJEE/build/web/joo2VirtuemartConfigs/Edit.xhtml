@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartConfigsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartConfigsLabel_virtuemartConfigId}" for="virtuemartConfigId" />
+                    <h:inputText id="virtuemartConfigId" value="#{joo2VirtuemartConfigsController.selected.virtuemartConfigId}" title="#{bundle.EditJoo2VirtuemartConfigsTitle_virtuemartConfigId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartConfigsRequiredMessage_virtuemartConfigId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartConfigsLabel_config}" for="config" />
+                    <h:inputTextarea rows="4" cols="30" id="config" value="#{joo2VirtuemartConfigsController.selected.config}" title="#{bundle.EditJoo2VirtuemartConfigsTitle_config}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartConfigsLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartConfigsController.selected.createdOn}" title="#{bundle.EditJoo2VirtuemartConfigsTitle_createdOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartConfigsRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartConfigsLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartConfigsController.selected.createdBy}" title="#{bundle.EditJoo2VirtuemartConfigsTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartConfigsRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartConfigsLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartConfigsController.selected.modifiedOn}" title="#{bundle.EditJoo2VirtuemartConfigsTitle_modifiedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartConfigsRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartConfigsLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartConfigsController.selected.modifiedBy}" title="#{bundle.EditJoo2VirtuemartConfigsTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartConfigsRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartConfigsLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartConfigsController.selected.lockedOn}" title="#{bundle.EditJoo2VirtuemartConfigsTitle_lockedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartConfigsRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartConfigsLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartConfigsController.selected.lockedBy}" title="#{bundle.EditJoo2VirtuemartConfigsTitle_lockedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartConfigsRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartConfigsController.update}" value="#{bundle.EditJoo2VirtuemartConfigsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartConfigsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartConfigsController.prepareList}" value="#{bundle.EditJoo2VirtuemartConfigsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartConfigsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

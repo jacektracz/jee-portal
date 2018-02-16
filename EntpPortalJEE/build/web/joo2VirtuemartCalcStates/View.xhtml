@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartCalcStatesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCalcStatesLabel_id}"/>
+                    <h:outputText value="#{joo2VirtuemartCalcStatesController.selected.id}" title="#{bundle.ViewJoo2VirtuemartCalcStatesTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCalcStatesLabel_virtuemartCalcId}"/>
+                    <h:outputText value="#{joo2VirtuemartCalcStatesController.selected.virtuemartCalcId}" title="#{bundle.ViewJoo2VirtuemartCalcStatesTitle_virtuemartCalcId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCalcStatesLabel_virtuemartStateId}"/>
+                    <h:outputText value="#{joo2VirtuemartCalcStatesController.selected.virtuemartStateId}" title="#{bundle.ViewJoo2VirtuemartCalcStatesTitle_virtuemartStateId}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCalcStatesController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartCalcStatesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartCalcStatesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCalcStatesController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartCalcStatesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCalcStatesController.prepareList}" value="#{bundle.ViewJoo2VirtuemartCalcStatesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartCalcStatesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

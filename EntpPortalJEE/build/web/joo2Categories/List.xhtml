@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2CategoriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2CategoriesEmpty}" rendered="#{joo2CategoriesController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2CategoriesController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2CategoriesController.pagination.pageFirstItem + 1}..#{joo2CategoriesController.pagination.pageLastItem + 1}/#{joo2CategoriesController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2CategoriesController.previous}" value="#{bundle.Previous} #{joo2CategoriesController.pagination.pageSize}" rendered="#{joo2CategoriesController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2CategoriesController.next}" value="#{bundle.Next} #{joo2CategoriesController.pagination.pageSize}" rendered="#{joo2CategoriesController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2CategoriesController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_assetId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.assetId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_parentId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.parentId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_lft}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lft}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_rgt}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rgt}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_level}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.level}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_path}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.path}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_extension}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.extension}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_title}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.title}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_alias}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.alias}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_note}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.note}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_description}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.description}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_published}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.published}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_checkedOut}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.checkedOut}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_checkedOutTime}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.checkedOutTime}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_access}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.access}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_params}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.params}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_metadesc}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metadesc}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_metakey}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metakey}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_metadata}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metadata}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_createdUserId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdUserId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_createdTime}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdTime}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_modifiedUserId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modifiedUserId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_modifiedTime}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modifiedTime}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_hits}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hits}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_language}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.language}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_epMenuid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epMenuid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_epMenuPath}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epMenuPath}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_epCopyCatId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epCopyCatId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_epRedirectedToCatId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epRedirectedToCatId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_epReferencedCount}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epReferencedCount}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_epReferencedParentcatCount}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epReferencedParentcatCount}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_epReferencedParentContentid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epReferencedParentContentid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_epOrdering}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epOrdering}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_epImportFromDir}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epImportFromDir}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_epImportFromFile}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epImportFromFile}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_eptLft}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.eptLft}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_eptRgt}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.eptRgt}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_eptCount}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.eptCount}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_epLft}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epLft}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_epRgt}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epRgt}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2CategoriesTitle_epCount}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.epCount}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2CategoriesController.prepareView}" value="#{bundle.ListJoo2CategoriesViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2CategoriesController.prepareEdit}" value="#{bundle.ListJoo2CategoriesEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2CategoriesController.destroy}" value="#{bundle.ListJoo2CategoriesDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2CategoriesController.prepareCreate}" value="#{bundle.ListJoo2CategoriesCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2CategoriesIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

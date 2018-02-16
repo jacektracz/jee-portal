@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2VirtuemartOrderstatesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2VirtuemartOrderstatesEmpty}" rendered="#{joo2VirtuemartOrderstatesController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2VirtuemartOrderstatesController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2VirtuemartOrderstatesController.pagination.pageFirstItem + 1}..#{joo2VirtuemartOrderstatesController.pagination.pageLastItem + 1}/#{joo2VirtuemartOrderstatesController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2VirtuemartOrderstatesController.previous}" value="#{bundle.Previous} #{joo2VirtuemartOrderstatesController.pagination.pageSize}" rendered="#{joo2VirtuemartOrderstatesController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2VirtuemartOrderstatesController.next}" value="#{bundle.Next} #{joo2VirtuemartOrderstatesController.pagination.pageSize}" rendered="#{joo2VirtuemartOrderstatesController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2VirtuemartOrderstatesController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrderstatesTitle_virtuemartOrderstateId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.virtuemartOrderstateId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrderstatesTitle_virtuemartVendorId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.virtuemartVendorId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrderstatesTitle_orderStatusCode}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderStatusCode}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrderstatesTitle_orderStatusName}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderStatusName}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrderstatesTitle_orderStatusDescription}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderStatusDescription}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrderstatesTitle_ordering}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ordering}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrderstatesTitle_published}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.published}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrderstatesTitle_createdOn}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdOn}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrderstatesTitle_createdBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrderstatesTitle_modifiedOn}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modifiedOn}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrderstatesTitle_modifiedBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modifiedBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrderstatesTitle_lockedOn}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lockedOn}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartOrderstatesTitle_lockedBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lockedBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2VirtuemartOrderstatesController.prepareView}" value="#{bundle.ListJoo2VirtuemartOrderstatesViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2VirtuemartOrderstatesController.prepareEdit}" value="#{bundle.ListJoo2VirtuemartOrderstatesEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2VirtuemartOrderstatesController.destroy}" value="#{bundle.ListJoo2VirtuemartOrderstatesDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartOrderstatesController.prepareCreate}" value="#{bundle.ListJoo2VirtuemartOrderstatesCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2VirtuemartOrderstatesIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

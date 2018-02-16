@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartCalcsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_virtuemartCalcId}" for="virtuemartCalcId" />
+                    <h:inputText id="virtuemartCalcId" value="#{joo2VirtuemartCalcsController.selected.virtuemartCalcId}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_virtuemartCalcId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_virtuemartCalcId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_virtuemartVendorId}" for="virtuemartVendorId" />
+                    <h:inputText id="virtuemartVendorId" value="#{joo2VirtuemartCalcsController.selected.virtuemartVendorId}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_virtuemartVendorId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_virtuemartVendorId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_calcName}" for="calcName" />
+                    <h:inputTextarea rows="4" cols="30" id="calcName" value="#{joo2VirtuemartCalcsController.selected.calcName}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_calcName}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_calcName}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_calcDescr}" for="calcDescr" />
+                    <h:inputTextarea rows="4" cols="30" id="calcDescr" value="#{joo2VirtuemartCalcsController.selected.calcDescr}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_calcDescr}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_calcDescr}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_calcKind}" for="calcKind" />
+                    <h:inputTextarea rows="4" cols="30" id="calcKind" value="#{joo2VirtuemartCalcsController.selected.calcKind}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_calcKind}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_calcKind}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_calcValueMathop}" for="calcValueMathop" />
+                    <h:inputTextarea rows="4" cols="30" id="calcValueMathop" value="#{joo2VirtuemartCalcsController.selected.calcValueMathop}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_calcValueMathop}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_calcValueMathop}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_calcValue}" for="calcValue" />
+                    <h:inputText id="calcValue" value="#{joo2VirtuemartCalcsController.selected.calcValue}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_calcValue}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_calcValue}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_calcCurrency}" for="calcCurrency" />
+                    <h:inputText id="calcCurrency" value="#{joo2VirtuemartCalcsController.selected.calcCurrency}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_calcCurrency}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_calcCurrency}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_calcShopperPublished}" for="calcShopperPublished" />
+                    <h:inputText id="calcShopperPublished" value="#{joo2VirtuemartCalcsController.selected.calcShopperPublished}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_calcShopperPublished}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_calcShopperPublished}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_calcVendorPublished}" for="calcVendorPublished" />
+                    <h:inputText id="calcVendorPublished" value="#{joo2VirtuemartCalcsController.selected.calcVendorPublished}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_calcVendorPublished}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_calcVendorPublished}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_publishUp}" for="publishUp" />
+                    <h:inputText id="publishUp" value="#{joo2VirtuemartCalcsController.selected.publishUp}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_publishUp}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_publishUp}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_publishDown}" for="publishDown" />
+                    <h:inputText id="publishDown" value="#{joo2VirtuemartCalcsController.selected.publishDown}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_publishDown}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_publishDown}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_calcQualify}" for="calcQualify" />
+                    <h:inputText id="calcQualify" value="#{joo2VirtuemartCalcsController.selected.calcQualify}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_calcQualify}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_calcQualify}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_calcAffected}" for="calcAffected" />
+                    <h:inputText id="calcAffected" value="#{joo2VirtuemartCalcsController.selected.calcAffected}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_calcAffected}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_calcAffected}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_calcAmountCond}" for="calcAmountCond" />
+                    <h:inputText id="calcAmountCond" value="#{joo2VirtuemartCalcsController.selected.calcAmountCond}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_calcAmountCond}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_calcAmountCond}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_calcAmountDimunit}" for="calcAmountDimunit" />
+                    <h:inputTextarea rows="4" cols="30" id="calcAmountDimunit" value="#{joo2VirtuemartCalcsController.selected.calcAmountDimunit}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_calcAmountDimunit}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_calcAmountDimunit}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_forOverride}" for="forOverride" />
+                    <h:inputText id="forOverride" value="#{joo2VirtuemartCalcsController.selected.forOverride}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_forOverride}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_forOverride}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2VirtuemartCalcsController.selected.ordering}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_shared}" for="shared" />
+                    <h:inputText id="shared" value="#{joo2VirtuemartCalcsController.selected.shared}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_shared}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_shared}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartCalcsController.selected.published}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartCalcsController.selected.createdOn}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_createdOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartCalcsController.selected.createdBy}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartCalcsController.selected.modifiedOn}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_modifiedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartCalcsController.selected.modifiedBy}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartCalcsController.selected.lockedOn}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_lockedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartCalcsLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartCalcsController.selected.lockedBy}" title="#{bundle.EditJoo2VirtuemartCalcsTitle_lockedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartCalcsRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartCalcsController.update}" value="#{bundle.EditJoo2VirtuemartCalcsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartCalcsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCalcsController.prepareList}" value="#{bundle.EditJoo2VirtuemartCalcsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartCalcsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_virtuemartRatingReviewId}" for="virtuemartRatingReviewId" />
+                    <h:inputText id="virtuemartRatingReviewId" value="#{joo2VirtuemartRatingReviewsController.selected.virtuemartRatingReviewId}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_virtuemartRatingReviewId}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_virtuemartRatingReviewId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_virtuemartProductId}" for="virtuemartProductId" />
+                    <h:inputText id="virtuemartProductId" value="#{joo2VirtuemartRatingReviewsController.selected.virtuemartProductId}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_virtuemartProductId}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_virtuemartProductId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_comment}" for="comment" />
+                    <h:inputTextarea rows="4" cols="30" id="comment" value="#{joo2VirtuemartRatingReviewsController.selected.comment}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_comment}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_comment}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_reviewOk}" for="reviewOk" />
+                    <h:inputText id="reviewOk" value="#{joo2VirtuemartRatingReviewsController.selected.reviewOk}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_reviewOk}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_reviewOk}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_reviewRates}" for="reviewRates" />
+                    <h:inputText id="reviewRates" value="#{joo2VirtuemartRatingReviewsController.selected.reviewRates}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_reviewRates}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_reviewRates}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_reviewRatingcount}" for="reviewRatingcount" />
+                    <h:inputText id="reviewRatingcount" value="#{joo2VirtuemartRatingReviewsController.selected.reviewRatingcount}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_reviewRatingcount}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_reviewRatingcount}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_reviewRating}" for="reviewRating" />
+                    <h:inputText id="reviewRating" value="#{joo2VirtuemartRatingReviewsController.selected.reviewRating}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_reviewRating}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_reviewRating}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_lastip}" for="lastip" />
+                    <h:inputText id="lastip" value="#{joo2VirtuemartRatingReviewsController.selected.lastip}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_lastip}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_lastip}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartRatingReviewsController.selected.published}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_published}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartRatingReviewsController.selected.createdOn}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_createdOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartRatingReviewsController.selected.createdBy}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_createdBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartRatingReviewsController.selected.modifiedOn}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_modifiedOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartRatingReviewsController.selected.modifiedBy}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_modifiedBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartRatingReviewsController.selected.lockedOn}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_lockedOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartRatingReviewsLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartRatingReviewsController.selected.lockedBy}" title="#{bundle.CreateJoo2VirtuemartRatingReviewsTitle_lockedBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartRatingReviewsRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartRatingReviewsController.create}" value="#{bundle.CreateJoo2VirtuemartRatingReviewsSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartRatingReviewsController.prepareList}" value="#{bundle.CreateJoo2VirtuemartRatingReviewsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2VirtuemartRatingReviewsIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

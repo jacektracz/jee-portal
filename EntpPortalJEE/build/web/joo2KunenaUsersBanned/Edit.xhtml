@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2KunenaUsersBannedTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaUsersBannedLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2KunenaUsersBannedController.selected.id}" title="#{bundle.EditJoo2KunenaUsersBannedTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2KunenaUsersBannedRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaUsersBannedLabel_userid}" for="userid" />
+                    <h:inputText id="userid" value="#{joo2KunenaUsersBannedController.selected.userid}" title="#{bundle.EditJoo2KunenaUsersBannedTitle_userid}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaUsersBannedLabel_ip}" for="ip" />
+                    <h:inputText id="ip" value="#{joo2KunenaUsersBannedController.selected.ip}" title="#{bundle.EditJoo2KunenaUsersBannedTitle_ip}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaUsersBannedLabel_blocked}" for="blocked" />
+                    <h:inputText id="blocked" value="#{joo2KunenaUsersBannedController.selected.blocked}" title="#{bundle.EditJoo2KunenaUsersBannedTitle_blocked}" required="true" requiredMessage="#{bundle.EditJoo2KunenaUsersBannedRequiredMessage_blocked}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaUsersBannedLabel_expiration}" for="expiration" />
+                    <h:inputText id="expiration" value="#{joo2KunenaUsersBannedController.selected.expiration}" title="#{bundle.EditJoo2KunenaUsersBannedTitle_expiration}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaUsersBannedLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2KunenaUsersBannedController.selected.createdBy}" title="#{bundle.EditJoo2KunenaUsersBannedTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2KunenaUsersBannedRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaUsersBannedLabel_createdTime}" for="createdTime" />
+                    <h:inputText id="createdTime" value="#{joo2KunenaUsersBannedController.selected.createdTime}" title="#{bundle.EditJoo2KunenaUsersBannedTitle_createdTime}" required="true" requiredMessage="#{bundle.EditJoo2KunenaUsersBannedRequiredMessage_createdTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaUsersBannedLabel_reasonPrivate}" for="reasonPrivate" />
+                    <h:inputTextarea rows="4" cols="30" id="reasonPrivate" value="#{joo2KunenaUsersBannedController.selected.reasonPrivate}" title="#{bundle.EditJoo2KunenaUsersBannedTitle_reasonPrivate}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaUsersBannedLabel_reasonPublic}" for="reasonPublic" />
+                    <h:inputTextarea rows="4" cols="30" id="reasonPublic" value="#{joo2KunenaUsersBannedController.selected.reasonPublic}" title="#{bundle.EditJoo2KunenaUsersBannedTitle_reasonPublic}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaUsersBannedLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2KunenaUsersBannedController.selected.modifiedBy}" title="#{bundle.EditJoo2KunenaUsersBannedTitle_modifiedBy}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaUsersBannedLabel_modifiedTime}" for="modifiedTime" />
+                    <h:inputText id="modifiedTime" value="#{joo2KunenaUsersBannedController.selected.modifiedTime}" title="#{bundle.EditJoo2KunenaUsersBannedTitle_modifiedTime}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaUsersBannedLabel_comments}" for="comments" />
+                    <h:inputTextarea rows="4" cols="30" id="comments" value="#{joo2KunenaUsersBannedController.selected.comments}" title="#{bundle.EditJoo2KunenaUsersBannedTitle_comments}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaUsersBannedLabel_params}" for="params" />
+                    <h:inputTextarea rows="4" cols="30" id="params" value="#{joo2KunenaUsersBannedController.selected.params}" title="#{bundle.EditJoo2KunenaUsersBannedTitle_params}" />
+                </h:panelGrid>
+                <h:commandLink action="#{joo2KunenaUsersBannedController.update}" value="#{bundle.EditJoo2KunenaUsersBannedSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2KunenaUsersBannedViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaUsersBannedController.prepareList}" value="#{bundle.EditJoo2KunenaUsersBannedShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2KunenaUsersBannedIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

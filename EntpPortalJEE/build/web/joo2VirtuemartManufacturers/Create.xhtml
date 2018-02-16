@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2VirtuemartManufacturersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_virtuemartManufacturerId}" for="virtuemartManufacturerId" />
+                    <h:inputText id="virtuemartManufacturerId" value="#{joo2VirtuemartManufacturersController.selected.virtuemartManufacturerId}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_virtuemartManufacturerId}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartManufacturersRequiredMessage_virtuemartManufacturerId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_mfName}" for="mfName" />
+                    <h:inputText id="mfName" value="#{joo2VirtuemartManufacturersController.selected.mfName}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_mfName}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_slug}" for="slug" />
+                    <h:inputText id="slug" value="#{joo2VirtuemartManufacturersController.selected.slug}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_slug}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_mfEmail}" for="mfEmail" />
+                    <h:inputText id="mfEmail" value="#{joo2VirtuemartManufacturersController.selected.mfEmail}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_mfEmail}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_mfDesc}" for="mfDesc" />
+                    <h:inputTextarea rows="4" cols="30" id="mfDesc" value="#{joo2VirtuemartManufacturersController.selected.mfDesc}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_mfDesc}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_virtuemartManufacturercategoriesId}" for="virtuemartManufacturercategoriesId" />
+                    <h:inputText id="virtuemartManufacturercategoriesId" value="#{joo2VirtuemartManufacturersController.selected.virtuemartManufacturercategoriesId}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_virtuemartManufacturercategoriesId}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_mfUrl}" for="mfUrl" />
+                    <h:inputText id="mfUrl" value="#{joo2VirtuemartManufacturersController.selected.mfUrl}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_mfUrl}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartManufacturersRequiredMessage_mfUrl}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_hits}" for="hits" />
+                    <h:inputText id="hits" value="#{joo2VirtuemartManufacturersController.selected.hits}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_hits}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartManufacturersRequiredMessage_hits}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartManufacturersController.selected.published}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_published}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartManufacturersRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartManufacturersController.selected.createdOn}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_createdOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartManufacturersRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartManufacturersController.selected.createdBy}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_createdBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartManufacturersRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartManufacturersController.selected.modifiedOn}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_modifiedOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartManufacturersRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartManufacturersController.selected.modifiedBy}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_modifiedBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartManufacturersRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartManufacturersController.selected.lockedOn}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_lockedOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartManufacturersRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartManufacturersLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartManufacturersController.selected.lockedBy}" title="#{bundle.CreateJoo2VirtuemartManufacturersTitle_lockedBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartManufacturersRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartManufacturersController.create}" value="#{bundle.CreateJoo2VirtuemartManufacturersSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartManufacturersController.prepareList}" value="#{bundle.CreateJoo2VirtuemartManufacturersShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2VirtuemartManufacturersIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

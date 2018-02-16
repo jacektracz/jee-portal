@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2ViewlevelsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2ViewlevelsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2ViewlevelsController.selected.id}" title="#{bundle.EditJoo2ViewlevelsTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2ViewlevelsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ViewlevelsLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2ViewlevelsController.selected.title}" title="#{bundle.EditJoo2ViewlevelsTitle_title}" required="true" requiredMessage="#{bundle.EditJoo2ViewlevelsRequiredMessage_title}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ViewlevelsLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2ViewlevelsController.selected.ordering}" title="#{bundle.EditJoo2ViewlevelsTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2ViewlevelsRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ViewlevelsLabel_rules}" for="rules" />
+                    <h:inputText id="rules" value="#{joo2ViewlevelsController.selected.rules}" title="#{bundle.EditJoo2ViewlevelsTitle_rules}" required="true" requiredMessage="#{bundle.EditJoo2ViewlevelsRequiredMessage_rules}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2ViewlevelsController.update}" value="#{bundle.EditJoo2ViewlevelsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2ViewlevelsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2ViewlevelsController.prepareList}" value="#{bundle.EditJoo2ViewlevelsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2ViewlevelsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

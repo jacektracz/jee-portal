@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartPermgroupsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPermgroupsLabel_virtuemartPermgroupId}"/>
+                    <h:outputText value="#{joo2VirtuemartPermgroupsController.selected.virtuemartPermgroupId}" title="#{bundle.ViewJoo2VirtuemartPermgroupsTitle_virtuemartPermgroupId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPermgroupsLabel_virtuemartVendorId}"/>
+                    <h:outputText value="#{joo2VirtuemartPermgroupsController.selected.virtuemartVendorId}" title="#{bundle.ViewJoo2VirtuemartPermgroupsTitle_virtuemartVendorId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPermgroupsLabel_groupName}"/>
+                    <h:outputText value="#{joo2VirtuemartPermgroupsController.selected.groupName}" title="#{bundle.ViewJoo2VirtuemartPermgroupsTitle_groupName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPermgroupsLabel_groupLevel}"/>
+                    <h:outputText value="#{joo2VirtuemartPermgroupsController.selected.groupLevel}" title="#{bundle.ViewJoo2VirtuemartPermgroupsTitle_groupLevel}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPermgroupsLabel_ordering}"/>
+                    <h:outputText value="#{joo2VirtuemartPermgroupsController.selected.ordering}" title="#{bundle.ViewJoo2VirtuemartPermgroupsTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPermgroupsLabel_shared}"/>
+                    <h:outputText value="#{joo2VirtuemartPermgroupsController.selected.shared}" title="#{bundle.ViewJoo2VirtuemartPermgroupsTitle_shared}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPermgroupsLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartPermgroupsController.selected.published}" title="#{bundle.ViewJoo2VirtuemartPermgroupsTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPermgroupsLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartPermgroupsController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartPermgroupsTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPermgroupsLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartPermgroupsController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartPermgroupsTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPermgroupsLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartPermgroupsController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartPermgroupsTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPermgroupsLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartPermgroupsController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartPermgroupsTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPermgroupsLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartPermgroupsController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartPermgroupsTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartPermgroupsLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartPermgroupsController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartPermgroupsTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartPermgroupsController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartPermgroupsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartPermgroupsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartPermgroupsController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartPermgroupsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartPermgroupsController.prepareList}" value="#{bundle.ViewJoo2VirtuemartPermgroupsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartPermgroupsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

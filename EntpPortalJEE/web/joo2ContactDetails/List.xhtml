@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2ContactDetailsEmpty}" rendered="#{joo2ContactDetailsController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2ContactDetailsController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2ContactDetailsController.pagination.pageFirstItem + 1}..#{joo2ContactDetailsController.pagination.pageLastItem + 1}/#{joo2ContactDetailsController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2ContactDetailsController.previous}" value="#{bundle.Previous} #{joo2ContactDetailsController.pagination.pageSize}" rendered="#{joo2ContactDetailsController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2ContactDetailsController.next}" value="#{bundle.Next} #{joo2ContactDetailsController.pagination.pageSize}" rendered="#{joo2ContactDetailsController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2ContactDetailsController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_name}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.name}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_alias}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.alias}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_conPosition}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.conPosition}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_address}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.address}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_suburb}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.suburb}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_state}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.state}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_country}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.country}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_postcode}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.postcode}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_telephone}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.telephone}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_fax}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fax}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_misc}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.misc}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_image}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.image}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_imagepos}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.imagepos}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_emailTo}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.emailTo}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_defaultCon}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.defaultCon}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_published}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.published}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_checkedOut}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.checkedOut}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_checkedOutTime}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.checkedOutTime}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_ordering}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ordering}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_params}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.params}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_userId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_catid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.catid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_access}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.access}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_mobile}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mobile}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_webpage}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.webpage}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_sortname1}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.sortname1}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_sortname2}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.sortname2}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_sortname3}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.sortname3}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_language}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.language}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_created}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.created}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_createdBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_createdByAlias}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdByAlias}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_modified}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modified}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_modifiedBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modifiedBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_metakey}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metakey}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_metadesc}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metadesc}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_metadata}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metadata}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_featured}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.featured}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_xreference}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.xreference}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_publishUp}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.publishUp}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2ContactDetailsTitle_publishDown}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.publishDown}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2ContactDetailsController.prepareView}" value="#{bundle.ListJoo2ContactDetailsViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2ContactDetailsController.prepareEdit}" value="#{bundle.ListJoo2ContactDetailsEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2ContactDetailsController.destroy}" value="#{bundle.ListJoo2ContactDetailsDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2ContactDetailsController.prepareCreate}" value="#{bundle.ListJoo2ContactDetailsCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2ContactDetailsIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

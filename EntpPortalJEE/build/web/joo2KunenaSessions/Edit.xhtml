@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2KunenaSessionsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaSessionsLabel_userid}" for="userid" />
+                    <h:inputText id="userid" value="#{joo2KunenaSessionsController.selected.userid}" title="#{bundle.EditJoo2KunenaSessionsTitle_userid}" required="true" requiredMessage="#{bundle.EditJoo2KunenaSessionsRequiredMessage_userid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaSessionsLabel_allowed}" for="allowed" />
+                    <h:inputTextarea rows="4" cols="30" id="allowed" value="#{joo2KunenaSessionsController.selected.allowed}" title="#{bundle.EditJoo2KunenaSessionsTitle_allowed}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaSessionsLabel_lasttime}" for="lasttime" />
+                    <h:inputText id="lasttime" value="#{joo2KunenaSessionsController.selected.lasttime}" title="#{bundle.EditJoo2KunenaSessionsTitle_lasttime}" required="true" requiredMessage="#{bundle.EditJoo2KunenaSessionsRequiredMessage_lasttime}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaSessionsLabel_readtopics}" for="readtopics" />
+                    <h:inputTextarea rows="4" cols="30" id="readtopics" value="#{joo2KunenaSessionsController.selected.readtopics}" title="#{bundle.EditJoo2KunenaSessionsTitle_readtopics}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaSessionsLabel_currvisit}" for="currvisit" />
+                    <h:inputText id="currvisit" value="#{joo2KunenaSessionsController.selected.currvisit}" title="#{bundle.EditJoo2KunenaSessionsTitle_currvisit}" required="true" requiredMessage="#{bundle.EditJoo2KunenaSessionsRequiredMessage_currvisit}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2KunenaSessionsController.update}" value="#{bundle.EditJoo2KunenaSessionsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2KunenaSessionsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaSessionsController.prepareList}" value="#{bundle.EditJoo2KunenaSessionsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2KunenaSessionsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

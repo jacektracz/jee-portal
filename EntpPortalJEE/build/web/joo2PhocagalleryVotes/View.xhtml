@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2PhocagalleryVotesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryVotesLabel_id}"/>
+                    <h:outputText value="#{joo2PhocagalleryVotesController.selected.id}" title="#{bundle.ViewJoo2PhocagalleryVotesTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryVotesLabel_catid}"/>
+                    <h:outputText value="#{joo2PhocagalleryVotesController.selected.catid}" title="#{bundle.ViewJoo2PhocagalleryVotesTitle_catid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryVotesLabel_userid}"/>
+                    <h:outputText value="#{joo2PhocagalleryVotesController.selected.userid}" title="#{bundle.ViewJoo2PhocagalleryVotesTitle_userid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryVotesLabel_date}"/>
+                    <h:outputText value="#{joo2PhocagalleryVotesController.selected.date}" title="#{bundle.ViewJoo2PhocagalleryVotesTitle_date}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryVotesLabel_rating}"/>
+                    <h:outputText value="#{joo2PhocagalleryVotesController.selected.rating}" title="#{bundle.ViewJoo2PhocagalleryVotesTitle_rating}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryVotesLabel_published}"/>
+                    <h:outputText value="#{joo2PhocagalleryVotesController.selected.published}" title="#{bundle.ViewJoo2PhocagalleryVotesTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryVotesLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2PhocagalleryVotesController.selected.checkedOut}" title="#{bundle.ViewJoo2PhocagalleryVotesTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryVotesLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2PhocagalleryVotesController.selected.checkedOutTime}" title="#{bundle.ViewJoo2PhocagalleryVotesTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryVotesLabel_ordering}"/>
+                    <h:outputText value="#{joo2PhocagalleryVotesController.selected.ordering}" title="#{bundle.ViewJoo2PhocagalleryVotesTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryVotesLabel_params}"/>
+                    <h:outputText value="#{joo2PhocagalleryVotesController.selected.params}" title="#{bundle.ViewJoo2PhocagalleryVotesTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2PhocagalleryVotesLabel_language}"/>
+                    <h:outputText value="#{joo2PhocagalleryVotesController.selected.language}" title="#{bundle.ViewJoo2PhocagalleryVotesTitle_language}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryVotesController.destroyAndView}" value="#{bundle.ViewJoo2PhocagalleryVotesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2PhocagalleryVotesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryVotesController.prepareCreate}" value="#{bundle.ViewJoo2PhocagalleryVotesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryVotesController.prepareList}" value="#{bundle.ViewJoo2PhocagalleryVotesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2PhocagalleryVotesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2KunenaConfigTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2KunenaConfigController.selected.id}" title="#{bundle.EditJoo2KunenaConfigTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2KunenaConfigRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_boardTitle}" for="boardTitle" />
+                    <h:inputTextarea rows="4" cols="30" id="boardTitle" value="#{joo2KunenaConfigController.selected.boardTitle}" title="#{bundle.EditJoo2KunenaConfigTitle_boardTitle}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_email}" for="email" />
+                    <h:inputTextarea rows="4" cols="30" id="email" value="#{joo2KunenaConfigController.selected.email}" title="#{bundle.EditJoo2KunenaConfigTitle_email}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_boardOffline}" for="boardOffline" />
+                    <h:inputText id="boardOffline" value="#{joo2KunenaConfigController.selected.boardOffline}" title="#{bundle.EditJoo2KunenaConfigTitle_boardOffline}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_boardOfset}" for="boardOfset" />
+                    <h:inputTextarea rows="4" cols="30" id="boardOfset" value="#{joo2KunenaConfigController.selected.boardOfset}" title="#{bundle.EditJoo2KunenaConfigTitle_boardOfset}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_offlineMessage}" for="offlineMessage" />
+                    <h:inputTextarea rows="4" cols="30" id="offlineMessage" value="#{joo2KunenaConfigController.selected.offlineMessage}" title="#{bundle.EditJoo2KunenaConfigTitle_offlineMessage}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_enablerss}" for="enablerss" />
+                    <h:inputText id="enablerss" value="#{joo2KunenaConfigController.selected.enablerss}" title="#{bundle.EditJoo2KunenaConfigTitle_enablerss}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_enablepdf}" for="enablepdf" />
+                    <h:inputText id="enablepdf" value="#{joo2KunenaConfigController.selected.enablepdf}" title="#{bundle.EditJoo2KunenaConfigTitle_enablepdf}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_threadsPerPage}" for="threadsPerPage" />
+                    <h:inputText id="threadsPerPage" value="#{joo2KunenaConfigController.selected.threadsPerPage}" title="#{bundle.EditJoo2KunenaConfigTitle_threadsPerPage}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_messagesPerPage}" for="messagesPerPage" />
+                    <h:inputText id="messagesPerPage" value="#{joo2KunenaConfigController.selected.messagesPerPage}" title="#{bundle.EditJoo2KunenaConfigTitle_messagesPerPage}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_messagesPerPageSearch}" for="messagesPerPageSearch" />
+                    <h:inputText id="messagesPerPageSearch" value="#{joo2KunenaConfigController.selected.messagesPerPageSearch}" title="#{bundle.EditJoo2KunenaConfigTitle_messagesPerPageSearch}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showhistory}" for="showhistory" />
+                    <h:inputText id="showhistory" value="#{joo2KunenaConfigController.selected.showhistory}" title="#{bundle.EditJoo2KunenaConfigTitle_showhistory}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_historylimit}" for="historylimit" />
+                    <h:inputText id="historylimit" value="#{joo2KunenaConfigController.selected.historylimit}" title="#{bundle.EditJoo2KunenaConfigTitle_historylimit}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_shownew}" for="shownew" />
+                    <h:inputText id="shownew" value="#{joo2KunenaConfigController.selected.shownew}" title="#{bundle.EditJoo2KunenaConfigTitle_shownew}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_jmambot}" for="jmambot" />
+                    <h:inputText id="jmambot" value="#{joo2KunenaConfigController.selected.jmambot}" title="#{bundle.EditJoo2KunenaConfigTitle_jmambot}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_disemoticons}" for="disemoticons" />
+                    <h:inputText id="disemoticons" value="#{joo2KunenaConfigController.selected.disemoticons}" title="#{bundle.EditJoo2KunenaConfigTitle_disemoticons}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_template}" for="template" />
+                    <h:inputTextarea rows="4" cols="30" id="template" value="#{joo2KunenaConfigController.selected.template}" title="#{bundle.EditJoo2KunenaConfigTitle_template}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showannouncement}" for="showannouncement" />
+                    <h:inputText id="showannouncement" value="#{joo2KunenaConfigController.selected.showannouncement}" title="#{bundle.EditJoo2KunenaConfigTitle_showannouncement}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_avataroncat}" for="avataroncat" />
+                    <h:inputText id="avataroncat" value="#{joo2KunenaConfigController.selected.avataroncat}" title="#{bundle.EditJoo2KunenaConfigTitle_avataroncat}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_catimagepath}" for="catimagepath" />
+                    <h:inputTextarea rows="4" cols="30" id="catimagepath" value="#{joo2KunenaConfigController.selected.catimagepath}" title="#{bundle.EditJoo2KunenaConfigTitle_catimagepath}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showchildcaticon}" for="showchildcaticon" />
+                    <h:inputText id="showchildcaticon" value="#{joo2KunenaConfigController.selected.showchildcaticon}" title="#{bundle.EditJoo2KunenaConfigTitle_showchildcaticon}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_annmodid}" for="annmodid" />
+                    <h:inputTextarea rows="4" cols="30" id="annmodid" value="#{joo2KunenaConfigController.selected.annmodid}" title="#{bundle.EditJoo2KunenaConfigTitle_annmodid}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rtewidth}" for="rtewidth" />
+                    <h:inputText id="rtewidth" value="#{joo2KunenaConfigController.selected.rtewidth}" title="#{bundle.EditJoo2KunenaConfigTitle_rtewidth}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rteheight}" for="rteheight" />
+                    <h:inputText id="rteheight" value="#{joo2KunenaConfigController.selected.rteheight}" title="#{bundle.EditJoo2KunenaConfigTitle_rteheight}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_enableforumjump}" for="enableforumjump" />
+                    <h:inputText id="enableforumjump" value="#{joo2KunenaConfigController.selected.enableforumjump}" title="#{bundle.EditJoo2KunenaConfigTitle_enableforumjump}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_reportmsg}" for="reportmsg" />
+                    <h:inputText id="reportmsg" value="#{joo2KunenaConfigController.selected.reportmsg}" title="#{bundle.EditJoo2KunenaConfigTitle_reportmsg}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_username}" for="username" />
+                    <h:inputText id="username" value="#{joo2KunenaConfigController.selected.username}" title="#{bundle.EditJoo2KunenaConfigTitle_username}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_askemail}" for="askemail" />
+                    <h:inputText id="askemail" value="#{joo2KunenaConfigController.selected.askemail}" title="#{bundle.EditJoo2KunenaConfigTitle_askemail}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showemail}" for="showemail" />
+                    <h:inputText id="showemail" value="#{joo2KunenaConfigController.selected.showemail}" title="#{bundle.EditJoo2KunenaConfigTitle_showemail}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showuserstats}" for="showuserstats" />
+                    <h:inputText id="showuserstats" value="#{joo2KunenaConfigController.selected.showuserstats}" title="#{bundle.EditJoo2KunenaConfigTitle_showuserstats}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showkarma}" for="showkarma" />
+                    <h:inputText id="showkarma" value="#{joo2KunenaConfigController.selected.showkarma}" title="#{bundle.EditJoo2KunenaConfigTitle_showkarma}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_useredit}" for="useredit" />
+                    <h:inputText id="useredit" value="#{joo2KunenaConfigController.selected.useredit}" title="#{bundle.EditJoo2KunenaConfigTitle_useredit}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_useredittime}" for="useredittime" />
+                    <h:inputText id="useredittime" value="#{joo2KunenaConfigController.selected.useredittime}" title="#{bundle.EditJoo2KunenaConfigTitle_useredittime}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_useredittimegrace}" for="useredittimegrace" />
+                    <h:inputText id="useredittimegrace" value="#{joo2KunenaConfigController.selected.useredittimegrace}" title="#{bundle.EditJoo2KunenaConfigTitle_useredittimegrace}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_editmarkup}" for="editmarkup" />
+                    <h:inputText id="editmarkup" value="#{joo2KunenaConfigController.selected.editmarkup}" title="#{bundle.EditJoo2KunenaConfigTitle_editmarkup}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_allowsubscriptions}" for="allowsubscriptions" />
+                    <h:inputText id="allowsubscriptions" value="#{joo2KunenaConfigController.selected.allowsubscriptions}" title="#{bundle.EditJoo2KunenaConfigTitle_allowsubscriptions}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_subscriptionschecked}" for="subscriptionschecked" />
+                    <h:inputText id="subscriptionschecked" value="#{joo2KunenaConfigController.selected.subscriptionschecked}" title="#{bundle.EditJoo2KunenaConfigTitle_subscriptionschecked}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_allowfavorites}" for="allowfavorites" />
+                    <h:inputText id="allowfavorites" value="#{joo2KunenaConfigController.selected.allowfavorites}" title="#{bundle.EditJoo2KunenaConfigTitle_allowfavorites}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_maxsubject}" for="maxsubject" />
+                    <h:inputText id="maxsubject" value="#{joo2KunenaConfigController.selected.maxsubject}" title="#{bundle.EditJoo2KunenaConfigTitle_maxsubject}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_maxsig}" for="maxsig" />
+                    <h:inputText id="maxsig" value="#{joo2KunenaConfigController.selected.maxsig}" title="#{bundle.EditJoo2KunenaConfigTitle_maxsig}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_regonly}" for="regonly" />
+                    <h:inputText id="regonly" value="#{joo2KunenaConfigController.selected.regonly}" title="#{bundle.EditJoo2KunenaConfigTitle_regonly}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_changename}" for="changename" />
+                    <h:inputText id="changename" value="#{joo2KunenaConfigController.selected.changename}" title="#{bundle.EditJoo2KunenaConfigTitle_changename}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_pubwrite}" for="pubwrite" />
+                    <h:inputText id="pubwrite" value="#{joo2KunenaConfigController.selected.pubwrite}" title="#{bundle.EditJoo2KunenaConfigTitle_pubwrite}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_floodprotection}" for="floodprotection" />
+                    <h:inputText id="floodprotection" value="#{joo2KunenaConfigController.selected.floodprotection}" title="#{bundle.EditJoo2KunenaConfigTitle_floodprotection}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_mailmod}" for="mailmod" />
+                    <h:inputText id="mailmod" value="#{joo2KunenaConfigController.selected.mailmod}" title="#{bundle.EditJoo2KunenaConfigTitle_mailmod}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_mailadmin}" for="mailadmin" />
+                    <h:inputText id="mailadmin" value="#{joo2KunenaConfigController.selected.mailadmin}" title="#{bundle.EditJoo2KunenaConfigTitle_mailadmin}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_captcha}" for="captcha" />
+                    <h:inputText id="captcha" value="#{joo2KunenaConfigController.selected.captcha}" title="#{bundle.EditJoo2KunenaConfigTitle_captcha}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_mailfull}" for="mailfull" />
+                    <h:inputText id="mailfull" value="#{joo2KunenaConfigController.selected.mailfull}" title="#{bundle.EditJoo2KunenaConfigTitle_mailfull}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_allowavatar}" for="allowavatar" />
+                    <h:inputText id="allowavatar" value="#{joo2KunenaConfigController.selected.allowavatar}" title="#{bundle.EditJoo2KunenaConfigTitle_allowavatar}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_allowavatarupload}" for="allowavatarupload" />
+                    <h:inputText id="allowavatarupload" value="#{joo2KunenaConfigController.selected.allowavatarupload}" title="#{bundle.EditJoo2KunenaConfigTitle_allowavatarupload}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_allowavatargallery}" for="allowavatargallery" />
+                    <h:inputText id="allowavatargallery" value="#{joo2KunenaConfigController.selected.allowavatargallery}" title="#{bundle.EditJoo2KunenaConfigTitle_allowavatargallery}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_avatarquality}" for="avatarquality" />
+                    <h:inputText id="avatarquality" value="#{joo2KunenaConfigController.selected.avatarquality}" title="#{bundle.EditJoo2KunenaConfigTitle_avatarquality}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_avatarsize}" for="avatarsize" />
+                    <h:inputText id="avatarsize" value="#{joo2KunenaConfigController.selected.avatarsize}" title="#{bundle.EditJoo2KunenaConfigTitle_avatarsize}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_allowimageupload}" for="allowimageupload" />
+                    <h:inputText id="allowimageupload" value="#{joo2KunenaConfigController.selected.allowimageupload}" title="#{bundle.EditJoo2KunenaConfigTitle_allowimageupload}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_allowimageregupload}" for="allowimageregupload" />
+                    <h:inputText id="allowimageregupload" value="#{joo2KunenaConfigController.selected.allowimageregupload}" title="#{bundle.EditJoo2KunenaConfigTitle_allowimageregupload}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_imageheight}" for="imageheight" />
+                    <h:inputText id="imageheight" value="#{joo2KunenaConfigController.selected.imageheight}" title="#{bundle.EditJoo2KunenaConfigTitle_imageheight}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_imagewidth}" for="imagewidth" />
+                    <h:inputText id="imagewidth" value="#{joo2KunenaConfigController.selected.imagewidth}" title="#{bundle.EditJoo2KunenaConfigTitle_imagewidth}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_imagesize}" for="imagesize" />
+                    <h:inputText id="imagesize" value="#{joo2KunenaConfigController.selected.imagesize}" title="#{bundle.EditJoo2KunenaConfigTitle_imagesize}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_allowfileupload}" for="allowfileupload" />
+                    <h:inputText id="allowfileupload" value="#{joo2KunenaConfigController.selected.allowfileupload}" title="#{bundle.EditJoo2KunenaConfigTitle_allowfileupload}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_allowfileregupload}" for="allowfileregupload" />
+                    <h:inputText id="allowfileregupload" value="#{joo2KunenaConfigController.selected.allowfileregupload}" title="#{bundle.EditJoo2KunenaConfigTitle_allowfileregupload}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_filetypes}" for="filetypes" />
+                    <h:inputTextarea rows="4" cols="30" id="filetypes" value="#{joo2KunenaConfigController.selected.filetypes}" title="#{bundle.EditJoo2KunenaConfigTitle_filetypes}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_filesize}" for="filesize" />
+                    <h:inputText id="filesize" value="#{joo2KunenaConfigController.selected.filesize}" title="#{bundle.EditJoo2KunenaConfigTitle_filesize}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showranking}" for="showranking" />
+                    <h:inputText id="showranking" value="#{joo2KunenaConfigController.selected.showranking}" title="#{bundle.EditJoo2KunenaConfigTitle_showranking}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rankimages}" for="rankimages" />
+                    <h:inputText id="rankimages" value="#{joo2KunenaConfigController.selected.rankimages}" title="#{bundle.EditJoo2KunenaConfigTitle_rankimages}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_avatarSrc}" for="avatarSrc" />
+                    <h:inputTextarea rows="4" cols="30" id="avatarSrc" value="#{joo2KunenaConfigController.selected.avatarSrc}" title="#{bundle.EditJoo2KunenaConfigTitle_avatarSrc}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_fbProfile}" for="fbProfile" />
+                    <h:inputTextarea rows="4" cols="30" id="fbProfile" value="#{joo2KunenaConfigController.selected.fbProfile}" title="#{bundle.EditJoo2KunenaConfigTitle_fbProfile}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_pmComponent}" for="pmComponent" />
+                    <h:inputTextarea rows="4" cols="30" id="pmComponent" value="#{joo2KunenaConfigController.selected.pmComponent}" title="#{bundle.EditJoo2KunenaConfigTitle_pmComponent}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userlistRows}" for="userlistRows" />
+                    <h:inputText id="userlistRows" value="#{joo2KunenaConfigController.selected.userlistRows}" title="#{bundle.EditJoo2KunenaConfigTitle_userlistRows}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userlistOnline}" for="userlistOnline" />
+                    <h:inputText id="userlistOnline" value="#{joo2KunenaConfigController.selected.userlistOnline}" title="#{bundle.EditJoo2KunenaConfigTitle_userlistOnline}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userlistAvatar}" for="userlistAvatar" />
+                    <h:inputText id="userlistAvatar" value="#{joo2KunenaConfigController.selected.userlistAvatar}" title="#{bundle.EditJoo2KunenaConfigTitle_userlistAvatar}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userlistName}" for="userlistName" />
+                    <h:inputText id="userlistName" value="#{joo2KunenaConfigController.selected.userlistName}" title="#{bundle.EditJoo2KunenaConfigTitle_userlistName}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userlistUsername}" for="userlistUsername" />
+                    <h:inputText id="userlistUsername" value="#{joo2KunenaConfigController.selected.userlistUsername}" title="#{bundle.EditJoo2KunenaConfigTitle_userlistUsername}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userlistPosts}" for="userlistPosts" />
+                    <h:inputText id="userlistPosts" value="#{joo2KunenaConfigController.selected.userlistPosts}" title="#{bundle.EditJoo2KunenaConfigTitle_userlistPosts}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userlistKarma}" for="userlistKarma" />
+                    <h:inputText id="userlistKarma" value="#{joo2KunenaConfigController.selected.userlistKarma}" title="#{bundle.EditJoo2KunenaConfigTitle_userlistKarma}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userlistEmail}" for="userlistEmail" />
+                    <h:inputText id="userlistEmail" value="#{joo2KunenaConfigController.selected.userlistEmail}" title="#{bundle.EditJoo2KunenaConfigTitle_userlistEmail}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userlistUsertype}" for="userlistUsertype" />
+                    <h:inputText id="userlistUsertype" value="#{joo2KunenaConfigController.selected.userlistUsertype}" title="#{bundle.EditJoo2KunenaConfigTitle_userlistUsertype}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userlistJoindate}" for="userlistJoindate" />
+                    <h:inputText id="userlistJoindate" value="#{joo2KunenaConfigController.selected.userlistJoindate}" title="#{bundle.EditJoo2KunenaConfigTitle_userlistJoindate}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userlistLastvisitdate}" for="userlistLastvisitdate" />
+                    <h:inputText id="userlistLastvisitdate" value="#{joo2KunenaConfigController.selected.userlistLastvisitdate}" title="#{bundle.EditJoo2KunenaConfigTitle_userlistLastvisitdate}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userlistUserhits}" for="userlistUserhits" />
+                    <h:inputText id="userlistUserhits" value="#{joo2KunenaConfigController.selected.userlistUserhits}" title="#{bundle.EditJoo2KunenaConfigTitle_userlistUserhits}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_latestcategory}" for="latestcategory" />
+                    <h:inputTextarea rows="4" cols="30" id="latestcategory" value="#{joo2KunenaConfigController.selected.latestcategory}" title="#{bundle.EditJoo2KunenaConfigTitle_latestcategory}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showstats}" for="showstats" />
+                    <h:inputText id="showstats" value="#{joo2KunenaConfigController.selected.showstats}" title="#{bundle.EditJoo2KunenaConfigTitle_showstats}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showwhoisonline}" for="showwhoisonline" />
+                    <h:inputText id="showwhoisonline" value="#{joo2KunenaConfigController.selected.showwhoisonline}" title="#{bundle.EditJoo2KunenaConfigTitle_showwhoisonline}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showgenstats}" for="showgenstats" />
+                    <h:inputText id="showgenstats" value="#{joo2KunenaConfigController.selected.showgenstats}" title="#{bundle.EditJoo2KunenaConfigTitle_showgenstats}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showpopuserstats}" for="showpopuserstats" />
+                    <h:inputText id="showpopuserstats" value="#{joo2KunenaConfigController.selected.showpopuserstats}" title="#{bundle.EditJoo2KunenaConfigTitle_showpopuserstats}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_popusercount}" for="popusercount" />
+                    <h:inputText id="popusercount" value="#{joo2KunenaConfigController.selected.popusercount}" title="#{bundle.EditJoo2KunenaConfigTitle_popusercount}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showpopsubjectstats}" for="showpopsubjectstats" />
+                    <h:inputText id="showpopsubjectstats" value="#{joo2KunenaConfigController.selected.showpopsubjectstats}" title="#{bundle.EditJoo2KunenaConfigTitle_showpopsubjectstats}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_popsubjectcount}" for="popsubjectcount" />
+                    <h:inputText id="popsubjectcount" value="#{joo2KunenaConfigController.selected.popsubjectcount}" title="#{bundle.EditJoo2KunenaConfigTitle_popsubjectcount}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_usernamechange}" for="usernamechange" />
+                    <h:inputText id="usernamechange" value="#{joo2KunenaConfigController.selected.usernamechange}" title="#{bundle.EditJoo2KunenaConfigTitle_usernamechange}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rulesInfb}" for="rulesInfb" />
+                    <h:inputText id="rulesInfb" value="#{joo2KunenaConfigController.selected.rulesInfb}" title="#{bundle.EditJoo2KunenaConfigTitle_rulesInfb}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rulesCid}" for="rulesCid" />
+                    <h:inputText id="rulesCid" value="#{joo2KunenaConfigController.selected.rulesCid}" title="#{bundle.EditJoo2KunenaConfigTitle_rulesCid}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_helpInfb}" for="helpInfb" />
+                    <h:inputText id="helpInfb" value="#{joo2KunenaConfigController.selected.helpInfb}" title="#{bundle.EditJoo2KunenaConfigTitle_helpInfb}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_helpCid}" for="helpCid" />
+                    <h:inputText id="helpCid" value="#{joo2KunenaConfigController.selected.helpCid}" title="#{bundle.EditJoo2KunenaConfigTitle_helpCid}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showspoilertag}" for="showspoilertag" />
+                    <h:inputText id="showspoilertag" value="#{joo2KunenaConfigController.selected.showspoilertag}" title="#{bundle.EditJoo2KunenaConfigTitle_showspoilertag}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showvideotag}" for="showvideotag" />
+                    <h:inputText id="showvideotag" value="#{joo2KunenaConfigController.selected.showvideotag}" title="#{bundle.EditJoo2KunenaConfigTitle_showvideotag}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showebaytag}" for="showebaytag" />
+                    <h:inputText id="showebaytag" value="#{joo2KunenaConfigController.selected.showebaytag}" title="#{bundle.EditJoo2KunenaConfigTitle_showebaytag}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_trimlongurls}" for="trimlongurls" />
+                    <h:inputText id="trimlongurls" value="#{joo2KunenaConfigController.selected.trimlongurls}" title="#{bundle.EditJoo2KunenaConfigTitle_trimlongurls}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_trimlongurlsfront}" for="trimlongurlsfront" />
+                    <h:inputText id="trimlongurlsfront" value="#{joo2KunenaConfigController.selected.trimlongurlsfront}" title="#{bundle.EditJoo2KunenaConfigTitle_trimlongurlsfront}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_trimlongurlsback}" for="trimlongurlsback" />
+                    <h:inputText id="trimlongurlsback" value="#{joo2KunenaConfigController.selected.trimlongurlsback}" title="#{bundle.EditJoo2KunenaConfigTitle_trimlongurlsback}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_autoembedyoutube}" for="autoembedyoutube" />
+                    <h:inputText id="autoembedyoutube" value="#{joo2KunenaConfigController.selected.autoembedyoutube}" title="#{bundle.EditJoo2KunenaConfigTitle_autoembedyoutube}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_autoembedebay}" for="autoembedebay" />
+                    <h:inputText id="autoembedebay" value="#{joo2KunenaConfigController.selected.autoembedebay}" title="#{bundle.EditJoo2KunenaConfigTitle_autoembedebay}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_ebaylanguagecode}" for="ebaylanguagecode" />
+                    <h:inputTextarea rows="4" cols="30" id="ebaylanguagecode" value="#{joo2KunenaConfigController.selected.ebaylanguagecode}" title="#{bundle.EditJoo2KunenaConfigTitle_ebaylanguagecode}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_fbsessiontimeout}" for="fbsessiontimeout" />
+                    <h:inputText id="fbsessiontimeout" value="#{joo2KunenaConfigController.selected.fbsessiontimeout}" title="#{bundle.EditJoo2KunenaConfigTitle_fbsessiontimeout}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_highlightcode}" for="highlightcode" />
+                    <h:inputText id="highlightcode" value="#{joo2KunenaConfigController.selected.highlightcode}" title="#{bundle.EditJoo2KunenaConfigTitle_highlightcode}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rssType}" for="rssType" />
+                    <h:inputTextarea rows="4" cols="30" id="rssType" value="#{joo2KunenaConfigController.selected.rssType}" title="#{bundle.EditJoo2KunenaConfigTitle_rssType}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rssTimelimit}" for="rssTimelimit" />
+                    <h:inputTextarea rows="4" cols="30" id="rssTimelimit" value="#{joo2KunenaConfigController.selected.rssTimelimit}" title="#{bundle.EditJoo2KunenaConfigTitle_rssTimelimit}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rssLimit}" for="rssLimit" />
+                    <h:inputText id="rssLimit" value="#{joo2KunenaConfigController.selected.rssLimit}" title="#{bundle.EditJoo2KunenaConfigTitle_rssLimit}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rssIncludedCategories}" for="rssIncludedCategories" />
+                    <h:inputTextarea rows="4" cols="30" id="rssIncludedCategories" value="#{joo2KunenaConfigController.selected.rssIncludedCategories}" title="#{bundle.EditJoo2KunenaConfigTitle_rssIncludedCategories}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rssExcludedCategories}" for="rssExcludedCategories" />
+                    <h:inputTextarea rows="4" cols="30" id="rssExcludedCategories" value="#{joo2KunenaConfigController.selected.rssExcludedCategories}" title="#{bundle.EditJoo2KunenaConfigTitle_rssExcludedCategories}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rssSpecification}" for="rssSpecification" />
+                    <h:inputTextarea rows="4" cols="30" id="rssSpecification" value="#{joo2KunenaConfigController.selected.rssSpecification}" title="#{bundle.EditJoo2KunenaConfigTitle_rssSpecification}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rssAllowHtml}" for="rssAllowHtml" />
+                    <h:inputText id="rssAllowHtml" value="#{joo2KunenaConfigController.selected.rssAllowHtml}" title="#{bundle.EditJoo2KunenaConfigTitle_rssAllowHtml}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rssAuthorFormat}" for="rssAuthorFormat" />
+                    <h:inputTextarea rows="4" cols="30" id="rssAuthorFormat" value="#{joo2KunenaConfigController.selected.rssAuthorFormat}" title="#{bundle.EditJoo2KunenaConfigTitle_rssAuthorFormat}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rssAuthorInTitle}" for="rssAuthorInTitle" />
+                    <h:inputText id="rssAuthorInTitle" value="#{joo2KunenaConfigController.selected.rssAuthorInTitle}" title="#{bundle.EditJoo2KunenaConfigTitle_rssAuthorInTitle}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rssWordCount}" for="rssWordCount" />
+                    <h:inputTextarea rows="4" cols="30" id="rssWordCount" value="#{joo2KunenaConfigController.selected.rssWordCount}" title="#{bundle.EditJoo2KunenaConfigTitle_rssWordCount}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rssOldTitles}" for="rssOldTitles" />
+                    <h:inputText id="rssOldTitles" value="#{joo2KunenaConfigController.selected.rssOldTitles}" title="#{bundle.EditJoo2KunenaConfigTitle_rssOldTitles}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_rssCache}" for="rssCache" />
+                    <h:inputText id="rssCache" value="#{joo2KunenaConfigController.selected.rssCache}" title="#{bundle.EditJoo2KunenaConfigTitle_rssCache}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_fbdefaultpage}" for="fbdefaultpage" />
+                    <h:inputTextarea rows="4" cols="30" id="fbdefaultpage" value="#{joo2KunenaConfigController.selected.fbdefaultpage}" title="#{bundle.EditJoo2KunenaConfigTitle_fbdefaultpage}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_defaultSort}" for="defaultSort" />
+                    <h:inputTextarea rows="4" cols="30" id="defaultSort" value="#{joo2KunenaConfigController.selected.defaultSort}" title="#{bundle.EditJoo2KunenaConfigTitle_defaultSort}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_alphauserpointsnumchars}" for="alphauserpointsnumchars" />
+                    <h:inputText id="alphauserpointsnumchars" value="#{joo2KunenaConfigController.selected.alphauserpointsnumchars}" title="#{bundle.EditJoo2KunenaConfigTitle_alphauserpointsnumchars}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_sef}" for="sef" />
+                    <h:inputText id="sef" value="#{joo2KunenaConfigController.selected.sef}" title="#{bundle.EditJoo2KunenaConfigTitle_sef}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_sefcats}" for="sefcats" />
+                    <h:inputText id="sefcats" value="#{joo2KunenaConfigController.selected.sefcats}" title="#{bundle.EditJoo2KunenaConfigTitle_sefcats}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_sefutf8}" for="sefutf8" />
+                    <h:inputText id="sefutf8" value="#{joo2KunenaConfigController.selected.sefutf8}" title="#{bundle.EditJoo2KunenaConfigTitle_sefutf8}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showimgforguest}" for="showimgforguest" />
+                    <h:inputText id="showimgforguest" value="#{joo2KunenaConfigController.selected.showimgforguest}" title="#{bundle.EditJoo2KunenaConfigTitle_showimgforguest}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showfileforguest}" for="showfileforguest" />
+                    <h:inputText id="showfileforguest" value="#{joo2KunenaConfigController.selected.showfileforguest}" title="#{bundle.EditJoo2KunenaConfigTitle_showfileforguest}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_pollnboptions}" for="pollnboptions" />
+                    <h:inputText id="pollnboptions" value="#{joo2KunenaConfigController.selected.pollnboptions}" title="#{bundle.EditJoo2KunenaConfigTitle_pollnboptions}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_pollallowvoteone}" for="pollallowvoteone" />
+                    <h:inputText id="pollallowvoteone" value="#{joo2KunenaConfigController.selected.pollallowvoteone}" title="#{bundle.EditJoo2KunenaConfigTitle_pollallowvoteone}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_pollenabled}" for="pollenabled" />
+                    <h:inputText id="pollenabled" value="#{joo2KunenaConfigController.selected.pollenabled}" title="#{bundle.EditJoo2KunenaConfigTitle_pollenabled}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_poppollscount}" for="poppollscount" />
+                    <h:inputText id="poppollscount" value="#{joo2KunenaConfigController.selected.poppollscount}" title="#{bundle.EditJoo2KunenaConfigTitle_poppollscount}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showpoppollstats}" for="showpoppollstats" />
+                    <h:inputText id="showpoppollstats" value="#{joo2KunenaConfigController.selected.showpoppollstats}" title="#{bundle.EditJoo2KunenaConfigTitle_showpoppollstats}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_polltimebtvotes}" for="polltimebtvotes" />
+                    <h:inputTextarea rows="4" cols="30" id="polltimebtvotes" value="#{joo2KunenaConfigController.selected.polltimebtvotes}" title="#{bundle.EditJoo2KunenaConfigTitle_polltimebtvotes}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_pollnbvotesbyuser}" for="pollnbvotesbyuser" />
+                    <h:inputText id="pollnbvotesbyuser" value="#{joo2KunenaConfigController.selected.pollnbvotesbyuser}" title="#{bundle.EditJoo2KunenaConfigTitle_pollnbvotesbyuser}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_pollresultsuserslist}" for="pollresultsuserslist" />
+                    <h:inputText id="pollresultsuserslist" value="#{joo2KunenaConfigController.selected.pollresultsuserslist}" title="#{bundle.EditJoo2KunenaConfigTitle_pollresultsuserslist}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_maxpersotext}" for="maxpersotext" />
+                    <h:inputText id="maxpersotext" value="#{joo2KunenaConfigController.selected.maxpersotext}" title="#{bundle.EditJoo2KunenaConfigTitle_maxpersotext}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_orderingSystem}" for="orderingSystem" />
+                    <h:inputTextarea rows="4" cols="30" id="orderingSystem" value="#{joo2KunenaConfigController.selected.orderingSystem}" title="#{bundle.EditJoo2KunenaConfigTitle_orderingSystem}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_postDateformat}" for="postDateformat" />
+                    <h:inputTextarea rows="4" cols="30" id="postDateformat" value="#{joo2KunenaConfigController.selected.postDateformat}" title="#{bundle.EditJoo2KunenaConfigTitle_postDateformat}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_postDateformatHover}" for="postDateformatHover" />
+                    <h:inputTextarea rows="4" cols="30" id="postDateformatHover" value="#{joo2KunenaConfigController.selected.postDateformatHover}" title="#{bundle.EditJoo2KunenaConfigTitle_postDateformatHover}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_hideIp}" for="hideIp" />
+                    <h:inputText id="hideIp" value="#{joo2KunenaConfigController.selected.hideIp}" title="#{bundle.EditJoo2KunenaConfigTitle_hideIp}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_jsActstrIntegration}" for="jsActstrIntegration" />
+                    <h:inputText id="jsActstrIntegration" value="#{joo2KunenaConfigController.selected.jsActstrIntegration}" title="#{bundle.EditJoo2KunenaConfigTitle_jsActstrIntegration}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_imagetypes}" for="imagetypes" />
+                    <h:inputTextarea rows="4" cols="30" id="imagetypes" value="#{joo2KunenaConfigController.selected.imagetypes}" title="#{bundle.EditJoo2KunenaConfigTitle_imagetypes}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_checkmimetypes}" for="checkmimetypes" />
+                    <h:inputText id="checkmimetypes" value="#{joo2KunenaConfigController.selected.checkmimetypes}" title="#{bundle.EditJoo2KunenaConfigTitle_checkmimetypes}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_imagemimetypes}" for="imagemimetypes" />
+                    <h:inputTextarea rows="4" cols="30" id="imagemimetypes" value="#{joo2KunenaConfigController.selected.imagemimetypes}" title="#{bundle.EditJoo2KunenaConfigTitle_imagemimetypes}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_imagequality}" for="imagequality" />
+                    <h:inputText id="imagequality" value="#{joo2KunenaConfigController.selected.imagequality}" title="#{bundle.EditJoo2KunenaConfigTitle_imagequality}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_thumbheight}" for="thumbheight" />
+                    <h:inputText id="thumbheight" value="#{joo2KunenaConfigController.selected.thumbheight}" title="#{bundle.EditJoo2KunenaConfigTitle_thumbheight}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_thumbwidth}" for="thumbwidth" />
+                    <h:inputText id="thumbwidth" value="#{joo2KunenaConfigController.selected.thumbwidth}" title="#{bundle.EditJoo2KunenaConfigTitle_thumbwidth}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_hideuserprofileinfo}" for="hideuserprofileinfo" />
+                    <h:inputTextarea rows="4" cols="30" id="hideuserprofileinfo" value="#{joo2KunenaConfigController.selected.hideuserprofileinfo}" title="#{bundle.EditJoo2KunenaConfigTitle_hideuserprofileinfo}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_integrationAccess}" for="integrationAccess" />
+                    <h:inputTextarea rows="4" cols="30" id="integrationAccess" value="#{joo2KunenaConfigController.selected.integrationAccess}" title="#{bundle.EditJoo2KunenaConfigTitle_integrationAccess}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_integrationLogin}" for="integrationLogin" />
+                    <h:inputTextarea rows="4" cols="30" id="integrationLogin" value="#{joo2KunenaConfigController.selected.integrationLogin}" title="#{bundle.EditJoo2KunenaConfigTitle_integrationLogin}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_integrationAvatar}" for="integrationAvatar" />
+                    <h:inputTextarea rows="4" cols="30" id="integrationAvatar" value="#{joo2KunenaConfigController.selected.integrationAvatar}" title="#{bundle.EditJoo2KunenaConfigTitle_integrationAvatar}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_integrationProfile}" for="integrationProfile" />
+                    <h:inputTextarea rows="4" cols="30" id="integrationProfile" value="#{joo2KunenaConfigController.selected.integrationProfile}" title="#{bundle.EditJoo2KunenaConfigTitle_integrationProfile}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_integrationPrivate}" for="integrationPrivate" />
+                    <h:inputTextarea rows="4" cols="30" id="integrationPrivate" value="#{joo2KunenaConfigController.selected.integrationPrivate}" title="#{bundle.EditJoo2KunenaConfigTitle_integrationPrivate}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_integrationActivity}" for="integrationActivity" />
+                    <h:inputTextarea rows="4" cols="30" id="integrationActivity" value="#{joo2KunenaConfigController.selected.integrationActivity}" title="#{bundle.EditJoo2KunenaConfigTitle_integrationActivity}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_boxghostmessage}" for="boxghostmessage" />
+                    <h:inputText id="boxghostmessage" value="#{joo2KunenaConfigController.selected.boxghostmessage}" title="#{bundle.EditJoo2KunenaConfigTitle_boxghostmessage}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userdeletetmessage}" for="userdeletetmessage" />
+                    <h:inputText id="userdeletetmessage" value="#{joo2KunenaConfigController.selected.userdeletetmessage}" title="#{bundle.EditJoo2KunenaConfigTitle_userdeletetmessage}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_latestcategoryIn}" for="latestcategoryIn" />
+                    <h:inputText id="latestcategoryIn" value="#{joo2KunenaConfigController.selected.latestcategoryIn}" title="#{bundle.EditJoo2KunenaConfigTitle_latestcategoryIn}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_topicicons}" for="topicicons" />
+                    <h:inputText id="topicicons" value="#{joo2KunenaConfigController.selected.topicicons}" title="#{bundle.EditJoo2KunenaConfigTitle_topicicons}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_onlineusers}" for="onlineusers" />
+                    <h:inputText id="onlineusers" value="#{joo2KunenaConfigController.selected.onlineusers}" title="#{bundle.EditJoo2KunenaConfigTitle_onlineusers}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_debug}" for="debug" />
+                    <h:inputText id="debug" value="#{joo2KunenaConfigController.selected.debug}" title="#{bundle.EditJoo2KunenaConfigTitle_debug}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_catsautosubscribed}" for="catsautosubscribed" />
+                    <h:inputText id="catsautosubscribed" value="#{joo2KunenaConfigController.selected.catsautosubscribed}" title="#{bundle.EditJoo2KunenaConfigTitle_catsautosubscribed}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showbannedreason}" for="showbannedreason" />
+                    <h:inputText id="showbannedreason" value="#{joo2KunenaConfigController.selected.showbannedreason}" title="#{bundle.EditJoo2KunenaConfigTitle_showbannedreason}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_versionCheck}" for="versionCheck" />
+                    <h:inputText id="versionCheck" value="#{joo2KunenaConfigController.selected.versionCheck}" title="#{bundle.EditJoo2KunenaConfigTitle_versionCheck}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showthankyou}" for="showthankyou" />
+                    <h:inputText id="showthankyou" value="#{joo2KunenaConfigController.selected.showthankyou}" title="#{bundle.EditJoo2KunenaConfigTitle_showthankyou}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showpopthankyoustats}" for="showpopthankyoustats" />
+                    <h:inputText id="showpopthankyoustats" value="#{joo2KunenaConfigController.selected.showpopthankyoustats}" title="#{bundle.EditJoo2KunenaConfigTitle_showpopthankyoustats}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_popthankscount}" for="popthankscount" />
+                    <h:inputText id="popthankscount" value="#{joo2KunenaConfigController.selected.popthankscount}" title="#{bundle.EditJoo2KunenaConfigTitle_popthankscount}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_modSeeDeleted}" for="modSeeDeleted" />
+                    <h:inputText id="modSeeDeleted" value="#{joo2KunenaConfigController.selected.modSeeDeleted}" title="#{bundle.EditJoo2KunenaConfigTitle_modSeeDeleted}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_bbcodeImgSecure}" for="bbcodeImgSecure" />
+                    <h:inputTextarea rows="4" cols="30" id="bbcodeImgSecure" value="#{joo2KunenaConfigController.selected.bbcodeImgSecure}" title="#{bundle.EditJoo2KunenaConfigTitle_bbcodeImgSecure}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_listcatShowModerators}" for="listcatShowModerators" />
+                    <h:inputText id="listcatShowModerators" value="#{joo2KunenaConfigController.selected.listcatShowModerators}" title="#{bundle.EditJoo2KunenaConfigTitle_listcatShowModerators}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_lightbox}" for="lightbox" />
+                    <h:inputText id="lightbox" value="#{joo2KunenaConfigController.selected.lightbox}" title="#{bundle.EditJoo2KunenaConfigTitle_lightbox}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_activityLimit}" for="activityLimit" />
+                    <h:inputText id="activityLimit" value="#{joo2KunenaConfigController.selected.activityLimit}" title="#{bundle.EditJoo2KunenaConfigTitle_activityLimit}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showListTime}" for="showListTime" />
+                    <h:inputText id="showListTime" value="#{joo2KunenaConfigController.selected.showListTime}" title="#{bundle.EditJoo2KunenaConfigTitle_showListTime}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showSessionType}" for="showSessionType" />
+                    <h:inputText id="showSessionType" value="#{joo2KunenaConfigController.selected.showSessionType}" title="#{bundle.EditJoo2KunenaConfigTitle_showSessionType}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_showSessionStarttime}" for="showSessionStarttime" />
+                    <h:inputText id="showSessionStarttime" value="#{joo2KunenaConfigController.selected.showSessionStarttime}" title="#{bundle.EditJoo2KunenaConfigTitle_showSessionStarttime}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userlistAllowed}" for="userlistAllowed" />
+                    <h:inputText id="userlistAllowed" value="#{joo2KunenaConfigController.selected.userlistAllowed}" title="#{bundle.EditJoo2KunenaConfigTitle_userlistAllowed}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_userlistCountUsers}" for="userlistCountUsers" />
+                    <h:inputText id="userlistCountUsers" value="#{joo2KunenaConfigController.selected.userlistCountUsers}" title="#{bundle.EditJoo2KunenaConfigTitle_userlistCountUsers}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_enableThreadedLayouts}" for="enableThreadedLayouts" />
+                    <h:inputText id="enableThreadedLayouts" value="#{joo2KunenaConfigController.selected.enableThreadedLayouts}" title="#{bundle.EditJoo2KunenaConfigTitle_enableThreadedLayouts}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_categorySubscriptions}" for="categorySubscriptions" />
+                    <h:inputTextarea rows="4" cols="30" id="categorySubscriptions" value="#{joo2KunenaConfigController.selected.categorySubscriptions}" title="#{bundle.EditJoo2KunenaConfigTitle_categorySubscriptions}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_topicSubscriptions}" for="topicSubscriptions" />
+                    <h:inputTextarea rows="4" cols="30" id="topicSubscriptions" value="#{joo2KunenaConfigController.selected.topicSubscriptions}" title="#{bundle.EditJoo2KunenaConfigTitle_topicSubscriptions}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_pubprofile}" for="pubprofile" />
+                    <h:inputText id="pubprofile" value="#{joo2KunenaConfigController.selected.pubprofile}" title="#{bundle.EditJoo2KunenaConfigTitle_pubprofile}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_thankyouMax}" for="thankyouMax" />
+                    <h:inputText id="thankyouMax" value="#{joo2KunenaConfigController.selected.thankyouMax}" title="#{bundle.EditJoo2KunenaConfigTitle_thankyouMax}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_emailRecipientCount}" for="emailRecipientCount" />
+                    <h:inputText id="emailRecipientCount" value="#{joo2KunenaConfigController.selected.emailRecipientCount}" title="#{bundle.EditJoo2KunenaConfigTitle_emailRecipientCount}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_emailRecipientPrivacy}" for="emailRecipientPrivacy" />
+                    <h:inputTextarea rows="4" cols="30" id="emailRecipientPrivacy" value="#{joo2KunenaConfigController.selected.emailRecipientPrivacy}" title="#{bundle.EditJoo2KunenaConfigTitle_emailRecipientPrivacy}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_emailVisibleAddress}" for="emailVisibleAddress" />
+                    <h:inputTextarea rows="4" cols="30" id="emailVisibleAddress" value="#{joo2KunenaConfigController.selected.emailVisibleAddress}" title="#{bundle.EditJoo2KunenaConfigTitle_emailVisibleAddress}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_captchaPostLimit}" for="captchaPostLimit" />
+                    <h:inputText id="captchaPostLimit" value="#{joo2KunenaConfigController.selected.captchaPostLimit}" title="#{bundle.EditJoo2KunenaConfigTitle_captchaPostLimit}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_recaptchaPublickey}" for="recaptchaPublickey" />
+                    <h:inputTextarea rows="4" cols="30" id="recaptchaPublickey" value="#{joo2KunenaConfigController.selected.recaptchaPublickey}" title="#{bundle.EditJoo2KunenaConfigTitle_recaptchaPublickey}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_recaptchaPrivatekey}" for="recaptchaPrivatekey" />
+                    <h:inputTextarea rows="4" cols="30" id="recaptchaPrivatekey" value="#{joo2KunenaConfigController.selected.recaptchaPrivatekey}" title="#{bundle.EditJoo2KunenaConfigTitle_recaptchaPrivatekey}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaConfigLabel_recaptchaTheme}" for="recaptchaTheme" />
+                    <h:inputTextarea rows="4" cols="30" id="recaptchaTheme" value="#{joo2KunenaConfigController.selected.recaptchaTheme}" title="#{bundle.EditJoo2KunenaConfigTitle_recaptchaTheme}" />
+                </h:panelGrid>
+                <h:commandLink action="#{joo2KunenaConfigController.update}" value="#{bundle.EditJoo2KunenaConfigSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2KunenaConfigViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaConfigController.prepareList}" value="#{bundle.EditJoo2KunenaConfigShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2KunenaConfigIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

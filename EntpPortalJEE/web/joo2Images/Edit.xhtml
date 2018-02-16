@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2ImagesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epImageId}" for="epImageId" />
+                    <h:inputText id="epImageId" value="#{joo2ImagesController.selected.epImageId}" title="#{bundle.EditJoo2ImagesTitle_epImageId}" required="true" requiredMessage="#{bundle.EditJoo2ImagesRequiredMessage_epImageId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epImageSmallPath}" for="epImageSmallPath" />
+                    <h:inputText id="epImageSmallPath" value="#{joo2ImagesController.selected.epImageSmallPath}" title="#{bundle.EditJoo2ImagesTitle_epImageSmallPath}" required="true" requiredMessage="#{bundle.EditJoo2ImagesRequiredMessage_epImageSmallPath}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epImageBigPath}" for="epImageBigPath" />
+                    <h:inputText id="epImageBigPath" value="#{joo2ImagesController.selected.epImageBigPath}" title="#{bundle.EditJoo2ImagesTitle_epImageBigPath}" required="true" requiredMessage="#{bundle.EditJoo2ImagesRequiredMessage_epImageBigPath}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epSourceClass}" for="epSourceClass" />
+                    <h:inputText id="epSourceClass" value="#{joo2ImagesController.selected.epSourceClass}" title="#{bundle.EditJoo2ImagesTitle_epSourceClass}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epSizeSmall}" for="epSizeSmall" />
+                    <h:inputText id="epSizeSmall" value="#{joo2ImagesController.selected.epSizeSmall}" title="#{bundle.EditJoo2ImagesTitle_epSizeSmall}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epSizeBigl}" for="epSizeBigl" />
+                    <h:inputText id="epSizeBigl" value="#{joo2ImagesController.selected.epSizeBigl}" title="#{bundle.EditJoo2ImagesTitle_epSizeBigl}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epSizeBig}" for="epSizeBig" />
+                    <h:inputText id="epSizeBig" value="#{joo2ImagesController.selected.epSizeBig}" title="#{bundle.EditJoo2ImagesTitle_epSizeBig}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epSizeSmallDb}" for="epSizeSmallDb" />
+                    <h:inputText id="epSizeSmallDb" value="#{joo2ImagesController.selected.epSizeSmallDb}" title="#{bundle.EditJoo2ImagesTitle_epSizeSmallDb}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epSizeBigDb}" for="epSizeBigDb" />
+                    <h:inputText id="epSizeBigDb" value="#{joo2ImagesController.selected.epSizeBigDb}" title="#{bundle.EditJoo2ImagesTitle_epSizeBigDb}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epSizeType}" for="epSizeType" />
+                    <h:inputText id="epSizeType" value="#{joo2ImagesController.selected.epSizeType}" title="#{bundle.EditJoo2ImagesTitle_epSizeType}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epBigSizeType}" for="epBigSizeType" />
+                    <h:inputText id="epBigSizeType" value="#{joo2ImagesController.selected.epBigSizeType}" title="#{bundle.EditJoo2ImagesTitle_epBigSizeType}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epSmallSizeType}" for="epSmallSizeType" />
+                    <h:inputText id="epSmallSizeType" value="#{joo2ImagesController.selected.epSmallSizeType}" title="#{bundle.EditJoo2ImagesTitle_epSmallSizeType}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epBigWidth}" for="epBigWidth" />
+                    <h:inputText id="epBigWidth" value="#{joo2ImagesController.selected.epBigWidth}" title="#{bundle.EditJoo2ImagesTitle_epBigWidth}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epBigHeight}" for="epBigHeight" />
+                    <h:inputText id="epBigHeight" value="#{joo2ImagesController.selected.epBigHeight}" title="#{bundle.EditJoo2ImagesTitle_epBigHeight}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epSmallWidth}" for="epSmallWidth" />
+                    <h:inputText id="epSmallWidth" value="#{joo2ImagesController.selected.epSmallWidth}" title="#{bundle.EditJoo2ImagesTitle_epSmallWidth}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ImagesLabel_epSmallHeight}" for="epSmallHeight" />
+                    <h:inputText id="epSmallHeight" value="#{joo2ImagesController.selected.epSmallHeight}" title="#{bundle.EditJoo2ImagesTitle_epSmallHeight}" />
+                </h:panelGrid>
+                <h:commandLink action="#{joo2ImagesController.update}" value="#{bundle.EditJoo2ImagesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2ImagesViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2ImagesController.prepareList}" value="#{bundle.EditJoo2ImagesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2ImagesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

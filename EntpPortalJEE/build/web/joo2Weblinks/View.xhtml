@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2WeblinksTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_id}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.id}" title="#{bundle.ViewJoo2WeblinksTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_catid}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.catid}" title="#{bundle.ViewJoo2WeblinksTitle_catid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_sid}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.sid}" title="#{bundle.ViewJoo2WeblinksTitle_sid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_title}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.title}" title="#{bundle.ViewJoo2WeblinksTitle_title}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_alias}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.alias}" title="#{bundle.ViewJoo2WeblinksTitle_alias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_url}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.url}" title="#{bundle.ViewJoo2WeblinksTitle_url}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_description}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.description}" title="#{bundle.ViewJoo2WeblinksTitle_description}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_date}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.date}" title="#{bundle.ViewJoo2WeblinksTitle_date}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_hits}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.hits}" title="#{bundle.ViewJoo2WeblinksTitle_hits}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_state}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.state}" title="#{bundle.ViewJoo2WeblinksTitle_state}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.checkedOut}" title="#{bundle.ViewJoo2WeblinksTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.checkedOutTime}" title="#{bundle.ViewJoo2WeblinksTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_ordering}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.ordering}" title="#{bundle.ViewJoo2WeblinksTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_archived}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.archived}" title="#{bundle.ViewJoo2WeblinksTitle_archived}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_approved}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.approved}" title="#{bundle.ViewJoo2WeblinksTitle_approved}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_access}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.access}" title="#{bundle.ViewJoo2WeblinksTitle_access}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_params}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.params}" title="#{bundle.ViewJoo2WeblinksTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_language}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.language}" title="#{bundle.ViewJoo2WeblinksTitle_language}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_created}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.created}" title="#{bundle.ViewJoo2WeblinksTitle_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_createdBy}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.createdBy}" title="#{bundle.ViewJoo2WeblinksTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_createdByAlias}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.createdByAlias}" title="#{bundle.ViewJoo2WeblinksTitle_createdByAlias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_modified}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.modified}" title="#{bundle.ViewJoo2WeblinksTitle_modified}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.modifiedBy}" title="#{bundle.ViewJoo2WeblinksTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_metakey}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.metakey}" title="#{bundle.ViewJoo2WeblinksTitle_metakey}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_metadesc}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.metadesc}" title="#{bundle.ViewJoo2WeblinksTitle_metadesc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_metadata}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.metadata}" title="#{bundle.ViewJoo2WeblinksTitle_metadata}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_featured}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.featured}" title="#{bundle.ViewJoo2WeblinksTitle_featured}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_xreference}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.xreference}" title="#{bundle.ViewJoo2WeblinksTitle_xreference}"/>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_publishUp}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.publishUp}" title="#{bundle.ViewJoo2WeblinksTitle_publishUp}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2WeblinksLabel_publishDown}"/>
+                    <h:outputText value="#{joo2WeblinksController.selected.publishDown}" title="#{bundle.ViewJoo2WeblinksTitle_publishDown}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2WeblinksController.destroyAndView}" value="#{bundle.ViewJoo2WeblinksDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2WeblinksEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2WeblinksController.prepareCreate}" value="#{bundle.ViewJoo2WeblinksCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2WeblinksController.prepareList}" value="#{bundle.ViewJoo2WeblinksShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2WeblinksIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

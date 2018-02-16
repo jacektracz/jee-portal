@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_virtuemartCategoryId}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.virtuemartCategoryId}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_virtuemartCategoryId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_virtuemartVendorId}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.virtuemartVendorId}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_virtuemartVendorId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_categoryName}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.categoryName}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_categoryName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_slug}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.slug}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_slug}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_categoryDescription}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.categoryDescription}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_categoryDescription}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_categoryTemplate}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.categoryTemplate}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_categoryTemplate}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_categoryLayout}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.categoryLayout}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_categoryLayout}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_categoryProductLayout}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.categoryProductLayout}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_categoryProductLayout}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_productsPerRow}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.productsPerRow}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_productsPerRow}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_limitListStart}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.limitListStart}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_limitListStart}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_limitListStep}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.limitListStep}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_limitListStep}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_limitListMax}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.limitListMax}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_limitListMax}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_limitListInitial}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.limitListInitial}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_limitListInitial}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_hits}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.hits}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_hits}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_metadesc}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.metadesc}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_metadesc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_metakey}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.metakey}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_metakey}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_metarobot}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.metarobot}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_metarobot}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_metaauthor}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.metaauthor}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_metaauthor}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_ordering}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.ordering}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_shared}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.shared}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_shared}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.published}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoriesLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoriesController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartCategoriesTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCategoriesController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartCategoriesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartCategoriesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCategoriesController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartCategoriesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCategoriesController.prepareList}" value="#{bundle.ViewJoo2VirtuemartCategoriesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartCategoriesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_virtuemartStateId}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.virtuemartStateId}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_virtuemartStateId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_virtuemartVendorId}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.virtuemartVendorId}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_virtuemartVendorId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_virtuemartCountryId}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.virtuemartCountryId}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_virtuemartCountryId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_virtuemartWorldzoneId}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.virtuemartWorldzoneId}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_virtuemartWorldzoneId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_stateName}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.stateName}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_stateName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_state3Code}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.state3Code}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_state3Code}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_state2Code}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.state2Code}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_state2Code}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_ordering}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.ordering}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_shared}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.shared}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_shared}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.published}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartStatesLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartStatesController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartStatesTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartStatesController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartStatesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartStatesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartStatesController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartStatesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartStatesController.prepareList}" value="#{bundle.ViewJoo2VirtuemartStatesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartStatesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

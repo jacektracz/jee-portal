@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2MessagesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2MessagesLabel_messageId}"/>
+                    <h:outputText value="#{joo2MessagesController.selected.messageId}" title="#{bundle.ViewJoo2MessagesTitle_messageId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MessagesLabel_userIdFrom}"/>
+                    <h:outputText value="#{joo2MessagesController.selected.userIdFrom}" title="#{bundle.ViewJoo2MessagesTitle_userIdFrom}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MessagesLabel_userIdTo}"/>
+                    <h:outputText value="#{joo2MessagesController.selected.userIdTo}" title="#{bundle.ViewJoo2MessagesTitle_userIdTo}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MessagesLabel_folderId}"/>
+                    <h:outputText value="#{joo2MessagesController.selected.folderId}" title="#{bundle.ViewJoo2MessagesTitle_folderId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MessagesLabel_dateTime}"/>
+                    <h:outputText value="#{joo2MessagesController.selected.dateTime}" title="#{bundle.ViewJoo2MessagesTitle_dateTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2MessagesLabel_state}"/>
+                    <h:outputText value="#{joo2MessagesController.selected.state}" title="#{bundle.ViewJoo2MessagesTitle_state}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MessagesLabel_priority}"/>
+                    <h:outputText value="#{joo2MessagesController.selected.priority}" title="#{bundle.ViewJoo2MessagesTitle_priority}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MessagesLabel_subject}"/>
+                    <h:outputText value="#{joo2MessagesController.selected.subject}" title="#{bundle.ViewJoo2MessagesTitle_subject}"/>
+                    <h:outputText value="#{bundle.ViewJoo2MessagesLabel_message}"/>
+                    <h:outputText value="#{joo2MessagesController.selected.message}" title="#{bundle.ViewJoo2MessagesTitle_message}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2MessagesController.destroyAndView}" value="#{bundle.ViewJoo2MessagesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2MessagesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2MessagesController.prepareCreate}" value="#{bundle.ViewJoo2MessagesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2MessagesController.prepareList}" value="#{bundle.ViewJoo2MessagesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2MessagesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

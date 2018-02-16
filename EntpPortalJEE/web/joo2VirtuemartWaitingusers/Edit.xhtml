@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartWaitingusersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartWaitingusersLabel_virtuemartWaitinguserId}" for="virtuemartWaitinguserId" />
+                    <h:inputText id="virtuemartWaitinguserId" value="#{joo2VirtuemartWaitingusersController.selected.virtuemartWaitinguserId}" title="#{bundle.EditJoo2VirtuemartWaitingusersTitle_virtuemartWaitinguserId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartWaitingusersRequiredMessage_virtuemartWaitinguserId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartWaitingusersLabel_virtuemartProductId}" for="virtuemartProductId" />
+                    <h:inputText id="virtuemartProductId" value="#{joo2VirtuemartWaitingusersController.selected.virtuemartProductId}" title="#{bundle.EditJoo2VirtuemartWaitingusersTitle_virtuemartProductId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartWaitingusersRequiredMessage_virtuemartProductId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartWaitingusersLabel_virtuemartUserId}" for="virtuemartUserId" />
+                    <h:inputText id="virtuemartUserId" value="#{joo2VirtuemartWaitingusersController.selected.virtuemartUserId}" title="#{bundle.EditJoo2VirtuemartWaitingusersTitle_virtuemartUserId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartWaitingusersRequiredMessage_virtuemartUserId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartWaitingusersLabel_notifyEmail}" for="notifyEmail" />
+                    <h:inputText id="notifyEmail" value="#{joo2VirtuemartWaitingusersController.selected.notifyEmail}" title="#{bundle.EditJoo2VirtuemartWaitingusersTitle_notifyEmail}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartWaitingusersRequiredMessage_notifyEmail}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartWaitingusersLabel_notified}" for="notified" />
+                    <h:inputText id="notified" value="#{joo2VirtuemartWaitingusersController.selected.notified}" title="#{bundle.EditJoo2VirtuemartWaitingusersTitle_notified}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartWaitingusersLabel_notifyDate}" for="notifyDate" />
+                    <h:inputText id="notifyDate" value="#{joo2VirtuemartWaitingusersController.selected.notifyDate}" title="#{bundle.EditJoo2VirtuemartWaitingusersTitle_notifyDate}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartWaitingusersRequiredMessage_notifyDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartWaitingusersLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2VirtuemartWaitingusersController.selected.ordering}" title="#{bundle.EditJoo2VirtuemartWaitingusersTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartWaitingusersRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartWaitingusersLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartWaitingusersController.selected.createdOn}" title="#{bundle.EditJoo2VirtuemartWaitingusersTitle_createdOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartWaitingusersRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartWaitingusersLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartWaitingusersController.selected.createdBy}" title="#{bundle.EditJoo2VirtuemartWaitingusersTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartWaitingusersRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartWaitingusersLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartWaitingusersController.selected.modifiedOn}" title="#{bundle.EditJoo2VirtuemartWaitingusersTitle_modifiedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartWaitingusersRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartWaitingusersLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartWaitingusersController.selected.modifiedBy}" title="#{bundle.EditJoo2VirtuemartWaitingusersTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartWaitingusersRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartWaitingusersLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartWaitingusersController.selected.lockedOn}" title="#{bundle.EditJoo2VirtuemartWaitingusersTitle_lockedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartWaitingusersRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartWaitingusersLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartWaitingusersController.selected.lockedBy}" title="#{bundle.EditJoo2VirtuemartWaitingusersTitle_lockedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartWaitingusersRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartWaitingusersController.update}" value="#{bundle.EditJoo2VirtuemartWaitingusersSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartWaitingusersViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartWaitingusersController.prepareList}" value="#{bundle.EditJoo2VirtuemartWaitingusersShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartWaitingusersIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

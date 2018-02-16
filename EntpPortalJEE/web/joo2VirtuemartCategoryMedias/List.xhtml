@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2VirtuemartCategoryMediasTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2VirtuemartCategoryMediasEmpty}" rendered="#{joo2VirtuemartCategoryMediasController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2VirtuemartCategoryMediasController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2VirtuemartCategoryMediasController.pagination.pageFirstItem + 1}..#{joo2VirtuemartCategoryMediasController.pagination.pageLastItem + 1}/#{joo2VirtuemartCategoryMediasController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2VirtuemartCategoryMediasController.previous}" value="#{bundle.Previous} #{joo2VirtuemartCategoryMediasController.pagination.pageSize}" rendered="#{joo2VirtuemartCategoryMediasController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2VirtuemartCategoryMediasController.next}" value="#{bundle.Next} #{joo2VirtuemartCategoryMediasController.pagination.pageSize}" rendered="#{joo2VirtuemartCategoryMediasController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2VirtuemartCategoryMediasController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartCategoryMediasTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartCategoryMediasTitle_virtuemartCategoryId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.virtuemartCategoryId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartCategoryMediasTitle_virtuemartMediaId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.virtuemartMediaId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2VirtuemartCategoryMediasTitle_ordering}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ordering}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2VirtuemartCategoryMediasController.prepareView}" value="#{bundle.ListJoo2VirtuemartCategoryMediasViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2VirtuemartCategoryMediasController.prepareEdit}" value="#{bundle.ListJoo2VirtuemartCategoryMediasEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2VirtuemartCategoryMediasController.destroy}" value="#{bundle.ListJoo2VirtuemartCategoryMediasDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCategoryMediasController.prepareCreate}" value="#{bundle.ListJoo2VirtuemartCategoryMediasCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2VirtuemartCategoryMediasIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

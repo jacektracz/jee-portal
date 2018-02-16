@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2K2ItemsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2K2ItemsController.selected.id}" title="#{bundle.EditJoo2K2ItemsTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2K2ItemsController.selected.title}" title="#{bundle.EditJoo2K2ItemsTitle_title}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_title}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_alias}" for="alias" />
+                    <h:inputText id="alias" value="#{joo2K2ItemsController.selected.alias}" title="#{bundle.EditJoo2K2ItemsTitle_alias}" />
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_catid}" for="catid" />
+                    <h:inputText id="catid" value="#{joo2K2ItemsController.selected.catid}" title="#{bundle.EditJoo2K2ItemsTitle_catid}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_catid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2K2ItemsController.selected.published}" title="#{bundle.EditJoo2K2ItemsTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_introtext}" for="introtext" />
+                    <h:inputTextarea rows="4" cols="30" id="introtext" value="#{joo2K2ItemsController.selected.introtext}" title="#{bundle.EditJoo2K2ItemsTitle_introtext}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_introtext}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_fulltext}" for="fulltext" />
+                    <h:inputTextarea rows="4" cols="30" id="fulltext" value="#{joo2K2ItemsController.selected.fulltext}" title="#{bundle.EditJoo2K2ItemsTitle_fulltext}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_fulltext}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_video}" for="video" />
+                    <h:inputTextarea rows="4" cols="30" id="video" value="#{joo2K2ItemsController.selected.video}" title="#{bundle.EditJoo2K2ItemsTitle_video}" />
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_gallery}" for="gallery" />
+                    <h:inputText id="gallery" value="#{joo2K2ItemsController.selected.gallery}" title="#{bundle.EditJoo2K2ItemsTitle_gallery}" />
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_extraFields}" for="extraFields" />
+                    <h:inputTextarea rows="4" cols="30" id="extraFields" value="#{joo2K2ItemsController.selected.extraFields}" title="#{bundle.EditJoo2K2ItemsTitle_extraFields}" />
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_extraFieldsSearch}" for="extraFieldsSearch" />
+                    <h:inputTextarea rows="4" cols="30" id="extraFieldsSearch" value="#{joo2K2ItemsController.selected.extraFieldsSearch}" title="#{bundle.EditJoo2K2ItemsTitle_extraFieldsSearch}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_extraFieldsSearch}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_created}" for="created" />
+                    <h:inputText id="created" value="#{joo2K2ItemsController.selected.created}" title="#{bundle.EditJoo2K2ItemsTitle_created}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2K2ItemsController.selected.createdBy}" title="#{bundle.EditJoo2K2ItemsTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_createdByAlias}" for="createdByAlias" />
+                    <h:inputText id="createdByAlias" value="#{joo2K2ItemsController.selected.createdByAlias}" title="#{bundle.EditJoo2K2ItemsTitle_createdByAlias}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_createdByAlias}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_checkedOut}" for="checkedOut" />
+                    <h:inputText id="checkedOut" value="#{joo2K2ItemsController.selected.checkedOut}" title="#{bundle.EditJoo2K2ItemsTitle_checkedOut}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_checkedOut}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_checkedOutTime}" for="checkedOutTime" />
+                    <h:inputText id="checkedOutTime" value="#{joo2K2ItemsController.selected.checkedOutTime}" title="#{bundle.EditJoo2K2ItemsTitle_checkedOutTime}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_modified}" for="modified" />
+                    <h:inputText id="modified" value="#{joo2K2ItemsController.selected.modified}" title="#{bundle.EditJoo2K2ItemsTitle_modified}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_modified}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2K2ItemsController.selected.modifiedBy}" title="#{bundle.EditJoo2K2ItemsTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_publishUp}" for="publishUp" />
+                    <h:inputText id="publishUp" value="#{joo2K2ItemsController.selected.publishUp}" title="#{bundle.EditJoo2K2ItemsTitle_publishUp}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_publishUp}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_publishDown}" for="publishDown" />
+                    <h:inputText id="publishDown" value="#{joo2K2ItemsController.selected.publishDown}" title="#{bundle.EditJoo2K2ItemsTitle_publishDown}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_publishDown}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_trash}" for="trash" />
+                    <h:inputText id="trash" value="#{joo2K2ItemsController.selected.trash}" title="#{bundle.EditJoo2K2ItemsTitle_trash}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_trash}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_access}" for="access" />
+                    <h:inputText id="access" value="#{joo2K2ItemsController.selected.access}" title="#{bundle.EditJoo2K2ItemsTitle_access}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_access}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2K2ItemsController.selected.ordering}" title="#{bundle.EditJoo2K2ItemsTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_featured}" for="featured" />
+                    <h:inputText id="featured" value="#{joo2K2ItemsController.selected.featured}" title="#{bundle.EditJoo2K2ItemsTitle_featured}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_featured}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_featuredOrdering}" for="featuredOrdering" />
+                    <h:inputText id="featuredOrdering" value="#{joo2K2ItemsController.selected.featuredOrdering}" title="#{bundle.EditJoo2K2ItemsTitle_featuredOrdering}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_featuredOrdering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_imageCaption}" for="imageCaption" />
+                    <h:inputTextarea rows="4" cols="30" id="imageCaption" value="#{joo2K2ItemsController.selected.imageCaption}" title="#{bundle.EditJoo2K2ItemsTitle_imageCaption}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_imageCaption}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_imageCredits}" for="imageCredits" />
+                    <h:inputText id="imageCredits" value="#{joo2K2ItemsController.selected.imageCredits}" title="#{bundle.EditJoo2K2ItemsTitle_imageCredits}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_imageCredits}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_videoCaption}" for="videoCaption" />
+                    <h:inputTextarea rows="4" cols="30" id="videoCaption" value="#{joo2K2ItemsController.selected.videoCaption}" title="#{bundle.EditJoo2K2ItemsTitle_videoCaption}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_videoCaption}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_videoCredits}" for="videoCredits" />
+                    <h:inputText id="videoCredits" value="#{joo2K2ItemsController.selected.videoCredits}" title="#{bundle.EditJoo2K2ItemsTitle_videoCredits}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_videoCredits}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_hits}" for="hits" />
+                    <h:inputText id="hits" value="#{joo2K2ItemsController.selected.hits}" title="#{bundle.EditJoo2K2ItemsTitle_hits}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_hits}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_params}" for="params" />
+                    <h:inputTextarea rows="4" cols="30" id="params" value="#{joo2K2ItemsController.selected.params}" title="#{bundle.EditJoo2K2ItemsTitle_params}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_params}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_metadesc}" for="metadesc" />
+                    <h:inputTextarea rows="4" cols="30" id="metadesc" value="#{joo2K2ItemsController.selected.metadesc}" title="#{bundle.EditJoo2K2ItemsTitle_metadesc}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_metadesc}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_metadata}" for="metadata" />
+                    <h:inputTextarea rows="4" cols="30" id="metadata" value="#{joo2K2ItemsController.selected.metadata}" title="#{bundle.EditJoo2K2ItemsTitle_metadata}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_metadata}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_metakey}" for="metakey" />
+                    <h:inputTextarea rows="4" cols="30" id="metakey" value="#{joo2K2ItemsController.selected.metakey}" title="#{bundle.EditJoo2K2ItemsTitle_metakey}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_metakey}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_plugins}" for="plugins" />
+                    <h:inputTextarea rows="4" cols="30" id="plugins" value="#{joo2K2ItemsController.selected.plugins}" title="#{bundle.EditJoo2K2ItemsTitle_plugins}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_plugins}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2K2ItemsLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2K2ItemsController.selected.language}" title="#{bundle.EditJoo2K2ItemsTitle_language}" required="true" requiredMessage="#{bundle.EditJoo2K2ItemsRequiredMessage_language}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2K2ItemsController.update}" value="#{bundle.EditJoo2K2ItemsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2K2ItemsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2K2ItemsController.prepareList}" value="#{bundle.EditJoo2K2ItemsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2K2ItemsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2UpdateSitesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2UpdateSitesLabel_updateSiteId}"/>
+                    <h:outputText value="#{joo2UpdateSitesController.selected.updateSiteId}" title="#{bundle.ViewJoo2UpdateSitesTitle_updateSiteId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdateSitesLabel_name}"/>
+                    <h:outputText value="#{joo2UpdateSitesController.selected.name}" title="#{bundle.ViewJoo2UpdateSitesTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdateSitesLabel_type}"/>
+                    <h:outputText value="#{joo2UpdateSitesController.selected.type}" title="#{bundle.ViewJoo2UpdateSitesTitle_type}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdateSitesLabel_location}"/>
+                    <h:outputText value="#{joo2UpdateSitesController.selected.location}" title="#{bundle.ViewJoo2UpdateSitesTitle_location}"/>
+                    <h:outputText value="#{bundle.ViewJoo2UpdateSitesLabel_enabled}"/>
+                    <h:outputText value="#{joo2UpdateSitesController.selected.enabled}" title="#{bundle.ViewJoo2UpdateSitesTitle_enabled}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2UpdateSitesController.destroyAndView}" value="#{bundle.ViewJoo2UpdateSitesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2UpdateSitesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2UpdateSitesController.prepareCreate}" value="#{bundle.ViewJoo2UpdateSitesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2UpdateSitesController.prepareList}" value="#{bundle.ViewJoo2UpdateSitesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2UpdateSitesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

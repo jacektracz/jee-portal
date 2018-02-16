@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2ModulesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_id}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.id}" title="#{bundle.ViewJoo2ModulesTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_title}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.title}" title="#{bundle.ViewJoo2ModulesTitle_title}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_note}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.note}" title="#{bundle.ViewJoo2ModulesTitle_note}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_content}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.content}" title="#{bundle.ViewJoo2ModulesTitle_content}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_ordering}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.ordering}" title="#{bundle.ViewJoo2ModulesTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_position}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.position}" title="#{bundle.ViewJoo2ModulesTitle_position}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.checkedOut}" title="#{bundle.ViewJoo2ModulesTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.checkedOutTime}" title="#{bundle.ViewJoo2ModulesTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_publishUp}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.publishUp}" title="#{bundle.ViewJoo2ModulesTitle_publishUp}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_publishDown}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.publishDown}" title="#{bundle.ViewJoo2ModulesTitle_publishDown}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_published}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.published}" title="#{bundle.ViewJoo2ModulesTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_module}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.module}" title="#{bundle.ViewJoo2ModulesTitle_module}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_access}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.access}" title="#{bundle.ViewJoo2ModulesTitle_access}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_showtitle}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.showtitle}" title="#{bundle.ViewJoo2ModulesTitle_showtitle}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_params}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.params}" title="#{bundle.ViewJoo2ModulesTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_clientId}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.clientId}" title="#{bundle.ViewJoo2ModulesTitle_clientId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_language}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.language}" title="#{bundle.ViewJoo2ModulesTitle_language}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_epRootCatId}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.epRootCatId}" title="#{bundle.ViewJoo2ModulesTitle_epRootCatId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ModulesLabel_epRootMenuId}"/>
+                    <h:outputText value="#{joo2ModulesController.selected.epRootMenuId}" title="#{bundle.ViewJoo2ModulesTitle_epRootMenuId}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2ModulesController.destroyAndView}" value="#{bundle.ViewJoo2ModulesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2ModulesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2ModulesController.prepareCreate}" value="#{bundle.ViewJoo2ModulesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2ModulesController.prepareList}" value="#{bundle.ViewJoo2ModulesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2ModulesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

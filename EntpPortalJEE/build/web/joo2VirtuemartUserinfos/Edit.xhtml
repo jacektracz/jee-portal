@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartUserinfosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_virtuemartUserinfoId}" for="virtuemartUserinfoId" />
+                    <h:inputText id="virtuemartUserinfoId" value="#{joo2VirtuemartUserinfosController.selected.virtuemartUserinfoId}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_virtuemartUserinfoId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartUserinfosRequiredMessage_virtuemartUserinfoId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_virtuemartUserId}" for="virtuemartUserId" />
+                    <h:inputText id="virtuemartUserId" value="#{joo2VirtuemartUserinfosController.selected.virtuemartUserId}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_virtuemartUserId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartUserinfosRequiredMessage_virtuemartUserId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_addressType}" for="addressType" />
+                    <h:inputText id="addressType" value="#{joo2VirtuemartUserinfosController.selected.addressType}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_addressType}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_addressTypeName}" for="addressTypeName" />
+                    <h:inputText id="addressTypeName" value="#{joo2VirtuemartUserinfosController.selected.addressTypeName}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_addressTypeName}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{joo2VirtuemartUserinfosController.selected.name}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_name}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_company}" for="company" />
+                    <h:inputText id="company" value="#{joo2VirtuemartUserinfosController.selected.company}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_company}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2VirtuemartUserinfosController.selected.title}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_title}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_lastName}" for="lastName" />
+                    <h:inputText id="lastName" value="#{joo2VirtuemartUserinfosController.selected.lastName}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_lastName}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_firstName}" for="firstName" />
+                    <h:inputText id="firstName" value="#{joo2VirtuemartUserinfosController.selected.firstName}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_firstName}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_middleName}" for="middleName" />
+                    <h:inputText id="middleName" value="#{joo2VirtuemartUserinfosController.selected.middleName}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_middleName}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_phone1}" for="phone1" />
+                    <h:inputText id="phone1" value="#{joo2VirtuemartUserinfosController.selected.phone1}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_phone1}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_phone2}" for="phone2" />
+                    <h:inputText id="phone2" value="#{joo2VirtuemartUserinfosController.selected.phone2}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_phone2}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_fax}" for="fax" />
+                    <h:inputText id="fax" value="#{joo2VirtuemartUserinfosController.selected.fax}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_fax}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_address1}" for="address1" />
+                    <h:inputText id="address1" value="#{joo2VirtuemartUserinfosController.selected.address1}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_address1}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartUserinfosRequiredMessage_address1}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_address2}" for="address2" />
+                    <h:inputText id="address2" value="#{joo2VirtuemartUserinfosController.selected.address2}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_address2}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_city}" for="city" />
+                    <h:inputText id="city" value="#{joo2VirtuemartUserinfosController.selected.city}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_city}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartUserinfosRequiredMessage_city}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_virtuemartStateId}" for="virtuemartStateId" />
+                    <h:inputText id="virtuemartStateId" value="#{joo2VirtuemartUserinfosController.selected.virtuemartStateId}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_virtuemartStateId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartUserinfosRequiredMessage_virtuemartStateId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_virtuemartCountryId}" for="virtuemartCountryId" />
+                    <h:inputText id="virtuemartCountryId" value="#{joo2VirtuemartUserinfosController.selected.virtuemartCountryId}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_virtuemartCountryId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartUserinfosRequiredMessage_virtuemartCountryId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_zip}" for="zip" />
+                    <h:inputText id="zip" value="#{joo2VirtuemartUserinfosController.selected.zip}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_zip}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartUserinfosRequiredMessage_zip}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_extraField1}" for="extraField1" />
+                    <h:inputText id="extraField1" value="#{joo2VirtuemartUserinfosController.selected.extraField1}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_extraField1}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_extraField2}" for="extraField2" />
+                    <h:inputText id="extraField2" value="#{joo2VirtuemartUserinfosController.selected.extraField2}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_extraField2}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_extraField3}" for="extraField3" />
+                    <h:inputText id="extraField3" value="#{joo2VirtuemartUserinfosController.selected.extraField3}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_extraField3}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_extraField4}" for="extraField4" />
+                    <h:inputText id="extraField4" value="#{joo2VirtuemartUserinfosController.selected.extraField4}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_extraField4}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_extraField5}" for="extraField5" />
+                    <h:inputText id="extraField5" value="#{joo2VirtuemartUserinfosController.selected.extraField5}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_extraField5}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartUserinfosController.selected.createdOn}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_createdOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartUserinfosRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartUserinfosController.selected.createdBy}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartUserinfosRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartUserinfosController.selected.modifiedOn}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_modifiedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartUserinfosRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartUserinfosController.selected.modifiedBy}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartUserinfosRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartUserinfosController.selected.lockedOn}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_lockedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartUserinfosRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartUserinfosLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartUserinfosController.selected.lockedBy}" title="#{bundle.EditJoo2VirtuemartUserinfosTitle_lockedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartUserinfosRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartUserinfosController.update}" value="#{bundle.EditJoo2VirtuemartUserinfosSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartUserinfosViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartUserinfosController.prepareList}" value="#{bundle.EditJoo2VirtuemartUserinfosShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartUserinfosIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

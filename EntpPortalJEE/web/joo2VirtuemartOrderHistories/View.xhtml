@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartOrderHistoriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartOrderHistoriesLabel_virtuemartOrderHistoryId}"/>
+                    <h:outputText value="#{joo2VirtuemartOrderHistoriesController.selected.virtuemartOrderHistoryId}" title="#{bundle.ViewJoo2VirtuemartOrderHistoriesTitle_virtuemartOrderHistoryId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartOrderHistoriesLabel_virtuemartOrderId}"/>
+                    <h:outputText value="#{joo2VirtuemartOrderHistoriesController.selected.virtuemartOrderId}" title="#{bundle.ViewJoo2VirtuemartOrderHistoriesTitle_virtuemartOrderId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartOrderHistoriesLabel_orderStatusCode}"/>
+                    <h:outputText value="#{joo2VirtuemartOrderHistoriesController.selected.orderStatusCode}" title="#{bundle.ViewJoo2VirtuemartOrderHistoriesTitle_orderStatusCode}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartOrderHistoriesLabel_dateAdded}"/>
+                    <h:outputText value="#{joo2VirtuemartOrderHistoriesController.selected.dateAdded}" title="#{bundle.ViewJoo2VirtuemartOrderHistoriesTitle_dateAdded}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartOrderHistoriesLabel_customerNotified}"/>
+                    <h:outputText value="#{joo2VirtuemartOrderHistoriesController.selected.customerNotified}" title="#{bundle.ViewJoo2VirtuemartOrderHistoriesTitle_customerNotified}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartOrderHistoriesLabel_comments}"/>
+                    <h:outputText value="#{joo2VirtuemartOrderHistoriesController.selected.comments}" title="#{bundle.ViewJoo2VirtuemartOrderHistoriesTitle_comments}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartOrderHistoriesLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartOrderHistoriesController.selected.published}" title="#{bundle.ViewJoo2VirtuemartOrderHistoriesTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartOrderHistoriesLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartOrderHistoriesController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartOrderHistoriesTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartOrderHistoriesLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartOrderHistoriesController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartOrderHistoriesTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartOrderHistoriesLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartOrderHistoriesController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartOrderHistoriesTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartOrderHistoriesLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartOrderHistoriesController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartOrderHistoriesTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartOrderHistoriesLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartOrderHistoriesController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartOrderHistoriesTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartOrderHistoriesLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartOrderHistoriesController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartOrderHistoriesTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartOrderHistoriesController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartOrderHistoriesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartOrderHistoriesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartOrderHistoriesController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartOrderHistoriesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartOrderHistoriesController.prepareList}" value="#{bundle.ViewJoo2VirtuemartOrderHistoriesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartOrderHistoriesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2KunenaConfigEmpty}" rendered="#{joo2KunenaConfigController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2KunenaConfigController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2KunenaConfigController.pagination.pageFirstItem + 1}..#{joo2KunenaConfigController.pagination.pageLastItem + 1}/#{joo2KunenaConfigController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2KunenaConfigController.previous}" value="#{bundle.Previous} #{joo2KunenaConfigController.pagination.pageSize}" rendered="#{joo2KunenaConfigController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2KunenaConfigController.next}" value="#{bundle.Next} #{joo2KunenaConfigController.pagination.pageSize}" rendered="#{joo2KunenaConfigController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2KunenaConfigController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_boardTitle}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.boardTitle}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_email}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.email}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_boardOffline}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.boardOffline}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_boardOfset}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.boardOfset}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_offlineMessage}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.offlineMessage}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_enablerss}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.enablerss}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_enablepdf}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.enablepdf}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_threadsPerPage}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.threadsPerPage}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_messagesPerPage}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.messagesPerPage}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_messagesPerPageSearch}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.messagesPerPageSearch}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showhistory}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showhistory}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_historylimit}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.historylimit}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_shownew}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.shownew}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_jmambot}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.jmambot}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_disemoticons}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.disemoticons}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_template}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.template}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showannouncement}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showannouncement}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_avataroncat}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.avataroncat}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_catimagepath}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.catimagepath}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showchildcaticon}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showchildcaticon}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_annmodid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.annmodid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rtewidth}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rtewidth}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rteheight}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rteheight}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_enableforumjump}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.enableforumjump}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_reportmsg}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.reportmsg}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_username}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.username}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_askemail}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.askemail}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showemail}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showemail}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showuserstats}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showuserstats}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showkarma}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showkarma}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_useredit}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.useredit}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_useredittime}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.useredittime}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_useredittimegrace}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.useredittimegrace}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_editmarkup}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.editmarkup}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_allowsubscriptions}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.allowsubscriptions}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_subscriptionschecked}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subscriptionschecked}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_allowfavorites}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.allowfavorites}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_maxsubject}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.maxsubject}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_maxsig}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.maxsig}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_regonly}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.regonly}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_changename}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.changename}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_pubwrite}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.pubwrite}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_floodprotection}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.floodprotection}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_mailmod}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mailmod}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_mailadmin}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mailadmin}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_captcha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.captcha}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_mailfull}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mailfull}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_allowavatar}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.allowavatar}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_allowavatarupload}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.allowavatarupload}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_allowavatargallery}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.allowavatargallery}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_avatarquality}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.avatarquality}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_avatarsize}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.avatarsize}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_allowimageupload}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.allowimageupload}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_allowimageregupload}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.allowimageregupload}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_imageheight}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.imageheight}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_imagewidth}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.imagewidth}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_imagesize}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.imagesize}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_allowfileupload}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.allowfileupload}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_allowfileregupload}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.allowfileregupload}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_filetypes}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.filetypes}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_filesize}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.filesize}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showranking}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showranking}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rankimages}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rankimages}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_avatarSrc}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.avatarSrc}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_fbProfile}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fbProfile}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_pmComponent}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.pmComponent}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userlistRows}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userlistRows}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userlistOnline}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userlistOnline}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userlistAvatar}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userlistAvatar}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userlistName}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userlistName}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userlistUsername}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userlistUsername}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userlistPosts}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userlistPosts}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userlistKarma}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userlistKarma}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userlistEmail}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userlistEmail}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userlistUsertype}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userlistUsertype}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userlistJoindate}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userlistJoindate}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userlistLastvisitdate}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userlistLastvisitdate}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userlistUserhits}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userlistUserhits}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_latestcategory}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.latestcategory}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showstats}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showstats}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showwhoisonline}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showwhoisonline}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showgenstats}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showgenstats}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showpopuserstats}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showpopuserstats}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_popusercount}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.popusercount}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showpopsubjectstats}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showpopsubjectstats}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_popsubjectcount}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.popsubjectcount}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_usernamechange}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.usernamechange}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rulesInfb}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rulesInfb}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rulesCid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rulesCid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_helpInfb}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.helpInfb}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_helpCid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.helpCid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showspoilertag}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showspoilertag}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showvideotag}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showvideotag}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showebaytag}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showebaytag}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_trimlongurls}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.trimlongurls}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_trimlongurlsfront}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.trimlongurlsfront}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_trimlongurlsback}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.trimlongurlsback}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_autoembedyoutube}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.autoembedyoutube}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_autoembedebay}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.autoembedebay}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_ebaylanguagecode}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ebaylanguagecode}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_fbsessiontimeout}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fbsessiontimeout}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_highlightcode}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.highlightcode}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rssType}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rssType}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rssTimelimit}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rssTimelimit}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rssLimit}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rssLimit}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rssIncludedCategories}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rssIncludedCategories}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rssExcludedCategories}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rssExcludedCategories}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rssSpecification}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rssSpecification}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rssAllowHtml}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rssAllowHtml}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rssAuthorFormat}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rssAuthorFormat}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rssAuthorInTitle}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rssAuthorInTitle}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rssWordCount}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rssWordCount}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rssOldTitles}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rssOldTitles}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_rssCache}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rssCache}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_fbdefaultpage}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fbdefaultpage}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_defaultSort}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.defaultSort}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_alphauserpointsnumchars}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.alphauserpointsnumchars}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_sef}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.sef}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_sefcats}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.sefcats}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_sefutf8}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.sefutf8}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showimgforguest}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showimgforguest}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showfileforguest}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showfileforguest}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_pollnboptions}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.pollnboptions}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_pollallowvoteone}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.pollallowvoteone}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_pollenabled}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.pollenabled}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_poppollscount}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.poppollscount}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showpoppollstats}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showpoppollstats}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_polltimebtvotes}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.polltimebtvotes}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_pollnbvotesbyuser}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.pollnbvotesbyuser}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_pollresultsuserslist}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.pollresultsuserslist}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_maxpersotext}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.maxpersotext}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_orderingSystem}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orderingSystem}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_postDateformat}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.postDateformat}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_postDateformatHover}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.postDateformatHover}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_hideIp}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hideIp}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_jsActstrIntegration}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.jsActstrIntegration}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_imagetypes}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.imagetypes}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_checkmimetypes}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.checkmimetypes}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_imagemimetypes}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.imagemimetypes}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_imagequality}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.imagequality}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_thumbheight}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.thumbheight}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_thumbwidth}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.thumbwidth}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_hideuserprofileinfo}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hideuserprofileinfo}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_integrationAccess}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.integrationAccess}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_integrationLogin}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.integrationLogin}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_integrationAvatar}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.integrationAvatar}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_integrationProfile}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.integrationProfile}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_integrationPrivate}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.integrationPrivate}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_integrationActivity}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.integrationActivity}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_boxghostmessage}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.boxghostmessage}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userdeletetmessage}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userdeletetmessage}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_latestcategoryIn}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.latestcategoryIn}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_topicicons}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.topicicons}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_onlineusers}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.onlineusers}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_debug}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.debug}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_catsautosubscribed}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.catsautosubscribed}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showbannedreason}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showbannedreason}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_versionCheck}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.versionCheck}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showthankyou}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showthankyou}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showpopthankyoustats}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showpopthankyoustats}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_popthankscount}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.popthankscount}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_modSeeDeleted}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modSeeDeleted}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_bbcodeImgSecure}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.bbcodeImgSecure}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_listcatShowModerators}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.listcatShowModerators}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_lightbox}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lightbox}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_activityLimit}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.activityLimit}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showListTime}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showListTime}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showSessionType}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showSessionType}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_showSessionStarttime}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.showSessionStarttime}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userlistAllowed}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userlistAllowed}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_userlistCountUsers}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userlistCountUsers}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_enableThreadedLayouts}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.enableThreadedLayouts}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_categorySubscriptions}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.categorySubscriptions}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_topicSubscriptions}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.topicSubscriptions}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_pubprofile}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.pubprofile}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_thankyouMax}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.thankyouMax}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_emailRecipientCount}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.emailRecipientCount}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_emailRecipientPrivacy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.emailRecipientPrivacy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_emailVisibleAddress}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.emailVisibleAddress}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_captchaPostLimit}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.captchaPostLimit}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_recaptchaPublickey}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.recaptchaPublickey}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_recaptchaPrivatekey}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.recaptchaPrivatekey}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaConfigTitle_recaptchaTheme}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.recaptchaTheme}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2KunenaConfigController.prepareView}" value="#{bundle.ListJoo2KunenaConfigViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2KunenaConfigController.prepareEdit}" value="#{bundle.ListJoo2KunenaConfigEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2KunenaConfigController.destroy}" value="#{bundle.ListJoo2KunenaConfigDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2KunenaConfigController.prepareCreate}" value="#{bundle.ListJoo2KunenaConfigCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2KunenaConfigIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2AssetsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2AssetsLabel_id}"/>
+                    <h:outputText value="#{joo2AssetsController.selected.id}" title="#{bundle.ViewJoo2AssetsTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2AssetsLabel_parentId}"/>
+                    <h:outputText value="#{joo2AssetsController.selected.parentId}" title="#{bundle.ViewJoo2AssetsTitle_parentId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2AssetsLabel_lft}"/>
+                    <h:outputText value="#{joo2AssetsController.selected.lft}" title="#{bundle.ViewJoo2AssetsTitle_lft}"/>
+                    <h:outputText value="#{bundle.ViewJoo2AssetsLabel_rgt}"/>
+                    <h:outputText value="#{joo2AssetsController.selected.rgt}" title="#{bundle.ViewJoo2AssetsTitle_rgt}"/>
+                    <h:outputText value="#{bundle.ViewJoo2AssetsLabel_level}"/>
+                    <h:outputText value="#{joo2AssetsController.selected.level}" title="#{bundle.ViewJoo2AssetsTitle_level}"/>
+                    <h:outputText value="#{bundle.ViewJoo2AssetsLabel_name}"/>
+                    <h:outputText value="#{joo2AssetsController.selected.name}" title="#{bundle.ViewJoo2AssetsTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2AssetsLabel_title}"/>
+                    <h:outputText value="#{joo2AssetsController.selected.title}" title="#{bundle.ViewJoo2AssetsTitle_title}"/>
+                    <h:outputText value="#{bundle.ViewJoo2AssetsLabel_rules}"/>
+                    <h:outputText value="#{joo2AssetsController.selected.rules}" title="#{bundle.ViewJoo2AssetsTitle_rules}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2AssetsController.destroyAndView}" value="#{bundle.ViewJoo2AssetsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2AssetsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2AssetsController.prepareCreate}" value="#{bundle.ViewJoo2AssetsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2AssetsController.prepareList}" value="#{bundle.ViewJoo2AssetsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2AssetsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

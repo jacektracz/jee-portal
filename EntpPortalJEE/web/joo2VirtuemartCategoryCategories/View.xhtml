@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoryCategoriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoryCategoriesLabel_id}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoryCategoriesController.selected.id}" title="#{bundle.ViewJoo2VirtuemartCategoryCategoriesTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoryCategoriesLabel_categoryParentId}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoryCategoriesController.selected.categoryParentId}" title="#{bundle.ViewJoo2VirtuemartCategoryCategoriesTitle_categoryParentId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoryCategoriesLabel_categoryChildId}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoryCategoriesController.selected.categoryChildId}" title="#{bundle.ViewJoo2VirtuemartCategoryCategoriesTitle_categoryChildId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCategoryCategoriesLabel_ordering}"/>
+                    <h:outputText value="#{joo2VirtuemartCategoryCategoriesController.selected.ordering}" title="#{bundle.ViewJoo2VirtuemartCategoryCategoriesTitle_ordering}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCategoryCategoriesController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartCategoryCategoriesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartCategoryCategoriesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCategoryCategoriesController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartCategoryCategoriesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCategoryCategoriesController.prepareList}" value="#{bundle.ViewJoo2VirtuemartCategoryCategoriesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartCategoryCategoriesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2PhocagalleryUserTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryUserLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2PhocagalleryUserController.selected.id}" title="#{bundle.CreateJoo2PhocagalleryUserTitle_id}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryUserRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryUserLabel_userid}" for="userid" />
+                    <h:inputText id="userid" value="#{joo2PhocagalleryUserController.selected.userid}" title="#{bundle.CreateJoo2PhocagalleryUserTitle_userid}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryUserRequiredMessage_userid}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryUserLabel_avatar}" for="avatar" />
+                    <h:inputText id="avatar" value="#{joo2PhocagalleryUserController.selected.avatar}" title="#{bundle.CreateJoo2PhocagalleryUserTitle_avatar}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryUserRequiredMessage_avatar}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryUserLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2PhocagalleryUserController.selected.published}" title="#{bundle.CreateJoo2PhocagalleryUserTitle_published}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryUserRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryUserLabel_approved}" for="approved" />
+                    <h:inputText id="approved" value="#{joo2PhocagalleryUserController.selected.approved}" title="#{bundle.CreateJoo2PhocagalleryUserTitle_approved}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryUserRequiredMessage_approved}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryUserLabel_checkedOut}" for="checkedOut" />
+                    <h:inputText id="checkedOut" value="#{joo2PhocagalleryUserController.selected.checkedOut}" title="#{bundle.CreateJoo2PhocagalleryUserTitle_checkedOut}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryUserRequiredMessage_checkedOut}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryUserLabel_checkedOutTime}" for="checkedOutTime" />
+                    <h:inputText id="checkedOutTime" value="#{joo2PhocagalleryUserController.selected.checkedOutTime}" title="#{bundle.CreateJoo2PhocagalleryUserTitle_checkedOutTime}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryUserRequiredMessage_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryUserLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2PhocagalleryUserController.selected.ordering}" title="#{bundle.CreateJoo2PhocagalleryUserTitle_ordering}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryUserRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryUserLabel_params}" for="params" />
+                    <h:inputTextarea rows="4" cols="30" id="params" value="#{joo2PhocagalleryUserController.selected.params}" title="#{bundle.CreateJoo2PhocagalleryUserTitle_params}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryUserLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2PhocagalleryUserController.selected.language}" title="#{bundle.CreateJoo2PhocagalleryUserTitle_language}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryUserRequiredMessage_language}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryUserController.create}" value="#{bundle.CreateJoo2PhocagalleryUserSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryUserController.prepareList}" value="#{bundle.CreateJoo2PhocagalleryUserShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2PhocagalleryUserIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2ContentTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_id}"/>
+                    <h:outputText value="#{joo2ContentController.selected.id}" title="#{bundle.ViewJoo2ContentTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_assetId}"/>
+                    <h:outputText value="#{joo2ContentController.selected.assetId}" title="#{bundle.ViewJoo2ContentTitle_assetId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_title}"/>
+                    <h:outputText value="#{joo2ContentController.selected.title}" title="#{bundle.ViewJoo2ContentTitle_title}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_alias}"/>
+                    <h:outputText value="#{joo2ContentController.selected.alias}" title="#{bundle.ViewJoo2ContentTitle_alias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_titleAlias}"/>
+                    <h:outputText value="#{joo2ContentController.selected.titleAlias}" title="#{bundle.ViewJoo2ContentTitle_titleAlias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_introtext}"/>
+                    <h:outputText value="#{joo2ContentController.selected.introtext}" title="#{bundle.ViewJoo2ContentTitle_introtext}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_fulltext}"/>
+                    <h:outputText value="#{joo2ContentController.selected.fulltext}" title="#{bundle.ViewJoo2ContentTitle_fulltext}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_state}"/>
+                    <h:outputText value="#{joo2ContentController.selected.state}" title="#{bundle.ViewJoo2ContentTitle_state}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_sectionid}"/>
+                    <h:outputText value="#{joo2ContentController.selected.sectionid}" title="#{bundle.ViewJoo2ContentTitle_sectionid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_mask}"/>
+                    <h:outputText value="#{joo2ContentController.selected.mask}" title="#{bundle.ViewJoo2ContentTitle_mask}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_catid}"/>
+                    <h:outputText value="#{joo2ContentController.selected.catid}" title="#{bundle.ViewJoo2ContentTitle_catid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_created}"/>
+                    <h:outputText value="#{joo2ContentController.selected.created}" title="#{bundle.ViewJoo2ContentTitle_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_createdBy}"/>
+                    <h:outputText value="#{joo2ContentController.selected.createdBy}" title="#{bundle.ViewJoo2ContentTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_createdByAlias}"/>
+                    <h:outputText value="#{joo2ContentController.selected.createdByAlias}" title="#{bundle.ViewJoo2ContentTitle_createdByAlias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_modified}"/>
+                    <h:outputText value="#{joo2ContentController.selected.modified}" title="#{bundle.ViewJoo2ContentTitle_modified}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2ContentController.selected.modifiedBy}" title="#{bundle.ViewJoo2ContentTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2ContentController.selected.checkedOut}" title="#{bundle.ViewJoo2ContentTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2ContentController.selected.checkedOutTime}" title="#{bundle.ViewJoo2ContentTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_publishUp}"/>
+                    <h:outputText value="#{joo2ContentController.selected.publishUp}" title="#{bundle.ViewJoo2ContentTitle_publishUp}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_publishDown}"/>
+                    <h:outputText value="#{joo2ContentController.selected.publishDown}" title="#{bundle.ViewJoo2ContentTitle_publishDown}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_images}"/>
+                    <h:outputText value="#{joo2ContentController.selected.images}" title="#{bundle.ViewJoo2ContentTitle_images}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_urls}"/>
+                    <h:outputText value="#{joo2ContentController.selected.urls}" title="#{bundle.ViewJoo2ContentTitle_urls}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_attribs}"/>
+                    <h:outputText value="#{joo2ContentController.selected.attribs}" title="#{bundle.ViewJoo2ContentTitle_attribs}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_version}"/>
+                    <h:outputText value="#{joo2ContentController.selected.version}" title="#{bundle.ViewJoo2ContentTitle_version}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_parentid}"/>
+                    <h:outputText value="#{joo2ContentController.selected.parentid}" title="#{bundle.ViewJoo2ContentTitle_parentid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_ordering}"/>
+                    <h:outputText value="#{joo2ContentController.selected.ordering}" title="#{bundle.ViewJoo2ContentTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_metakey}"/>
+                    <h:outputText value="#{joo2ContentController.selected.metakey}" title="#{bundle.ViewJoo2ContentTitle_metakey}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_metadesc}"/>
+                    <h:outputText value="#{joo2ContentController.selected.metadesc}" title="#{bundle.ViewJoo2ContentTitle_metadesc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_access}"/>
+                    <h:outputText value="#{joo2ContentController.selected.access}" title="#{bundle.ViewJoo2ContentTitle_access}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_hits}"/>
+                    <h:outputText value="#{joo2ContentController.selected.hits}" title="#{bundle.ViewJoo2ContentTitle_hits}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_metadata}"/>
+                    <h:outputText value="#{joo2ContentController.selected.metadata}" title="#{bundle.ViewJoo2ContentTitle_metadata}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_featured}"/>
+                    <h:outputText value="#{joo2ContentController.selected.featured}" title="#{bundle.ViewJoo2ContentTitle_featured}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_language}"/>
+                    <h:outputText value="#{joo2ContentController.selected.language}" title="#{bundle.ViewJoo2ContentTitle_language}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_xreference}"/>
+                    <h:outputText value="#{joo2ContentController.selected.xreference}" title="#{bundle.ViewJoo2ContentTitle_xreference}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epHrefMain}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epHrefMain}" title="#{bundle.ViewJoo2ContentTitle_epHrefMain}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epImage}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epImage}" title="#{bundle.ViewJoo2ContentTitle_epImage}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epIntroRaw}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epIntroRaw}" title="#{bundle.ViewJoo2ContentTitle_epIntroRaw}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epDownButtin}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epDownButtin}" title="#{bundle.ViewJoo2ContentTitle_epDownButtin}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epDownButton}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epDownButton}" title="#{bundle.ViewJoo2ContentTitle_epDownButton}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epType}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epType}" title="#{bundle.ViewJoo2ContentTitle_epType}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epImageType}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epImageType}" title="#{bundle.ViewJoo2ContentTitle_epImageType}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epFunction}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epFunction}" title="#{bundle.ViewJoo2ContentTitle_epFunction}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epRegenerationState}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epRegenerationState}" title="#{bundle.ViewJoo2ContentTitle_epRegenerationState}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epFeaturedPosition}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epFeaturedPosition}" title="#{bundle.ViewJoo2ContentTitle_epFeaturedPosition}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epImageBig}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epImageBig}" title="#{bundle.ViewJoo2ContentTitle_epImageBig}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epImageOrg}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epImageOrg}" title="#{bundle.ViewJoo2ContentTitle_epImageOrg}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epReferencedCatid}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epReferencedCatid}" title="#{bundle.ViewJoo2ContentTitle_epReferencedCatid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epHrefOrg}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epHrefOrg}" title="#{bundle.ViewJoo2ContentTitle_epHrefOrg}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epReferencedMenuid}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epReferencedMenuid}" title="#{bundle.ViewJoo2ContentTitle_epReferencedMenuid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epUnpublished}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epUnpublished}" title="#{bundle.ViewJoo2ContentTitle_epUnpublished}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epTheme}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epTheme}" title="#{bundle.ViewJoo2ContentTitle_epTheme}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epMenuid}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epMenuid}" title="#{bundle.ViewJoo2ContentTitle_epMenuid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epHrefAll}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epHrefAll}" title="#{bundle.ViewJoo2ContentTitle_epHrefAll}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epHrefText}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epHrefText}" title="#{bundle.ViewJoo2ContentTitle_epHrefText}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epHrefTitle}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epHrefTitle}" title="#{bundle.ViewJoo2ContentTitle_epHrefTitle}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epHrefImg}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epHrefImg}" title="#{bundle.ViewJoo2ContentTitle_epHrefImg}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epIsThreeSummary}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epIsThreeSummary}" title="#{bundle.ViewJoo2ContentTitle_epIsThreeSummary}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epRefToOutsideCatId}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epRefToOutsideCatId}" title="#{bundle.ViewJoo2ContentTitle_epRefToOutsideCatId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epImportFromDir}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epImportFromDir}" title="#{bundle.ViewJoo2ContentTitle_epImportFromDir}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epImportFromFile}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epImportFromFile}" title="#{bundle.ViewJoo2ContentTitle_epImportFromFile}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epImportFromFileShort}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epImportFromFileShort}" title="#{bundle.ViewJoo2ContentTitle_epImportFromFileShort}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContentLabel_epLeadingImported}"/>
+                    <h:outputText value="#{joo2ContentController.selected.epLeadingImported}" title="#{bundle.ViewJoo2ContentTitle_epLeadingImported}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2ContentController.destroyAndView}" value="#{bundle.ViewJoo2ContentDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2ContentEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2ContentController.prepareCreate}" value="#{bundle.ViewJoo2ContentCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2ContentController.prepareList}" value="#{bundle.ViewJoo2ContentShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2ContentIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

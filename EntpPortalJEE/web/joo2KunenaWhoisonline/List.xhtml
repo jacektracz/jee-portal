@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2KunenaWhoisonlineTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2KunenaWhoisonlineEmpty}" rendered="#{joo2KunenaWhoisonlineController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2KunenaWhoisonlineController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2KunenaWhoisonlineController.pagination.pageFirstItem + 1}..#{joo2KunenaWhoisonlineController.pagination.pageLastItem + 1}/#{joo2KunenaWhoisonlineController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2KunenaWhoisonlineController.previous}" value="#{bundle.Previous} #{joo2KunenaWhoisonlineController.pagination.pageSize}" rendered="#{joo2KunenaWhoisonlineController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2KunenaWhoisonlineController.next}" value="#{bundle.Next} #{joo2KunenaWhoisonlineController.pagination.pageSize}" rendered="#{joo2KunenaWhoisonlineController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2KunenaWhoisonlineController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaWhoisonlineTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaWhoisonlineTitle_userid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaWhoisonlineTitle_time}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.time}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaWhoisonlineTitle_item}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.item}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaWhoisonlineTitle_what}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.what}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaWhoisonlineTitle_func}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.func}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaWhoisonlineTitle_do1}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.do1}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaWhoisonlineTitle_task}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.task}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaWhoisonlineTitle_link}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.link}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaWhoisonlineTitle_userip}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userip}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaWhoisonlineTitle_user}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.user}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2KunenaWhoisonlineController.prepareView}" value="#{bundle.ListJoo2KunenaWhoisonlineViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2KunenaWhoisonlineController.prepareEdit}" value="#{bundle.ListJoo2KunenaWhoisonlineEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2KunenaWhoisonlineController.destroy}" value="#{bundle.ListJoo2KunenaWhoisonlineDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2KunenaWhoisonlineController.prepareCreate}" value="#{bundle.ListJoo2KunenaWhoisonlineCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2KunenaWhoisonlineIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

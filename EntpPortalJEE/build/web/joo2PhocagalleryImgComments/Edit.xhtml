@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2PhocagalleryImgCommentsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryImgCommentsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2PhocagalleryImgCommentsController.selected.id}" title="#{bundle.EditJoo2PhocagalleryImgCommentsTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryImgCommentsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryImgCommentsLabel_imgid}" for="imgid" />
+                    <h:inputText id="imgid" value="#{joo2PhocagalleryImgCommentsController.selected.imgid}" title="#{bundle.EditJoo2PhocagalleryImgCommentsTitle_imgid}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryImgCommentsRequiredMessage_imgid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryImgCommentsLabel_userid}" for="userid" />
+                    <h:inputText id="userid" value="#{joo2PhocagalleryImgCommentsController.selected.userid}" title="#{bundle.EditJoo2PhocagalleryImgCommentsTitle_userid}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryImgCommentsRequiredMessage_userid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryImgCommentsLabel_date}" for="date" />
+                    <h:inputText id="date" value="#{joo2PhocagalleryImgCommentsController.selected.date}" title="#{bundle.EditJoo2PhocagalleryImgCommentsTitle_date}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryImgCommentsRequiredMessage_date}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryImgCommentsLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2PhocagalleryImgCommentsController.selected.title}" title="#{bundle.EditJoo2PhocagalleryImgCommentsTitle_title}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryImgCommentsRequiredMessage_title}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryImgCommentsLabel_alias}" for="alias" />
+                    <h:inputText id="alias" value="#{joo2PhocagalleryImgCommentsController.selected.alias}" title="#{bundle.EditJoo2PhocagalleryImgCommentsTitle_alias}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryImgCommentsRequiredMessage_alias}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryImgCommentsLabel_comment}" for="comment" />
+                    <h:inputTextarea rows="4" cols="30" id="comment" value="#{joo2PhocagalleryImgCommentsController.selected.comment}" title="#{bundle.EditJoo2PhocagalleryImgCommentsTitle_comment}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryImgCommentsLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2PhocagalleryImgCommentsController.selected.published}" title="#{bundle.EditJoo2PhocagalleryImgCommentsTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryImgCommentsRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryImgCommentsLabel_checkedOut}" for="checkedOut" />
+                    <h:inputText id="checkedOut" value="#{joo2PhocagalleryImgCommentsController.selected.checkedOut}" title="#{bundle.EditJoo2PhocagalleryImgCommentsTitle_checkedOut}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryImgCommentsRequiredMessage_checkedOut}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryImgCommentsLabel_checkedOutTime}" for="checkedOutTime" />
+                    <h:inputText id="checkedOutTime" value="#{joo2PhocagalleryImgCommentsController.selected.checkedOutTime}" title="#{bundle.EditJoo2PhocagalleryImgCommentsTitle_checkedOutTime}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryImgCommentsRequiredMessage_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryImgCommentsLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2PhocagalleryImgCommentsController.selected.ordering}" title="#{bundle.EditJoo2PhocagalleryImgCommentsTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryImgCommentsRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryImgCommentsLabel_params}" for="params" />
+                    <h:inputTextarea rows="4" cols="30" id="params" value="#{joo2PhocagalleryImgCommentsController.selected.params}" title="#{bundle.EditJoo2PhocagalleryImgCommentsTitle_params}" />
+                    <h:outputLabel value="#{bundle.EditJoo2PhocagalleryImgCommentsLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2PhocagalleryImgCommentsController.selected.language}" title="#{bundle.EditJoo2PhocagalleryImgCommentsTitle_language}" required="true" requiredMessage="#{bundle.EditJoo2PhocagalleryImgCommentsRequiredMessage_language}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2PhocagalleryImgCommentsController.update}" value="#{bundle.EditJoo2PhocagalleryImgCommentsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2PhocagalleryImgCommentsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryImgCommentsController.prepareList}" value="#{bundle.EditJoo2PhocagalleryImgCommentsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2PhocagalleryImgCommentsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

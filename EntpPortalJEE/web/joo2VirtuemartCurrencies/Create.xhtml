@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2VirtuemartCurrenciesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_virtuemartCurrencyId}" for="virtuemartCurrencyId" />
+                    <h:inputText id="virtuemartCurrencyId" value="#{joo2VirtuemartCurrenciesController.selected.virtuemartCurrencyId}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_virtuemartCurrencyId}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCurrenciesRequiredMessage_virtuemartCurrencyId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_virtuemartVendorId}" for="virtuemartVendorId" />
+                    <h:inputText id="virtuemartVendorId" value="#{joo2VirtuemartCurrenciesController.selected.virtuemartVendorId}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_virtuemartVendorId}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCurrenciesRequiredMessage_virtuemartVendorId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_currencyName}" for="currencyName" />
+                    <h:inputText id="currencyName" value="#{joo2VirtuemartCurrenciesController.selected.currencyName}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_currencyName}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_currencyCode2}" for="currencyCode2" />
+                    <h:inputText id="currencyCode2" value="#{joo2VirtuemartCurrenciesController.selected.currencyCode2}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_currencyCode2}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_currencyCode3}" for="currencyCode3" />
+                    <h:inputText id="currencyCode3" value="#{joo2VirtuemartCurrenciesController.selected.currencyCode3}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_currencyCode3}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_currencyNumericCode}" for="currencyNumericCode" />
+                    <h:inputText id="currencyNumericCode" value="#{joo2VirtuemartCurrenciesController.selected.currencyNumericCode}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_currencyNumericCode}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCurrenciesRequiredMessage_currencyNumericCode}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_currencyExchangeRate}" for="currencyExchangeRate" />
+                    <h:inputText id="currencyExchangeRate" value="#{joo2VirtuemartCurrenciesController.selected.currencyExchangeRate}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_currencyExchangeRate}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_currencySymbol}" for="currencySymbol" />
+                    <h:inputText id="currencySymbol" value="#{joo2VirtuemartCurrenciesController.selected.currencySymbol}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_currencySymbol}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_currencyDecimalPlace}" for="currencyDecimalPlace" />
+                    <h:inputText id="currencyDecimalPlace" value="#{joo2VirtuemartCurrenciesController.selected.currencyDecimalPlace}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_currencyDecimalPlace}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_currencyDecimalSymbol}" for="currencyDecimalSymbol" />
+                    <h:inputText id="currencyDecimalSymbol" value="#{joo2VirtuemartCurrenciesController.selected.currencyDecimalSymbol}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_currencyDecimalSymbol}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_currencyThousands}" for="currencyThousands" />
+                    <h:inputText id="currencyThousands" value="#{joo2VirtuemartCurrenciesController.selected.currencyThousands}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_currencyThousands}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_currencyPositiveStyle}" for="currencyPositiveStyle" />
+                    <h:inputText id="currencyPositiveStyle" value="#{joo2VirtuemartCurrenciesController.selected.currencyPositiveStyle}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_currencyPositiveStyle}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_currencyNegativeStyle}" for="currencyNegativeStyle" />
+                    <h:inputText id="currencyNegativeStyle" value="#{joo2VirtuemartCurrenciesController.selected.currencyNegativeStyle}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_currencyNegativeStyle}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2VirtuemartCurrenciesController.selected.ordering}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_ordering}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCurrenciesRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_shared}" for="shared" />
+                    <h:inputText id="shared" value="#{joo2VirtuemartCurrenciesController.selected.shared}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_shared}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCurrenciesRequiredMessage_shared}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartCurrenciesController.selected.published}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_published}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCurrenciesRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartCurrenciesController.selected.createdOn}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_createdOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCurrenciesRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartCurrenciesController.selected.createdBy}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_createdBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCurrenciesRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartCurrenciesController.selected.modifiedOn}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_modifiedOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCurrenciesRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartCurrenciesController.selected.modifiedBy}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_modifiedBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCurrenciesRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartCurrenciesController.selected.lockedOn}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_lockedOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCurrenciesRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartCurrenciesLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartCurrenciesController.selected.lockedBy}" title="#{bundle.CreateJoo2VirtuemartCurrenciesTitle_lockedBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartCurrenciesRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCurrenciesController.create}" value="#{bundle.CreateJoo2VirtuemartCurrenciesSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCurrenciesController.prepareList}" value="#{bundle.CreateJoo2VirtuemartCurrenciesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2VirtuemartCurrenciesIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

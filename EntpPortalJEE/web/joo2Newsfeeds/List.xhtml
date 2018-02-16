@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2NewsfeedsEmpty}" rendered="#{joo2NewsfeedsController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2NewsfeedsController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2NewsfeedsController.pagination.pageFirstItem + 1}..#{joo2NewsfeedsController.pagination.pageLastItem + 1}/#{joo2NewsfeedsController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2NewsfeedsController.previous}" value="#{bundle.Previous} #{joo2NewsfeedsController.pagination.pageSize}" rendered="#{joo2NewsfeedsController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2NewsfeedsController.next}" value="#{bundle.Next} #{joo2NewsfeedsController.pagination.pageSize}" rendered="#{joo2NewsfeedsController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2NewsfeedsController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_catid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.catid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_name}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.name}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_alias}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.alias}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_link}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.link}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_filename}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.filename}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_published}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.published}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_numarticles}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.numarticles}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_cacheTime}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.cacheTime}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_checkedOut}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.checkedOut}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_checkedOutTime}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.checkedOutTime}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_ordering}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ordering}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_rtl}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.rtl}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_access}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.access}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_language}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.language}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_params}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.params}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_created}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.created}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_createdBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_createdByAlias}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdByAlias}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_modified}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modified}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_modifiedBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.modifiedBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_metakey}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metakey}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_metadesc}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metadesc}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_metadata}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metadata}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_xreference}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.xreference}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_publishUp}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.publishUp}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2NewsfeedsTitle_publishDown}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.publishDown}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2NewsfeedsController.prepareView}" value="#{bundle.ListJoo2NewsfeedsViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2NewsfeedsController.prepareEdit}" value="#{bundle.ListJoo2NewsfeedsEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2NewsfeedsController.destroy}" value="#{bundle.ListJoo2NewsfeedsDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2NewsfeedsController.prepareCreate}" value="#{bundle.ListJoo2NewsfeedsCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2NewsfeedsIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

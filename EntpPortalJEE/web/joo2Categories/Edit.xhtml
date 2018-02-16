@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2CategoriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2CategoriesController.selected.id}" title="#{bundle.EditJoo2CategoriesTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_assetId}" for="assetId" />
+                    <h:inputText id="assetId" value="#{joo2CategoriesController.selected.assetId}" title="#{bundle.EditJoo2CategoriesTitle_assetId}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_assetId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_parentId}" for="parentId" />
+                    <h:inputText id="parentId" value="#{joo2CategoriesController.selected.parentId}" title="#{bundle.EditJoo2CategoriesTitle_parentId}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_parentId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_lft}" for="lft" />
+                    <h:inputText id="lft" value="#{joo2CategoriesController.selected.lft}" title="#{bundle.EditJoo2CategoriesTitle_lft}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_lft}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_rgt}" for="rgt" />
+                    <h:inputText id="rgt" value="#{joo2CategoriesController.selected.rgt}" title="#{bundle.EditJoo2CategoriesTitle_rgt}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_rgt}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_level}" for="level" />
+                    <h:inputText id="level" value="#{joo2CategoriesController.selected.level}" title="#{bundle.EditJoo2CategoriesTitle_level}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_level}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_path}" for="path" />
+                    <h:inputText id="path" value="#{joo2CategoriesController.selected.path}" title="#{bundle.EditJoo2CategoriesTitle_path}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_path}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_extension}" for="extension" />
+                    <h:inputText id="extension" value="#{joo2CategoriesController.selected.extension}" title="#{bundle.EditJoo2CategoriesTitle_extension}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_extension}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2CategoriesController.selected.title}" title="#{bundle.EditJoo2CategoriesTitle_title}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_title}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_alias}" for="alias" />
+                    <h:inputText id="alias" value="#{joo2CategoriesController.selected.alias}" title="#{bundle.EditJoo2CategoriesTitle_alias}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_alias}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_note}" for="note" />
+                    <h:inputText id="note" value="#{joo2CategoriesController.selected.note}" title="#{bundle.EditJoo2CategoriesTitle_note}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_note}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_description}" for="description" />
+                    <h:inputTextarea rows="4" cols="30" id="description" value="#{joo2CategoriesController.selected.description}" title="#{bundle.EditJoo2CategoriesTitle_description}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2CategoriesController.selected.published}" title="#{bundle.EditJoo2CategoriesTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_checkedOut}" for="checkedOut" />
+                    <h:inputText id="checkedOut" value="#{joo2CategoriesController.selected.checkedOut}" title="#{bundle.EditJoo2CategoriesTitle_checkedOut}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_checkedOut}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_checkedOutTime}" for="checkedOutTime" />
+                    <h:inputText id="checkedOutTime" value="#{joo2CategoriesController.selected.checkedOutTime}" title="#{bundle.EditJoo2CategoriesTitle_checkedOutTime}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_access}" for="access" />
+                    <h:inputText id="access" value="#{joo2CategoriesController.selected.access}" title="#{bundle.EditJoo2CategoriesTitle_access}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_params}" for="params" />
+                    <h:inputTextarea rows="4" cols="30" id="params" value="#{joo2CategoriesController.selected.params}" title="#{bundle.EditJoo2CategoriesTitle_params}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_params}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_metadesc}" for="metadesc" />
+                    <h:inputText id="metadesc" value="#{joo2CategoriesController.selected.metadesc}" title="#{bundle.EditJoo2CategoriesTitle_metadesc}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_metadesc}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_metakey}" for="metakey" />
+                    <h:inputText id="metakey" value="#{joo2CategoriesController.selected.metakey}" title="#{bundle.EditJoo2CategoriesTitle_metakey}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_metakey}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_metadata}" for="metadata" />
+                    <h:inputText id="metadata" value="#{joo2CategoriesController.selected.metadata}" title="#{bundle.EditJoo2CategoriesTitle_metadata}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_metadata}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_createdUserId}" for="createdUserId" />
+                    <h:inputText id="createdUserId" value="#{joo2CategoriesController.selected.createdUserId}" title="#{bundle.EditJoo2CategoriesTitle_createdUserId}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_createdUserId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_createdTime}" for="createdTime" />
+                    <h:inputText id="createdTime" value="#{joo2CategoriesController.selected.createdTime}" title="#{bundle.EditJoo2CategoriesTitle_createdTime}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_createdTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_modifiedUserId}" for="modifiedUserId" />
+                    <h:inputText id="modifiedUserId" value="#{joo2CategoriesController.selected.modifiedUserId}" title="#{bundle.EditJoo2CategoriesTitle_modifiedUserId}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_modifiedUserId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_modifiedTime}" for="modifiedTime" />
+                    <h:inputText id="modifiedTime" value="#{joo2CategoriesController.selected.modifiedTime}" title="#{bundle.EditJoo2CategoriesTitle_modifiedTime}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_modifiedTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_hits}" for="hits" />
+                    <h:inputText id="hits" value="#{joo2CategoriesController.selected.hits}" title="#{bundle.EditJoo2CategoriesTitle_hits}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_hits}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2CategoriesController.selected.language}" title="#{bundle.EditJoo2CategoriesTitle_language}" required="true" requiredMessage="#{bundle.EditJoo2CategoriesRequiredMessage_language}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_epMenuid}" for="epMenuid" />
+                    <h:inputText id="epMenuid" value="#{joo2CategoriesController.selected.epMenuid}" title="#{bundle.EditJoo2CategoriesTitle_epMenuid}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_epMenuPath}" for="epMenuPath" />
+                    <h:inputText id="epMenuPath" value="#{joo2CategoriesController.selected.epMenuPath}" title="#{bundle.EditJoo2CategoriesTitle_epMenuPath}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_epCopyCatId}" for="epCopyCatId" />
+                    <h:inputText id="epCopyCatId" value="#{joo2CategoriesController.selected.epCopyCatId}" title="#{bundle.EditJoo2CategoriesTitle_epCopyCatId}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_epRedirectedToCatId}" for="epRedirectedToCatId" />
+                    <h:inputText id="epRedirectedToCatId" value="#{joo2CategoriesController.selected.epRedirectedToCatId}" title="#{bundle.EditJoo2CategoriesTitle_epRedirectedToCatId}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_epReferencedCount}" for="epReferencedCount" />
+                    <h:inputText id="epReferencedCount" value="#{joo2CategoriesController.selected.epReferencedCount}" title="#{bundle.EditJoo2CategoriesTitle_epReferencedCount}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_epReferencedParentcatCount}" for="epReferencedParentcatCount" />
+                    <h:inputText id="epReferencedParentcatCount" value="#{joo2CategoriesController.selected.epReferencedParentcatCount}" title="#{bundle.EditJoo2CategoriesTitle_epReferencedParentcatCount}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_epReferencedParentContentid}" for="epReferencedParentContentid" />
+                    <h:inputText id="epReferencedParentContentid" value="#{joo2CategoriesController.selected.epReferencedParentContentid}" title="#{bundle.EditJoo2CategoriesTitle_epReferencedParentContentid}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_epOrdering}" for="epOrdering" />
+                    <h:inputText id="epOrdering" value="#{joo2CategoriesController.selected.epOrdering}" title="#{bundle.EditJoo2CategoriesTitle_epOrdering}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_epImportFromDir}" for="epImportFromDir" />
+                    <h:inputText id="epImportFromDir" value="#{joo2CategoriesController.selected.epImportFromDir}" title="#{bundle.EditJoo2CategoriesTitle_epImportFromDir}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_epImportFromFile}" for="epImportFromFile" />
+                    <h:inputText id="epImportFromFile" value="#{joo2CategoriesController.selected.epImportFromFile}" title="#{bundle.EditJoo2CategoriesTitle_epImportFromFile}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_eptLft}" for="eptLft" />
+                    <h:inputText id="eptLft" value="#{joo2CategoriesController.selected.eptLft}" title="#{bundle.EditJoo2CategoriesTitle_eptLft}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_eptRgt}" for="eptRgt" />
+                    <h:inputText id="eptRgt" value="#{joo2CategoriesController.selected.eptRgt}" title="#{bundle.EditJoo2CategoriesTitle_eptRgt}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_eptCount}" for="eptCount" />
+                    <h:inputText id="eptCount" value="#{joo2CategoriesController.selected.eptCount}" title="#{bundle.EditJoo2CategoriesTitle_eptCount}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_epLft}" for="epLft" />
+                    <h:inputText id="epLft" value="#{joo2CategoriesController.selected.epLft}" title="#{bundle.EditJoo2CategoriesTitle_epLft}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_epRgt}" for="epRgt" />
+                    <h:inputText id="epRgt" value="#{joo2CategoriesController.selected.epRgt}" title="#{bundle.EditJoo2CategoriesTitle_epRgt}" />
+                    <h:outputLabel value="#{bundle.EditJoo2CategoriesLabel_epCount}" for="epCount" />
+                    <h:inputText id="epCount" value="#{joo2CategoriesController.selected.epCount}" title="#{bundle.EditJoo2CategoriesTitle_epCount}" />
+                </h:panelGrid>
+                <h:commandLink action="#{joo2CategoriesController.update}" value="#{bundle.EditJoo2CategoriesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2CategoriesViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2CategoriesController.prepareList}" value="#{bundle.EditJoo2CategoriesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2CategoriesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

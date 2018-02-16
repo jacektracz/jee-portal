@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_virtuemartShippingcarrierId}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.virtuemartShippingcarrierId}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_virtuemartShippingcarrierId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_virtuemartVendorId}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.virtuemartVendorId}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_virtuemartVendorId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_shippingCarrierJpluginId}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierJpluginId}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_shippingCarrierJpluginId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_shippingCarrierName}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierName}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_shippingCarrierName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_shippingCarrierDesc}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierDesc}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_shippingCarrierDesc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_shippingCarrierElement}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierElement}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_shippingCarrierElement}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_shippingCarrierParams}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierParams}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_shippingCarrierParams}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_shippingCarrierValue}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierValue}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_shippingCarrierValue}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_shippingCarrierPackageFee}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierPackageFee}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_shippingCarrierPackageFee}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_shippingCarrierVatId}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierVatId}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_shippingCarrierVatId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_ordering}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.ordering}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_shared}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.shared}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_shared}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.published}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartShippingcarriersLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartShippingcarriersController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartShippingcarriersTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartShippingcarriersController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartShippingcarriersDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartShippingcarriersEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartShippingcarriersController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartShippingcarriersCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartShippingcarriersController.prepareList}" value="#{bundle.ViewJoo2VirtuemartShippingcarriersShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartShippingcarriersIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

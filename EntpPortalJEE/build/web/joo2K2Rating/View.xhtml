@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2K2RatingTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2K2RatingLabel_itemID}"/>
+                    <h:outputText value="#{joo2K2RatingController.selected.itemID}" title="#{bundle.ViewJoo2K2RatingTitle_itemID}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2RatingLabel_ratingSum}"/>
+                    <h:outputText value="#{joo2K2RatingController.selected.ratingSum}" title="#{bundle.ViewJoo2K2RatingTitle_ratingSum}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2RatingLabel_ratingCount}"/>
+                    <h:outputText value="#{joo2K2RatingController.selected.ratingCount}" title="#{bundle.ViewJoo2K2RatingTitle_ratingCount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2RatingLabel_lastip}"/>
+                    <h:outputText value="#{joo2K2RatingController.selected.lastip}" title="#{bundle.ViewJoo2K2RatingTitle_lastip}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2K2RatingController.destroyAndView}" value="#{bundle.ViewJoo2K2RatingDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2K2RatingEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2K2RatingController.prepareCreate}" value="#{bundle.ViewJoo2K2RatingCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2K2RatingController.prepareList}" value="#{bundle.ViewJoo2K2RatingShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2K2RatingIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

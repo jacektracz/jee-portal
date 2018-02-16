@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2CategoriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_id}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.id}" title="#{bundle.ViewJoo2CategoriesTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_assetId}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.assetId}" title="#{bundle.ViewJoo2CategoriesTitle_assetId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_parentId}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.parentId}" title="#{bundle.ViewJoo2CategoriesTitle_parentId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_lft}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.lft}" title="#{bundle.ViewJoo2CategoriesTitle_lft}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_rgt}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.rgt}" title="#{bundle.ViewJoo2CategoriesTitle_rgt}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_level}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.level}" title="#{bundle.ViewJoo2CategoriesTitle_level}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_path}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.path}" title="#{bundle.ViewJoo2CategoriesTitle_path}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_extension}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.extension}" title="#{bundle.ViewJoo2CategoriesTitle_extension}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_title}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.title}" title="#{bundle.ViewJoo2CategoriesTitle_title}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_alias}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.alias}" title="#{bundle.ViewJoo2CategoriesTitle_alias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_note}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.note}" title="#{bundle.ViewJoo2CategoriesTitle_note}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_description}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.description}" title="#{bundle.ViewJoo2CategoriesTitle_description}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_published}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.published}" title="#{bundle.ViewJoo2CategoriesTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.checkedOut}" title="#{bundle.ViewJoo2CategoriesTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.checkedOutTime}" title="#{bundle.ViewJoo2CategoriesTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_access}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.access}" title="#{bundle.ViewJoo2CategoriesTitle_access}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_params}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.params}" title="#{bundle.ViewJoo2CategoriesTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_metadesc}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.metadesc}" title="#{bundle.ViewJoo2CategoriesTitle_metadesc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_metakey}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.metakey}" title="#{bundle.ViewJoo2CategoriesTitle_metakey}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_metadata}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.metadata}" title="#{bundle.ViewJoo2CategoriesTitle_metadata}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_createdUserId}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.createdUserId}" title="#{bundle.ViewJoo2CategoriesTitle_createdUserId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_createdTime}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.createdTime}" title="#{bundle.ViewJoo2CategoriesTitle_createdTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_modifiedUserId}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.modifiedUserId}" title="#{bundle.ViewJoo2CategoriesTitle_modifiedUserId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_modifiedTime}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.modifiedTime}" title="#{bundle.ViewJoo2CategoriesTitle_modifiedTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_hits}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.hits}" title="#{bundle.ViewJoo2CategoriesTitle_hits}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_language}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.language}" title="#{bundle.ViewJoo2CategoriesTitle_language}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_epMenuid}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.epMenuid}" title="#{bundle.ViewJoo2CategoriesTitle_epMenuid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_epMenuPath}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.epMenuPath}" title="#{bundle.ViewJoo2CategoriesTitle_epMenuPath}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_epCopyCatId}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.epCopyCatId}" title="#{bundle.ViewJoo2CategoriesTitle_epCopyCatId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_epRedirectedToCatId}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.epRedirectedToCatId}" title="#{bundle.ViewJoo2CategoriesTitle_epRedirectedToCatId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_epReferencedCount}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.epReferencedCount}" title="#{bundle.ViewJoo2CategoriesTitle_epReferencedCount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_epReferencedParentcatCount}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.epReferencedParentcatCount}" title="#{bundle.ViewJoo2CategoriesTitle_epReferencedParentcatCount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_epReferencedParentContentid}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.epReferencedParentContentid}" title="#{bundle.ViewJoo2CategoriesTitle_epReferencedParentContentid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_epOrdering}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.epOrdering}" title="#{bundle.ViewJoo2CategoriesTitle_epOrdering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_epImportFromDir}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.epImportFromDir}" title="#{bundle.ViewJoo2CategoriesTitle_epImportFromDir}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_epImportFromFile}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.epImportFromFile}" title="#{bundle.ViewJoo2CategoriesTitle_epImportFromFile}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_eptLft}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.eptLft}" title="#{bundle.ViewJoo2CategoriesTitle_eptLft}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_eptRgt}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.eptRgt}" title="#{bundle.ViewJoo2CategoriesTitle_eptRgt}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_eptCount}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.eptCount}" title="#{bundle.ViewJoo2CategoriesTitle_eptCount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_epLft}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.epLft}" title="#{bundle.ViewJoo2CategoriesTitle_epLft}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_epRgt}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.epRgt}" title="#{bundle.ViewJoo2CategoriesTitle_epRgt}"/>
+                    <h:outputText value="#{bundle.ViewJoo2CategoriesLabel_epCount}"/>
+                    <h:outputText value="#{joo2CategoriesController.selected.epCount}" title="#{bundle.ViewJoo2CategoriesTitle_epCount}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2CategoriesController.destroyAndView}" value="#{bundle.ViewJoo2CategoriesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2CategoriesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2CategoriesController.prepareCreate}" value="#{bundle.ViewJoo2CategoriesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2CategoriesController.prepareList}" value="#{bundle.ViewJoo2CategoriesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2CategoriesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

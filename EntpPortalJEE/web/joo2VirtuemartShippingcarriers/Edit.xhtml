@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartShippingcarriersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_virtuemartShippingcarrierId}" for="virtuemartShippingcarrierId" />
+                    <h:inputText id="virtuemartShippingcarrierId" value="#{joo2VirtuemartShippingcarriersController.selected.virtuemartShippingcarrierId}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_virtuemartShippingcarrierId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_virtuemartShippingcarrierId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_virtuemartVendorId}" for="virtuemartVendorId" />
+                    <h:inputText id="virtuemartVendorId" value="#{joo2VirtuemartShippingcarriersController.selected.virtuemartVendorId}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_virtuemartVendorId}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_shippingCarrierJpluginId}" for="shippingCarrierJpluginId" />
+                    <h:inputText id="shippingCarrierJpluginId" value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierJpluginId}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_shippingCarrierJpluginId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_shippingCarrierJpluginId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_shippingCarrierName}" for="shippingCarrierName" />
+                    <h:inputText id="shippingCarrierName" value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierName}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_shippingCarrierName}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_shippingCarrierName}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_shippingCarrierDesc}" for="shippingCarrierDesc" />
+                    <h:inputTextarea rows="4" cols="30" id="shippingCarrierDesc" value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierDesc}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_shippingCarrierDesc}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_shippingCarrierDesc}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_shippingCarrierElement}" for="shippingCarrierElement" />
+                    <h:inputText id="shippingCarrierElement" value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierElement}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_shippingCarrierElement}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_shippingCarrierElement}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_shippingCarrierParams}" for="shippingCarrierParams" />
+                    <h:inputTextarea rows="4" cols="30" id="shippingCarrierParams" value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierParams}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_shippingCarrierParams}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_shippingCarrierParams}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_shippingCarrierValue}" for="shippingCarrierValue" />
+                    <h:inputText id="shippingCarrierValue" value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierValue}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_shippingCarrierValue}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_shippingCarrierValue}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_shippingCarrierPackageFee}" for="shippingCarrierPackageFee" />
+                    <h:inputText id="shippingCarrierPackageFee" value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierPackageFee}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_shippingCarrierPackageFee}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_shippingCarrierPackageFee}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_shippingCarrierVatId}" for="shippingCarrierVatId" />
+                    <h:inputText id="shippingCarrierVatId" value="#{joo2VirtuemartShippingcarriersController.selected.shippingCarrierVatId}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_shippingCarrierVatId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_shippingCarrierVatId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2VirtuemartShippingcarriersController.selected.ordering}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_shared}" for="shared" />
+                    <h:inputText id="shared" value="#{joo2VirtuemartShippingcarriersController.selected.shared}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_shared}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_shared}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartShippingcarriersController.selected.published}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartShippingcarriersController.selected.createdOn}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_createdOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartShippingcarriersController.selected.createdBy}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartShippingcarriersController.selected.modifiedOn}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_modifiedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartShippingcarriersController.selected.modifiedBy}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartShippingcarriersController.selected.lockedOn}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_lockedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShippingcarriersLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartShippingcarriersController.selected.lockedBy}" title="#{bundle.EditJoo2VirtuemartShippingcarriersTitle_lockedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShippingcarriersRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartShippingcarriersController.update}" value="#{bundle.EditJoo2VirtuemartShippingcarriersSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartShippingcarriersViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartShippingcarriersController.prepareList}" value="#{bundle.EditJoo2VirtuemartShippingcarriersShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartShippingcarriersIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

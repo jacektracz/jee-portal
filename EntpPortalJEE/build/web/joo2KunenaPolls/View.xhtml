@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2KunenaPollsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2KunenaPollsLabel_id}"/>
+                    <h:outputText value="#{joo2KunenaPollsController.selected.id}" title="#{bundle.ViewJoo2KunenaPollsTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaPollsLabel_title}"/>
+                    <h:outputText value="#{joo2KunenaPollsController.selected.title}" title="#{bundle.ViewJoo2KunenaPollsTitle_title}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaPollsLabel_threadid}"/>
+                    <h:outputText value="#{joo2KunenaPollsController.selected.threadid}" title="#{bundle.ViewJoo2KunenaPollsTitle_threadid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaPollsLabel_polltimetolive}"/>
+                    <h:outputText value="#{joo2KunenaPollsController.selected.polltimetolive}" title="#{bundle.ViewJoo2KunenaPollsTitle_polltimetolive}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2KunenaPollsController.destroyAndView}" value="#{bundle.ViewJoo2KunenaPollsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2KunenaPollsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaPollsController.prepareCreate}" value="#{bundle.ViewJoo2KunenaPollsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2KunenaPollsController.prepareList}" value="#{bundle.ViewJoo2KunenaPollsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2KunenaPollsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

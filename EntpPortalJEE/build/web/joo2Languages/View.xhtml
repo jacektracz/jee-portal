@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2LanguagesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2LanguagesLabel_langId}"/>
+                    <h:outputText value="#{joo2LanguagesController.selected.langId}" title="#{bundle.ViewJoo2LanguagesTitle_langId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2LanguagesLabel_langCode}"/>
+                    <h:outputText value="#{joo2LanguagesController.selected.langCode}" title="#{bundle.ViewJoo2LanguagesTitle_langCode}"/>
+                    <h:outputText value="#{bundle.ViewJoo2LanguagesLabel_title}"/>
+                    <h:outputText value="#{joo2LanguagesController.selected.title}" title="#{bundle.ViewJoo2LanguagesTitle_title}"/>
+                    <h:outputText value="#{bundle.ViewJoo2LanguagesLabel_titleNative}"/>
+                    <h:outputText value="#{joo2LanguagesController.selected.titleNative}" title="#{bundle.ViewJoo2LanguagesTitle_titleNative}"/>
+                    <h:outputText value="#{bundle.ViewJoo2LanguagesLabel_sef}"/>
+                    <h:outputText value="#{joo2LanguagesController.selected.sef}" title="#{bundle.ViewJoo2LanguagesTitle_sef}"/>
+                    <h:outputText value="#{bundle.ViewJoo2LanguagesLabel_image}"/>
+                    <h:outputText value="#{joo2LanguagesController.selected.image}" title="#{bundle.ViewJoo2LanguagesTitle_image}"/>
+                    <h:outputText value="#{bundle.ViewJoo2LanguagesLabel_description}"/>
+                    <h:outputText value="#{joo2LanguagesController.selected.description}" title="#{bundle.ViewJoo2LanguagesTitle_description}"/>
+                    <h:outputText value="#{bundle.ViewJoo2LanguagesLabel_metakey}"/>
+                    <h:outputText value="#{joo2LanguagesController.selected.metakey}" title="#{bundle.ViewJoo2LanguagesTitle_metakey}"/>
+                    <h:outputText value="#{bundle.ViewJoo2LanguagesLabel_metadesc}"/>
+                    <h:outputText value="#{joo2LanguagesController.selected.metadesc}" title="#{bundle.ViewJoo2LanguagesTitle_metadesc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2LanguagesLabel_sitename}"/>
+                    <h:outputText value="#{joo2LanguagesController.selected.sitename}" title="#{bundle.ViewJoo2LanguagesTitle_sitename}"/>
+                    <h:outputText value="#{bundle.ViewJoo2LanguagesLabel_published}"/>
+                    <h:outputText value="#{joo2LanguagesController.selected.published}" title="#{bundle.ViewJoo2LanguagesTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2LanguagesLabel_ordering}"/>
+                    <h:outputText value="#{joo2LanguagesController.selected.ordering}" title="#{bundle.ViewJoo2LanguagesTitle_ordering}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2LanguagesController.destroyAndView}" value="#{bundle.ViewJoo2LanguagesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2LanguagesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2LanguagesController.prepareCreate}" value="#{bundle.ViewJoo2LanguagesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2LanguagesController.prepareList}" value="#{bundle.ViewJoo2LanguagesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2LanguagesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

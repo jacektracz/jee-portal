@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2K2ExtraFieldsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2K2ExtraFieldsLabel_id}"/>
+                    <h:outputText value="#{joo2K2ExtraFieldsController.selected.id}" title="#{bundle.ViewJoo2K2ExtraFieldsTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ExtraFieldsLabel_name}"/>
+                    <h:outputText value="#{joo2K2ExtraFieldsController.selected.name}" title="#{bundle.ViewJoo2K2ExtraFieldsTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ExtraFieldsLabel_value}"/>
+                    <h:outputText value="#{joo2K2ExtraFieldsController.selected.value}" title="#{bundle.ViewJoo2K2ExtraFieldsTitle_value}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ExtraFieldsLabel_type}"/>
+                    <h:outputText value="#{joo2K2ExtraFieldsController.selected.type}" title="#{bundle.ViewJoo2K2ExtraFieldsTitle_type}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ExtraFieldsLabel_group}"/>
+                    <h:outputText value="#{joo2K2ExtraFieldsController.selected.group}" title="#{bundle.ViewJoo2K2ExtraFieldsTitle_group}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ExtraFieldsLabel_published}"/>
+                    <h:outputText value="#{joo2K2ExtraFieldsController.selected.published}" title="#{bundle.ViewJoo2K2ExtraFieldsTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ExtraFieldsLabel_ordering}"/>
+                    <h:outputText value="#{joo2K2ExtraFieldsController.selected.ordering}" title="#{bundle.ViewJoo2K2ExtraFieldsTitle_ordering}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2K2ExtraFieldsController.destroyAndView}" value="#{bundle.ViewJoo2K2ExtraFieldsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2K2ExtraFieldsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2K2ExtraFieldsController.prepareCreate}" value="#{bundle.ViewJoo2K2ExtraFieldsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2K2ExtraFieldsController.prepareList}" value="#{bundle.ViewJoo2K2ExtraFieldsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2K2ExtraFieldsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2KunenaSessionsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2KunenaSessionsEmpty}" rendered="#{joo2KunenaSessionsController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2KunenaSessionsController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2KunenaSessionsController.pagination.pageFirstItem + 1}..#{joo2KunenaSessionsController.pagination.pageLastItem + 1}/#{joo2KunenaSessionsController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2KunenaSessionsController.previous}" value="#{bundle.Previous} #{joo2KunenaSessionsController.pagination.pageSize}" rendered="#{joo2KunenaSessionsController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2KunenaSessionsController.next}" value="#{bundle.Next} #{joo2KunenaSessionsController.pagination.pageSize}" rendered="#{joo2KunenaSessionsController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2KunenaSessionsController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaSessionsTitle_userid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaSessionsTitle_allowed}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.allowed}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaSessionsTitle_lasttime}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lasttime}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaSessionsTitle_readtopics}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.readtopics}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2KunenaSessionsTitle_currvisit}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.currvisit}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2KunenaSessionsController.prepareView}" value="#{bundle.ListJoo2KunenaSessionsViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2KunenaSessionsController.prepareEdit}" value="#{bundle.ListJoo2KunenaSessionsEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2KunenaSessionsController.destroy}" value="#{bundle.ListJoo2KunenaSessionsDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2KunenaSessionsController.prepareCreate}" value="#{bundle.ListJoo2KunenaSessionsCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2KunenaSessionsIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

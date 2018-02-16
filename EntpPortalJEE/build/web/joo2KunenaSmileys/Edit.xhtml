@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2KunenaSmileysTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaSmileysLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2KunenaSmileysController.selected.id}" title="#{bundle.EditJoo2KunenaSmileysTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2KunenaSmileysRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaSmileysLabel_code}" for="code" />
+                    <h:inputText id="code" value="#{joo2KunenaSmileysController.selected.code}" title="#{bundle.EditJoo2KunenaSmileysTitle_code}" required="true" requiredMessage="#{bundle.EditJoo2KunenaSmileysRequiredMessage_code}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaSmileysLabel_location}" for="location" />
+                    <h:inputText id="location" value="#{joo2KunenaSmileysController.selected.location}" title="#{bundle.EditJoo2KunenaSmileysTitle_location}" required="true" requiredMessage="#{bundle.EditJoo2KunenaSmileysRequiredMessage_location}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaSmileysLabel_greylocation}" for="greylocation" />
+                    <h:inputText id="greylocation" value="#{joo2KunenaSmileysController.selected.greylocation}" title="#{bundle.EditJoo2KunenaSmileysTitle_greylocation}" required="true" requiredMessage="#{bundle.EditJoo2KunenaSmileysRequiredMessage_greylocation}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaSmileysLabel_emoticonbar}" for="emoticonbar" />
+                    <h:inputText id="emoticonbar" value="#{joo2KunenaSmileysController.selected.emoticonbar}" title="#{bundle.EditJoo2KunenaSmileysTitle_emoticonbar}" required="true" requiredMessage="#{bundle.EditJoo2KunenaSmileysRequiredMessage_emoticonbar}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2KunenaSmileysController.update}" value="#{bundle.EditJoo2KunenaSmileysSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2KunenaSmileysViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaSmileysController.prepareList}" value="#{bundle.EditJoo2KunenaSmileysShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2KunenaSmileysIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

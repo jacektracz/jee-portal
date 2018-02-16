@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2WeblinksTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2WeblinksController.selected.id}" title="#{bundle.CreateJoo2WeblinksTitle_id}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_catid}" for="catid" />
+                    <h:inputText id="catid" value="#{joo2WeblinksController.selected.catid}" title="#{bundle.CreateJoo2WeblinksTitle_catid}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_catid}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_sid}" for="sid" />
+                    <h:inputText id="sid" value="#{joo2WeblinksController.selected.sid}" title="#{bundle.CreateJoo2WeblinksTitle_sid}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_sid}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2WeblinksController.selected.title}" title="#{bundle.CreateJoo2WeblinksTitle_title}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_title}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_alias}" for="alias" />
+                    <h:inputText id="alias" value="#{joo2WeblinksController.selected.alias}" title="#{bundle.CreateJoo2WeblinksTitle_alias}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_alias}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_url}" for="url" />
+                    <h:inputText id="url" value="#{joo2WeblinksController.selected.url}" title="#{bundle.CreateJoo2WeblinksTitle_url}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_url}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_description}" for="description" />
+                    <h:inputTextarea rows="4" cols="30" id="description" value="#{joo2WeblinksController.selected.description}" title="#{bundle.CreateJoo2WeblinksTitle_description}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_description}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_date}" for="date" />
+                    <h:inputText id="date" value="#{joo2WeblinksController.selected.date}" title="#{bundle.CreateJoo2WeblinksTitle_date}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_date}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_hits}" for="hits" />
+                    <h:inputText id="hits" value="#{joo2WeblinksController.selected.hits}" title="#{bundle.CreateJoo2WeblinksTitle_hits}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_hits}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_state}" for="state" />
+                    <h:inputText id="state" value="#{joo2WeblinksController.selected.state}" title="#{bundle.CreateJoo2WeblinksTitle_state}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_state}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_checkedOut}" for="checkedOut" />
+                    <h:inputText id="checkedOut" value="#{joo2WeblinksController.selected.checkedOut}" title="#{bundle.CreateJoo2WeblinksTitle_checkedOut}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_checkedOut}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_checkedOutTime}" for="checkedOutTime" />
+                    <h:inputText id="checkedOutTime" value="#{joo2WeblinksController.selected.checkedOutTime}" title="#{bundle.CreateJoo2WeblinksTitle_checkedOutTime}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2WeblinksController.selected.ordering}" title="#{bundle.CreateJoo2WeblinksTitle_ordering}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_archived}" for="archived" />
+                    <h:inputText id="archived" value="#{joo2WeblinksController.selected.archived}" title="#{bundle.CreateJoo2WeblinksTitle_archived}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_archived}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_approved}" for="approved" />
+                    <h:inputText id="approved" value="#{joo2WeblinksController.selected.approved}" title="#{bundle.CreateJoo2WeblinksTitle_approved}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_approved}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_access}" for="access" />
+                    <h:inputText id="access" value="#{joo2WeblinksController.selected.access}" title="#{bundle.CreateJoo2WeblinksTitle_access}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_access}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_params}" for="params" />
+                    <h:inputTextarea rows="4" cols="30" id="params" value="#{joo2WeblinksController.selected.params}" title="#{bundle.CreateJoo2WeblinksTitle_params}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_params}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2WeblinksController.selected.language}" title="#{bundle.CreateJoo2WeblinksTitle_language}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_language}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_created}" for="created" />
+                    <h:inputText id="created" value="#{joo2WeblinksController.selected.created}" title="#{bundle.CreateJoo2WeblinksTitle_created}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2WeblinksController.selected.createdBy}" title="#{bundle.CreateJoo2WeblinksTitle_createdBy}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_createdByAlias}" for="createdByAlias" />
+                    <h:inputText id="createdByAlias" value="#{joo2WeblinksController.selected.createdByAlias}" title="#{bundle.CreateJoo2WeblinksTitle_createdByAlias}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_createdByAlias}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_modified}" for="modified" />
+                    <h:inputText id="modified" value="#{joo2WeblinksController.selected.modified}" title="#{bundle.CreateJoo2WeblinksTitle_modified}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_modified}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2WeblinksController.selected.modifiedBy}" title="#{bundle.CreateJoo2WeblinksTitle_modifiedBy}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_metakey}" for="metakey" />
+                    <h:inputTextarea rows="4" cols="30" id="metakey" value="#{joo2WeblinksController.selected.metakey}" title="#{bundle.CreateJoo2WeblinksTitle_metakey}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_metakey}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_metadesc}" for="metadesc" />
+                    <h:inputTextarea rows="4" cols="30" id="metadesc" value="#{joo2WeblinksController.selected.metadesc}" title="#{bundle.CreateJoo2WeblinksTitle_metadesc}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_metadesc}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_metadata}" for="metadata" />
+                    <h:inputTextarea rows="4" cols="30" id="metadata" value="#{joo2WeblinksController.selected.metadata}" title="#{bundle.CreateJoo2WeblinksTitle_metadata}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_metadata}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_featured}" for="featured" />
+                    <h:inputText id="featured" value="#{joo2WeblinksController.selected.featured}" title="#{bundle.CreateJoo2WeblinksTitle_featured}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_featured}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_xreference}" for="xreference" />
+                    <h:inputText id="xreference" value="#{joo2WeblinksController.selected.xreference}" title="#{bundle.CreateJoo2WeblinksTitle_xreference}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_xreference}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_publishUp}" for="publishUp" />
+                    <h:inputText id="publishUp" value="#{joo2WeblinksController.selected.publishUp}" title="#{bundle.CreateJoo2WeblinksTitle_publishUp}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_publishUp}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2WeblinksLabel_publishDown}" for="publishDown" />
+                    <h:inputText id="publishDown" value="#{joo2WeblinksController.selected.publishDown}" title="#{bundle.CreateJoo2WeblinksTitle_publishDown}" required="true" requiredMessage="#{bundle.CreateJoo2WeblinksRequiredMessage_publishDown}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2WeblinksController.create}" value="#{bundle.CreateJoo2WeblinksSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2WeblinksController.prepareList}" value="#{bundle.CreateJoo2WeblinksShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2WeblinksIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

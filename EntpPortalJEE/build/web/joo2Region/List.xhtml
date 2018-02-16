@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2RegionTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2RegionEmpty}" rendered="#{joo2RegionController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2RegionController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2RegionController.pagination.pageFirstItem + 1}..#{joo2RegionController.pagination.pageLastItem + 1}/#{joo2RegionController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2RegionController.previous}" value="#{bundle.Previous} #{joo2RegionController.pagination.pageSize}" rendered="#{joo2RegionController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2RegionController.next}" value="#{bundle.Next} #{joo2RegionController.pagination.pageSize}" rendered="#{joo2RegionController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2RegionController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2RegionTitle_MRegionId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MRegionId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2RegionTitle_MParentId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MParentId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2RegionTitle_MLayerId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MLayerId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2RegionTitle_MShortName}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MShortName}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2RegionTitle_MTitle}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MTitle}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2RegionTitle_MCollapsible}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MCollapsible}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2RegionTitle_MOpenContent}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MOpenContent}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2RegionTitle_MRegionType}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MRegionType}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2RegionTitle_MRegionPosition}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MRegionPosition}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2RegionTitle_MRegionOrdering}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MRegionOrdering}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2RegionTitle_MRegionName}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MRegionName}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2RegionTitle_MRegionTitle}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MRegionTitle}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2RegionTitle_regionDisplay}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.regionDisplay}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2RegionTitle_MRegionDisplay}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MRegionDisplay}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2RegionController.prepareView}" value="#{bundle.ListJoo2RegionViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2RegionController.prepareEdit}" value="#{bundle.ListJoo2RegionEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2RegionController.destroy}" value="#{bundle.ListJoo2RegionDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2RegionController.prepareCreate}" value="#{bundle.ListJoo2RegionCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2RegionIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

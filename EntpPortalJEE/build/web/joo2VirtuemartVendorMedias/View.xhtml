@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorMediasTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorMediasLabel_id}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorMediasController.selected.id}" title="#{bundle.ViewJoo2VirtuemartVendorMediasTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorMediasLabel_virtuemartVendorId}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorMediasController.selected.virtuemartVendorId}" title="#{bundle.ViewJoo2VirtuemartVendorMediasTitle_virtuemartVendorId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorMediasLabel_virtuemartMediaId}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorMediasController.selected.virtuemartMediaId}" title="#{bundle.ViewJoo2VirtuemartVendorMediasTitle_virtuemartMediaId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartVendorMediasLabel_ordering}"/>
+                    <h:outputText value="#{joo2VirtuemartVendorMediasController.selected.ordering}" title="#{bundle.ViewJoo2VirtuemartVendorMediasTitle_ordering}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartVendorMediasController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartVendorMediasDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartVendorMediasEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartVendorMediasController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartVendorMediasCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartVendorMediasController.prepareList}" value="#{bundle.ViewJoo2VirtuemartVendorMediasShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartVendorMediasIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

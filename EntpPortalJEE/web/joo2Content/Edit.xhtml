@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2ContentTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2ContentController.selected.id}" title="#{bundle.EditJoo2ContentTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_assetId}" for="assetId" />
+                    <h:inputText id="assetId" value="#{joo2ContentController.selected.assetId}" title="#{bundle.EditJoo2ContentTitle_assetId}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_assetId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2ContentController.selected.title}" title="#{bundle.EditJoo2ContentTitle_title}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_title}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_alias}" for="alias" />
+                    <h:inputText id="alias" value="#{joo2ContentController.selected.alias}" title="#{bundle.EditJoo2ContentTitle_alias}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_alias}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_titleAlias}" for="titleAlias" />
+                    <h:inputText id="titleAlias" value="#{joo2ContentController.selected.titleAlias}" title="#{bundle.EditJoo2ContentTitle_titleAlias}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_titleAlias}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_introtext}" for="introtext" />
+                    <h:inputTextarea rows="4" cols="30" id="introtext" value="#{joo2ContentController.selected.introtext}" title="#{bundle.EditJoo2ContentTitle_introtext}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_introtext}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_fulltext}" for="fulltext" />
+                    <h:inputTextarea rows="4" cols="30" id="fulltext" value="#{joo2ContentController.selected.fulltext}" title="#{bundle.EditJoo2ContentTitle_fulltext}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_fulltext}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_state}" for="state" />
+                    <h:inputText id="state" value="#{joo2ContentController.selected.state}" title="#{bundle.EditJoo2ContentTitle_state}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_state}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_sectionid}" for="sectionid" />
+                    <h:inputText id="sectionid" value="#{joo2ContentController.selected.sectionid}" title="#{bundle.EditJoo2ContentTitle_sectionid}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_sectionid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_mask}" for="mask" />
+                    <h:inputText id="mask" value="#{joo2ContentController.selected.mask}" title="#{bundle.EditJoo2ContentTitle_mask}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_mask}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_catid}" for="catid" />
+                    <h:inputText id="catid" value="#{joo2ContentController.selected.catid}" title="#{bundle.EditJoo2ContentTitle_catid}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_catid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_created}" for="created" />
+                    <h:inputText id="created" value="#{joo2ContentController.selected.created}" title="#{bundle.EditJoo2ContentTitle_created}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2ContentController.selected.createdBy}" title="#{bundle.EditJoo2ContentTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_createdByAlias}" for="createdByAlias" />
+                    <h:inputText id="createdByAlias" value="#{joo2ContentController.selected.createdByAlias}" title="#{bundle.EditJoo2ContentTitle_createdByAlias}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_createdByAlias}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_modified}" for="modified" />
+                    <h:inputText id="modified" value="#{joo2ContentController.selected.modified}" title="#{bundle.EditJoo2ContentTitle_modified}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_modified}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2ContentController.selected.modifiedBy}" title="#{bundle.EditJoo2ContentTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_checkedOut}" for="checkedOut" />
+                    <h:inputText id="checkedOut" value="#{joo2ContentController.selected.checkedOut}" title="#{bundle.EditJoo2ContentTitle_checkedOut}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_checkedOut}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_checkedOutTime}" for="checkedOutTime" />
+                    <h:inputText id="checkedOutTime" value="#{joo2ContentController.selected.checkedOutTime}" title="#{bundle.EditJoo2ContentTitle_checkedOutTime}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_publishUp}" for="publishUp" />
+                    <h:inputText id="publishUp" value="#{joo2ContentController.selected.publishUp}" title="#{bundle.EditJoo2ContentTitle_publishUp}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_publishUp}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_publishDown}" for="publishDown" />
+                    <h:inputText id="publishDown" value="#{joo2ContentController.selected.publishDown}" title="#{bundle.EditJoo2ContentTitle_publishDown}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_publishDown}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_images}" for="images" />
+                    <h:inputTextarea rows="4" cols="30" id="images" value="#{joo2ContentController.selected.images}" title="#{bundle.EditJoo2ContentTitle_images}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_images}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_urls}" for="urls" />
+                    <h:inputTextarea rows="4" cols="30" id="urls" value="#{joo2ContentController.selected.urls}" title="#{bundle.EditJoo2ContentTitle_urls}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_urls}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_attribs}" for="attribs" />
+                    <h:inputText id="attribs" value="#{joo2ContentController.selected.attribs}" title="#{bundle.EditJoo2ContentTitle_attribs}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_attribs}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_version}" for="version" />
+                    <h:inputText id="version" value="#{joo2ContentController.selected.version}" title="#{bundle.EditJoo2ContentTitle_version}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_version}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_parentid}" for="parentid" />
+                    <h:inputText id="parentid" value="#{joo2ContentController.selected.parentid}" title="#{bundle.EditJoo2ContentTitle_parentid}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_parentid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2ContentController.selected.ordering}" title="#{bundle.EditJoo2ContentTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_metakey}" for="metakey" />
+                    <h:inputTextarea rows="4" cols="30" id="metakey" value="#{joo2ContentController.selected.metakey}" title="#{bundle.EditJoo2ContentTitle_metakey}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_metakey}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_metadesc}" for="metadesc" />
+                    <h:inputTextarea rows="4" cols="30" id="metadesc" value="#{joo2ContentController.selected.metadesc}" title="#{bundle.EditJoo2ContentTitle_metadesc}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_metadesc}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_access}" for="access" />
+                    <h:inputText id="access" value="#{joo2ContentController.selected.access}" title="#{bundle.EditJoo2ContentTitle_access}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_access}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_hits}" for="hits" />
+                    <h:inputText id="hits" value="#{joo2ContentController.selected.hits}" title="#{bundle.EditJoo2ContentTitle_hits}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_hits}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_metadata}" for="metadata" />
+                    <h:inputTextarea rows="4" cols="30" id="metadata" value="#{joo2ContentController.selected.metadata}" title="#{bundle.EditJoo2ContentTitle_metadata}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_metadata}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_featured}" for="featured" />
+                    <h:inputText id="featured" value="#{joo2ContentController.selected.featured}" title="#{bundle.EditJoo2ContentTitle_featured}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_featured}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2ContentController.selected.language}" title="#{bundle.EditJoo2ContentTitle_language}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_language}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_xreference}" for="xreference" />
+                    <h:inputText id="xreference" value="#{joo2ContentController.selected.xreference}" title="#{bundle.EditJoo2ContentTitle_xreference}" required="true" requiredMessage="#{bundle.EditJoo2ContentRequiredMessage_xreference}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epHrefMain}" for="epHrefMain" />
+                    <h:inputText id="epHrefMain" value="#{joo2ContentController.selected.epHrefMain}" title="#{bundle.EditJoo2ContentTitle_epHrefMain}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epImage}" for="epImage" />
+                    <h:inputText id="epImage" value="#{joo2ContentController.selected.epImage}" title="#{bundle.EditJoo2ContentTitle_epImage}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epIntroRaw}" for="epIntroRaw" />
+                    <h:inputTextarea rows="4" cols="30" id="epIntroRaw" value="#{joo2ContentController.selected.epIntroRaw}" title="#{bundle.EditJoo2ContentTitle_epIntroRaw}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epDownButtin}" for="epDownButtin" />
+                    <h:inputText id="epDownButtin" value="#{joo2ContentController.selected.epDownButtin}" title="#{bundle.EditJoo2ContentTitle_epDownButtin}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epDownButton}" for="epDownButton" />
+                    <h:inputText id="epDownButton" value="#{joo2ContentController.selected.epDownButton}" title="#{bundle.EditJoo2ContentTitle_epDownButton}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epType}" for="epType" />
+                    <h:inputText id="epType" value="#{joo2ContentController.selected.epType}" title="#{bundle.EditJoo2ContentTitle_epType}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epImageType}" for="epImageType" />
+                    <h:inputText id="epImageType" value="#{joo2ContentController.selected.epImageType}" title="#{bundle.EditJoo2ContentTitle_epImageType}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epFunction}" for="epFunction" />
+                    <h:inputText id="epFunction" value="#{joo2ContentController.selected.epFunction}" title="#{bundle.EditJoo2ContentTitle_epFunction}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epRegenerationState}" for="epRegenerationState" />
+                    <h:inputText id="epRegenerationState" value="#{joo2ContentController.selected.epRegenerationState}" title="#{bundle.EditJoo2ContentTitle_epRegenerationState}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epFeaturedPosition}" for="epFeaturedPosition" />
+                    <h:inputText id="epFeaturedPosition" value="#{joo2ContentController.selected.epFeaturedPosition}" title="#{bundle.EditJoo2ContentTitle_epFeaturedPosition}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epImageBig}" for="epImageBig" />
+                    <h:inputText id="epImageBig" value="#{joo2ContentController.selected.epImageBig}" title="#{bundle.EditJoo2ContentTitle_epImageBig}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epImageOrg}" for="epImageOrg" />
+                    <h:inputText id="epImageOrg" value="#{joo2ContentController.selected.epImageOrg}" title="#{bundle.EditJoo2ContentTitle_epImageOrg}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epReferencedCatid}" for="epReferencedCatid" />
+                    <h:inputText id="epReferencedCatid" value="#{joo2ContentController.selected.epReferencedCatid}" title="#{bundle.EditJoo2ContentTitle_epReferencedCatid}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epHrefOrg}" for="epHrefOrg" />
+                    <h:inputText id="epHrefOrg" value="#{joo2ContentController.selected.epHrefOrg}" title="#{bundle.EditJoo2ContentTitle_epHrefOrg}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epReferencedMenuid}" for="epReferencedMenuid" />
+                    <h:inputText id="epReferencedMenuid" value="#{joo2ContentController.selected.epReferencedMenuid}" title="#{bundle.EditJoo2ContentTitle_epReferencedMenuid}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epUnpublished}" for="epUnpublished" />
+                    <h:inputText id="epUnpublished" value="#{joo2ContentController.selected.epUnpublished}" title="#{bundle.EditJoo2ContentTitle_epUnpublished}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epTheme}" for="epTheme" />
+                    <h:inputText id="epTheme" value="#{joo2ContentController.selected.epTheme}" title="#{bundle.EditJoo2ContentTitle_epTheme}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epMenuid}" for="epMenuid" />
+                    <h:inputText id="epMenuid" value="#{joo2ContentController.selected.epMenuid}" title="#{bundle.EditJoo2ContentTitle_epMenuid}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epHrefAll}" for="epHrefAll" />
+                    <h:inputText id="epHrefAll" value="#{joo2ContentController.selected.epHrefAll}" title="#{bundle.EditJoo2ContentTitle_epHrefAll}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epHrefText}" for="epHrefText" />
+                    <h:inputText id="epHrefText" value="#{joo2ContentController.selected.epHrefText}" title="#{bundle.EditJoo2ContentTitle_epHrefText}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epHrefTitle}" for="epHrefTitle" />
+                    <h:inputText id="epHrefTitle" value="#{joo2ContentController.selected.epHrefTitle}" title="#{bundle.EditJoo2ContentTitle_epHrefTitle}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epHrefImg}" for="epHrefImg" />
+                    <h:inputText id="epHrefImg" value="#{joo2ContentController.selected.epHrefImg}" title="#{bundle.EditJoo2ContentTitle_epHrefImg}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epIsThreeSummary}" for="epIsThreeSummary" />
+                    <h:inputText id="epIsThreeSummary" value="#{joo2ContentController.selected.epIsThreeSummary}" title="#{bundle.EditJoo2ContentTitle_epIsThreeSummary}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epRefToOutsideCatId}" for="epRefToOutsideCatId" />
+                    <h:inputText id="epRefToOutsideCatId" value="#{joo2ContentController.selected.epRefToOutsideCatId}" title="#{bundle.EditJoo2ContentTitle_epRefToOutsideCatId}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epImportFromDir}" for="epImportFromDir" />
+                    <h:inputText id="epImportFromDir" value="#{joo2ContentController.selected.epImportFromDir}" title="#{bundle.EditJoo2ContentTitle_epImportFromDir}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epImportFromFile}" for="epImportFromFile" />
+                    <h:inputText id="epImportFromFile" value="#{joo2ContentController.selected.epImportFromFile}" title="#{bundle.EditJoo2ContentTitle_epImportFromFile}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epImportFromFileShort}" for="epImportFromFileShort" />
+                    <h:inputText id="epImportFromFileShort" value="#{joo2ContentController.selected.epImportFromFileShort}" title="#{bundle.EditJoo2ContentTitle_epImportFromFileShort}" />
+                    <h:outputLabel value="#{bundle.EditJoo2ContentLabel_epLeadingImported}" for="epLeadingImported" />
+                    <h:inputText id="epLeadingImported" value="#{joo2ContentController.selected.epLeadingImported}" title="#{bundle.EditJoo2ContentTitle_epLeadingImported}" />
+                </h:panelGrid>
+                <h:commandLink action="#{joo2ContentController.update}" value="#{bundle.EditJoo2ContentSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2ContentViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2ContentController.prepareList}" value="#{bundle.EditJoo2ContentShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2ContentIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

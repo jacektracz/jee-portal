@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartVmuserShoppergroupsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartVmuserShoppergroupsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2VirtuemartVmuserShoppergroupsController.selected.id}" title="#{bundle.EditJoo2VirtuemartVmuserShoppergroupsTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartVmuserShoppergroupsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartVmuserShoppergroupsLabel_virtuemartUserId}" for="virtuemartUserId" />
+                    <h:inputText id="virtuemartUserId" value="#{joo2VirtuemartVmuserShoppergroupsController.selected.virtuemartUserId}" title="#{bundle.EditJoo2VirtuemartVmuserShoppergroupsTitle_virtuemartUserId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartVmuserShoppergroupsRequiredMessage_virtuemartUserId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartVmuserShoppergroupsLabel_virtuemartShoppergroupId}" for="virtuemartShoppergroupId" />
+                    <h:inputText id="virtuemartShoppergroupId" value="#{joo2VirtuemartVmuserShoppergroupsController.selected.virtuemartShoppergroupId}" title="#{bundle.EditJoo2VirtuemartVmuserShoppergroupsTitle_virtuemartShoppergroupId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartVmuserShoppergroupsRequiredMessage_virtuemartShoppergroupId}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartVmuserShoppergroupsController.update}" value="#{bundle.EditJoo2VirtuemartVmuserShoppergroupsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartVmuserShoppergroupsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartVmuserShoppergroupsController.prepareList}" value="#{bundle.EditJoo2VirtuemartVmuserShoppergroupsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartVmuserShoppergroupsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

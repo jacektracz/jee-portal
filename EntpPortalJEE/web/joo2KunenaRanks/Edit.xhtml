@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2KunenaRanksTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaRanksLabel_rankId}" for="rankId" />
+                    <h:inputText id="rankId" value="#{joo2KunenaRanksController.selected.rankId}" title="#{bundle.EditJoo2KunenaRanksTitle_rankId}" required="true" requiredMessage="#{bundle.EditJoo2KunenaRanksRequiredMessage_rankId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaRanksLabel_rankTitle}" for="rankTitle" />
+                    <h:inputText id="rankTitle" value="#{joo2KunenaRanksController.selected.rankTitle}" title="#{bundle.EditJoo2KunenaRanksTitle_rankTitle}" required="true" requiredMessage="#{bundle.EditJoo2KunenaRanksRequiredMessage_rankTitle}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaRanksLabel_rankMin}" for="rankMin" />
+                    <h:inputText id="rankMin" value="#{joo2KunenaRanksController.selected.rankMin}" title="#{bundle.EditJoo2KunenaRanksTitle_rankMin}" required="true" requiredMessage="#{bundle.EditJoo2KunenaRanksRequiredMessage_rankMin}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaRanksLabel_rankSpecial}" for="rankSpecial" />
+                    <h:inputText id="rankSpecial" value="#{joo2KunenaRanksController.selected.rankSpecial}" title="#{bundle.EditJoo2KunenaRanksTitle_rankSpecial}" required="true" requiredMessage="#{bundle.EditJoo2KunenaRanksRequiredMessage_rankSpecial}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaRanksLabel_rankImage}" for="rankImage" />
+                    <h:inputText id="rankImage" value="#{joo2KunenaRanksController.selected.rankImage}" title="#{bundle.EditJoo2KunenaRanksTitle_rankImage}" required="true" requiredMessage="#{bundle.EditJoo2KunenaRanksRequiredMessage_rankImage}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2KunenaRanksController.update}" value="#{bundle.EditJoo2KunenaRanksSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2KunenaRanksViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaRanksController.prepareList}" value="#{bundle.EditJoo2KunenaRanksShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2KunenaRanksIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

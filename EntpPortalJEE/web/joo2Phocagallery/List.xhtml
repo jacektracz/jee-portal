@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2PhocagalleryEmpty}" rendered="#{joo2PhocagalleryController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2PhocagalleryController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2PhocagalleryController.pagination.pageFirstItem + 1}..#{joo2PhocagalleryController.pagination.pageLastItem + 1}/#{joo2PhocagalleryController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2PhocagalleryController.previous}" value="#{bundle.Previous} #{joo2PhocagalleryController.pagination.pageSize}" rendered="#{joo2PhocagalleryController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2PhocagalleryController.next}" value="#{bundle.Next} #{joo2PhocagalleryController.pagination.pageSize}" rendered="#{joo2PhocagalleryController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2PhocagalleryController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_catid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.catid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_sid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.sid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_title}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.title}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_alias}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.alias}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_filename}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.filename}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_description}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.description}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_date}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.date}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_hits}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hits}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_latitude}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.latitude}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_longitude}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.longitude}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_zoom}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.zoom}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_geotitle}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.geotitle}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_userid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_videocode}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.videocode}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_vmproductid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.vmproductid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_imgorigsize}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.imgorigsize}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_published}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.published}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_approved}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.approved}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_checkedOut}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.checkedOut}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_checkedOutTime}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.checkedOutTime}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_ordering}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ordering}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_params}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.params}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_metakey}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metakey}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_metadesc}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metadesc}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_metadata}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.metadata}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_extlink1}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.extlink1}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_extlink2}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.extlink2}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_extid}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.extid}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_exttype}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.exttype}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_extl}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.extl}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_extm}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.extm}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_exts}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.exts}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_exto}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.exto}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_extw}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.extw}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_exth}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.exth}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2PhocagalleryTitle_language}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.language}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2PhocagalleryController.prepareView}" value="#{bundle.ListJoo2PhocagalleryViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2PhocagalleryController.prepareEdit}" value="#{bundle.ListJoo2PhocagalleryEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2PhocagalleryController.destroy}" value="#{bundle.ListJoo2PhocagalleryDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryController.prepareCreate}" value="#{bundle.ListJoo2PhocagalleryCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2PhocagalleryIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2K2ExtraFieldsGroupsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2K2ExtraFieldsGroupsLabel_id}"/>
+                    <h:outputText value="#{joo2K2ExtraFieldsGroupsController.selected.id}" title="#{bundle.ViewJoo2K2ExtraFieldsGroupsTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2K2ExtraFieldsGroupsLabel_name}"/>
+                    <h:outputText value="#{joo2K2ExtraFieldsGroupsController.selected.name}" title="#{bundle.ViewJoo2K2ExtraFieldsGroupsTitle_name}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2K2ExtraFieldsGroupsController.destroyAndView}" value="#{bundle.ViewJoo2K2ExtraFieldsGroupsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2K2ExtraFieldsGroupsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2K2ExtraFieldsGroupsController.prepareCreate}" value="#{bundle.ViewJoo2K2ExtraFieldsGroupsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2K2ExtraFieldsGroupsController.prepareList}" value="#{bundle.ViewJoo2K2ExtraFieldsGroupsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2K2ExtraFieldsGroupsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

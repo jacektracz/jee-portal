@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2KunenaRanksTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2KunenaRanksLabel_rankId}"/>
+                    <h:outputText value="#{joo2KunenaRanksController.selected.rankId}" title="#{bundle.ViewJoo2KunenaRanksTitle_rankId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaRanksLabel_rankTitle}"/>
+                    <h:outputText value="#{joo2KunenaRanksController.selected.rankTitle}" title="#{bundle.ViewJoo2KunenaRanksTitle_rankTitle}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaRanksLabel_rankMin}"/>
+                    <h:outputText value="#{joo2KunenaRanksController.selected.rankMin}" title="#{bundle.ViewJoo2KunenaRanksTitle_rankMin}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaRanksLabel_rankSpecial}"/>
+                    <h:outputText value="#{joo2KunenaRanksController.selected.rankSpecial}" title="#{bundle.ViewJoo2KunenaRanksTitle_rankSpecial}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaRanksLabel_rankImage}"/>
+                    <h:outputText value="#{joo2KunenaRanksController.selected.rankImage}" title="#{bundle.ViewJoo2KunenaRanksTitle_rankImage}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2KunenaRanksController.destroyAndView}" value="#{bundle.ViewJoo2KunenaRanksDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2KunenaRanksEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaRanksController.prepareCreate}" value="#{bundle.ViewJoo2KunenaRanksCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2KunenaRanksController.prepareList}" value="#{bundle.ViewJoo2KunenaRanksShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2KunenaRanksIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

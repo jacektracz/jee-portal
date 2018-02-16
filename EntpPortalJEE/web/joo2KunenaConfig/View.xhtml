@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2KunenaConfigTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_id}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.id}" title="#{bundle.ViewJoo2KunenaConfigTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_boardTitle}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.boardTitle}" title="#{bundle.ViewJoo2KunenaConfigTitle_boardTitle}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_email}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.email}" title="#{bundle.ViewJoo2KunenaConfigTitle_email}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_boardOffline}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.boardOffline}" title="#{bundle.ViewJoo2KunenaConfigTitle_boardOffline}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_boardOfset}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.boardOfset}" title="#{bundle.ViewJoo2KunenaConfigTitle_boardOfset}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_offlineMessage}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.offlineMessage}" title="#{bundle.ViewJoo2KunenaConfigTitle_offlineMessage}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_enablerss}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.enablerss}" title="#{bundle.ViewJoo2KunenaConfigTitle_enablerss}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_enablepdf}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.enablepdf}" title="#{bundle.ViewJoo2KunenaConfigTitle_enablepdf}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_threadsPerPage}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.threadsPerPage}" title="#{bundle.ViewJoo2KunenaConfigTitle_threadsPerPage}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_messagesPerPage}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.messagesPerPage}" title="#{bundle.ViewJoo2KunenaConfigTitle_messagesPerPage}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_messagesPerPageSearch}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.messagesPerPageSearch}" title="#{bundle.ViewJoo2KunenaConfigTitle_messagesPerPageSearch}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showhistory}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showhistory}" title="#{bundle.ViewJoo2KunenaConfigTitle_showhistory}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_historylimit}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.historylimit}" title="#{bundle.ViewJoo2KunenaConfigTitle_historylimit}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_shownew}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.shownew}" title="#{bundle.ViewJoo2KunenaConfigTitle_shownew}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_jmambot}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.jmambot}" title="#{bundle.ViewJoo2KunenaConfigTitle_jmambot}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_disemoticons}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.disemoticons}" title="#{bundle.ViewJoo2KunenaConfigTitle_disemoticons}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_template}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.template}" title="#{bundle.ViewJoo2KunenaConfigTitle_template}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showannouncement}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showannouncement}" title="#{bundle.ViewJoo2KunenaConfigTitle_showannouncement}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_avataroncat}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.avataroncat}" title="#{bundle.ViewJoo2KunenaConfigTitle_avataroncat}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_catimagepath}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.catimagepath}" title="#{bundle.ViewJoo2KunenaConfigTitle_catimagepath}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showchildcaticon}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showchildcaticon}" title="#{bundle.ViewJoo2KunenaConfigTitle_showchildcaticon}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_annmodid}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.annmodid}" title="#{bundle.ViewJoo2KunenaConfigTitle_annmodid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rtewidth}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rtewidth}" title="#{bundle.ViewJoo2KunenaConfigTitle_rtewidth}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rteheight}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rteheight}" title="#{bundle.ViewJoo2KunenaConfigTitle_rteheight}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_enableforumjump}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.enableforumjump}" title="#{bundle.ViewJoo2KunenaConfigTitle_enableforumjump}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_reportmsg}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.reportmsg}" title="#{bundle.ViewJoo2KunenaConfigTitle_reportmsg}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_username}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.username}" title="#{bundle.ViewJoo2KunenaConfigTitle_username}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_askemail}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.askemail}" title="#{bundle.ViewJoo2KunenaConfigTitle_askemail}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showemail}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showemail}" title="#{bundle.ViewJoo2KunenaConfigTitle_showemail}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showuserstats}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showuserstats}" title="#{bundle.ViewJoo2KunenaConfigTitle_showuserstats}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showkarma}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showkarma}" title="#{bundle.ViewJoo2KunenaConfigTitle_showkarma}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_useredit}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.useredit}" title="#{bundle.ViewJoo2KunenaConfigTitle_useredit}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_useredittime}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.useredittime}" title="#{bundle.ViewJoo2KunenaConfigTitle_useredittime}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_useredittimegrace}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.useredittimegrace}" title="#{bundle.ViewJoo2KunenaConfigTitle_useredittimegrace}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_editmarkup}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.editmarkup}" title="#{bundle.ViewJoo2KunenaConfigTitle_editmarkup}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_allowsubscriptions}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.allowsubscriptions}" title="#{bundle.ViewJoo2KunenaConfigTitle_allowsubscriptions}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_subscriptionschecked}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.subscriptionschecked}" title="#{bundle.ViewJoo2KunenaConfigTitle_subscriptionschecked}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_allowfavorites}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.allowfavorites}" title="#{bundle.ViewJoo2KunenaConfigTitle_allowfavorites}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_maxsubject}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.maxsubject}" title="#{bundle.ViewJoo2KunenaConfigTitle_maxsubject}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_maxsig}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.maxsig}" title="#{bundle.ViewJoo2KunenaConfigTitle_maxsig}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_regonly}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.regonly}" title="#{bundle.ViewJoo2KunenaConfigTitle_regonly}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_changename}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.changename}" title="#{bundle.ViewJoo2KunenaConfigTitle_changename}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_pubwrite}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.pubwrite}" title="#{bundle.ViewJoo2KunenaConfigTitle_pubwrite}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_floodprotection}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.floodprotection}" title="#{bundle.ViewJoo2KunenaConfigTitle_floodprotection}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_mailmod}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.mailmod}" title="#{bundle.ViewJoo2KunenaConfigTitle_mailmod}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_mailadmin}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.mailadmin}" title="#{bundle.ViewJoo2KunenaConfigTitle_mailadmin}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_captcha}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.captcha}" title="#{bundle.ViewJoo2KunenaConfigTitle_captcha}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_mailfull}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.mailfull}" title="#{bundle.ViewJoo2KunenaConfigTitle_mailfull}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_allowavatar}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.allowavatar}" title="#{bundle.ViewJoo2KunenaConfigTitle_allowavatar}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_allowavatarupload}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.allowavatarupload}" title="#{bundle.ViewJoo2KunenaConfigTitle_allowavatarupload}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_allowavatargallery}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.allowavatargallery}" title="#{bundle.ViewJoo2KunenaConfigTitle_allowavatargallery}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_avatarquality}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.avatarquality}" title="#{bundle.ViewJoo2KunenaConfigTitle_avatarquality}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_avatarsize}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.avatarsize}" title="#{bundle.ViewJoo2KunenaConfigTitle_avatarsize}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_allowimageupload}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.allowimageupload}" title="#{bundle.ViewJoo2KunenaConfigTitle_allowimageupload}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_allowimageregupload}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.allowimageregupload}" title="#{bundle.ViewJoo2KunenaConfigTitle_allowimageregupload}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_imageheight}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.imageheight}" title="#{bundle.ViewJoo2KunenaConfigTitle_imageheight}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_imagewidth}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.imagewidth}" title="#{bundle.ViewJoo2KunenaConfigTitle_imagewidth}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_imagesize}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.imagesize}" title="#{bundle.ViewJoo2KunenaConfigTitle_imagesize}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_allowfileupload}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.allowfileupload}" title="#{bundle.ViewJoo2KunenaConfigTitle_allowfileupload}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_allowfileregupload}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.allowfileregupload}" title="#{bundle.ViewJoo2KunenaConfigTitle_allowfileregupload}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_filetypes}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.filetypes}" title="#{bundle.ViewJoo2KunenaConfigTitle_filetypes}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_filesize}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.filesize}" title="#{bundle.ViewJoo2KunenaConfigTitle_filesize}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showranking}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showranking}" title="#{bundle.ViewJoo2KunenaConfigTitle_showranking}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rankimages}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rankimages}" title="#{bundle.ViewJoo2KunenaConfigTitle_rankimages}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_avatarSrc}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.avatarSrc}" title="#{bundle.ViewJoo2KunenaConfigTitle_avatarSrc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_fbProfile}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.fbProfile}" title="#{bundle.ViewJoo2KunenaConfigTitle_fbProfile}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_pmComponent}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.pmComponent}" title="#{bundle.ViewJoo2KunenaConfigTitle_pmComponent}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userlistRows}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userlistRows}" title="#{bundle.ViewJoo2KunenaConfigTitle_userlistRows}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userlistOnline}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userlistOnline}" title="#{bundle.ViewJoo2KunenaConfigTitle_userlistOnline}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userlistAvatar}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userlistAvatar}" title="#{bundle.ViewJoo2KunenaConfigTitle_userlistAvatar}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userlistName}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userlistName}" title="#{bundle.ViewJoo2KunenaConfigTitle_userlistName}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userlistUsername}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userlistUsername}" title="#{bundle.ViewJoo2KunenaConfigTitle_userlistUsername}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userlistPosts}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userlistPosts}" title="#{bundle.ViewJoo2KunenaConfigTitle_userlistPosts}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userlistKarma}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userlistKarma}" title="#{bundle.ViewJoo2KunenaConfigTitle_userlistKarma}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userlistEmail}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userlistEmail}" title="#{bundle.ViewJoo2KunenaConfigTitle_userlistEmail}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userlistUsertype}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userlistUsertype}" title="#{bundle.ViewJoo2KunenaConfigTitle_userlistUsertype}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userlistJoindate}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userlistJoindate}" title="#{bundle.ViewJoo2KunenaConfigTitle_userlistJoindate}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userlistLastvisitdate}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userlistLastvisitdate}" title="#{bundle.ViewJoo2KunenaConfigTitle_userlistLastvisitdate}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userlistUserhits}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userlistUserhits}" title="#{bundle.ViewJoo2KunenaConfigTitle_userlistUserhits}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_latestcategory}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.latestcategory}" title="#{bundle.ViewJoo2KunenaConfigTitle_latestcategory}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showstats}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showstats}" title="#{bundle.ViewJoo2KunenaConfigTitle_showstats}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showwhoisonline}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showwhoisonline}" title="#{bundle.ViewJoo2KunenaConfigTitle_showwhoisonline}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showgenstats}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showgenstats}" title="#{bundle.ViewJoo2KunenaConfigTitle_showgenstats}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showpopuserstats}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showpopuserstats}" title="#{bundle.ViewJoo2KunenaConfigTitle_showpopuserstats}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_popusercount}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.popusercount}" title="#{bundle.ViewJoo2KunenaConfigTitle_popusercount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showpopsubjectstats}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showpopsubjectstats}" title="#{bundle.ViewJoo2KunenaConfigTitle_showpopsubjectstats}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_popsubjectcount}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.popsubjectcount}" title="#{bundle.ViewJoo2KunenaConfigTitle_popsubjectcount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_usernamechange}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.usernamechange}" title="#{bundle.ViewJoo2KunenaConfigTitle_usernamechange}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rulesInfb}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rulesInfb}" title="#{bundle.ViewJoo2KunenaConfigTitle_rulesInfb}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rulesCid}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rulesCid}" title="#{bundle.ViewJoo2KunenaConfigTitle_rulesCid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_helpInfb}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.helpInfb}" title="#{bundle.ViewJoo2KunenaConfigTitle_helpInfb}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_helpCid}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.helpCid}" title="#{bundle.ViewJoo2KunenaConfigTitle_helpCid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showspoilertag}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showspoilertag}" title="#{bundle.ViewJoo2KunenaConfigTitle_showspoilertag}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showvideotag}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showvideotag}" title="#{bundle.ViewJoo2KunenaConfigTitle_showvideotag}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showebaytag}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showebaytag}" title="#{bundle.ViewJoo2KunenaConfigTitle_showebaytag}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_trimlongurls}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.trimlongurls}" title="#{bundle.ViewJoo2KunenaConfigTitle_trimlongurls}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_trimlongurlsfront}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.trimlongurlsfront}" title="#{bundle.ViewJoo2KunenaConfigTitle_trimlongurlsfront}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_trimlongurlsback}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.trimlongurlsback}" title="#{bundle.ViewJoo2KunenaConfigTitle_trimlongurlsback}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_autoembedyoutube}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.autoembedyoutube}" title="#{bundle.ViewJoo2KunenaConfigTitle_autoembedyoutube}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_autoembedebay}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.autoembedebay}" title="#{bundle.ViewJoo2KunenaConfigTitle_autoembedebay}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_ebaylanguagecode}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.ebaylanguagecode}" title="#{bundle.ViewJoo2KunenaConfigTitle_ebaylanguagecode}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_fbsessiontimeout}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.fbsessiontimeout}" title="#{bundle.ViewJoo2KunenaConfigTitle_fbsessiontimeout}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_highlightcode}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.highlightcode}" title="#{bundle.ViewJoo2KunenaConfigTitle_highlightcode}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rssType}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rssType}" title="#{bundle.ViewJoo2KunenaConfigTitle_rssType}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rssTimelimit}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rssTimelimit}" title="#{bundle.ViewJoo2KunenaConfigTitle_rssTimelimit}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rssLimit}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rssLimit}" title="#{bundle.ViewJoo2KunenaConfigTitle_rssLimit}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rssIncludedCategories}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rssIncludedCategories}" title="#{bundle.ViewJoo2KunenaConfigTitle_rssIncludedCategories}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rssExcludedCategories}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rssExcludedCategories}" title="#{bundle.ViewJoo2KunenaConfigTitle_rssExcludedCategories}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rssSpecification}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rssSpecification}" title="#{bundle.ViewJoo2KunenaConfigTitle_rssSpecification}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rssAllowHtml}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rssAllowHtml}" title="#{bundle.ViewJoo2KunenaConfigTitle_rssAllowHtml}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rssAuthorFormat}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rssAuthorFormat}" title="#{bundle.ViewJoo2KunenaConfigTitle_rssAuthorFormat}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rssAuthorInTitle}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rssAuthorInTitle}" title="#{bundle.ViewJoo2KunenaConfigTitle_rssAuthorInTitle}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rssWordCount}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rssWordCount}" title="#{bundle.ViewJoo2KunenaConfigTitle_rssWordCount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rssOldTitles}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rssOldTitles}" title="#{bundle.ViewJoo2KunenaConfigTitle_rssOldTitles}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_rssCache}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.rssCache}" title="#{bundle.ViewJoo2KunenaConfigTitle_rssCache}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_fbdefaultpage}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.fbdefaultpage}" title="#{bundle.ViewJoo2KunenaConfigTitle_fbdefaultpage}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_defaultSort}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.defaultSort}" title="#{bundle.ViewJoo2KunenaConfigTitle_defaultSort}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_alphauserpointsnumchars}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.alphauserpointsnumchars}" title="#{bundle.ViewJoo2KunenaConfigTitle_alphauserpointsnumchars}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_sef}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.sef}" title="#{bundle.ViewJoo2KunenaConfigTitle_sef}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_sefcats}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.sefcats}" title="#{bundle.ViewJoo2KunenaConfigTitle_sefcats}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_sefutf8}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.sefutf8}" title="#{bundle.ViewJoo2KunenaConfigTitle_sefutf8}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showimgforguest}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showimgforguest}" title="#{bundle.ViewJoo2KunenaConfigTitle_showimgforguest}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showfileforguest}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showfileforguest}" title="#{bundle.ViewJoo2KunenaConfigTitle_showfileforguest}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_pollnboptions}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.pollnboptions}" title="#{bundle.ViewJoo2KunenaConfigTitle_pollnboptions}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_pollallowvoteone}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.pollallowvoteone}" title="#{bundle.ViewJoo2KunenaConfigTitle_pollallowvoteone}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_pollenabled}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.pollenabled}" title="#{bundle.ViewJoo2KunenaConfigTitle_pollenabled}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_poppollscount}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.poppollscount}" title="#{bundle.ViewJoo2KunenaConfigTitle_poppollscount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showpoppollstats}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showpoppollstats}" title="#{bundle.ViewJoo2KunenaConfigTitle_showpoppollstats}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_polltimebtvotes}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.polltimebtvotes}" title="#{bundle.ViewJoo2KunenaConfigTitle_polltimebtvotes}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_pollnbvotesbyuser}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.pollnbvotesbyuser}" title="#{bundle.ViewJoo2KunenaConfigTitle_pollnbvotesbyuser}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_pollresultsuserslist}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.pollresultsuserslist}" title="#{bundle.ViewJoo2KunenaConfigTitle_pollresultsuserslist}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_maxpersotext}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.maxpersotext}" title="#{bundle.ViewJoo2KunenaConfigTitle_maxpersotext}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_orderingSystem}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.orderingSystem}" title="#{bundle.ViewJoo2KunenaConfigTitle_orderingSystem}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_postDateformat}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.postDateformat}" title="#{bundle.ViewJoo2KunenaConfigTitle_postDateformat}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_postDateformatHover}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.postDateformatHover}" title="#{bundle.ViewJoo2KunenaConfigTitle_postDateformatHover}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_hideIp}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.hideIp}" title="#{bundle.ViewJoo2KunenaConfigTitle_hideIp}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_jsActstrIntegration}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.jsActstrIntegration}" title="#{bundle.ViewJoo2KunenaConfigTitle_jsActstrIntegration}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_imagetypes}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.imagetypes}" title="#{bundle.ViewJoo2KunenaConfigTitle_imagetypes}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_checkmimetypes}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.checkmimetypes}" title="#{bundle.ViewJoo2KunenaConfigTitle_checkmimetypes}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_imagemimetypes}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.imagemimetypes}" title="#{bundle.ViewJoo2KunenaConfigTitle_imagemimetypes}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_imagequality}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.imagequality}" title="#{bundle.ViewJoo2KunenaConfigTitle_imagequality}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_thumbheight}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.thumbheight}" title="#{bundle.ViewJoo2KunenaConfigTitle_thumbheight}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_thumbwidth}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.thumbwidth}" title="#{bundle.ViewJoo2KunenaConfigTitle_thumbwidth}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_hideuserprofileinfo}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.hideuserprofileinfo}" title="#{bundle.ViewJoo2KunenaConfigTitle_hideuserprofileinfo}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_integrationAccess}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.integrationAccess}" title="#{bundle.ViewJoo2KunenaConfigTitle_integrationAccess}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_integrationLogin}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.integrationLogin}" title="#{bundle.ViewJoo2KunenaConfigTitle_integrationLogin}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_integrationAvatar}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.integrationAvatar}" title="#{bundle.ViewJoo2KunenaConfigTitle_integrationAvatar}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_integrationProfile}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.integrationProfile}" title="#{bundle.ViewJoo2KunenaConfigTitle_integrationProfile}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_integrationPrivate}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.integrationPrivate}" title="#{bundle.ViewJoo2KunenaConfigTitle_integrationPrivate}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_integrationActivity}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.integrationActivity}" title="#{bundle.ViewJoo2KunenaConfigTitle_integrationActivity}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_boxghostmessage}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.boxghostmessage}" title="#{bundle.ViewJoo2KunenaConfigTitle_boxghostmessage}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userdeletetmessage}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userdeletetmessage}" title="#{bundle.ViewJoo2KunenaConfigTitle_userdeletetmessage}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_latestcategoryIn}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.latestcategoryIn}" title="#{bundle.ViewJoo2KunenaConfigTitle_latestcategoryIn}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_topicicons}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.topicicons}" title="#{bundle.ViewJoo2KunenaConfigTitle_topicicons}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_onlineusers}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.onlineusers}" title="#{bundle.ViewJoo2KunenaConfigTitle_onlineusers}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_debug}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.debug}" title="#{bundle.ViewJoo2KunenaConfigTitle_debug}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_catsautosubscribed}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.catsautosubscribed}" title="#{bundle.ViewJoo2KunenaConfigTitle_catsautosubscribed}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showbannedreason}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showbannedreason}" title="#{bundle.ViewJoo2KunenaConfigTitle_showbannedreason}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_versionCheck}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.versionCheck}" title="#{bundle.ViewJoo2KunenaConfigTitle_versionCheck}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showthankyou}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showthankyou}" title="#{bundle.ViewJoo2KunenaConfigTitle_showthankyou}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showpopthankyoustats}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showpopthankyoustats}" title="#{bundle.ViewJoo2KunenaConfigTitle_showpopthankyoustats}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_popthankscount}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.popthankscount}" title="#{bundle.ViewJoo2KunenaConfigTitle_popthankscount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_modSeeDeleted}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.modSeeDeleted}" title="#{bundle.ViewJoo2KunenaConfigTitle_modSeeDeleted}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_bbcodeImgSecure}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.bbcodeImgSecure}" title="#{bundle.ViewJoo2KunenaConfigTitle_bbcodeImgSecure}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_listcatShowModerators}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.listcatShowModerators}" title="#{bundle.ViewJoo2KunenaConfigTitle_listcatShowModerators}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_lightbox}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.lightbox}" title="#{bundle.ViewJoo2KunenaConfigTitle_lightbox}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_activityLimit}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.activityLimit}" title="#{bundle.ViewJoo2KunenaConfigTitle_activityLimit}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showListTime}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showListTime}" title="#{bundle.ViewJoo2KunenaConfigTitle_showListTime}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showSessionType}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showSessionType}" title="#{bundle.ViewJoo2KunenaConfigTitle_showSessionType}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_showSessionStarttime}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.showSessionStarttime}" title="#{bundle.ViewJoo2KunenaConfigTitle_showSessionStarttime}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userlistAllowed}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userlistAllowed}" title="#{bundle.ViewJoo2KunenaConfigTitle_userlistAllowed}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_userlistCountUsers}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.userlistCountUsers}" title="#{bundle.ViewJoo2KunenaConfigTitle_userlistCountUsers}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_enableThreadedLayouts}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.enableThreadedLayouts}" title="#{bundle.ViewJoo2KunenaConfigTitle_enableThreadedLayouts}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_categorySubscriptions}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.categorySubscriptions}" title="#{bundle.ViewJoo2KunenaConfigTitle_categorySubscriptions}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_topicSubscriptions}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.topicSubscriptions}" title="#{bundle.ViewJoo2KunenaConfigTitle_topicSubscriptions}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_pubprofile}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.pubprofile}" title="#{bundle.ViewJoo2KunenaConfigTitle_pubprofile}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_thankyouMax}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.thankyouMax}" title="#{bundle.ViewJoo2KunenaConfigTitle_thankyouMax}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_emailRecipientCount}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.emailRecipientCount}" title="#{bundle.ViewJoo2KunenaConfigTitle_emailRecipientCount}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_emailRecipientPrivacy}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.emailRecipientPrivacy}" title="#{bundle.ViewJoo2KunenaConfigTitle_emailRecipientPrivacy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_emailVisibleAddress}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.emailVisibleAddress}" title="#{bundle.ViewJoo2KunenaConfigTitle_emailVisibleAddress}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_captchaPostLimit}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.captchaPostLimit}" title="#{bundle.ViewJoo2KunenaConfigTitle_captchaPostLimit}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_recaptchaPublickey}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.recaptchaPublickey}" title="#{bundle.ViewJoo2KunenaConfigTitle_recaptchaPublickey}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_recaptchaPrivatekey}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.recaptchaPrivatekey}" title="#{bundle.ViewJoo2KunenaConfigTitle_recaptchaPrivatekey}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaConfigLabel_recaptchaTheme}"/>
+                    <h:outputText value="#{joo2KunenaConfigController.selected.recaptchaTheme}" title="#{bundle.ViewJoo2KunenaConfigTitle_recaptchaTheme}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2KunenaConfigController.destroyAndView}" value="#{bundle.ViewJoo2KunenaConfigDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2KunenaConfigEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaConfigController.prepareCreate}" value="#{bundle.ViewJoo2KunenaConfigCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2KunenaConfigController.prepareList}" value="#{bundle.ViewJoo2KunenaConfigShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2KunenaConfigIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

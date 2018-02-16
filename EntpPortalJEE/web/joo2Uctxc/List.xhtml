@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2UctxcTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2UctxcEmpty}" rendered="#{joo2UctxcController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2UctxcController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2UctxcController.pagination.pageFirstItem + 1}..#{joo2UctxcController.pagination.pageLastItem + 1}/#{joo2UctxcController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2UctxcController.previous}" value="#{bundle.Previous} #{joo2UctxcController.pagination.pageSize}" rendered="#{joo2UctxcController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2UctxcController.next}" value="#{bundle.Next} #{joo2UctxcController.pagination.pageSize}" rendered="#{joo2UctxcController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2UctxcController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UctxcTitle_MUctxcId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUctxcId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UctxcTitle_MUctxcCookie}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUctxcCookie}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UctxcTitle_MUctxcName}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUctxcName}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UctxcTitle_MUctxcTitle}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUctxcTitle}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UctxcTitle_MUctxcTheme}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUctxcTheme}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2UctxcTitle_MUctxcGenericData}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.MUctxcGenericData}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2UctxcController.prepareView}" value="#{bundle.ListJoo2UctxcViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2UctxcController.prepareEdit}" value="#{bundle.ListJoo2UctxcEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2UctxcController.destroy}" value="#{bundle.ListJoo2UctxcDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2UctxcController.prepareCreate}" value="#{bundle.ListJoo2UctxcCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2UctxcIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2KunenaMessagesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2KunenaMessagesController.selected.id}" title="#{bundle.EditJoo2KunenaMessagesTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2KunenaMessagesRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_parent}" for="parent" />
+                    <h:inputText id="parent" value="#{joo2KunenaMessagesController.selected.parent}" title="#{bundle.EditJoo2KunenaMessagesTitle_parent}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_thread}" for="thread" />
+                    <h:inputText id="thread" value="#{joo2KunenaMessagesController.selected.thread}" title="#{bundle.EditJoo2KunenaMessagesTitle_thread}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_catid}" for="catid" />
+                    <h:inputText id="catid" value="#{joo2KunenaMessagesController.selected.catid}" title="#{bundle.EditJoo2KunenaMessagesTitle_catid}" required="true" requiredMessage="#{bundle.EditJoo2KunenaMessagesRequiredMessage_catid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{joo2KunenaMessagesController.selected.name}" title="#{bundle.EditJoo2KunenaMessagesTitle_name}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_userid}" for="userid" />
+                    <h:inputText id="userid" value="#{joo2KunenaMessagesController.selected.userid}" title="#{bundle.EditJoo2KunenaMessagesTitle_userid}" required="true" requiredMessage="#{bundle.EditJoo2KunenaMessagesRequiredMessage_userid}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_email}" for="email" />
+                    <h:inputText id="email" value="#{joo2KunenaMessagesController.selected.email}" title="#{bundle.EditJoo2KunenaMessagesTitle_email}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_subject}" for="subject" />
+                    <h:inputText id="subject" value="#{joo2KunenaMessagesController.selected.subject}" title="#{bundle.EditJoo2KunenaMessagesTitle_subject}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_time}" for="time" />
+                    <h:inputText id="time" value="#{joo2KunenaMessagesController.selected.time}" title="#{bundle.EditJoo2KunenaMessagesTitle_time}" required="true" requiredMessage="#{bundle.EditJoo2KunenaMessagesRequiredMessage_time}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_ip}" for="ip" />
+                    <h:inputText id="ip" value="#{joo2KunenaMessagesController.selected.ip}" title="#{bundle.EditJoo2KunenaMessagesTitle_ip}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_topicEmoticon}" for="topicEmoticon" />
+                    <h:inputText id="topicEmoticon" value="#{joo2KunenaMessagesController.selected.topicEmoticon}" title="#{bundle.EditJoo2KunenaMessagesTitle_topicEmoticon}" required="true" requiredMessage="#{bundle.EditJoo2KunenaMessagesRequiredMessage_topicEmoticon}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_locked}" for="locked" />
+                    <h:inputText id="locked" value="#{joo2KunenaMessagesController.selected.locked}" title="#{bundle.EditJoo2KunenaMessagesTitle_locked}" required="true" requiredMessage="#{bundle.EditJoo2KunenaMessagesRequiredMessage_locked}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_hold}" for="hold" />
+                    <h:inputText id="hold" value="#{joo2KunenaMessagesController.selected.hold}" title="#{bundle.EditJoo2KunenaMessagesTitle_hold}" required="true" requiredMessage="#{bundle.EditJoo2KunenaMessagesRequiredMessage_hold}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2KunenaMessagesController.selected.ordering}" title="#{bundle.EditJoo2KunenaMessagesTitle_ordering}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_hits}" for="hits" />
+                    <h:inputText id="hits" value="#{joo2KunenaMessagesController.selected.hits}" title="#{bundle.EditJoo2KunenaMessagesTitle_hits}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_moved}" for="moved" />
+                    <h:inputText id="moved" value="#{joo2KunenaMessagesController.selected.moved}" title="#{bundle.EditJoo2KunenaMessagesTitle_moved}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2KunenaMessagesController.selected.modifiedBy}" title="#{bundle.EditJoo2KunenaMessagesTitle_modifiedBy}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_modifiedTime}" for="modifiedTime" />
+                    <h:inputText id="modifiedTime" value="#{joo2KunenaMessagesController.selected.modifiedTime}" title="#{bundle.EditJoo2KunenaMessagesTitle_modifiedTime}" />
+                    <h:outputLabel value="#{bundle.EditJoo2KunenaMessagesLabel_modifiedReason}" for="modifiedReason" />
+                    <h:inputText id="modifiedReason" value="#{joo2KunenaMessagesController.selected.modifiedReason}" title="#{bundle.EditJoo2KunenaMessagesTitle_modifiedReason}" />
+                </h:panelGrid>
+                <h:commandLink action="#{joo2KunenaMessagesController.update}" value="#{bundle.EditJoo2KunenaMessagesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2KunenaMessagesViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaMessagesController.prepareList}" value="#{bundle.EditJoo2KunenaMessagesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2KunenaMessagesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListJoo2SwmenufreeConfigEmpty}" rendered="#{joo2SwmenufreeConfigController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{joo2SwmenufreeConfigController.items.rowCount > 0}">
+                    <h:outputText value="#{joo2SwmenufreeConfigController.pagination.pageFirstItem + 1}..#{joo2SwmenufreeConfigController.pagination.pageLastItem + 1}/#{joo2SwmenufreeConfigController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{joo2SwmenufreeConfigController.previous}" value="#{bundle.Previous} #{joo2SwmenufreeConfigController.pagination.pageSize}" rendered="#{joo2SwmenufreeConfigController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{joo2SwmenufreeConfigController.next}" value="#{bundle.Next} #{joo2SwmenufreeConfigController.pagination.pageSize}" rendered="#{joo2SwmenufreeConfigController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{joo2SwmenufreeConfigController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainTop}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainTop}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainLeft}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainLeft}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainHeight}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainHeight}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subBorderOver}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subBorderOver}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainWidth}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainWidth}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subWidth}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subWidth}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainBack}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainBack}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainOver}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainOver}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subBack}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subBack}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subOver}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subOver}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subBorder}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subBorder}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainFontSize}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainFontSize}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subFontSize}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subFontSize}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainBorderOver}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainBorderOver}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subFontColor}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subFontColor}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainBorder}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainBorder}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainFontColor}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainFontColor}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subFontColorOver}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subFontColorOver}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainFontColorOver}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainFontColorOver}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainAlign}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainAlign}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subAlign}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subAlign}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subHeight}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subHeight}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_position}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.position}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_orientation}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.orientation}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_fontFamily}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fontFamily}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_fontWeight}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fontWeight}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_fontWeightOver}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fontWeightOver}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_level2SubTop}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.level2SubTop}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_level2SubLeft}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.level2SubLeft}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_level1SubTop}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.level1SubTop}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_level1SubLeft}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.level1SubLeft}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainBackImage}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainBackImage}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainBackImageOver}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainBackImageOver}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subBackImage}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subBackImage}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subBackImageOver}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subBackImageOver}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_specialA}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.specialA}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_mainPadding}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mainPadding}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subPadding}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subPadding}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_specialB}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.specialB}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subFontFamily}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subFontFamily}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_extra}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.extra}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_topTtf}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.topTtf}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subTtf}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subTtf}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_activeBackground}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.activeBackground}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_activeFont}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.activeFont}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_topMargin}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.topMargin}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_topWrap}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.topWrap}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subWrap}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subWrap}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_corners}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.corners}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_topFontExtra}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.topFontExtra}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subFontExtra}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subFontExtra}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_completePadding}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.completePadding}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_completeBackground}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.completeBackground}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_completeBackgroundImage}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.completeBackgroundImage}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_activeBackgroundImage}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.activeBackgroundImage}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListJoo2SwmenufreeConfigTitle_subIndicator}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subIndicator}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{joo2SwmenufreeConfigController.prepareView}" value="#{bundle.ListJoo2SwmenufreeConfigViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2SwmenufreeConfigController.prepareEdit}" value="#{bundle.ListJoo2SwmenufreeConfigEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{joo2SwmenufreeConfigController.destroy}" value="#{bundle.ListJoo2SwmenufreeConfigDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{joo2SwmenufreeConfigController.prepareCreate}" value="#{bundle.ListJoo2SwmenufreeConfigCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListJoo2SwmenufreeConfigIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

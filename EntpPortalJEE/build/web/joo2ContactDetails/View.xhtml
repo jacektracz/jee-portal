@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2ContactDetailsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_id}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.id}" title="#{bundle.ViewJoo2ContactDetailsTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_name}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.name}" title="#{bundle.ViewJoo2ContactDetailsTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_alias}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.alias}" title="#{bundle.ViewJoo2ContactDetailsTitle_alias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_conPosition}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.conPosition}" title="#{bundle.ViewJoo2ContactDetailsTitle_conPosition}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_address}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.address}" title="#{bundle.ViewJoo2ContactDetailsTitle_address}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_suburb}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.suburb}" title="#{bundle.ViewJoo2ContactDetailsTitle_suburb}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_state}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.state}" title="#{bundle.ViewJoo2ContactDetailsTitle_state}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_country}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.country}" title="#{bundle.ViewJoo2ContactDetailsTitle_country}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_postcode}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.postcode}" title="#{bundle.ViewJoo2ContactDetailsTitle_postcode}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_telephone}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.telephone}" title="#{bundle.ViewJoo2ContactDetailsTitle_telephone}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_fax}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.fax}" title="#{bundle.ViewJoo2ContactDetailsTitle_fax}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_misc}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.misc}" title="#{bundle.ViewJoo2ContactDetailsTitle_misc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_image}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.image}" title="#{bundle.ViewJoo2ContactDetailsTitle_image}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_imagepos}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.imagepos}" title="#{bundle.ViewJoo2ContactDetailsTitle_imagepos}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_emailTo}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.emailTo}" title="#{bundle.ViewJoo2ContactDetailsTitle_emailTo}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_defaultCon}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.defaultCon}" title="#{bundle.ViewJoo2ContactDetailsTitle_defaultCon}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_published}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.published}" title="#{bundle.ViewJoo2ContactDetailsTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.checkedOut}" title="#{bundle.ViewJoo2ContactDetailsTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.checkedOutTime}" title="#{bundle.ViewJoo2ContactDetailsTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_ordering}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.ordering}" title="#{bundle.ViewJoo2ContactDetailsTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_params}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.params}" title="#{bundle.ViewJoo2ContactDetailsTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_userId}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.userId}" title="#{bundle.ViewJoo2ContactDetailsTitle_userId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_catid}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.catid}" title="#{bundle.ViewJoo2ContactDetailsTitle_catid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_access}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.access}" title="#{bundle.ViewJoo2ContactDetailsTitle_access}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_mobile}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.mobile}" title="#{bundle.ViewJoo2ContactDetailsTitle_mobile}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_webpage}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.webpage}" title="#{bundle.ViewJoo2ContactDetailsTitle_webpage}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_sortname1}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.sortname1}" title="#{bundle.ViewJoo2ContactDetailsTitle_sortname1}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_sortname2}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.sortname2}" title="#{bundle.ViewJoo2ContactDetailsTitle_sortname2}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_sortname3}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.sortname3}" title="#{bundle.ViewJoo2ContactDetailsTitle_sortname3}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_language}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.language}" title="#{bundle.ViewJoo2ContactDetailsTitle_language}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_created}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.created}" title="#{bundle.ViewJoo2ContactDetailsTitle_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_createdBy}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.createdBy}" title="#{bundle.ViewJoo2ContactDetailsTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_createdByAlias}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.createdByAlias}" title="#{bundle.ViewJoo2ContactDetailsTitle_createdByAlias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_modified}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.modified}" title="#{bundle.ViewJoo2ContactDetailsTitle_modified}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.modifiedBy}" title="#{bundle.ViewJoo2ContactDetailsTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_metakey}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.metakey}" title="#{bundle.ViewJoo2ContactDetailsTitle_metakey}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_metadesc}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.metadesc}" title="#{bundle.ViewJoo2ContactDetailsTitle_metadesc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_metadata}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.metadata}" title="#{bundle.ViewJoo2ContactDetailsTitle_metadata}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_featured}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.featured}" title="#{bundle.ViewJoo2ContactDetailsTitle_featured}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_xreference}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.xreference}" title="#{bundle.ViewJoo2ContactDetailsTitle_xreference}"/>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_publishUp}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.publishUp}" title="#{bundle.ViewJoo2ContactDetailsTitle_publishUp}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2ContactDetailsLabel_publishDown}"/>
+                    <h:outputText value="#{joo2ContactDetailsController.selected.publishDown}" title="#{bundle.ViewJoo2ContactDetailsTitle_publishDown}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2ContactDetailsController.destroyAndView}" value="#{bundle.ViewJoo2ContactDetailsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2ContactDetailsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2ContactDetailsController.prepareCreate}" value="#{bundle.ViewJoo2ContactDetailsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2ContactDetailsController.prepareList}" value="#{bundle.ViewJoo2ContactDetailsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2ContactDetailsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

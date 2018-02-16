@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2UcparamTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2UcparamLabel_MUcparamId}" for="MUcparamId" />
+                    <h:inputText id="MUcparamId" value="#{joo2UcparamController.selected.MUcparamId}" title="#{bundle.EditJoo2UcparamTitle_MUcparamId}" required="true" requiredMessage="#{bundle.EditJoo2UcparamRequiredMessage_MUcparamId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2UcparamLabel_MUctxcId}" for="MUctxcId" />
+                    <h:inputText id="MUctxcId" value="#{joo2UcparamController.selected.MUctxcId}" title="#{bundle.EditJoo2UcparamTitle_MUctxcId}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UcparamLabel_MUcparamKey}" for="MUcparamKey" />
+                    <h:inputText id="MUcparamKey" value="#{joo2UcparamController.selected.MUcparamKey}" title="#{bundle.EditJoo2UcparamTitle_MUcparamKey}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UcparamLabel_MUcparamName}" for="MUcparamName" />
+                    <h:inputText id="MUcparamName" value="#{joo2UcparamController.selected.MUcparamName}" title="#{bundle.EditJoo2UcparamTitle_MUcparamName}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UcparamLabel_MUcparamValue}" for="MUcparamValue" />
+                    <h:inputText id="MUcparamValue" value="#{joo2UcparamController.selected.MUcparamValue}" title="#{bundle.EditJoo2UcparamTitle_MUcparamValue}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UcparamLabel_MUcparamValue0}" for="MUcparamValue0" />
+                    <h:inputText id="MUcparamValue0" value="#{joo2UcparamController.selected.MUcparamValue0}" title="#{bundle.EditJoo2UcparamTitle_MUcparamValue0}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UcparamLabel_MUcparamValue1}" for="MUcparamValue1" />
+                    <h:inputText id="MUcparamValue1" value="#{joo2UcparamController.selected.MUcparamValue1}" title="#{bundle.EditJoo2UcparamTitle_MUcparamValue1}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UcparamLabel_MUcparamValue2}" for="MUcparamValue2" />
+                    <h:inputText id="MUcparamValue2" value="#{joo2UcparamController.selected.MUcparamValue2}" title="#{bundle.EditJoo2UcparamTitle_MUcparamValue2}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UcparamLabel_MUcparamValue3}" for="MUcparamValue3" />
+                    <h:inputText id="MUcparamValue3" value="#{joo2UcparamController.selected.MUcparamValue3}" title="#{bundle.EditJoo2UcparamTitle_MUcparamValue3}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UcparamLabel_MUcparamTitle}" for="MUcparamTitle" />
+                    <h:inputText id="MUcparamTitle" value="#{joo2UcparamController.selected.MUcparamTitle}" title="#{bundle.EditJoo2UcparamTitle_MUcparamTitle}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UcparamLabel_MUcparamType}" for="MUcparamType" />
+                    <h:inputText id="MUcparamType" value="#{joo2UcparamController.selected.MUcparamType}" title="#{bundle.EditJoo2UcparamTitle_MUcparamType}" />
+                </h:panelGrid>
+                <h:commandLink action="#{joo2UcparamController.update}" value="#{bundle.EditJoo2UcparamSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2UcparamViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2UcparamController.prepareList}" value="#{bundle.EditJoo2UcparamShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2UcparamIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

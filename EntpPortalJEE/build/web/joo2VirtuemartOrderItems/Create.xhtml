@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2VirtuemartOrderItemsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_virtuemartOrderItemId}" for="virtuemartOrderItemId" />
+                    <h:inputText id="virtuemartOrderItemId" value="#{joo2VirtuemartOrderItemsController.selected.virtuemartOrderItemId}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_virtuemartOrderItemId}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartOrderItemsRequiredMessage_virtuemartOrderItemId}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_virtuemartOrderId}" for="virtuemartOrderId" />
+                    <h:inputText id="virtuemartOrderId" value="#{joo2VirtuemartOrderItemsController.selected.virtuemartOrderId}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_virtuemartOrderId}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_virtuemartUserinfoId}" for="virtuemartUserinfoId" />
+                    <h:inputText id="virtuemartUserinfoId" value="#{joo2VirtuemartOrderItemsController.selected.virtuemartUserinfoId}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_virtuemartUserinfoId}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_virtuemartVendorId}" for="virtuemartVendorId" />
+                    <h:inputText id="virtuemartVendorId" value="#{joo2VirtuemartOrderItemsController.selected.virtuemartVendorId}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_virtuemartVendorId}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_virtuemartProductId}" for="virtuemartProductId" />
+                    <h:inputText id="virtuemartProductId" value="#{joo2VirtuemartOrderItemsController.selected.virtuemartProductId}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_virtuemartProductId}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_orderItemSku}" for="orderItemSku" />
+                    <h:inputText id="orderItemSku" value="#{joo2VirtuemartOrderItemsController.selected.orderItemSku}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_orderItemSku}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartOrderItemsRequiredMessage_orderItemSku}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_orderItemName}" for="orderItemName" />
+                    <h:inputText id="orderItemName" value="#{joo2VirtuemartOrderItemsController.selected.orderItemName}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_orderItemName}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartOrderItemsRequiredMessage_orderItemName}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_productQuantity}" for="productQuantity" />
+                    <h:inputText id="productQuantity" value="#{joo2VirtuemartOrderItemsController.selected.productQuantity}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_productQuantity}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_productItemPrice}" for="productItemPrice" />
+                    <h:inputText id="productItemPrice" value="#{joo2VirtuemartOrderItemsController.selected.productItemPrice}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_productItemPrice}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_productFinalPrice}" for="productFinalPrice" />
+                    <h:inputText id="productFinalPrice" value="#{joo2VirtuemartOrderItemsController.selected.productFinalPrice}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_productFinalPrice}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartOrderItemsRequiredMessage_productFinalPrice}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_orderItemCurrency}" for="orderItemCurrency" />
+                    <h:inputText id="orderItemCurrency" value="#{joo2VirtuemartOrderItemsController.selected.orderItemCurrency}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_orderItemCurrency}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_orderStatus}" for="orderStatus" />
+                    <h:inputText id="orderStatus" value="#{joo2VirtuemartOrderItemsController.selected.orderStatus}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_orderStatus}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_productAttribute}" for="productAttribute" />
+                    <h:inputTextarea rows="4" cols="30" id="productAttribute" value="#{joo2VirtuemartOrderItemsController.selected.productAttribute}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_productAttribute}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartOrderItemsController.selected.createdOn}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_createdOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartOrderItemsRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartOrderItemsController.selected.createdBy}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_createdBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartOrderItemsRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartOrderItemsController.selected.modifiedOn}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_modifiedOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartOrderItemsRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartOrderItemsController.selected.modifiedBy}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_modifiedBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartOrderItemsRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartOrderItemsController.selected.lockedOn}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_lockedOn}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartOrderItemsRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2VirtuemartOrderItemsLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartOrderItemsController.selected.lockedBy}" title="#{bundle.CreateJoo2VirtuemartOrderItemsTitle_lockedBy}" required="true" requiredMessage="#{bundle.CreateJoo2VirtuemartOrderItemsRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartOrderItemsController.create}" value="#{bundle.CreateJoo2VirtuemartOrderItemsSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartOrderItemsController.prepareList}" value="#{bundle.CreateJoo2VirtuemartOrderItemsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2VirtuemartOrderItemsIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

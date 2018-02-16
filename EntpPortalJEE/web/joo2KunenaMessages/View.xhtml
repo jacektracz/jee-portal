@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2KunenaMessagesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_id}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.id}" title="#{bundle.ViewJoo2KunenaMessagesTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_parent}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.parent}" title="#{bundle.ViewJoo2KunenaMessagesTitle_parent}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_thread}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.thread}" title="#{bundle.ViewJoo2KunenaMessagesTitle_thread}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_catid}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.catid}" title="#{bundle.ViewJoo2KunenaMessagesTitle_catid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_name}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.name}" title="#{bundle.ViewJoo2KunenaMessagesTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_userid}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.userid}" title="#{bundle.ViewJoo2KunenaMessagesTitle_userid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_email}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.email}" title="#{bundle.ViewJoo2KunenaMessagesTitle_email}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_subject}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.subject}" title="#{bundle.ViewJoo2KunenaMessagesTitle_subject}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_time}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.time}" title="#{bundle.ViewJoo2KunenaMessagesTitle_time}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_ip}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.ip}" title="#{bundle.ViewJoo2KunenaMessagesTitle_ip}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_topicEmoticon}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.topicEmoticon}" title="#{bundle.ViewJoo2KunenaMessagesTitle_topicEmoticon}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_locked}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.locked}" title="#{bundle.ViewJoo2KunenaMessagesTitle_locked}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_hold}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.hold}" title="#{bundle.ViewJoo2KunenaMessagesTitle_hold}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_ordering}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.ordering}" title="#{bundle.ViewJoo2KunenaMessagesTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_hits}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.hits}" title="#{bundle.ViewJoo2KunenaMessagesTitle_hits}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_moved}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.moved}" title="#{bundle.ViewJoo2KunenaMessagesTitle_moved}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.modifiedBy}" title="#{bundle.ViewJoo2KunenaMessagesTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_modifiedTime}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.modifiedTime}" title="#{bundle.ViewJoo2KunenaMessagesTitle_modifiedTime}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaMessagesLabel_modifiedReason}"/>
+                    <h:outputText value="#{joo2KunenaMessagesController.selected.modifiedReason}" title="#{bundle.ViewJoo2KunenaMessagesTitle_modifiedReason}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2KunenaMessagesController.destroyAndView}" value="#{bundle.ViewJoo2KunenaMessagesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2KunenaMessagesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaMessagesController.prepareCreate}" value="#{bundle.ViewJoo2KunenaMessagesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2KunenaMessagesController.prepareList}" value="#{bundle.ViewJoo2KunenaMessagesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2KunenaMessagesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

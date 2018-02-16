@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_virtuemartCustomId}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.virtuemartCustomId}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_virtuemartCustomId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_customParentId}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.customParentId}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_customParentId}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_adminOnly}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.adminOnly}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_adminOnly}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_customTitle}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.customTitle}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_customTitle}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_customTip}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.customTip}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_customTip}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_customValue}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.customValue}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_customValue}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_customFieldDesc}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.customFieldDesc}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_customFieldDesc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_fieldType}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.fieldType}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_fieldType}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_isList}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.isList}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_isList}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_isHidden}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.isHidden}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_isHidden}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_isCartAttribute}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.isCartAttribute}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_isCartAttribute}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_published}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.published}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_createdOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.createdOn}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_createdBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.createdBy}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_modifiedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.modifiedOn}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.modifiedBy}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_lockedOn}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.lockedOn}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2VirtuemartCustomsLabel_lockedBy}"/>
+                    <h:outputText value="#{joo2VirtuemartCustomsController.selected.lockedBy}" title="#{bundle.ViewJoo2VirtuemartCustomsTitle_lockedBy}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCustomsController.destroyAndView}" value="#{bundle.ViewJoo2VirtuemartCustomsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2VirtuemartCustomsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCustomsController.prepareCreate}" value="#{bundle.ViewJoo2VirtuemartCustomsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2VirtuemartCustomsController.prepareList}" value="#{bundle.ViewJoo2VirtuemartCustomsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2VirtuemartCustomsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2NewsfeedsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_catid}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.catid}" title="#{bundle.ViewJoo2NewsfeedsTitle_catid}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_id}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.id}" title="#{bundle.ViewJoo2NewsfeedsTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_name}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.name}" title="#{bundle.ViewJoo2NewsfeedsTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_alias}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.alias}" title="#{bundle.ViewJoo2NewsfeedsTitle_alias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_link}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.link}" title="#{bundle.ViewJoo2NewsfeedsTitle_link}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_filename}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.filename}" title="#{bundle.ViewJoo2NewsfeedsTitle_filename}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_published}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.published}" title="#{bundle.ViewJoo2NewsfeedsTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_numarticles}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.numarticles}" title="#{bundle.ViewJoo2NewsfeedsTitle_numarticles}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_cacheTime}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.cacheTime}" title="#{bundle.ViewJoo2NewsfeedsTitle_cacheTime}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.checkedOut}" title="#{bundle.ViewJoo2NewsfeedsTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.checkedOutTime}" title="#{bundle.ViewJoo2NewsfeedsTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_ordering}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.ordering}" title="#{bundle.ViewJoo2NewsfeedsTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_rtl}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.rtl}" title="#{bundle.ViewJoo2NewsfeedsTitle_rtl}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_access}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.access}" title="#{bundle.ViewJoo2NewsfeedsTitle_access}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_language}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.language}" title="#{bundle.ViewJoo2NewsfeedsTitle_language}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_params}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.params}" title="#{bundle.ViewJoo2NewsfeedsTitle_params}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_created}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.created}" title="#{bundle.ViewJoo2NewsfeedsTitle_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_createdBy}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.createdBy}" title="#{bundle.ViewJoo2NewsfeedsTitle_createdBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_createdByAlias}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.createdByAlias}" title="#{bundle.ViewJoo2NewsfeedsTitle_createdByAlias}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_modified}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.modified}" title="#{bundle.ViewJoo2NewsfeedsTitle_modified}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_modifiedBy}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.modifiedBy}" title="#{bundle.ViewJoo2NewsfeedsTitle_modifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_metakey}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.metakey}" title="#{bundle.ViewJoo2NewsfeedsTitle_metakey}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_metadesc}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.metadesc}" title="#{bundle.ViewJoo2NewsfeedsTitle_metadesc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_metadata}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.metadata}" title="#{bundle.ViewJoo2NewsfeedsTitle_metadata}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_xreference}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.xreference}" title="#{bundle.ViewJoo2NewsfeedsTitle_xreference}"/>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_publishUp}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.publishUp}" title="#{bundle.ViewJoo2NewsfeedsTitle_publishUp}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2NewsfeedsLabel_publishDown}"/>
+                    <h:outputText value="#{joo2NewsfeedsController.selected.publishDown}" title="#{bundle.ViewJoo2NewsfeedsTitle_publishDown}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2NewsfeedsController.destroyAndView}" value="#{bundle.ViewJoo2NewsfeedsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2NewsfeedsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2NewsfeedsController.prepareCreate}" value="#{bundle.ViewJoo2NewsfeedsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2NewsfeedsController.prepareList}" value="#{bundle.ViewJoo2NewsfeedsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2NewsfeedsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

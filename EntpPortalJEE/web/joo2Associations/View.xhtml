@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2AssociationsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2AssociationsLabel_joo2AssociationsPK_id}"/>
+                    <h:outputText value="#{joo2AssociationsController.selected.joo2AssociationsPK.id}" title="#{bundle.ViewJoo2AssociationsTitle_joo2AssociationsPK_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2AssociationsLabel_joo2AssociationsPK_context}"/>
+                    <h:outputText value="#{joo2AssociationsController.selected.joo2AssociationsPK.context}" title="#{bundle.ViewJoo2AssociationsTitle_joo2AssociationsPK_context}"/>
+                    <h:outputText value="#{bundle.ViewJoo2AssociationsLabel_key}"/>
+                    <h:outputText value="#{joo2AssociationsController.selected.key}" title="#{bundle.ViewJoo2AssociationsTitle_key}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2AssociationsController.destroyAndView}" value="#{bundle.ViewJoo2AssociationsDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2AssociationsEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2AssociationsController.prepareCreate}" value="#{bundle.ViewJoo2AssociationsCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2AssociationsController.prepareList}" value="#{bundle.ViewJoo2AssociationsShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2AssociationsIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

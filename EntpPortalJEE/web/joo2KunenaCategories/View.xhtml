@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_id}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.id}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_parent}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.parent}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_parent}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_name}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.name}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_catEmoticon}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.catEmoticon}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_catEmoticon}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_locked}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.locked}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_locked}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_alertAdmin}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.alertAdmin}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_alertAdmin}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_moderated}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.moderated}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_moderated}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_moderators}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.moderators}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_moderators}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_accesstype}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.accesstype}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_accesstype}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_access}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.access}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_access}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_pubAccess}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.pubAccess}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_pubAccess}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_pubRecurse}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.pubRecurse}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_pubRecurse}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_adminAccess}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.adminAccess}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_adminAccess}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_adminRecurse}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.adminRecurse}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_adminRecurse}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_ordering}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.ordering}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_ordering}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_future2}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.future2}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_future2}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_published}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.published}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_published}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_checkedOut}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.checkedOut}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_checkedOut}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_checkedOutTime}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.checkedOutTime}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_review}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.review}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_review}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_allowAnonymous}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.allowAnonymous}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_allowAnonymous}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_postAnonymous}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.postAnonymous}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_postAnonymous}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_hits}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.hits}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_hits}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_description}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.description}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_description}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_headerdesc}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.headerdesc}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_headerdesc}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_classSfx}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.classSfx}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_classSfx}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_allowPolls}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.allowPolls}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_allowPolls}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_idLastMsg}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.idLastMsg}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_idLastMsg}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_numTopics}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.numTopics}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_numTopics}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_numPosts}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.numPosts}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_numPosts}"/>
+                    <h:outputText value="#{bundle.ViewJoo2KunenaCategoriesLabel_timeLastMsg}"/>
+                    <h:outputText value="#{joo2KunenaCategoriesController.selected.timeLastMsg}" title="#{bundle.ViewJoo2KunenaCategoriesTitle_timeLastMsg}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2KunenaCategoriesController.destroyAndView}" value="#{bundle.ViewJoo2KunenaCategoriesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewJoo2KunenaCategoriesEditLink}"/>
+                <br />
+                <h:commandLink action="#{joo2KunenaCategoriesController.prepareCreate}" value="#{bundle.ViewJoo2KunenaCategoriesCreateLink}" />
+                <br />
+                <h:commandLink action="#{joo2KunenaCategoriesController.prepareList}" value="#{bundle.ViewJoo2KunenaCategoriesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewJoo2KunenaCategoriesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

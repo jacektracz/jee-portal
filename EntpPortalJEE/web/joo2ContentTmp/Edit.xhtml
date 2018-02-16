@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2ContentTmpTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2ContentTmpLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2ContentTmpController.selected.id}" title="#{bundle.EditJoo2ContentTmpTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2ContentTmpRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentTmpLabel_fulltext}" for="fulltext" />
+                    <h:inputTextarea rows="4" cols="30" id="fulltext" value="#{joo2ContentTmpController.selected.fulltext}" title="#{bundle.EditJoo2ContentTmpTitle_fulltext}" required="true" requiredMessage="#{bundle.EditJoo2ContentTmpRequiredMessage_fulltext}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentTmpLabel_introtext}" for="introtext" />
+                    <h:inputTextarea rows="4" cols="30" id="introtext" value="#{joo2ContentTmpController.selected.introtext}" title="#{bundle.EditJoo2ContentTmpTitle_introtext}" required="true" requiredMessage="#{bundle.EditJoo2ContentTmpRequiredMessage_introtext}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2ContentTmpLabel_epHrefMain}" for="epHrefMain" />
+                    <h:inputTextarea rows="4" cols="30" id="epHrefMain" value="#{joo2ContentTmpController.selected.epHrefMain}" title="#{bundle.EditJoo2ContentTmpTitle_epHrefMain}" required="true" requiredMessage="#{bundle.EditJoo2ContentTmpRequiredMessage_epHrefMain}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2ContentTmpController.update}" value="#{bundle.EditJoo2ContentTmpSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2ContentTmpViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2ContentTmpController.prepareList}" value="#{bundle.EditJoo2ContentTmpShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2ContentTmpIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

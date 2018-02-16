@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2UpdatesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2UpdatesLabel_updateId}" for="updateId" />
+                    <h:inputText id="updateId" value="#{joo2UpdatesController.selected.updateId}" title="#{bundle.EditJoo2UpdatesTitle_updateId}" required="true" requiredMessage="#{bundle.EditJoo2UpdatesRequiredMessage_updateId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2UpdatesLabel_updateSiteId}" for="updateSiteId" />
+                    <h:inputText id="updateSiteId" value="#{joo2UpdatesController.selected.updateSiteId}" title="#{bundle.EditJoo2UpdatesTitle_updateSiteId}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UpdatesLabel_extensionId}" for="extensionId" />
+                    <h:inputText id="extensionId" value="#{joo2UpdatesController.selected.extensionId}" title="#{bundle.EditJoo2UpdatesTitle_extensionId}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UpdatesLabel_categoryid}" for="categoryid" />
+                    <h:inputText id="categoryid" value="#{joo2UpdatesController.selected.categoryid}" title="#{bundle.EditJoo2UpdatesTitle_categoryid}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UpdatesLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{joo2UpdatesController.selected.name}" title="#{bundle.EditJoo2UpdatesTitle_name}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UpdatesLabel_description}" for="description" />
+                    <h:inputTextarea rows="4" cols="30" id="description" value="#{joo2UpdatesController.selected.description}" title="#{bundle.EditJoo2UpdatesTitle_description}" required="true" requiredMessage="#{bundle.EditJoo2UpdatesRequiredMessage_description}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2UpdatesLabel_element}" for="element" />
+                    <h:inputText id="element" value="#{joo2UpdatesController.selected.element}" title="#{bundle.EditJoo2UpdatesTitle_element}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UpdatesLabel_type}" for="type" />
+                    <h:inputText id="type" value="#{joo2UpdatesController.selected.type}" title="#{bundle.EditJoo2UpdatesTitle_type}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UpdatesLabel_folder}" for="folder" />
+                    <h:inputText id="folder" value="#{joo2UpdatesController.selected.folder}" title="#{bundle.EditJoo2UpdatesTitle_folder}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UpdatesLabel_clientId}" for="clientId" />
+                    <h:inputText id="clientId" value="#{joo2UpdatesController.selected.clientId}" title="#{bundle.EditJoo2UpdatesTitle_clientId}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UpdatesLabel_version}" for="version" />
+                    <h:inputText id="version" value="#{joo2UpdatesController.selected.version}" title="#{bundle.EditJoo2UpdatesTitle_version}" />
+                    <h:outputLabel value="#{bundle.EditJoo2UpdatesLabel_data}" for="data" />
+                    <h:inputTextarea rows="4" cols="30" id="data" value="#{joo2UpdatesController.selected.data}" title="#{bundle.EditJoo2UpdatesTitle_data}" required="true" requiredMessage="#{bundle.EditJoo2UpdatesRequiredMessage_data}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2UpdatesLabel_detailsurl}" for="detailsurl" />
+                    <h:inputTextarea rows="4" cols="30" id="detailsurl" value="#{joo2UpdatesController.selected.detailsurl}" title="#{bundle.EditJoo2UpdatesTitle_detailsurl}" required="true" requiredMessage="#{bundle.EditJoo2UpdatesRequiredMessage_detailsurl}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2UpdatesController.update}" value="#{bundle.EditJoo2UpdatesSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2UpdatesViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2UpdatesController.prepareList}" value="#{bundle.EditJoo2UpdatesShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2UpdatesIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

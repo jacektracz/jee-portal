@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartProductDownloadsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductDownloadsLabel_virtuemartProductId}" for="virtuemartProductId" />
+                    <h:inputText id="virtuemartProductId" value="#{joo2VirtuemartProductDownloadsController.selected.virtuemartProductId}" title="#{bundle.EditJoo2VirtuemartProductDownloadsTitle_virtuemartProductId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductDownloadsRequiredMessage_virtuemartProductId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductDownloadsLabel_virtuemartUserId}" for="virtuemartUserId" />
+                    <h:inputText id="virtuemartUserId" value="#{joo2VirtuemartProductDownloadsController.selected.virtuemartUserId}" title="#{bundle.EditJoo2VirtuemartProductDownloadsTitle_virtuemartUserId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductDownloadsRequiredMessage_virtuemartUserId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductDownloadsLabel_virtuemartOrderId}" for="virtuemartOrderId" />
+                    <h:inputText id="virtuemartOrderId" value="#{joo2VirtuemartProductDownloadsController.selected.virtuemartOrderId}" title="#{bundle.EditJoo2VirtuemartProductDownloadsTitle_virtuemartOrderId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductDownloadsRequiredMessage_virtuemartOrderId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductDownloadsLabel_endDate}" for="endDate" />
+                    <h:inputText id="endDate" value="#{joo2VirtuemartProductDownloadsController.selected.endDate}" title="#{bundle.EditJoo2VirtuemartProductDownloadsTitle_endDate}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductDownloadsRequiredMessage_endDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductDownloadsLabel_downloadMax}" for="downloadMax" />
+                    <h:inputText id="downloadMax" value="#{joo2VirtuemartProductDownloadsController.selected.downloadMax}" title="#{bundle.EditJoo2VirtuemartProductDownloadsTitle_downloadMax}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductDownloadsRequiredMessage_downloadMax}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductDownloadsLabel_downloadId}" for="downloadId" />
+                    <h:inputText id="downloadId" value="#{joo2VirtuemartProductDownloadsController.selected.downloadId}" title="#{bundle.EditJoo2VirtuemartProductDownloadsTitle_downloadId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductDownloadsRequiredMessage_downloadId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductDownloadsLabel_fileName}" for="fileName" />
+                    <h:inputText id="fileName" value="#{joo2VirtuemartProductDownloadsController.selected.fileName}" title="#{bundle.EditJoo2VirtuemartProductDownloadsTitle_fileName}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductDownloadsRequiredMessage_fileName}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductDownloadsLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartProductDownloadsController.selected.published}" title="#{bundle.EditJoo2VirtuemartProductDownloadsTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductDownloadsRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductDownloadsLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartProductDownloadsController.selected.createdOn}" title="#{bundle.EditJoo2VirtuemartProductDownloadsTitle_createdOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductDownloadsRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductDownloadsLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartProductDownloadsController.selected.createdBy}" title="#{bundle.EditJoo2VirtuemartProductDownloadsTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductDownloadsRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductDownloadsLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartProductDownloadsController.selected.modifiedOn}" title="#{bundle.EditJoo2VirtuemartProductDownloadsTitle_modifiedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductDownloadsRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductDownloadsLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartProductDownloadsController.selected.modifiedBy}" title="#{bundle.EditJoo2VirtuemartProductDownloadsTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductDownloadsRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductDownloadsLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartProductDownloadsController.selected.lockedOn}" title="#{bundle.EditJoo2VirtuemartProductDownloadsTitle_lockedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductDownloadsRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartProductDownloadsLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartProductDownloadsController.selected.lockedBy}" title="#{bundle.EditJoo2VirtuemartProductDownloadsTitle_lockedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartProductDownloadsRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartProductDownloadsController.update}" value="#{bundle.EditJoo2VirtuemartProductDownloadsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartProductDownloadsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartProductDownloadsController.prepareList}" value="#{bundle.EditJoo2VirtuemartProductDownloadsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartProductDownloadsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

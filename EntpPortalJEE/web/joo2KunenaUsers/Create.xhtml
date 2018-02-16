@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2KunenaUsersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_userid}" for="userid" />
+                    <h:inputText id="userid" value="#{joo2KunenaUsersController.selected.userid}" title="#{bundle.CreateJoo2KunenaUsersTitle_userid}" required="true" requiredMessage="#{bundle.CreateJoo2KunenaUsersRequiredMessage_userid}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_view}" for="view" />
+                    <h:inputText id="view" value="#{joo2KunenaUsersController.selected.view}" title="#{bundle.CreateJoo2KunenaUsersTitle_view}" required="true" requiredMessage="#{bundle.CreateJoo2KunenaUsersRequiredMessage_view}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_signature}" for="signature" />
+                    <h:inputTextarea rows="4" cols="30" id="signature" value="#{joo2KunenaUsersController.selected.signature}" title="#{bundle.CreateJoo2KunenaUsersTitle_signature}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_moderator}" for="moderator" />
+                    <h:inputText id="moderator" value="#{joo2KunenaUsersController.selected.moderator}" title="#{bundle.CreateJoo2KunenaUsersTitle_moderator}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_banned}" for="banned" />
+                    <h:inputText id="banned" value="#{joo2KunenaUsersController.selected.banned}" title="#{bundle.CreateJoo2KunenaUsersTitle_banned}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2KunenaUsersController.selected.ordering}" title="#{bundle.CreateJoo2KunenaUsersTitle_ordering}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_posts}" for="posts" />
+                    <h:inputText id="posts" value="#{joo2KunenaUsersController.selected.posts}" title="#{bundle.CreateJoo2KunenaUsersTitle_posts}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_avatar}" for="avatar" />
+                    <h:inputText id="avatar" value="#{joo2KunenaUsersController.selected.avatar}" title="#{bundle.CreateJoo2KunenaUsersTitle_avatar}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_karma}" for="karma" />
+                    <h:inputText id="karma" value="#{joo2KunenaUsersController.selected.karma}" title="#{bundle.CreateJoo2KunenaUsersTitle_karma}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_karmaTime}" for="karmaTime" />
+                    <h:inputText id="karmaTime" value="#{joo2KunenaUsersController.selected.karmaTime}" title="#{bundle.CreateJoo2KunenaUsersTitle_karmaTime}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_groupId}" for="groupId" />
+                    <h:inputText id="groupId" value="#{joo2KunenaUsersController.selected.groupId}" title="#{bundle.CreateJoo2KunenaUsersTitle_groupId}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_uhits}" for="uhits" />
+                    <h:inputText id="uhits" value="#{joo2KunenaUsersController.selected.uhits}" title="#{bundle.CreateJoo2KunenaUsersTitle_uhits}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_personalText}" for="personalText" />
+                    <h:inputText id="personalText" value="#{joo2KunenaUsersController.selected.personalText}" title="#{bundle.CreateJoo2KunenaUsersTitle_personalText}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_gender}" for="gender" />
+                    <h:inputText id="gender" value="#{joo2KunenaUsersController.selected.gender}" title="#{bundle.CreateJoo2KunenaUsersTitle_gender}" required="true" requiredMessage="#{bundle.CreateJoo2KunenaUsersRequiredMessage_gender}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_birthdate}" for="birthdate" />
+                    <h:inputText id="birthdate" value="#{joo2KunenaUsersController.selected.birthdate}" title="#{bundle.CreateJoo2KunenaUsersTitle_birthdate}" required="true" requiredMessage="#{bundle.CreateJoo2KunenaUsersRequiredMessage_birthdate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_location}" for="location" />
+                    <h:inputText id="location" value="#{joo2KunenaUsersController.selected.location}" title="#{bundle.CreateJoo2KunenaUsersTitle_location}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_icq}" for="icq" />
+                    <h:inputText id="icq" value="#{joo2KunenaUsersController.selected.icq}" title="#{bundle.CreateJoo2KunenaUsersTitle_icq}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_aim}" for="aim" />
+                    <h:inputText id="aim" value="#{joo2KunenaUsersController.selected.aim}" title="#{bundle.CreateJoo2KunenaUsersTitle_aim}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_yim}" for="yim" />
+                    <h:inputText id="yim" value="#{joo2KunenaUsersController.selected.yim}" title="#{bundle.CreateJoo2KunenaUsersTitle_yim}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_msn}" for="msn" />
+                    <h:inputText id="msn" value="#{joo2KunenaUsersController.selected.msn}" title="#{bundle.CreateJoo2KunenaUsersTitle_msn}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_skype}" for="skype" />
+                    <h:inputText id="skype" value="#{joo2KunenaUsersController.selected.skype}" title="#{bundle.CreateJoo2KunenaUsersTitle_skype}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_twitter}" for="twitter" />
+                    <h:inputText id="twitter" value="#{joo2KunenaUsersController.selected.twitter}" title="#{bundle.CreateJoo2KunenaUsersTitle_twitter}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_facebook}" for="facebook" />
+                    <h:inputText id="facebook" value="#{joo2KunenaUsersController.selected.facebook}" title="#{bundle.CreateJoo2KunenaUsersTitle_facebook}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_gtalk}" for="gtalk" />
+                    <h:inputText id="gtalk" value="#{joo2KunenaUsersController.selected.gtalk}" title="#{bundle.CreateJoo2KunenaUsersTitle_gtalk}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_myspace}" for="myspace" />
+                    <h:inputText id="myspace" value="#{joo2KunenaUsersController.selected.myspace}" title="#{bundle.CreateJoo2KunenaUsersTitle_myspace}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_linkedin}" for="linkedin" />
+                    <h:inputText id="linkedin" value="#{joo2KunenaUsersController.selected.linkedin}" title="#{bundle.CreateJoo2KunenaUsersTitle_linkedin}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_delicious}" for="delicious" />
+                    <h:inputText id="delicious" value="#{joo2KunenaUsersController.selected.delicious}" title="#{bundle.CreateJoo2KunenaUsersTitle_delicious}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_friendfeed}" for="friendfeed" />
+                    <h:inputText id="friendfeed" value="#{joo2KunenaUsersController.selected.friendfeed}" title="#{bundle.CreateJoo2KunenaUsersTitle_friendfeed}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_digg}" for="digg" />
+                    <h:inputText id="digg" value="#{joo2KunenaUsersController.selected.digg}" title="#{bundle.CreateJoo2KunenaUsersTitle_digg}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_blogspot}" for="blogspot" />
+                    <h:inputText id="blogspot" value="#{joo2KunenaUsersController.selected.blogspot}" title="#{bundle.CreateJoo2KunenaUsersTitle_blogspot}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_flickr}" for="flickr" />
+                    <h:inputText id="flickr" value="#{joo2KunenaUsersController.selected.flickr}" title="#{bundle.CreateJoo2KunenaUsersTitle_flickr}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_bebo}" for="bebo" />
+                    <h:inputText id="bebo" value="#{joo2KunenaUsersController.selected.bebo}" title="#{bundle.CreateJoo2KunenaUsersTitle_bebo}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_websitename}" for="websitename" />
+                    <h:inputText id="websitename" value="#{joo2KunenaUsersController.selected.websitename}" title="#{bundle.CreateJoo2KunenaUsersTitle_websitename}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_websiteurl}" for="websiteurl" />
+                    <h:inputText id="websiteurl" value="#{joo2KunenaUsersController.selected.websiteurl}" title="#{bundle.CreateJoo2KunenaUsersTitle_websiteurl}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_rank}" for="rank" />
+                    <h:inputText id="rank" value="#{joo2KunenaUsersController.selected.rank}" title="#{bundle.CreateJoo2KunenaUsersTitle_rank}" required="true" requiredMessage="#{bundle.CreateJoo2KunenaUsersRequiredMessage_rank}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_hideEmail}" for="hideEmail" />
+                    <h:inputText id="hideEmail" value="#{joo2KunenaUsersController.selected.hideEmail}" title="#{bundle.CreateJoo2KunenaUsersTitle_hideEmail}" required="true" requiredMessage="#{bundle.CreateJoo2KunenaUsersRequiredMessage_hideEmail}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2KunenaUsersLabel_showOnline}" for="showOnline" />
+                    <h:inputText id="showOnline" value="#{joo2KunenaUsersController.selected.showOnline}" title="#{bundle.CreateJoo2KunenaUsersTitle_showOnline}" required="true" requiredMessage="#{bundle.CreateJoo2KunenaUsersRequiredMessage_showOnline}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2KunenaUsersController.create}" value="#{bundle.CreateJoo2KunenaUsersSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2KunenaUsersController.prepareList}" value="#{bundle.CreateJoo2KunenaUsersShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2KunenaUsersIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

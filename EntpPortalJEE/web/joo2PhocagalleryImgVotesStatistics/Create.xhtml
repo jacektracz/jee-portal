@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2PhocagalleryImgVotesStatisticsController.selected.id}" title="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsTitle_id}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsLabel_imgid}" for="imgid" />
+                    <h:inputText id="imgid" value="#{joo2PhocagalleryImgVotesStatisticsController.selected.imgid}" title="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsTitle_imgid}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsRequiredMessage_imgid}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsLabel_count}" for="count" />
+                    <h:inputText id="count" value="#{joo2PhocagalleryImgVotesStatisticsController.selected.count}" title="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsTitle_count}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsRequiredMessage_count}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsLabel_average}" for="average" />
+                    <h:inputText id="average" value="#{joo2PhocagalleryImgVotesStatisticsController.selected.average}" title="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsTitle_average}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsRequiredMessage_average}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2PhocagalleryImgVotesStatisticsController.selected.language}" title="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsTitle_language}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsRequiredMessage_language}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryImgVotesStatisticsController.create}" value="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryImgVotesStatisticsController.prepareList}" value="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2PhocagalleryImgVotesStatisticsIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

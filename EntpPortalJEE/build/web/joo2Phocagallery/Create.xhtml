@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateJoo2PhocagalleryTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2PhocagalleryController.selected.id}" title="#{bundle.CreateJoo2PhocagalleryTitle_id}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_catid}" for="catid" />
+                    <h:inputText id="catid" value="#{joo2PhocagalleryController.selected.catid}" title="#{bundle.CreateJoo2PhocagalleryTitle_catid}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_catid}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_sid}" for="sid" />
+                    <h:inputText id="sid" value="#{joo2PhocagalleryController.selected.sid}" title="#{bundle.CreateJoo2PhocagalleryTitle_sid}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_sid}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2PhocagalleryController.selected.title}" title="#{bundle.CreateJoo2PhocagalleryTitle_title}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_title}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_alias}" for="alias" />
+                    <h:inputText id="alias" value="#{joo2PhocagalleryController.selected.alias}" title="#{bundle.CreateJoo2PhocagalleryTitle_alias}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_alias}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_filename}" for="filename" />
+                    <h:inputText id="filename" value="#{joo2PhocagalleryController.selected.filename}" title="#{bundle.CreateJoo2PhocagalleryTitle_filename}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_filename}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_description}" for="description" />
+                    <h:inputTextarea rows="4" cols="30" id="description" value="#{joo2PhocagalleryController.selected.description}" title="#{bundle.CreateJoo2PhocagalleryTitle_description}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_date}" for="date" />
+                    <h:inputText id="date" value="#{joo2PhocagalleryController.selected.date}" title="#{bundle.CreateJoo2PhocagalleryTitle_date}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_date}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_hits}" for="hits" />
+                    <h:inputText id="hits" value="#{joo2PhocagalleryController.selected.hits}" title="#{bundle.CreateJoo2PhocagalleryTitle_hits}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_hits}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_latitude}" for="latitude" />
+                    <h:inputText id="latitude" value="#{joo2PhocagalleryController.selected.latitude}" title="#{bundle.CreateJoo2PhocagalleryTitle_latitude}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_latitude}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_longitude}" for="longitude" />
+                    <h:inputText id="longitude" value="#{joo2PhocagalleryController.selected.longitude}" title="#{bundle.CreateJoo2PhocagalleryTitle_longitude}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_longitude}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_zoom}" for="zoom" />
+                    <h:inputText id="zoom" value="#{joo2PhocagalleryController.selected.zoom}" title="#{bundle.CreateJoo2PhocagalleryTitle_zoom}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_zoom}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_geotitle}" for="geotitle" />
+                    <h:inputText id="geotitle" value="#{joo2PhocagalleryController.selected.geotitle}" title="#{bundle.CreateJoo2PhocagalleryTitle_geotitle}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_geotitle}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_userid}" for="userid" />
+                    <h:inputText id="userid" value="#{joo2PhocagalleryController.selected.userid}" title="#{bundle.CreateJoo2PhocagalleryTitle_userid}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_userid}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_videocode}" for="videocode" />
+                    <h:inputTextarea rows="4" cols="30" id="videocode" value="#{joo2PhocagalleryController.selected.videocode}" title="#{bundle.CreateJoo2PhocagalleryTitle_videocode}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_vmproductid}" for="vmproductid" />
+                    <h:inputText id="vmproductid" value="#{joo2PhocagalleryController.selected.vmproductid}" title="#{bundle.CreateJoo2PhocagalleryTitle_vmproductid}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_vmproductid}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_imgorigsize}" for="imgorigsize" />
+                    <h:inputText id="imgorigsize" value="#{joo2PhocagalleryController.selected.imgorigsize}" title="#{bundle.CreateJoo2PhocagalleryTitle_imgorigsize}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_imgorigsize}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2PhocagalleryController.selected.published}" title="#{bundle.CreateJoo2PhocagalleryTitle_published}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_approved}" for="approved" />
+                    <h:inputText id="approved" value="#{joo2PhocagalleryController.selected.approved}" title="#{bundle.CreateJoo2PhocagalleryTitle_approved}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_approved}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_checkedOut}" for="checkedOut" />
+                    <h:inputText id="checkedOut" value="#{joo2PhocagalleryController.selected.checkedOut}" title="#{bundle.CreateJoo2PhocagalleryTitle_checkedOut}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_checkedOut}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_checkedOutTime}" for="checkedOutTime" />
+                    <h:inputText id="checkedOutTime" value="#{joo2PhocagalleryController.selected.checkedOutTime}" title="#{bundle.CreateJoo2PhocagalleryTitle_checkedOutTime}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_checkedOutTime}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2PhocagalleryController.selected.ordering}" title="#{bundle.CreateJoo2PhocagalleryTitle_ordering}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_params}" for="params" />
+                    <h:inputTextarea rows="4" cols="30" id="params" value="#{joo2PhocagalleryController.selected.params}" title="#{bundle.CreateJoo2PhocagalleryTitle_params}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_metakey}" for="metakey" />
+                    <h:inputTextarea rows="4" cols="30" id="metakey" value="#{joo2PhocagalleryController.selected.metakey}" title="#{bundle.CreateJoo2PhocagalleryTitle_metakey}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_metadesc}" for="metadesc" />
+                    <h:inputTextarea rows="4" cols="30" id="metadesc" value="#{joo2PhocagalleryController.selected.metadesc}" title="#{bundle.CreateJoo2PhocagalleryTitle_metadesc}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_metadata}" for="metadata" />
+                    <h:inputTextarea rows="4" cols="30" id="metadata" value="#{joo2PhocagalleryController.selected.metadata}" title="#{bundle.CreateJoo2PhocagalleryTitle_metadata}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_extlink1}" for="extlink1" />
+                    <h:inputTextarea rows="4" cols="30" id="extlink1" value="#{joo2PhocagalleryController.selected.extlink1}" title="#{bundle.CreateJoo2PhocagalleryTitle_extlink1}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_extlink2}" for="extlink2" />
+                    <h:inputTextarea rows="4" cols="30" id="extlink2" value="#{joo2PhocagalleryController.selected.extlink2}" title="#{bundle.CreateJoo2PhocagalleryTitle_extlink2}" />
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_extid}" for="extid" />
+                    <h:inputText id="extid" value="#{joo2PhocagalleryController.selected.extid}" title="#{bundle.CreateJoo2PhocagalleryTitle_extid}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_extid}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_exttype}" for="exttype" />
+                    <h:inputText id="exttype" value="#{joo2PhocagalleryController.selected.exttype}" title="#{bundle.CreateJoo2PhocagalleryTitle_exttype}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_exttype}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_extl}" for="extl" />
+                    <h:inputText id="extl" value="#{joo2PhocagalleryController.selected.extl}" title="#{bundle.CreateJoo2PhocagalleryTitle_extl}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_extl}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_extm}" for="extm" />
+                    <h:inputText id="extm" value="#{joo2PhocagalleryController.selected.extm}" title="#{bundle.CreateJoo2PhocagalleryTitle_extm}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_extm}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_exts}" for="exts" />
+                    <h:inputText id="exts" value="#{joo2PhocagalleryController.selected.exts}" title="#{bundle.CreateJoo2PhocagalleryTitle_exts}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_exts}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_exto}" for="exto" />
+                    <h:inputText id="exto" value="#{joo2PhocagalleryController.selected.exto}" title="#{bundle.CreateJoo2PhocagalleryTitle_exto}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_exto}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_extw}" for="extw" />
+                    <h:inputText id="extw" value="#{joo2PhocagalleryController.selected.extw}" title="#{bundle.CreateJoo2PhocagalleryTitle_extw}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_extw}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_exth}" for="exth" />
+                    <h:inputText id="exth" value="#{joo2PhocagalleryController.selected.exth}" title="#{bundle.CreateJoo2PhocagalleryTitle_exth}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_exth}"/>
+                    <h:outputLabel value="#{bundle.CreateJoo2PhocagalleryLabel_language}" for="language" />
+                    <h:inputText id="language" value="#{joo2PhocagalleryController.selected.language}" title="#{bundle.CreateJoo2PhocagalleryTitle_language}" required="true" requiredMessage="#{bundle.CreateJoo2PhocagalleryRequiredMessage_language}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryController.create}" value="#{bundle.CreateJoo2PhocagallerySaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{joo2PhocagalleryController.prepareList}" value="#{bundle.CreateJoo2PhocagalleryShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateJoo2PhocagalleryIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

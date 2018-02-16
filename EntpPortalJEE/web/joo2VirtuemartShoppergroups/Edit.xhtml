@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartShoppergroupsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_virtuemartShoppergroupId}" for="virtuemartShoppergroupId" />
+                    <h:inputText id="virtuemartShoppergroupId" value="#{joo2VirtuemartShoppergroupsController.selected.virtuemartShoppergroupId}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_virtuemartShoppergroupId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShoppergroupsRequiredMessage_virtuemartShoppergroupId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_virtuemartVendorId}" for="virtuemartVendorId" />
+                    <h:inputText id="virtuemartVendorId" value="#{joo2VirtuemartShoppergroupsController.selected.virtuemartVendorId}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_virtuemartVendorId}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_shopperGroupName}" for="shopperGroupName" />
+                    <h:inputText id="shopperGroupName" value="#{joo2VirtuemartShoppergroupsController.selected.shopperGroupName}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_shopperGroupName}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_shopperGroupDesc}" for="shopperGroupDesc" />
+                    <h:inputTextarea rows="4" cols="30" id="shopperGroupDesc" value="#{joo2VirtuemartShoppergroupsController.selected.shopperGroupDesc}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_shopperGroupDesc}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_customPriceDisplay}" for="customPriceDisplay" />
+                    <h:inputText id="customPriceDisplay" value="#{joo2VirtuemartShoppergroupsController.selected.customPriceDisplay}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_customPriceDisplay}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShoppergroupsRequiredMessage_customPriceDisplay}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_priceDisplay}" for="priceDisplay" />
+                    <h:inputTextarea rows="4" cols="30" id="priceDisplay" value="#{joo2VirtuemartShoppergroupsController.selected.priceDisplay}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_priceDisplay}" />
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_default1}" for="default1" />
+                    <h:inputText id="default1" value="#{joo2VirtuemartShoppergroupsController.selected.default1}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_default1}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShoppergroupsRequiredMessage_default1}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2VirtuemartShoppergroupsController.selected.ordering}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShoppergroupsRequiredMessage_ordering}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_shared}" for="shared" />
+                    <h:inputText id="shared" value="#{joo2VirtuemartShoppergroupsController.selected.shared}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_shared}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShoppergroupsRequiredMessage_shared}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_published}" for="published" />
+                    <h:inputText id="published" value="#{joo2VirtuemartShoppergroupsController.selected.published}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_published}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShoppergroupsRequiredMessage_published}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_createdOn}" for="createdOn" />
+                    <h:inputText id="createdOn" value="#{joo2VirtuemartShoppergroupsController.selected.createdOn}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_createdOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShoppergroupsRequiredMessage_createdOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_createdBy}" for="createdBy" />
+                    <h:inputText id="createdBy" value="#{joo2VirtuemartShoppergroupsController.selected.createdBy}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_createdBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShoppergroupsRequiredMessage_createdBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_modifiedOn}" for="modifiedOn" />
+                    <h:inputText id="modifiedOn" value="#{joo2VirtuemartShoppergroupsController.selected.modifiedOn}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_modifiedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShoppergroupsRequiredMessage_modifiedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_modifiedBy}" for="modifiedBy" />
+                    <h:inputText id="modifiedBy" value="#{joo2VirtuemartShoppergroupsController.selected.modifiedBy}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_modifiedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShoppergroupsRequiredMessage_modifiedBy}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_lockedOn}" for="lockedOn" />
+                    <h:inputText id="lockedOn" value="#{joo2VirtuemartShoppergroupsController.selected.lockedOn}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_lockedOn}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShoppergroupsRequiredMessage_lockedOn}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartShoppergroupsLabel_lockedBy}" for="lockedBy" />
+                    <h:inputText id="lockedBy" value="#{joo2VirtuemartShoppergroupsController.selected.lockedBy}" title="#{bundle.EditJoo2VirtuemartShoppergroupsTitle_lockedBy}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartShoppergroupsRequiredMessage_lockedBy}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartShoppergroupsController.update}" value="#{bundle.EditJoo2VirtuemartShoppergroupsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartShoppergroupsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartShoppergroupsController.prepareList}" value="#{bundle.EditJoo2VirtuemartShoppergroupsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartShoppergroupsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

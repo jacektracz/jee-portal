@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2VirtuemartManufacturerMediasTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartManufacturerMediasLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2VirtuemartManufacturerMediasController.selected.id}" title="#{bundle.EditJoo2VirtuemartManufacturerMediasTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartManufacturerMediasRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartManufacturerMediasLabel_virtuemartManufacturerId}" for="virtuemartManufacturerId" />
+                    <h:inputText id="virtuemartManufacturerId" value="#{joo2VirtuemartManufacturerMediasController.selected.virtuemartManufacturerId}" title="#{bundle.EditJoo2VirtuemartManufacturerMediasTitle_virtuemartManufacturerId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartManufacturerMediasRequiredMessage_virtuemartManufacturerId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartManufacturerMediasLabel_virtuemartMediaId}" for="virtuemartMediaId" />
+                    <h:inputText id="virtuemartMediaId" value="#{joo2VirtuemartManufacturerMediasController.selected.virtuemartMediaId}" title="#{bundle.EditJoo2VirtuemartManufacturerMediasTitle_virtuemartMediaId}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartManufacturerMediasRequiredMessage_virtuemartMediaId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2VirtuemartManufacturerMediasLabel_ordering}" for="ordering" />
+                    <h:inputText id="ordering" value="#{joo2VirtuemartManufacturerMediasController.selected.ordering}" title="#{bundle.EditJoo2VirtuemartManufacturerMediasTitle_ordering}" required="true" requiredMessage="#{bundle.EditJoo2VirtuemartManufacturerMediasRequiredMessage_ordering}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2VirtuemartManufacturerMediasController.update}" value="#{bundle.EditJoo2VirtuemartManufacturerMediasSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2VirtuemartManufacturerMediasViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2VirtuemartManufacturerMediasController.prepareList}" value="#{bundle.EditJoo2VirtuemartManufacturerMediasShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2VirtuemartManufacturerMediasIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

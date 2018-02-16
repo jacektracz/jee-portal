@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditJoo2AssetsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditJoo2AssetsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{joo2AssetsController.selected.id}" title="#{bundle.EditJoo2AssetsTitle_id}" required="true" requiredMessage="#{bundle.EditJoo2AssetsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2AssetsLabel_parentId}" for="parentId" />
+                    <h:inputText id="parentId" value="#{joo2AssetsController.selected.parentId}" title="#{bundle.EditJoo2AssetsTitle_parentId}" required="true" requiredMessage="#{bundle.EditJoo2AssetsRequiredMessage_parentId}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2AssetsLabel_lft}" for="lft" />
+                    <h:inputText id="lft" value="#{joo2AssetsController.selected.lft}" title="#{bundle.EditJoo2AssetsTitle_lft}" required="true" requiredMessage="#{bundle.EditJoo2AssetsRequiredMessage_lft}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2AssetsLabel_rgt}" for="rgt" />
+                    <h:inputText id="rgt" value="#{joo2AssetsController.selected.rgt}" title="#{bundle.EditJoo2AssetsTitle_rgt}" required="true" requiredMessage="#{bundle.EditJoo2AssetsRequiredMessage_rgt}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2AssetsLabel_level}" for="level" />
+                    <h:inputText id="level" value="#{joo2AssetsController.selected.level}" title="#{bundle.EditJoo2AssetsTitle_level}" required="true" requiredMessage="#{bundle.EditJoo2AssetsRequiredMessage_level}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2AssetsLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{joo2AssetsController.selected.name}" title="#{bundle.EditJoo2AssetsTitle_name}" required="true" requiredMessage="#{bundle.EditJoo2AssetsRequiredMessage_name}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2AssetsLabel_title}" for="title" />
+                    <h:inputText id="title" value="#{joo2AssetsController.selected.title}" title="#{bundle.EditJoo2AssetsTitle_title}" required="true" requiredMessage="#{bundle.EditJoo2AssetsRequiredMessage_title}"/>
+                    <h:outputLabel value="#{bundle.EditJoo2AssetsLabel_rules}" for="rules" />
+                    <h:inputText id="rules" value="#{joo2AssetsController.selected.rules}" title="#{bundle.EditJoo2AssetsTitle_rules}" required="true" requiredMessage="#{bundle.EditJoo2AssetsRequiredMessage_rules}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{joo2AssetsController.update}" value="#{bundle.EditJoo2AssetsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditJoo2AssetsViewLink}"/>
+                <br />
+                <h:commandLink action="#{joo2AssetsController.prepareList}" value="#{bundle.EditJoo2AssetsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditJoo2AssetsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
